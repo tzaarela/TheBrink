@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room
+public class Room : MonoBehaviour
 {
     public float AirLevel { get; set; }
     public float RadiationLevel { get; set; }
