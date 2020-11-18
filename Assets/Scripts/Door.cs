@@ -7,14 +7,14 @@ public class Door
     public bool IsOpen { get; set; }
     public bool IsLocked { get; set; }
 
-    private Transform doorPosition;
+    private Transform _doorPosition;
 
     [SerializeField]
-    private GameObject door;
+    private GameObject _door;
 
     public Door(Transform doorPosition)
     {
-        this.doorPosition = doorPosition;
+        this._doorPosition = doorPosition;
 
         IsOpen = false;
         IsLocked = false;
