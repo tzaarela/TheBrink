@@ -7,6 +7,7 @@
         <e p="Scripts" t="Include">
           <e p="CrewController.cs" t="Include" />
           <e p="CrewMember.cs" t="Include" />
+          <e p="Door.cs" t="Include" />
           <e p="Hazard.cs" t="Include" />
           <e p="HazardType.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />

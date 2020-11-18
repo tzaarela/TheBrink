@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-    public List<Room> Rooms { get; set; }
+    [SerializeField]
+    private List<Room> _rooms;
 
     private void Start()
     {
