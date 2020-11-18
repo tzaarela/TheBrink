@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hazard : MonoBehaviour
+public class Hazard
 {
-    // Start is called before the first frame update
-    void Start()
+    public float SeverityAmount { get; set; }
+
+    public HazardType HazardType { get; set; }
+
+    public bool IsFinished { get; set; }
+
+    public Hazard(HazardType hazardType, float severityAmount)
     {
-        
+        this.HazardType = hazardType;
+        this.SeverityAmount = severityAmount;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ExecuteHazard()
     {
-        
+
     }
 }
