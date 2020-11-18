@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private List<Transform> _wayPoints;
+    [SerializeField]
+    private int _currentWayPoint;
+
+    [SerializeField]
+    private Vector2 _velocity;
+
+    public void Move()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private bool WayPointIsReached()
     {
-        
+        return false;
     }
 }

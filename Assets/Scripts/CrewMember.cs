@@ -11,7 +11,7 @@ public class CrewMember : MonoBehaviour
     [SerializeField]
     private Profession _profession;
 
-    private CrewController _crewController;
+    private MoveController _moveController;
 
     public CrewMember()
     {
@@ -20,7 +20,7 @@ public class CrewMember : MonoBehaviour
 
     private void Awake()
     {
-        _crewController = GetComponent<CrewController>();
+        _moveController = GetComponent<MoveController>();
     }
 
     private void Update()
@@ -30,6 +30,6 @@ public class CrewMember : MonoBehaviour
         
     private void Move()
     {
-        _crewController.Move();
+        _moveController.Move();
     }
 }
