@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class CrewMember : MonoBehaviour
 {
-    public Profession Profession { get; set; }
     public string Name { get; set; }
     public float Health { get; set; }
 
+    [SerializeField]
+    private Profession _profession;
 
     private CrewController _crewController;
+
+    public CrewMember()
+    {
+        
+    }
 
     private void Awake()
     {

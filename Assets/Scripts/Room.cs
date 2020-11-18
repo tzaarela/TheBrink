@@ -10,7 +10,7 @@ public class Room : MonoBehaviour
     public RoomType RoomType { get; set; }
     public List<Hazard> Hazards { get; set; }
 
-    private Door door;
+    private Door _door;
 
     [SerializeField]
     private Transform _doorPosition;
@@ -35,6 +35,6 @@ public class Room : MonoBehaviour
 
     public void CreateDoor()
     {
-        door = new Door(_doorPosition);
+        _door = new Door(_doorPosition);
     }
 }
