@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrewController
+public class CrewController : MonoBehaviour
 {
     private List<Transform> _wayPoints;
-    [SerializeField] private int _currentWayPoint;
-    public CrewController()
-    {
-        
-    }
+    [SerializeField]
+    private int _currentWayPoint;
 
-    public void Move(Vector2 velocity)
+    [SerializeField]
+    private Vector2 _velocity;
+
+    public void Move()
     {
         
     }
