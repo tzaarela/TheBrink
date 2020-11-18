@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrewMember : MonoBehaviour
 {
-    public 
+    public Profession Profession { get; set; }
     public string Name { get; set; }
     public float Health { get; set; }
 
