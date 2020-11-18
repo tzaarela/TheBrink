@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CrewMember : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private CrewController _crewController;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
+    {
+        _crewController = new CrewController();
+    }
+    
+    private void Move()
     {
         
     }
