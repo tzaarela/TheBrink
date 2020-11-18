@@ -7,5 +7,6 @@
     CrewQuarters,
     MedBay,
     MainBattery,
-    AirLock
+    AirLock,
+    Corridor
 }

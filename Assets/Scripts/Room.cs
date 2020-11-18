@@ -13,17 +13,17 @@ public class Room : MonoBehaviour
     private Door door;
 
     [SerializeField]
-    private Transform wayPoint;
+    private Transform _doorPosition;
 
     [SerializeField]
-    private Transform doorPosition;
+    private RoomType _roomType;
 
-    public Room(RoomType roomType)
+    public Room()
     {
         AirLevel = 100;
         RadiationLevel = 0;
         HasElectricity = true;
-        RoomType = roomType;
+        RoomType = _roomType;
     }
 
     public void CreateHazard(HazardType hazardType, float severityAmount)
@@ -35,6 +35,6 @@ public class Room : MonoBehaviour
 
     public void CreateDoor()
     {
-        door = new Door(doorPosition);
+        door = new Door(_doorPosition);
     }
 }
