@@ -13,6 +13,9 @@ public class Room : MonoBehaviour
     private Door _door;
 
     [SerializeField]
+    private List<Transform> _neighbours;
+
+    [SerializeField]
     private Transform _doorPosition;
 
     [SerializeField]
@@ -36,5 +39,10 @@ public class Room : MonoBehaviour
     public void CreateDoor()
     {
         _door = new Door(_doorPosition);
+    }
+
+    public List<Transform> GetNeighbours()
+    {
+        return _neighbours;
     }
 }
