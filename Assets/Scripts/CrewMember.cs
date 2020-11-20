@@ -1,35 +1,29 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
 using UnityEngine;
 
-public class CrewMember : MonoBehaviour
+public class CrewMember
 {
     public string Name { get; set; }
     public float Health { get; set; }
+    public Profession Profession { get; set; }
+    public Task CurrentTask { get; set; }
+    public WayPoint CurrentWayPoint { get; set; }
+    public GameObject CrewObject { get; set; }
+    public bool IsMoving { get; set; }
 
-    [SerializeField]
-    private Profession _profession;
+
+    private float moveSpeed = 2f;
 
     private MoveController _moveController;
 
-    public CrewMember()
+    public CrewMember(string name, float health, Profession profession, WayPoint currentWayPoint)
     {
-        
-    }
-
-    private void Awake()
-    {
-        _moveController = GetComponent<MoveController>();
-    }
-
-    private void Update()
-    {
-        Move();
-    }
-        
-    private void Move()
-    {
-        _moveController.Move();
+        Name = name;
+        Health = health;
+        Profession = profession;
+        CurrentWayPoint = currentWayPoint;
     }
 }

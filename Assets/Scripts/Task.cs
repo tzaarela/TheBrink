@@ -1,18 +1,18 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Task : MonoBehaviour
+public class Task
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TaskType TaskType { get; set; }
 
-    // Update is called once per frame
-    void Update()
+    public WayPoint WayPoint { get; set; }
+
+    public Task(TaskType taskType, WayPoint wayPoint)
     {
-        
+        TaskType = taskType;
+        WayPoint = wayPoint;
     }
+   
 }
