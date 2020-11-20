@@ -29,9 +29,9 @@ public class Room : MonoBehaviour
         RoomType = _roomType;
     }
 
-    public void CreateHazard(HazardType hazardType, float severityAmount)
+    public void CreateHazard(HazardType hazardType, float severityAmount, Room currentRoom)
     {
-        Hazard hazard = new Hazard(hazardType, severityAmount);
+        Hazard hazard = new Hazard(hazardType, severityAmount, currentRoom);
 
         Hazards.Add(hazard);
     }
