@@ -30,10 +30,10 @@ public class Hazard
         switch (this.HazardType)
         {
             case HazardType.Breach:
-                RoomHasBreach();
+                RoomWithHullbreach();
                 break;
             case HazardType.Fire:
-                RoomIsBurning();
+                RoomOnFire();
                 break;
             case HazardType.RoomSpecific:
                 RoomSpecificHazard();
@@ -48,9 +48,10 @@ public class Hazard
     ///RoomHasBreach() decreases the AirLevel in the room by a percentage based on size of breach.
     ///AirLevel decreases by less the less air is in the room.
     ///</summary>
-    public void RoomHasBreach()
+    public void RoomWithHullbreach()
     {
-        //make this into one code line, also, think about fraction maybe?
+        //TODO: Make this into one code line
+        //TODO: The division of hundred here, it might be best to turn that into a named variable, so it can be affected from inside Unity.
         float _airLeakage;
         
         _airLeakage = ((SeverityAmount * _hazardRoom.AirLevel) / 100);
@@ -58,7 +59,7 @@ public class Hazard
         _hazardRoom.AirLevel -= _airLeakage;
     }
 
-    public void RoomIsBurning()
+    public void RoomOnFire()
     {
 
         FireGrows();
