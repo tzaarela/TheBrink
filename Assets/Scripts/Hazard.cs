@@ -50,7 +50,8 @@ public class Hazard
     ///</summary>
     public void RoomWithHullbreach()
     {
-        //make this into one code line, also, think about fraction maybe?
+        //TODO: Make this into one code line
+        //TODO: The division of hundred here, it might be best to turn that into a named variable, so it can be affected from inside Unity.
         float _airLeakage;
         
         _airLeakage = ((SeverityAmount * _hazardRoom.AirLevel) / 100);
