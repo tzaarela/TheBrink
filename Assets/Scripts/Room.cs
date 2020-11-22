@@ -65,10 +65,9 @@ public class Room : MonoBehaviour
             }
         }
 
-        Debug.Log("The crewmember couldn't find a hazard with that type they were told to repair");
+        Debug.Log("The crewmember couldn't find a hazard of the type they were told to repair");
         /*
          * Okay, so, to fix a room.
-         * I need a way to find out the severity of the hazard,
          * And I need a way to find out the damages on the room.
          * So, suppose that we put a function in crewmembers, that lets them repair a room.
          * As of now, the rooms are actually not damaged, severityAmount is it's own thing.
