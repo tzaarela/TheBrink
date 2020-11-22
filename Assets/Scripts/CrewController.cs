@@ -13,15 +13,12 @@ public class CrewController : MonoBehaviour
     private float moveSpeed = 1f;
 
     public List<CrewMember> crewMembers = new List<CrewMember>();
-
     public GameObject crewPrefab;
-
     private static CrewController _instance;
 
     public static CrewController Instance { get { return _instance; } }
 
     private List<WayPoint> route = new List<WayPoint>();
-
     private int routeCount = 0;
     
 
@@ -72,8 +69,6 @@ public class CrewController : MonoBehaviour
 
         Debug.Log("Crew is moving...");
 
-        //Move to waypoint
-        
         crewMember.CrewObject.transform.position = Vector2.MoveTowards(
             crewMember.CrewObject.transform.position, route[routeCount].Position, moveSpeed);
 

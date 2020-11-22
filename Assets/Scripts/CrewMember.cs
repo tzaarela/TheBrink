@@ -13,8 +13,7 @@ public class CrewMember
     public WayPoint CurrentWayPoint { get; set; }
     public GameObject CrewObject { get; set; }
     public bool IsMoving { get; set; }
-
-
+    
     private float moveSpeed = 2f;
 
     private MoveController _moveController;
