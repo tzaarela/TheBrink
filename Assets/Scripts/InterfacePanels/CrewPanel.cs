@@ -19,7 +19,7 @@ namespace Assets.Scripts.InterfacePanels
         public CrewPanel()
         {
             crewMembers = new List<CrewMember>();
-            //crewGameObjects = gameObject.GetComponentsInChildren<GameObject>();
+            crewGameObjects = gameObject.GetComponentsInChildren<CrewPanelObject>();
         }
 
         public void Update()
@@ -37,8 +37,7 @@ namespace Assets.Scripts.InterfacePanels
         {
             for (int i = 0; i < crewMembers.Count; i++)
             {
-                //var textMesh = crewGameObjects[i].GetComponentInChildren<TextMeshProUGUI>();
-                //textMesh.text = crewMembers[i].Name;
+                crewGameObjects[i].CrewMember = crewMembers[i];
             }
         }
 
