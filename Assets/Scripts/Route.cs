@@ -5,7 +5,10 @@ using UnityEngine;
 public class Route : MonoBehaviour
 {
     public float RouteLength { get; set; }
+
     public int EncounterAmount { get; set; }
+
+    public float ShipPosition { get; set; }
 
     public List<Encounter> EncountersOnRoute { get; set; }
 
@@ -14,7 +17,7 @@ public class Route : MonoBehaviour
     /// </summary>
     /// <param name="_routeLength"></param>
     /// <param name="_encounterAmount"></param>
-    Route(float _routeLength, int _encounterAmount)
+    public Route(float _routeLength, int _encounterAmount)
     {
         //TODO: Should this be broken into to parts? Maybe we can create routes without needing to create all of this encounters until later?
         //Have routes and then also ExecuteRoutes() as another function that creates the routes?
@@ -35,9 +38,9 @@ public class Route : MonoBehaviour
             should I be sending this in some other way? //DJ
             */
 
-            //Encounter encounter = new Encounter(_distanceToNextEncounter);
+            Encounter encounter = new Encounter(_distanceToNextEncounter);
 
-            //EncountersOnRoute.Add(encounter);
+            EncountersOnRoute.Add(encounter);
         }
         
     }
