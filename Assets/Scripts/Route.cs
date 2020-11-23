@@ -10,23 +10,9 @@ public class Route : MonoBehaviour
     public List<Encounter> EncountersOnRoute { get; set; }
 
     Route(float _routeLength, int _encounterAmount)
-    {
- 
+    { 
         RouteLength = _routeLength;
 
         EncounterAmount = _encounterAmount;
-
-        foreach(Encounter Encounter in EncountersOnRoute)
-        {
-            Encounter.EncounterPosition = 
-            EncounterPlacementOnRoute(RouteLength, EncounterAmount);
-            
-        }
     }
-
-    public float EncounterPlacementOnRoute(float _routeLength, int encounterAmount)
-    {
-
-    }
-
 }

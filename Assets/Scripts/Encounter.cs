@@ -9,4 +9,11 @@ public class Encounter : MonoBehaviour
     public EncounterType EncounterType { get; set; }
 
 
+
+    void ExecuteEncounter()
+    {
+
+    }
+
+    void
 }
