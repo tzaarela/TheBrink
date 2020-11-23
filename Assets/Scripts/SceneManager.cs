@@ -14,7 +14,7 @@ namespace Assets.Scripts
 
         public List<Scene> Scenes { get; set; }
 
-        void Start()
+        public void Start()
         {
             if (Instance == null)
                 Instance = this;
