@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour
+public class Ship
 {
     public float Speed { get; set; }
     public float Position { get; set; }
