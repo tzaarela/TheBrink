@@ -8,7 +8,7 @@ public class Ship : MonoBehaviour
     public float CurrentPosition { get; set; }
     public float CurrentFuel { get; set; }
     public float MaxFuel { get; set; }
-    public float CurrentCash { get; set; }
+    public int CurrentCash { get; set; }
 
         public Ship()
         {

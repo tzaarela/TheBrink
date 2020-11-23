@@ -7,6 +7,8 @@ public class Room : MonoBehaviour
     public float AirLevel { get; set; }
     public float RadiationLevel { get; set; }
     public bool HasElectricity { get; set; }
+    //Added this trait here, think we are going to need it, hope it's okay? - DJ
+    public float RoomHealth { get; set; }
     public RoomType RoomType { get; set; }
     public List<Hazard> Hazards { get; set; }
 
@@ -25,6 +27,7 @@ public class Room : MonoBehaviour
     {
         AirLevel = 100;
         RadiationLevel = 0;
+        RoomHealth = 100;
         HasElectricity = true;
         RoomType = _roomType;
     }
