@@ -7,17 +7,23 @@ using UnityEngine;
 public class CrewController : MonoBehaviour
 {
     [SerializeField]
-    private WayPoint spawnPoint;
+    private WayPoint spawnPoint1;
+
+    [SerializeField]
+    private WayPoint spawnPoint2;
+
+    [SerializeField]
+    private WayPoint spawnPoint3;
 
     [SerializeField]
     private float moveSpeed = 1f;
 
-    public List<CrewMember> crewMembers = new List<CrewMember>();
     public GameObject crewPrefab;
     private static CrewController _instance;
 
     public static CrewController Instance { get { return _instance; } }
 
+    public  List<CrewMember> crewMembers = new List<CrewMember>();
     private List<WayPoint> route = new List<WayPoint>();
     private int routeCount = 0;
     
@@ -36,6 +42,7 @@ public class CrewController : MonoBehaviour
 
     public void Start()
     {
+       
         CreateCrew();
     }
 
@@ -46,8 +53,6 @@ public class CrewController : MonoBehaviour
             if (crewMember.CurrentTask != null && crewMember.CurrentTask.TaskType == TaskType.Move)
             {
                 Move(crewMember);
-
-                
             }
         }
     }
@@ -55,9 +60,18 @@ public class CrewController : MonoBehaviour
     private void CreateCrew()
     {
         Debug.Log("Creating crew...");
-        CrewMember crewMember = new CrewMember("John Doe", 100, Profession.Engineer, spawnPoint);
-        crewMembers.Add(crewMember);
-        crewMember.CrewObject =  Instantiate(crewPrefab, spawnPoint.Position, Quaternion.identity);
+        CrewMember crewMember1 = new CrewMember("John Doe", 100, Profession.Engineer, spawnPoint1);
+        CrewMember crewMember2 = new CrewMember("Jane Doe", 100, Profession.Scientist, spawnPoint2);
+        CrewMember crewMember3 = new CrewMember("Jimmy Doe", 100, Profession.Technician, spawnPoint3);
+
+        crewMembers.Add(crewMember1);
+        crewMembers.Add(crewMember2);
+        crewMembers.Add(crewMember3);
+
+        crewMember1.CrewObject =  Instantiate(crewPrefab, spawnPoint1.Position, Quaternion.identity);
+        crewMember2.CrewObject = Instantiate(crewPrefab, spawnPoint2.Position, Quaternion.identity);
+        crewMember3.CrewObject = Instantiate(crewPrefab, spawnPoint3.Position, Quaternion.identity);
+
     }
 
     private void Move(CrewMember crewMember)

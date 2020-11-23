@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723880666439252990}
   - component: {fileID: 3371598503483805192}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,9 +68,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1784320571
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -1616610217
+  m_SortingLayer: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 1c98103eded9d4431b20bac7c098a690, type: 3}
   m_Color: {r: 0.2216981, g: 0.65177464, b: 1, a: 1}
   m_FlipX: 0
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 973000157988616772}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3599642795304731749}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CrewMember
   m_TagString: Untagged
   m_Icon: {fileID: 0}

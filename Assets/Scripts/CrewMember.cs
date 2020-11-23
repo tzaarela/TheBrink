@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro.EditorUtilities;
 using UnityEngine;
 
+[System.Serializable]
 public class CrewMember
 {
     public string Name { get; set; }

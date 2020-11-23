@@ -10,21 +10,30 @@ using TMPro;
 
 namespace Assets.Scripts.InterfacePanels
 {
-    public class CrewPanel : InterfaceTrigger
+    public class CrewPanel : EventTrigger
     {
 
         List<CrewMember> crewMembers;
         CrewPanelObject[] crewGameObjects;
 
-        public CrewPanel()
+        public void Start()
         {
             crewMembers = new List<CrewMember>();
             crewGameObjects = gameObject.GetComponentsInChildren<CrewPanelObject>();
+            CreateCrewGameObjects();
         }
 
         public void Update()
         {
             crewMembers = GetCrewMembers();
+
+            foreach (var item in crewGameObjects)
+            {
+                if (item.CrewMember == null)
+                {
+                    CreateCrewGameObjects();
+                }
+            }
         }
 
         public List<CrewMember> GetCrewMembers()
@@ -41,18 +50,6 @@ namespace Assets.Scripts.InterfacePanels
             }
         }
 
-        public override void OnPointerClick(PointerEventData eventData)
-        {
-            var crewGameObject = eventData.selectedObject.gameObject;
-
-            if(crewGameObject.tag == "CrewMember")
-            {
-                //crewGameObject.Get;
-            }
-
-            base.OnPointerClick(eventData);
-        }
-
-
+        
     }
 }

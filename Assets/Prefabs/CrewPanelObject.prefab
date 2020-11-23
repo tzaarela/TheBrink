@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+  m_Color: {r: 0, g: 0.688, b: 0.05733328, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 6793683621026694487}
   - component: {fileID: 6793683621026694480}
   - component: {fileID: 2297687438280367287}
+  - component: {fileID: 2139887770844009165}
   m_Layer: 0
   m_Name: CrewPanelObject
   m_TagString: CrewMember
@@ -1174,6 +1175,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &2139887770844009165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6793683621026694482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82eb8ee5b1968ae4d94fc32e6d3f2327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crewName: {fileID: 2015154510714306973}
+  profession: {fileID: 797303363638144506}
+  health: {fileID: 2018389389812123255}
+  highlight: {fileID: 6124575918507453488}
 --- !u!1 &8809988734354922903
 GameObject:
   m_ObjectHideFlags: 0
