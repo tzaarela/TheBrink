@@ -34,9 +34,10 @@ public class Route : MonoBehaviour
             TODO: I need to know how to handle the protection level here,
             should I be sending this in some other way? //DJ
             */
-            Encounter encounter = new Encounter(_distanceToNextEncounter);
 
-            EncountersOnRoute.Add(encounter);
+            //Encounter encounter = new Encounter(_distanceToNextEncounter);
+
+            //EncountersOnRoute.Add(encounter);
         }
         
     }

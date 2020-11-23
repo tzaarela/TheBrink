@@ -46,6 +46,8 @@ public class CrewController : MonoBehaviour
             if (crewMember.CurrentTask != null && crewMember.CurrentTask.TaskType == TaskType.Move)
             {
                 Move(crewMember);
+
+                
             }
         }
     }
