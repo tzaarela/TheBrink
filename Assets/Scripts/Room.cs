@@ -10,6 +10,7 @@ public class Room : MonoBehaviour
     //Added this trait here, think we are going to need it, hope it's okay? - DJ
     public float RoomHealth { get; set; }
     public RoomType RoomType { get; set; }
+
     public List<Hazard> Hazards { get; set; }
 
     private Door _door;
@@ -32,9 +33,9 @@ public class Room : MonoBehaviour
         RoomType = _roomType;
     }
 
-    public void CreateHazard(HazardType hazardType, float severityAmount, Room currentRoom)
+    public void CreateHazard(HazardType hazardType, float severityAmount)
     {
-        Hazard hazard = new Hazard(hazardType, severityAmount, currentRoom);
+        Hazard hazard = new Hazard(hazardType, severityAmount);
 
         Hazards.Add(hazard);
     }
@@ -86,5 +87,5 @@ public class Room : MonoBehaviour
          * (decreases its severityAmount for now)
          * So using this method will look like Room.RepairRoom(hazardType _hazardToRepair) ?
         */
-    }
+    } 
 }

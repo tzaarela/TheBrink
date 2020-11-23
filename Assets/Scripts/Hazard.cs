@@ -14,11 +14,10 @@ public class Hazard
 
     //Will this send a reference to the room then? It won't create a new object right?
     //Since we need to be able to have changes stick to the room I mean...
-    public Hazard(HazardType hazardType, float severityAmount, Room hazardRoom)
+    public Hazard(HazardType hazardType, float severityAmount)
     {
         this.HazardType = hazardType;
         this.SeverityAmount = severityAmount;
-        this._hazardRoom = hazardRoom;
     }
 
     public void ExecuteHazard()

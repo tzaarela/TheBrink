@@ -42,7 +42,7 @@ namespace Assets.Scripts
                 if(!encounter.HasTriggered && route.ShipPosition > encounter.Position)
                 {
                     encounter.HasTriggered = true;
-                    //encounter.Execute();
+                    encounter.Execute();
                 }
             }
         }
