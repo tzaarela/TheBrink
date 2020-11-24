@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-    public List<Room> Rooms { get; set; }
+    public List<Room> _rooms;
 
     public static RoomController Instance;
 

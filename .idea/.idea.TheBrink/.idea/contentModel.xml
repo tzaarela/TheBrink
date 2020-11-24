@@ -73,6 +73,8 @@
           <e p="MainMenuPanelType.cs" t="Include" />
           <e p="MissionController.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />
+          <e p="Node.cs" t="Include" />
+          <e p="Pathfinder.cs" t="Include" />
           <e p="Room.cs" t="Include" />
           <e p="RoomController.cs" t="Include" />
           <e p="RoomType.cs" t="Include" />
