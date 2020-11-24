@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.InterfacePanels
 {
-    public class ContextMenuPanel
+    public class ContextMenuPanel : MonoBehaviour
     {
 
         [SerializeField]
@@ -16,18 +16,22 @@ namespace Assets.Scripts.InterfacePanels
         private List<Task> availableTasks;
 
 
-        public ContextMenuPanel(List<Task> availableTasks)
+        //public ContextMenuPanel(List<Task> availableTasks)
+        //{
+        //    this.availableTasks = availableTasks;
+        //}
+
+        public void Start()
         {
-            this.availableTasks = availableTasks;
+            CreateMenuItems();
         }
 
         public void CreateMenuItems()
         {
-            foreach (var task in availableTasks)
-            {
-                //CONTINUE
-                //GameObject.Instantiate(menuItemPrefab, transform)
-            }
+            GameObject.Instantiate(menuItemPrefab, transform.position, Quaternion.identity, transform);
+            //foreach (var task in availableTasks)
+            //{
+            //}
            
         }
     }

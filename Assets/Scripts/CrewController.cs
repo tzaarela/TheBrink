@@ -24,7 +24,7 @@ public class CrewController : MonoBehaviour
     public static CrewController Instance { get { return _instance; } }
 
     public  List<CrewMember> crewMembers = new List<CrewMember>();
-    private List<WayPoint> route = new List<WayPoint>();
+    private List<WayPoint> path = new List<WayPoint>();
     private int routeCount = 0;
     
 
@@ -86,11 +86,11 @@ public class CrewController : MonoBehaviour
         Debug.Log("Crew is moving...");
 
         crewMember.CrewObject.transform.position = Vector2.MoveTowards(
-            crewMember.CrewObject.transform.position, route[routeCount].Position, moveSpeed);
+            crewMember.CrewObject.transform.position, path[routeCount].Position, moveSpeed);
 
-        if((Vector2)crewMember.CrewObject.transform.position == route[routeCount].Position && routeCount < route.Count - 1)
+        if((Vector2)crewMember.CrewObject.transform.position == path[routeCount].Position && routeCount < path.Count - 1)
         {
-            crewMember.CurrentWayPoint = route[routeCount];
+            crewMember.CurrentWayPoint = path[routeCount];
             routeCount++;
         }
 
@@ -126,7 +126,7 @@ public class CrewController : MonoBehaviour
 
         foreach (var nextNeighbour in current.Neighbours)
         {
-            route.Add(nextNeighbour);
+            path.Add(nextNeighbour);
             WayPoint found = FindTarget(target, nextNeighbour);
         }
 

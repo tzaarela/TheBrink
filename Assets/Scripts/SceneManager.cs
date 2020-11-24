@@ -12,6 +12,8 @@ namespace Assets.Scripts
     {
         public static SceneManager Instance { get; set; }
 
+        public Scene CurrentScene { get; set; }
+
         public List<Scene> Scenes { get; set; }
 
         public void Start()
@@ -24,9 +26,9 @@ namespace Assets.Scripts
             Scenes = new List<Scene>();
         }
 
-        public void ChangeScene(int index)
+        public void ChangeScene(string name)
         {
-
+            var scene = Scenes.First(x => x.name == name);
         }
     }
 }

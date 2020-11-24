@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts
 {
-    public class WayPointRoute
+    public class WayPointPath
     {
         public List<WayPoint> Points { get; set; }
 
-        public WayPointRoute()
+        public WayPointPath()
         {
             
         }
