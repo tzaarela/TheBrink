@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.InterfacePanels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +12,6 @@ namespace Assets.Scripts
     {
         [SerializeField]
         public List<WayPoint> Neighbours;
-
-        [SerializeField]
-        private ContextMenuPanel contextMenuPanel;
-
-        [SerializeField]
-        private GameObject contextCanvas;
 
         public Vector2 Position { get; set; }
 
@@ -36,15 +29,12 @@ namespace Assets.Scripts
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Adding move task");
-
-                var crewName = CrewController.Instance.crewMembers.First(x => x.IsSelected).Name;
-                TaskController.instance.AddTask(TaskType.Move, this, crewName);
+                TaskController.instance.AddTask(TaskType.Move, this, "John Doe");
             }
 
             if (Input.GetMouseButtonDown(1))
             {
-                var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Instantiate(contextMenuPanel, new Vector2(mousePos.x, mousePos.y), Quaternion.identity, contextCanvas.transform);
+
             }
         }
 
