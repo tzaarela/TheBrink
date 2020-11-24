@@ -54,15 +54,8 @@ namespace Assets.Scripts.InterfacePanels
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            Debug.Log(eventData);
-            var selectedGameObject = eventData.selectedObject;
-
-            if (selectedGameObject.tag == "CrewMember")
-            {
-                var crewGameObject = selectedGameObject.GetComponent<CrewPanelObject>();
-                CrewController.Instance.crewMembers.ForEach(x => x.IsSelected = false);
-                crewGameObject.CrewMember.IsSelected = true;
-            }
+            CrewController.Instance.crewMembers.ForEach(x => x.IsSelected = false);
+            CrewMember.IsSelected = true;
 
             base.OnPointerClick(eventData);
         }

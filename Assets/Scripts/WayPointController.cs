@@ -6,9 +6,6 @@ namespace Assets.Scripts
 {
     public class WayPointController : MonoBehaviour
     {
-        [SerializeField]
-        List<WayPoint> wayPoints;
-
         private void Start()
         {
             
