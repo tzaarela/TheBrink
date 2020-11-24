@@ -49,7 +49,6 @@
             <e p="WayPointController.cs" t="Include" />
             <e p="WayPointRoute.cs" t="Include" />
           </e>
-          <e p="CrewController.cs" t="Include" />
           <e p="Dangers on Route" t="Include">
             <e p="Encounter.cs" t="Include" />
             <e p="EncounterType.cs" t="Include" />
@@ -81,7 +80,6 @@
           <e p="Ship.cs" t="Include" />
           <e p="ShipController.cs" t="Include" />
           <e p="TaskType.cs" t="Include" />
-          <e p="WayPoint.cs" t="Include" />
           <e p="WayPointPath.cs" t="Include" />
         </e>
       </e>
