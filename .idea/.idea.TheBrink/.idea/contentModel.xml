@@ -38,20 +38,31 @@
             </e>
           </e>
         </e>
-        <e p="MainMenuController.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Crew" t="Include">
+            <e p="CrewController.cs" t="Include" />
+            <e p="CrewMember.cs" t="Include" />
+            <e p="Profession.cs" t="Include" />
+            <e p="Task.cs" t="Include" />
+            <e p="TaskController.cs" t="Include" />
+            <e p="WayPoint.cs" t="Include" />
+            <e p="WayPointController.cs" t="Include" />
+            <e p="WayPointRoute.cs" t="Include" />
+          </e>
           <e p="CrewController.cs" t="Include" />
-          <e p="CrewMember.cs" t="Include" />
+          <e p="Dangers on Route" t="Include">
+            <e p="Encounter.cs" t="Include" />
+            <e p="EncounterType.cs" t="Include" />
+            <e p="Hazard.cs" t="Include" />
+            <e p="HazardType.cs" t="Include" />
+            <e p="Route.cs" t="Include" />
+          </e>
           <e p="Door.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="InterfaceTriggerEditor.cs" t="Include" />
           </e>
-          <e p="Encounter.cs" t="Include" />
-          <e p="EncounterType.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
-          <e p="Hazard.cs" t="Include" />
-          <e p="HazardType.cs" t="Include" />
           <e p="InterfacePanels" t="Include">
             <e p="ContextMenuItem.cs" t="Include" />
             <e p="ContextMenuPanel.cs" t="Include" />
@@ -59,22 +70,19 @@
             <e p="CrewPanelObject.cs" t="Include" />
             <e p="InterfaceTrigger.cs" t="Include" />
           </e>
+          <e p="MainMenuController.cs" t="Include" />
+          <e p="MainMenuPanelType.cs" t="Include" />
           <e p="MissionController.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />
-          <e p="Profession.cs" t="Include" />
           <e p="Room.cs" t="Include" />
           <e p="RoomController.cs" t="Include" />
           <e p="RoomType.cs" t="Include" />
-          <e p="Route.cs" t="Include" />
           <e p="SceneManager.cs" t="Include" />
           <e p="Ship.cs" t="Include" />
           <e p="ShipController.cs" t="Include" />
-          <e p="Task.cs" t="Include" />
-          <e p="TaskController.cs" t="Include" />
           <e p="TaskType.cs" t="Include" />
           <e p="WayPoint.cs" t="Include" />
-          <e p="WayPointController.cs" t="Include" />
-          <e p="WayPointRoute.cs" t="Include" />
+          <e p="WayPointPath.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
