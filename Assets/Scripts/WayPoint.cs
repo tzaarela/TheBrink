@@ -31,6 +31,11 @@ namespace Assets.Scripts
                 Debug.Log("Adding move task");
                 TaskController.instance.AddTask(TaskType.Move, this, "John Doe");
             }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+
+            }
         }
 
     }

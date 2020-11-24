@@ -19,10 +19,10 @@ namespace Assets.Scripts.InterfacePanels
 
 
         [SerializeField]
-        private Color highlightColor;
+        private Color32 highlightColor;
 
         [SerializeField]
-        private Color backColor;
+        private Color32 backColor;
 
 
         public bool IsHighlighted
