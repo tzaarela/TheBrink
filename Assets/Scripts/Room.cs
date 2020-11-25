@@ -11,7 +11,6 @@ public class Room : UITrigger
     public float AirLevel { get; set; }
     public float RadiationLevel { get; set; }
     public bool HasElectricity { get; set; }
-    //Added this trait here, think we are going to need it, hope it's okay? - DJ
     public float RoomHealth { get; set; }
     public RoomType RoomType { get; set; }
 
@@ -116,25 +115,7 @@ public class Room : UITrigger
         }
 
         Debug.Log("The crewmember couldn't find a hazard of the type they were told to repair");
-        /*
-         * Okay, so, to fix a room.
-         * And I need a way to find out the damages on the room.
-         * So, suppose that we put a function in crewmembers, that lets them repair a room.
-         * As of now, the rooms are actually not damaged, severityAmount is it's own thing.
-         * So the only way to repair now is to decrease SeverityAmount.
-         * So the Room will need to find the hazard, and then change that hazards SeverityAmount...
-         * So it will need to do this once for every hazard?
-         * It will need to go through its own list?
-         * 
-         * So, first, check if there is a crewmember in the room...
-         * if it is, send in their "skill" value in repair.
-         * And maybe what type of hazard they want to work against?
-         * And then in repair, it checks for that hazard, and then lets them fight it?
-         * (decreases its severityAmount for now)
-         * So using this method will look like Room.RepairRoom(hazardType _hazardToRepair) ?
-        */
     }
-
 
     private void OnMouseOver()
     {

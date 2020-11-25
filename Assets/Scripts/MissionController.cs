@@ -34,6 +34,14 @@ namespace Assets.Scripts
             route.ShipPosition = ShipController.Instance.Ship.Position;
         }
 
+        public void UpdateHazard()
+        {
+            foreach(Room Room in RoomController.Instance.rooms)
+            {
+
+            }
+        }
+
         public void CheckEncounters()
         {
             foreach (Encounter encounter in route.EncountersOnRoute)
