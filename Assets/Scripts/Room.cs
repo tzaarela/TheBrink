@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.InterfacePanels;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,7 @@ public class Room : UITrigger
 
     private Door _door;
     private UnityEvent onRoomSelected;
+
     private UnityEvent onRoomDeselected;
 
     [SerializeField]
@@ -77,6 +79,16 @@ public class Room : UITrigger
         Hazard hazard = new Hazard(hazardType, severityAmount);
 
         Hazards.Add(hazard);
+    }
+
+    public void UpdateHazard()
+    {
+        Hazards.RemoveAll(x => x.IsFinished);
+
+        foreach(Hazard hazard in Hazards)
+        {             
+                hazard.ExecuteHazard();  
+        }
     }
 
     public List<Task> GetAvailableTasks()

@@ -34,11 +34,11 @@ namespace Assets.Scripts
             route.ShipPosition = ShipController.Instance.Ship.Position;
         }
 
-        public void UpdateHazard()
+        public void UpdateRoom()
         {
-            foreach(Room Room in RoomController.Instance.rooms)
+            foreach(Room room in RoomController.Instance.Rooms)
             {
-
+                room.UpdateHazard();
             }
         }
 

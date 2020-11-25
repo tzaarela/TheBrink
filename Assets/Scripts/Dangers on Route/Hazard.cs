@@ -20,11 +20,7 @@ public class Hazard
 
     public void ExecuteHazard()
     {
-        /*
-         * Need to add check here to check if severityAmount is zero (or less)
-         * if so, take away hazard & break out of execute right?
-        */
-        switch (this.HazardType)
+        switch (HazardType)
         {
             case HazardType.Breach:
                 RoomWithHullBreach();
@@ -39,6 +35,11 @@ public class Hazard
                 Debug.Log("Hazard is of unknown type. HazardType is: " + this.HazardType);
                 break;
         }
+
+        if (SeverityAmount <= 0)
+        {
+            IsFinished = true;
+        }
     }
 
     ///<summary>
@@ -48,6 +49,7 @@ public class Hazard
     public void RoomWithHullBreach()
     {
         //TODO: Make this into one code line
+        //Remove airLeakage here and just put straight into AirLevel?
         //TODO: The division of hundred here, it might be best to turn that into a named variable, so it can be affected from inside Unity.
         float _airLeakage;
         
