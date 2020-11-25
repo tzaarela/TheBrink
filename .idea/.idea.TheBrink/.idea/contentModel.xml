@@ -60,14 +60,18 @@
           <e p="Editor" t="Include">
             <e p="InterfaceTriggerEditor.cs" t="Include" />
           </e>
+          <e p="EventTriggers" t="Include">
+            <e p="RoomTrigger.cs" t="Include" />
+          </e>
           <e p="GameController.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
           <e p="InterfacePanels" t="Include">
+            <e p="ContextMenuController.cs" t="Include" />
             <e p="ContextMenuItem.cs" t="Include" />
             <e p="ContextMenuPanel.cs" t="Include" />
             <e p="CrewPanel.cs" t="Include" />
             <e p="CrewPanelObject.cs" t="Include" />
-            <e p="InterfaceTrigger.cs" t="Include" />
+            <e p="UITrigger.cs" t="Include" />
           </e>
           <e p="MainMenuController.cs" t="Include" />
           <e p="MainMenuPanelType.cs" t="Include" />
@@ -82,7 +86,6 @@
           <e p="Ship.cs" t="Include" />
           <e p="ShipController.cs" t="Include" />
           <e p="TaskType.cs" t="Include" />
-          <e p="WayPointPath.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

@@ -7,9 +7,8 @@ public class Pathfinder : MonoBehaviour
 {
     public static Pathfinder Instance;
     
-    // private List<Node> nodes;
     [SerializeField] private Node _startNode;
-    [SerializeField] private Node _endNode;
+    [SerializeField] private Node _targetNode;
     [SerializeField] private List<Node> _path;
 
     private void Awake()
@@ -22,7 +21,7 @@ public class Pathfinder : MonoBehaviour
     
     private void Update()
     {
-        FindShortestPath(_startNode, _endNode);
+        FindShortestPath(_startNode, _targetNode);
     }
 
     private void FindShortestPath(Node startNode, Node targetNode)
@@ -37,11 +36,8 @@ public class Pathfinder : MonoBehaviour
             Node currentNode = openSet[0];
             for (int i = 1; i < openSet.Count; i++)
             {
-                if (openSet[i].FCost < currentNode.FCost ||
-                    openSet[i].FCost == currentNode.FCost && openSet[i].hCost < currentNode.hCost)
-                {
+                if (openSet[i].FCost < currentNode.FCost || openSet[i].FCost == currentNode.FCost && openSet[i].hCost < currentNode.hCost)
                     currentNode = openSet[i];
-                }
             }
 
             openSet.Remove(currentNode);
@@ -50,7 +46,7 @@ public class Pathfinder : MonoBehaviour
             if (currentNode == targetNode)
             {
                 RetracePath(startNode, targetNode);
-                return; // WIN!
+                return;
             }
 
             foreach (Node neighbour in currentNode.GetNeighbours())
@@ -58,7 +54,8 @@ public class Pathfinder : MonoBehaviour
                 if (closedSet.Contains(neighbour))
                     continue;
 
-                float newMovementCostToNeighbour = currentNode.gCost + GetNodeDistance(currentNode, neighbour);
+                int newMovementCostToNeighbour = currentNode.gCost + GetNodeDistance(currentNode, neighbour);
+                
                 if (newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
                 {
                     neighbour.gCost = newMovementCostToNeighbour;
@@ -66,9 +63,7 @@ public class Pathfinder : MonoBehaviour
                     neighbour.parentNode = currentNode;
 
                     if (!openSet.Contains(neighbour))
-                    {
                         openSet.Add(neighbour);
-                    }
                 }
             }
         }
@@ -89,14 +84,14 @@ public class Pathfinder : MonoBehaviour
         _path = path;
     }
 
-    private float GetNodeDistance(Node source, Node target)
+    private int GetNodeDistance(Node source, Node target)
     {
-        return Vector2.Distance(source.transform.position, target.transform.position);
+        return (int)Vector2.Distance(source.Position, target.Position);
     }
 
     public void SetTargetNode(Node targetNode)
     {
-        _endNode = targetNode;
+        _targetNode = targetNode;
     }
     
     private void OnDrawGizmos()
@@ -104,7 +99,6 @@ public class Pathfinder : MonoBehaviour
         if (_path == null || _path.Count <= 1)
             return;
         
-        Color lineColor = new Color(0f, 1f, 1f);
         Gizmos.color = Color.red;
         
         Gizmos.DrawLine(_startNode.transform.position, _path[0].transform.position);

@@ -7,30 +7,30 @@ public class Node : MonoBehaviour
 {
     [SerializeField]
     private List<Node> _neighbours;
+    
+    public Vector2 Position { get; private set; }
 
-    public float gCost;
-    public float hCost;
+    public int gCost;
+    public int hCost;
+    public int FCost { get { return gCost + hCost; } }
 
     public Node parentNode;
-    
-    // [SerializeField]
-    // private Color 
+
+    private void Awake()
+    {
+        Position = transform.position;
+    }
 
     public List<Node> GetNeighbours()
     {
         return _neighbours;
     }
-    
-    public float FCost
-    {
-        get { return gCost + hCost; }
-    }
 
-    private void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Pathfinder.Instance.SetTargetNode(this);
-        }
-    }
+    // private void OnMouseOver()
+    // {
+    //     if (Input.GetMouseButtonDown(0))
+    //     {
+    //         Pathfinder.Instance.SetTargetNode(this);
+    //     }
+    // }
 }

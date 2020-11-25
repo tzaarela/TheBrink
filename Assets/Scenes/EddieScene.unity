@@ -1208,6 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rooms: []
+  roomGameObjects: []
 --- !u!4 &1110774077
 Transform:
   m_ObjectHideFlags: 0
@@ -2978,6 +2979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632025308335919965, guid: df3816e6a00274d69b706bea613317fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df3816e6a00274d69b706bea613317fe, type: 3}
