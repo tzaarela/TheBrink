@@ -11,7 +11,7 @@ namespace Assets.Scripts.InterfacePanels
     public class ContextMenuPanel : MonoBehaviour
     {
         [SerializeField]
-        private GameObject menuItemPrefab;
+        private ContextMenuItem menuItemPrefab;
 
         //public ContextMenuPanel(List<Task> availableTasks)
         //{
@@ -21,8 +21,9 @@ namespace Assets.Scripts.InterfacePanels
         {
             foreach (Task task in availableTasks)
             {
-                menuItemPrefab.GetComponentInChildren<TextMeshProUGUI>().text = task.TaskType.ToString();
-                GameObject.Instantiate(menuItemPrefab, transform.position, Quaternion.identity, transform);
+                var menuItem = Instantiate(menuItemPrefab, transform.position, Quaternion.identity, transform);
+                menuItem.Task = task;
+                menuItem.GetComponentInChildren<TextMeshProUGUI>().text = task.TaskType.ToString();
             }
                      
         }

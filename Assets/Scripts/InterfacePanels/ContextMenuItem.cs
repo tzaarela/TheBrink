@@ -17,6 +17,15 @@ namespace Assets.Scripts.InterfacePanels
 
         bool _isHighlighted;
 
+        private Task task;
+
+        public Task Task
+        {
+            get { return task; }
+            set { task = value; }
+        }
+
+
 
         [SerializeField]
         private Color32 highlightColor;
@@ -49,6 +58,10 @@ namespace Assets.Scripts.InterfacePanels
 
         public override void OnPointerClick(PointerEventData eventData)
         {
+            Debug.Log("click...");
+            CrewController.Instance.GetSelectedCrewMember().CurrentTask = Task;
+            ContextMenuController.instance.CloseContextMenu();
+
             base.OnPointerClick(eventData);
         }
 

@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 1339005954}
-  wayPoint: {fileID: 0}
+  wayPoint: {fileID: 909602059}
   _roomType: 2
 --- !u!222 &850235610
 CanvasRenderer:
@@ -4002,7 +4002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 837003119}
-  wayPoint: {fileID: 0}
+  wayPoint: {fileID: 1120805737}
   _roomType: 4
 --- !u!222 &1381073204
 CanvasRenderer:

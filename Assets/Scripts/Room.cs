@@ -41,12 +41,8 @@ public class Room : UITrigger
     [SerializeField]
     private WayPoint wayPoint;
 
-
-
     [SerializeField]
     private RoomType _roomType;
-
-    
 
     public void Start()
     {

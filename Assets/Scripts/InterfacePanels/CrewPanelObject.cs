@@ -24,11 +24,12 @@ namespace Assets.Scripts.InterfacePanels
         [SerializeField]
         Image highlight;
 
-        public CrewMember CrewMember { get; set; }
+        public CrewMember CrewMember { get => crewMember; set => crewMember = value; }
 
         private TextMeshProUGUI nameTextMesh;
         private TextMeshProUGUI professionTextMesh;
         private TextMeshProUGUI healthTextMesh;
+        private CrewMember crewMember;
 
         public void Start()
         {
@@ -39,13 +40,13 @@ namespace Assets.Scripts.InterfacePanels
 
         public void Update()
         {
-            if(CrewMember != null)
+            if (CrewMember != null)
             {
-                nameTextMesh.text = CrewMember.Name;
-                professionTextMesh.text = CrewMember.Profession.ToString();
-                healthTextMesh.text = CrewMember.Health.ToString();
+                nameTextMesh.text = crewMember.Name;
+                professionTextMesh.text = crewMember.Profession.ToString();
+                healthTextMesh.text = crewMember.Health.ToString();
 
-                if (CrewMember.IsSelected)
+                if (crewMember.IsSelected)
                     highlight.color = Color.green;
                 else
                     highlight.color = Color.red;
@@ -55,7 +56,7 @@ namespace Assets.Scripts.InterfacePanels
         public override void OnPointerClick(PointerEventData eventData)
         {
             CrewController.Instance.crewMembers.ForEach(x => x.IsSelected = false);
-            CrewMember.IsSelected = true;
+            crewMember.IsSelected = true;
 
             base.OnPointerClick(eventData);
         }

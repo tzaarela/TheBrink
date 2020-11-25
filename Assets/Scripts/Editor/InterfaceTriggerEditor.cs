@@ -32,4 +32,15 @@ namespace Assets.Scripts.Editor
             base.OnInspectorGUI();
         }
     }
+
+    [CustomEditor(typeof(CrewMember))]
+    public class CrewTriggerEditor : EventTriggerEditor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            base.OnInspectorGUI();
+        }
+    }
 }
