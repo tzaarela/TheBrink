@@ -11,11 +11,20 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.InterfacePanels
 {
-    public class ContextMenuItem : InterfaceTrigger
+    public class ContextMenuItem : UITrigger
     {
         Image image;
 
         bool _isHighlighted;
+
+        private Task task;
+
+        public Task Task
+        {
+            get { return task; }
+            set { task = value; }
+        }
+
 
 
         [SerializeField]
@@ -49,6 +58,10 @@ namespace Assets.Scripts.InterfacePanels
 
         public override void OnPointerClick(PointerEventData eventData)
         {
+            Debug.Log("click...");
+            CrewController.Instance.GetSelectedCrewMember().CurrentTask = Task;
+            ContextMenuController.instance.CloseContextMenu();
+
             base.OnPointerClick(eventData);
         }
 

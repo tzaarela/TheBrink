@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.InterfacePanels
 {
-    public class InterfaceTrigger : EventTrigger
+    public class UITrigger : EventTrigger
     {
         public override bool Equals(object other)
         {

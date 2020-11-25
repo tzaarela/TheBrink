@@ -1,8 +1,12 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using Assets.Scripts.InterfacePanels;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Room : MonoBehaviour
+public class Room : UITrigger
 {
     public float AirLevel { get; set; }
     public float RadiationLevel { get; set; }
@@ -11,26 +15,62 @@ public class Room : MonoBehaviour
     public float RoomHealth { get; set; }
     public RoomType RoomType { get; set; }
 
+    private bool isSelected;
+
+    public bool IsSelected {
+        get { return isSelected; }
+        set 
+        {
+            isSelected = value;
+            if (isSelected)
+                onRoomSelected.Invoke();
+            else
+                onRoomDeselected.Invoke();
+
+        } 
+    }
     public List<Hazard> Hazards { get; set; }
 
     private Door _door;
+    private UnityEvent onRoomSelected;
+    private UnityEvent onRoomDeselected;
 
     [SerializeField]
-    private List<Transform> _neighbours;
+    private Transform highlight;
 
     [SerializeField]
-    private Transform _doorPosition;
+    private WayPoint wayPoint;
 
     [SerializeField]
     private RoomType _roomType;
 
-    public Room()
+    public void Start()
     {
         AirLevel = 100;
         RadiationLevel = 0;
         RoomHealth = 100;
         HasElectricity = true;
+        Hazards = new List<Hazard>();
         RoomType = _roomType;
+
+        if (onRoomSelected == null)
+            onRoomSelected = new UnityEvent();
+
+        if (onRoomDeselected == null)
+            onRoomDeselected = new UnityEvent();
+
+        onRoomSelected.AddListener(OnRoomSelected);
+        onRoomDeselected.AddListener(OnRoomDeselected);
+    }
+
+    private void OnRoomSelected()
+    {
+        highlight.gameObject.SetActive(true);
+    }
+
+    private void OnRoomDeselected()
+    {
+        highlight.gameObject.SetActive(false);
     }
 
     public void CreateHazard(HazardType hazardType, float severityAmount)
@@ -40,14 +80,20 @@ public class Room : MonoBehaviour
         Hazards.Add(hazard);
     }
 
-    public void CreateDoor()
+    public List<Task> GetAvailableTasks()
     {
-        _door = new Door(_doorPosition);
-    }
+        List<Task> availableTasks = new List<Task>();
+        availableTasks.Add(new Task(TaskType.Move, wayPoint));
+        availableTasks.Add(new Task(TaskType.Investigate, wayPoint));
 
-    public List<Transform> GetNeighbours()
-    {
-        return _neighbours;
+        if(Hazards.Count > 0)
+        {
+            availableTasks.Add(new Task(TaskType.Repair, wayPoint));
+        }
+
+
+        return availableTasks;
+        
     }
 
     public void RepairRoom(HazardType _hazardTypeToRepair)
@@ -87,5 +133,32 @@ public class Room : MonoBehaviour
          * (decreases its severityAmount for now)
          * So using this method will look like Room.RepairRoom(hazardType _hazardToRepair) ?
         */
-    } 
+    }
+
+
+    private void OnMouseOver()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            SelectRoom();
+            ContextMenuController.instance.CloseContextMenu();
+        }
+        else if(Input.GetMouseButtonDown(1))
+        {
+            SelectRoom();
+            var availableTasks = GetAvailableTasks();
+            ContextMenuController.instance.OpenContextMenu(availableTasks);
+        }
+    }
+    public void SelectRoom()
+    {
+        Debug.Log("room selected");
+
+        var previouslySelected = RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true);
+        if (previouslySelected != null)
+            previouslySelected.IsSelected = false;
+
+        IsSelected = true;
+    }
+
 }
