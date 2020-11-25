@@ -1,39 +1,38 @@
-﻿using Assets.Scripts.InterfacePanels;
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Scripts
+public class Waypoint : MonoBehaviour
 {
-    public class WayPoint : MonoBehaviour
+    [SerializeField]
+    private List<Waypoint> _neighbours;
+    
+    public Vector2 Position { get; private set; }
+
+    [HideInInspector]
+    public int gCost;    // Distance cost between Start and Current Waypoint
+    [HideInInspector]
+    public int hCost;    // Estimated distance cost between Current and Target Waypoint
+    public int FCost { get { return gCost + hCost; } }    // Totalt distance cost of the Waypoint
+
+    public Waypoint parentNode;
+
+    private void Awake()
     {
-        [SerializeField]
-        public List<WayPoint> Neighbours;
-
-        [SerializeField]
-        private ContextMenuPanel contextMenuPanel;
-
-        public Vector2 Position { get; set; }
-
-        public bool isSelected;
-
-        public void Start()
-        {
-            Position = transform.position;
-        }
-
-        public void OnMouseOver()
-        {
-            Debug.Log("MouseOver");
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Debug.Log("Adding move task");
-                TaskController.instance.AddTask(TaskType.Move, this, "John Doe");
-            }
-        }
+        Position = transform.position;
     }
+
+    public List<Waypoint> GetNeighbours()
+    {
+        return _neighbours;
+    }
+
+    // private void OnMouseOver()
+    // {
+    //     if (Input.GetMouseButtonDown(0))
+    //     {
+    //         Pathfinder.Instance.SetTargetNode(this);
+    //     }
+    // }
 }

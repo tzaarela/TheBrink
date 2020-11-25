@@ -38,7 +38,7 @@ public class Room : UITrigger
     private Transform highlight;
 
     [SerializeField]
-    private WayPoint wayPoint;
+    private Waypoint _waypoint;
 
     [SerializeField]
     private RoomType _roomType;
@@ -82,12 +82,12 @@ public class Room : UITrigger
     public List<Task> GetAvailableTasks()
     {
         List<Task> availableTasks = new List<Task>();
-        availableTasks.Add(new Task(TaskType.Move, wayPoint));
-        availableTasks.Add(new Task(TaskType.Investigate, wayPoint));
+        availableTasks.Add(new Task(TaskType.Move, _waypoint));
+        availableTasks.Add(new Task(TaskType.Investigate, _waypoint));
 
         if(Hazards.Count > 0)
         {
-            availableTasks.Add(new Task(TaskType.Repair, wayPoint));
+            availableTasks.Add(new Task(TaskType.Repair, _waypoint));
         }
 
 
