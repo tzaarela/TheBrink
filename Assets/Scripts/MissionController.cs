@@ -36,7 +36,7 @@ namespace Assets.Scripts
 
         public void UpdateHazard()
         {
-            foreach(Room Room in RoomController.Instance.rooms)
+            foreach(Room Room in RoomController.Instance.Rooms)
             {
 
             }
