@@ -10,7 +10,7 @@ using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.InterfacePanels
 {
-    public class CrewPanelObject : InterfaceTrigger
+    public class CrewPanelObject : UITrigger
     {
         [SerializeField]
         GameObject crewName;

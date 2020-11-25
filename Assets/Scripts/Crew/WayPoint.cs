@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.InterfacePanels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +8,13 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    
     public class WayPoint : MonoBehaviour
     {
         [SerializeField]
         public List<WayPoint> Neighbours;
+
+        [SerializeField]
+        private ContextMenuPanel contextMenuPanel;
 
         public Vector2 Position { get; set; }
 
@@ -31,12 +34,6 @@ namespace Assets.Scripts
                 Debug.Log("Adding move task");
                 TaskController.instance.AddTask(TaskType.Move, this, "John Doe");
             }
-
-            if (Input.GetMouseButtonDown(1))
-            {
-
-            }
         }
-
     }
 }

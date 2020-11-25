@@ -15,7 +15,18 @@ namespace Assets.Scripts.Editor
     {
         public override void OnInspectorGUI()
         {
-            Debug.Log("onInspector");
+            DrawDefaultInspector();
+
+            base.OnInspectorGUI();
+        }
+    }
+
+
+    [CustomEditor(typeof(Room))]
+    public class RoomTriggerEditor : EventTriggerEditor
+    {
+        public override void OnInspectorGUI()
+        {
             DrawDefaultInspector();
 
             base.OnInspectorGUI();

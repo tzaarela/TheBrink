@@ -1,11 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-    public List<Room> Rooms { get; set; }
+    [SerializeField]
+    private List<GameObject> roomGameObjects;
+
+    private List<Room> rooms;
+
+    public List<Room> Rooms
+    {
+        get { return rooms; }
+        set { rooms = value; }
+    }
+
 
     public static RoomController Instance;
 
@@ -14,11 +25,18 @@ public class RoomController : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            rooms = new List<Room>();
+            CreateRooms();
         }
         else
         {
             Destroy(this);
         }
+    }
+
+    public void CreateRooms()
+    {
+        rooms.AddRange(roomGameObjects.Select(x => x.GetComponent<Room>()));
     }
 
     public void CreateBreachInRoom(float severity)

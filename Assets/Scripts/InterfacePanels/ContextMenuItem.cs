@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.InterfacePanels
 {
-    public class ContextMenuItem : InterfaceTrigger
+    public class ContextMenuItem : UITrigger
     {
         Image image;
 
