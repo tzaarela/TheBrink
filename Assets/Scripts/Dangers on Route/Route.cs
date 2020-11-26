@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Route : MonoBehaviour
 {
-    public float RouteLength { get; set; }
+    public float Length { get; set; }
 
     public int EncounterAmount { get; set; }
 
@@ -18,21 +18,21 @@ public class Route : MonoBehaviour
     /// </summary>
     /// <param name="_routeLength"></param>
     /// <param name="_encounterAmount"></param>
-    public Route(float _routeLength, int _encounterAmount)
+    public Route(float _routeLength, int _encounterAmount, float _dangerLevel)
     {
         float _distanceToNextEncounter;
 
-        RouteLength = _routeLength;
+        Length = _routeLength;
 
         EncounterAmount = _encounterAmount;
 
-        _distanceToNextEncounter = RouteLength / EncounterAmount + 1;
+        _distanceToNextEncounter = Length / EncounterAmount + 1;
 
         for(int i = 1; i <= EncounterAmount; i++)
         {
             _distanceToNextEncounter *= i;
 
-            Encounter encounter = new Encounter(_distanceToNextEncounter);
+            Encounter encounter = new Encounter(_distanceToNextEncounter, _dangerLevel);
 
             EncountersOnRoute.Add(encounter);
         }

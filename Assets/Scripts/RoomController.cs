@@ -38,7 +38,11 @@ public class RoomController : MonoBehaviour
     {
         _rooms.AddRange(roomGameObjects.Select(x => x.GetComponent<Room>()));
     }
-
+    /// <summary>
+    /// this method creates an ongoing breach hazard in all corridors of the ship.
+    /// It also, when created, decreases the health of the room by the severity, to indicate how the hull has been breached.
+    /// </summary>
+    /// <param name="severity"></param>
     public void CreateBreachInRoom(float severity)
     {
         foreach(Room room in Rooms)

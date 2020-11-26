@@ -58,7 +58,7 @@ public class CrewMember : UITrigger
 
     public void ToggleHighlight(bool isOn)
     {
-        Debug.Log("Toggling lights");
+        Debug.Log($"{_name} - Toggling lights");
         if (isOn)
             highlight.gameObject.SetActive(true);
         else

@@ -130,6 +130,7 @@ public class Room : UITrigger
 
     private void OnMouseOver()
     {
+        Debug.Log($"{name} OnMouseOver!");
         if(Input.GetMouseButtonDown(0))
         {
             SelectRoom();
