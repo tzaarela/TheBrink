@@ -69,6 +69,7 @@
             <e p="ContextMenuController.cs" t="Include" />
             <e p="ContextMenuItem.cs" t="Include" />
             <e p="ContextMenuPanel.cs" t="Include" />
+            <e p="CrewMemberUI.cs" t="Include" />
             <e p="CrewPanel.cs" t="Include" />
             <e p="CrewPanelObject.cs" t="Include" />
             <e p="InterfaceTrigger.cs" t="Include" />

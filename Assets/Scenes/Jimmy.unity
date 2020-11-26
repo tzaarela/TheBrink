@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 1713501901}
-  wayPoint: {fileID: 0}
+  _waypoint: {fileID: 0}
   _roomType: 6
 --- !u!222 &184322481
 CanvasRenderer:
@@ -1122,10 +1122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Neighbours:
-  - {fileID: 1120316123}
-  contextMenuPanel: {fileID: 0}
-  isSelected: 0
+  _neighbours: []
+  gCost: 0
+  hCost: 0
+  parentNode: {fileID: 0}
 --- !u!61 &579350873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1380,7 +1380,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 623289742}
-  - component: {fileID: 623289743}
   m_Layer: 0
   m_Name: $WaypointController
   m_TagString: Untagged
@@ -1408,18 +1407,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &623289743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623289741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b25adb1d3c464db4293f61ce9349b89a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &629722209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,10 +1693,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Neighbours:
-  - {fileID: 886712036}
-  contextMenuPanel: {fileID: 0}
-  isSelected: 0
+  _neighbours: []
+  gCost: 0
+  hCost: 0
+  parentNode: {fileID: 0}
 --- !u!61 &731481778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2338,7 +2325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 1339005954}
-  wayPoint: {fileID: 909602059}
+  _waypoint: {fileID: 0}
   _roomType: 2
 --- !u!222 &850235610
 CanvasRenderer:
@@ -2842,10 +2829,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Neighbours:
-  - {fileID: 579350872}
-  contextMenuPanel: {fileID: 0}
-  isSelected: 0
+  _neighbours: []
+  gCost: 0
+  hCost: 0
+  parentNode: {fileID: 0}
 --- !u!61 &886712037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2932,9 +2919,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Neighbours: []
-  contextMenuPanel: {fileID: 0}
-  isSelected: 0
+  _neighbours: []
+  gCost: 0
+  hCost: 0
+  parentNode: {fileID: 0}
 --- !u!61 &909602060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3548,10 +3536,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Neighbours:
-  - {fileID: 909602059}
-  contextMenuPanel: {fileID: 0}
-  isSelected: 0
+  _neighbours: []
+  gCost: 0
+  hCost: 0
+  parentNode: {fileID: 0}
 --- !u!61 &1120316124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3608,10 +3596,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Neighbours:
-  - {fileID: 731481777}
-  contextMenuPanel: {fileID: 0}
-  isSelected: 0
+  _neighbours: []
+  gCost: 0
+  hCost: 0
+  parentNode: {fileID: 0}
 --- !u!61 &1120805738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4091,7 +4079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 1970094367}
-  wayPoint: {fileID: 0}
+  _waypoint: {fileID: 0}
   _roomType: 5
 --- !u!222 &1304737281
 CanvasRenderer:
@@ -4255,7 +4243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 837003119}
-  wayPoint: {fileID: 1120805737}
+  _waypoint: {fileID: 0}
   _roomType: 4
 --- !u!222 &1381073204
 CanvasRenderer:
@@ -4364,7 +4352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 590644401}
-  wayPoint: {fileID: 0}
+  _waypoint: {fileID: 0}
   _roomType: 0
 --- !u!61 &1428471176
 BoxCollider2D:
@@ -5409,7 +5397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   highlight: {fileID: 1539819149}
-  wayPoint: {fileID: 0}
+  _waypoint: {fileID: 0}
   _roomType: 3
 --- !u!222 &1986654601
 CanvasRenderer:
