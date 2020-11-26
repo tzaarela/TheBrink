@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class WayPointController : MonoBehaviour
+    public class WaypointController : MonoBehaviour
     {
         private void Start()
         {
