@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Route : MonoBehaviour
 {
-    public float RouteLength { get; set; }
+    public float Length { get; set; }
 
     public int EncounterAmount { get; set; }
 
@@ -13,30 +13,28 @@ public class Route : MonoBehaviour
     public List<Encounter> EncountersOnRoute { get; set; }
 
     /// <summary>
-    /// This constructor creates a route with a number of Encounters evenly spaced along it's length. //DJ
+    /// This constructor creates a route with a number of Encounters evenly spaced along it's length.
+    /// The reason there is no encounter at the end of the route is because that is where the next Starport is obv.//DJ
     /// </summary>
     /// <param name="_routeLength"></param>
     /// <param name="_encounterAmount"></param>
-    public Route(float _routeLength, int _encounterAmount)
+    public Route(float _routeLength, int _encounterAmount, float _dangerLevel)
     {
-        //TODO: Should this be broken into to parts? Maybe we can create routes without needing to create all of this encounters until later?
-        //Have routes and then also ExecuteRoutes() as another function that creates the routes?
         float _distanceToNextEncounter;
 
-        RouteLength = _routeLength;
+        Length = _routeLength;
 
         EncounterAmount = _encounterAmount;
 
-        _distanceToNextEncounter = RouteLength / EncounterAmount + 1;
+        _distanceToNextEncounter = Length / EncounterAmount + 1;
 
         for(int i = 1; i <= EncounterAmount; i++)
         {
             _distanceToNextEncounter *= i;
 
-            Encounter encounter = new Encounter(_distanceToNextEncounter);
+            Encounter encounter = new Encounter(_distanceToNextEncounter, _dangerLevel);
 
             EncountersOnRoute.Add(encounter);
         }
-        
     }
 }

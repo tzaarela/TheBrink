@@ -38,17 +38,30 @@ public class RoomController : MonoBehaviour
     {
         _rooms.AddRange(roomGameObjects.Select(x => x.GetComponent<Room>()));
     }
-
+    /// <summary>
+    /// this method creates an ongoing breach hazard in all corridors of the ship.
+    /// It also, when created, decreases the health of the room by the severity, to indicate how the hull has been breached.
+    /// </summary>
+    /// <param name="severity"></param>
     public void CreateBreachInRoom(float severity)
     {
-        //int _indexOf 1;
-
-        float _severityAmount = severity;
-        //I do wonder if I've been stupid here, maybe I don't need to send with roomtype,
-        //Maybe that is something that RoomController should look into instead,
-
-        
-
-        //Rooms[_indexOf].CreateHazard(HazardType.Breach, _severityAmount);
+        foreach(Room room in Rooms)
+        {
+            if(room.RoomType == RoomType.Corridor)
+            {
+                room.CreateHazard(HazardType.Breach, severity);
+                room.RoomHealth -= severity;
+            }
+        }
+    }
+    public void CreateFireInRoom(float severity)
+    {
+        foreach(Room room in Rooms)
+        {
+            if (room.RoomType == RoomType.CrewQuarters || room.RoomType == RoomType.MedBay)
+            {
+                room.CreateHazard(HazardType.Fire, severity);
+            }
+        }
     }
 }
