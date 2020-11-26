@@ -46,6 +46,17 @@ public class RoomController : MonoBehaviour
             if(room.RoomType == RoomType.Corridor)
             {
                 room.CreateHazard(HazardType.Breach, severity);
+                room.RoomHealth -= severity;
+            }
+        }
+    }
+    public void CreateFireInRoom(float severity)
+    {
+        foreach(Room room in Rooms)
+        {
+            if (room.RoomType == RoomType.CrewQuarters || room.RoomType == RoomType.MedBay)
+            {
+                room.CreateHazard(HazardType.Fire, severity);
             }
         }
     }

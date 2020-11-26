@@ -33,6 +33,7 @@ public class Encounter : MonoBehaviour
 
             case EncounterType.SolarFlare:
                 Debug.Log("The ship is exposed to a dangerous solar flare!");
+                RoomController.Instance.CreateFireInRoom(Severity);
                 break;
 
             default:

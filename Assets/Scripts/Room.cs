@@ -74,9 +74,9 @@ public class Room : UITrigger
         highlight.gameObject.SetActive(false);
     }
 
-    public void CreateHazard(HazardType hazardType, float severityAmount)
+    public void CreateHazard(HazardType _hazardType, float _severityAmount)
     {
-        Hazard hazard = new Hazard(hazardType, severityAmount);
+        Hazard hazard = new Hazard(_hazardType, _severityAmount);
 
         Hazards.Add(hazard);
     }
