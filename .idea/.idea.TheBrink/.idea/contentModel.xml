@@ -42,12 +42,12 @@
           <e p="Crew" t="Include">
             <e p="CrewController.cs" t="Include" />
             <e p="CrewMember.cs" t="Include" />
+            <e p="Pathfinder.cs" t="Include" />
             <e p="Profession.cs" t="Include" />
             <e p="Task.cs" t="Include" />
             <e p="TaskController.cs" t="Include" />
             <e p="WayPoint.cs" t="Include" />
             <e p="WayPointController.cs" t="Include" />
-            <e p="WayPointRoute.cs" t="Include" />
           </e>
           <e p="Dangers on Route" t="Include">
             <e p="Encounter.cs" t="Include" />
@@ -69,16 +69,16 @@
             <e p="ContextMenuController.cs" t="Include" />
             <e p="ContextMenuItem.cs" t="Include" />
             <e p="ContextMenuPanel.cs" t="Include" />
+            <e p="CrewMemberUI.cs" t="Include" />
             <e p="CrewPanel.cs" t="Include" />
             <e p="CrewPanelObject.cs" t="Include" />
+            <e p="InterfaceTrigger.cs" t="Include" />
             <e p="UITrigger.cs" t="Include" />
           </e>
           <e p="MainMenuController.cs" t="Include" />
           <e p="MainMenuPanelType.cs" t="Include" />
           <e p="MissionController.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />
-          <e p="Node.cs" t="Include" />
-          <e p="Pathfinder.cs" t="Include" />
           <e p="Room.cs" t="Include" />
           <e p="RoomController.cs" t="Include" />
           <e p="RoomType.cs" t="Include" />

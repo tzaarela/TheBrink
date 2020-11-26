@@ -22,10 +22,11 @@
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EddieScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EddieScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MissionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MissionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jimmy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jimmy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Room.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,25 +37,38 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/CrewController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MoveController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CrewMember.cs" />
         <option value="$PROJECT_DIR$/Assets/TestScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" />
         <option value="$PROJECT_DIR$/Assets/MainMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
         <option value="$PROJECT_DIR$/Assets/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RoomController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MissionController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/WayPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/TaskController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Task.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/WaypointController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
       </list>
     </option>
   </component>
@@ -103,6 +117,7 @@
       <workItem from="1605791296760" duration="1430000" />
       <workItem from="1606219853349" duration="5144000" />
       <workItem from="1606292291514" duration="1588000" />
+      <workItem from="1606378779216" duration="674000" />
     </task>
     <servers />
   </component>
@@ -127,9 +142,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="286" width="672" height="678" key="search.everywhere.popup" timestamp="1606229929362">
+    <state x="623" y="286" width="672" height="678" key="search.everywhere.popup" timestamp="1606303035967">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state x="623" y="286" width="672" height="678" key="search.everywhere.popup/0.-1057.1920.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1606229929362" />
+    <state x="623" y="286" width="672" height="678" key="search.everywhere.popup/0.-1057.1920.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1606303035967" />
   </component>
 </project>

@@ -7,25 +7,25 @@ using UnityEngine;
 
 public class CrewController : MonoBehaviour
 {
+    public static CrewController Instance;
+    
     [SerializeField]
     private CrewMember[] crewMembersPrefab = new CrewMember[3];
-    
-    private static CrewController _instance;
-    public static CrewController Instance { get { return _instance; } }
 
-    public List<CrewMember> crewMembers; 
-    
-    
+    public List<CrewMember> crewMembers;
+
+    [SerializeField]
+    private CrewMember _currentCrewMember;
 
     public void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            _instance = this;
+            Instance = this;
         }
     }
 
@@ -47,7 +47,7 @@ public class CrewController : MonoBehaviour
                 case TaskType.Move:
                 {
                     Debug.Log(crewMember.Name + " is moving...");
-                        crewMember.Move();
+                    crewMember.Move();
                     break;
                 }
                 case TaskType.Repair:
@@ -83,5 +83,10 @@ public class CrewController : MonoBehaviour
     public CrewMember GetSelectedCrewMember()
     {
         return crewMembers.FirstOrDefault(x => x.IsSelected);
+    }
+
+    public void SetCurrentCrewMember(int index)
+    {
+        _currentCrewMember = crewMembers[index];
     }
 }
