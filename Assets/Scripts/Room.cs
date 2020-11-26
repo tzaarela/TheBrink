@@ -93,6 +93,7 @@ public class Room : UITrigger
 
     public List<Task> GetAvailableTasks()
     {
+        //TODO - GET CORRECT TASKS FOR ROOM AND CHARACTER
         List<Task> availableTasks = new List<Task>();
         availableTasks.Add(new Task(TaskType.Move, _waypoint));
         availableTasks.Add(new Task(TaskType.Investigate, _waypoint));
