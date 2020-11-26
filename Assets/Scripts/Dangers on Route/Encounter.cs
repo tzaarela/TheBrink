@@ -12,12 +12,12 @@ public class Encounter : MonoBehaviour
 
     public bool HasTriggered { get; set; }
 
-    public Encounter(float _encounterPosition)
+    public Encounter(float _encounterPosition, float _severity)
     {
 
         Position = _encounterPosition;
 
-        Severity = 10;
+        Severity = _severity;
 
         EncounterType = EncounterType.SmallMeteorSwarm;
     }

@@ -14,8 +14,8 @@ public class Hazard
 
     public Hazard(HazardType hazardType, float severityAmount)
     {
-        this.HazardType = hazardType;
-        this.SeverityAmount = severityAmount;
+        HazardType = hazardType;
+        SeverityAmount = severityAmount;
     }
 
     public void ExecuteHazard()
@@ -53,9 +53,13 @@ public class Hazard
         //TODO: The division of hundred here, it might be best to turn that into a named variable, so it can be affected from inside Unity.
         float _airLeakage;
         
+        //TODO: I messed up here, I need to fix so that, in this case, you will decrease the severity when you repair the room (since it is a crack in the hull).
+
         _airLeakage = ((SeverityAmount * _hazardRoom.AirLevel) / 100);
 
         _hazardRoom.AirLevel -= _airLeakage;
+
+        Debug.Log("Air is leaving the room, current airlevel is " + _hazardRoom.AirLevel);
     }
 
     public void RoomOnFire()
@@ -66,12 +70,6 @@ public class Hazard
         FireConsumes();
 
         FireBurns();
-    
-        /*
-        I added a commented function here incase we want fire to be able to spread through doors,
-        just maybe not through locked doors right?
-        FireSpreads();
-        */
     }
 
     /// <summary>
@@ -105,6 +103,7 @@ public class Hazard
         if(SeverityAmount >= _heatResistance)
         {
             Debug.Log("The fire is burning hot enough that this room will be damaged");
+            _hazardRoom.RoomHealth -= 1;
         }
     }
 

@@ -19,7 +19,7 @@ namespace Assets.Scripts
 
         public void Start()
         {
-            route = new Route(1000, 5);
+            route = new Route(1000, 5, 10);
         }
 
         public void Update()
@@ -45,7 +45,6 @@ namespace Assets.Scripts
         {
             foreach (Encounter encounter in route.EncountersOnRoute)
             {
-
                 if(!encounter.HasTriggered && route.ShipPosition > encounter.Position)
                 {
                     encounter.HasTriggered = true;
