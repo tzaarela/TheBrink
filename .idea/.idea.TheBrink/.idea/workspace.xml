@@ -20,10 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WayPoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WayPoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/WayPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/WayPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Account Warning_464911.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Alzheimer_2686167.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Bandage_3408147.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Cracked brick wall_309351.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Electricity_2847708.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Fire_2694481.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Fire_55015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Flame_755585.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Heart Bandage_768740.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Injury_3408174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Radiation_1009162.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Radiation_34518.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_Radiation_7358.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_bleeding_988020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_bleeding_988126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_bones fracture_3241693.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_breach protection_2958736.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_break_1784917.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_broken cable_3446970.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_broken cable_916952.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_broken window_396744 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_broken window_396744.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_broken_3005819.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_claw_1629065.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_crew neck_485609.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_electrical_2995272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_electrical_3408535.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_image broken_2279650.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_mental_2886625.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_person_2088531.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_person_574812.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/OLD/icons - kopia/noun_puncture_52629.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +62,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crew/WayPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -108,7 +136,7 @@
       <workItem from="1605791296760" duration="1430000" />
       <workItem from="1606219853349" duration="5144000" />
       <workItem from="1606292291514" duration="1588000" />
-      <workItem from="1606378779216" duration="382000" />
+      <workItem from="1606378779216" duration="674000" />
     </task>
     <servers />
   </component>
