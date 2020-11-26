@@ -24,6 +24,8 @@ public class CrewMember : UITrigger
     public float Health { get => _health; set => _health = value; }
     public Profession Profession { get => _profession; set => _profession = value; }
     public Task CurrentTask { get; set; }
+
+    public TaskController TaskController { get; set; }
     public WayPoint CurrentWayPoint { get; set; }
     public bool IsMoving { get; set; }
     public bool IsSelected { 
