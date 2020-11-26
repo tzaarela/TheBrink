@@ -41,14 +41,12 @@ public class RoomController : MonoBehaviour
 
     public void CreateBreachInRoom(float severity)
     {
-        //int _indexOf 1;
-
-        float _severityAmount = severity;
-        //I do wonder if I've been stupid here, maybe I don't need to send with roomtype,
-        //Maybe that is something that RoomController should look into instead,
-
-        
-
-        //Rooms[_indexOf].CreateHazard(HazardType.Breach, _severityAmount);
+        /*
+         * Chose a room from Rooms
+         * tell that room
+         * to create a hazard of type depending on encounter
+         * with severityAmount = to severity
+         * 
+        */
     }
 }

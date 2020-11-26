@@ -13,14 +13,13 @@ public class Route : MonoBehaviour
     public List<Encounter> EncountersOnRoute { get; set; }
 
     /// <summary>
-    /// This constructor creates a route with a number of Encounters evenly spaced along it's length. //DJ
+    /// This constructor creates a route with a number of Encounters evenly spaced along it's length.
+    /// The reason there is no encounter at the end of the route is because that is where the next Starport is obv.//DJ
     /// </summary>
     /// <param name="_routeLength"></param>
     /// <param name="_encounterAmount"></param>
     public Route(float _routeLength, int _encounterAmount)
     {
-        //TODO: Should this be broken into to parts? Maybe we can create routes without needing to create all of this encounters until later?
-        //Have routes and then also ExecuteRoutes() as another function that creates the routes?
         float _distanceToNextEncounter;
 
         RouteLength = _routeLength;
@@ -37,6 +36,5 @@ public class Route : MonoBehaviour
 
             EncountersOnRoute.Add(encounter);
         }
-        
     }
 }

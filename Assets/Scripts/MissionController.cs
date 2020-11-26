@@ -11,7 +11,6 @@ namespace Assets.Scripts
     {
 
         Route route;
-        
 
         public MissionController()
         {
