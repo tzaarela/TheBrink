@@ -110,7 +110,6 @@ public class Room : UITrigger
     public void RepairRoom(HazardType _hazardTypeToRepair)
     {
         //TODO: Talk to JS or EN about this
-                //Suggestion 1: Will this float be seen in Unity for ease of manipulation? To figure if repair goes to slowly?
                 //Suggestion 2: Could this be turned into a property of each crewmember later on maybe?
         float _crewMemberRepairSkill = 5;
 

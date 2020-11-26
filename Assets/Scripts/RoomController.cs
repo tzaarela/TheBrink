@@ -41,12 +41,12 @@ public class RoomController : MonoBehaviour
 
     public void CreateBreachInRoom(float severity)
     {
-        /*
-         * Chose a room from Rooms
-         * tell that room
-         * to create a hazard of type depending on encounter
-         * with severityAmount = to severity
-         * 
-        */
+        foreach(Room room in Rooms)
+        {
+            if(room.RoomType == RoomType.Corridor)
+            {
+                room.CreateHazard(HazardType.Breach, severity);
+            }
+        }
     }
 }
