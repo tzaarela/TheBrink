@@ -47,7 +47,7 @@ public class CrewController : MonoBehaviour
                 case TaskType.Move:
                 {
                     Debug.Log(crewMember.Name + " is moving...");
-                        crewMember.Move();
+                    crewMember.Move();
                     break;
                 }
                 case TaskType.Repair:
