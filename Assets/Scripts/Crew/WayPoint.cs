@@ -15,7 +15,8 @@ public class Waypoint : MonoBehaviour
     [HideInInspector]
     public int hCost;    // Estimated distance cost between Current and Target Waypoint
     public int FCost { get { return gCost + hCost; } }    // Totalt distance cost of the Waypoint
-
+    
+    [HideInInspector]
     public Waypoint parentNode;
 
     private void Awake()
@@ -27,12 +28,4 @@ public class Waypoint : MonoBehaviour
     {
         return _neighbours;
     }
-
-    // private void OnMouseOver()
-    // {
-    //     if (Input.GetMouseButtonDown(0))
-    //     {
-    //         Pathfinder.Instance.SetTargetNode(this);
-    //     }
-    // }
 }
