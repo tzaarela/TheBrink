@@ -7,12 +7,13 @@ public class Task
 {
     public TaskType TaskType { get; set; }
 
-    public Waypoint Waypoint { get; set; }
+    public Room Destination { get; set; }
 
-    public Task(TaskType taskType, Waypoint waypoint)
+   
+    public Task(TaskType taskType, Room destination)
     {
         TaskType = taskType;
-        Waypoint = waypoint;
+        Destination = destination;
     }
    
 }

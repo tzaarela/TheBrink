@@ -42,7 +42,9 @@ public class CrewController : MonoBehaviour
             if (crewMember.CurrentTask == null)
                 continue;
 
-            switch (crewMember.CurrentTask.TaskType)
+            var task = crewMember.CurrentTask;
+
+            switch (task.TaskType)
             {
                 case TaskType.Move:
                 {
@@ -57,7 +59,13 @@ public class CrewController : MonoBehaviour
                 }
                 case TaskType.Investigate:
                 {
-                    Debug.Log(crewMember.Name + " is investigating...");
+                    Debug.Log(crewMember.Name + "is investigating...");
+                        ConsoleController.instance.PrintToConsole(
+                            $"Room status [{task.Destination.RoomType.ToString()}]" +
+                            "\n -- Oxygen level: " + task.Destination.AirLevel + "%" +
+                            "\n -- Radiation level: " + task.Destination.RadiationLevel + "%" +
+                            "\n -- Hull Integrity: " + task.Destination.RoomHealth + "% ", 0.04f);
+                        crewMember.CurrentTask = null;
                     break;
                 }
 

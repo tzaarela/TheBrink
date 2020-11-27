@@ -6,17 +6,19 @@ using UnityEngine.Events;
 
 public class Room : UITrigger
 {
-    public float AirLevel { get; set; }
-    public float RadiationLevel { get; set; }
-    public bool HasElectricity { get; set; }
-    public float RoomHealth { get; set; }
+
+    public float AirLevel { get => airLevel; set => airLevel = value; }
+    public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
+    public float RoomHealth { get => roomHealth; set => roomHealth = value; }
+    public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
     public RoomType RoomType { get; set; }
 
     private bool isSelected;
 
-    public bool IsSelected {
+    public bool IsSelected
+    {
         get { return isSelected; }
-        set 
+        set
         {
             isSelected = value;
             if (isSelected)
@@ -24,7 +26,7 @@ public class Room : UITrigger
             else
                 onRoomDeselected.Invoke();
 
-        } 
+        }
     }
     public List<Hazard> Hazards { get; set; }
 
@@ -35,19 +37,21 @@ public class Room : UITrigger
 
     [SerializeField]
     private Transform highlight;
-
     [SerializeField]
     private Waypoint _waypoint;
-
     [SerializeField]
     private RoomType _roomType;
+    [SerializeField]
+    private float airLevel;
+    [SerializeField]
+    private float radiationLevel;
+    [SerializeField]
+    private float roomHealth;
+    [SerializeField]
+    private bool hasElectricity;
 
     public void Start()
     {
-        AirLevel = 100;
-        RadiationLevel = 0;
-        RoomHealth = 100;
-        HasElectricity = true;
         Hazards = new List<Hazard>();
         RoomType = _roomType;
 
@@ -82,9 +86,9 @@ public class Room : UITrigger
     {
         Hazards.RemoveAll(x => x.IsFinished);
 
-        foreach(Hazard hazard in Hazards)
-        {             
-                hazard.ExecuteHazard();  
+        foreach (Hazard hazard in Hazards)
+        {
+            hazard.ExecuteHazard();
         }
     }
 
@@ -92,32 +96,32 @@ public class Room : UITrigger
     {
         //TODO - GET CORRECT TASKS FOR ROOM AND CHARACTER
         List<Task> availableTasks = new List<Task>();
-        availableTasks.Add(new Task(TaskType.Move, _waypoint));
-        availableTasks.Add(new Task(TaskType.Investigate, _waypoint));
+        availableTasks.Add(new Task(TaskType.Move, this));
+        availableTasks.Add(new Task(TaskType.Investigate, this));
 
-        if(Hazards.Count > 0)
+        if (Hazards.Count > 0)
         {
-            availableTasks.Add(new Task(TaskType.Repair, _waypoint));
+            availableTasks.Add(new Task(TaskType.Repair, this));
         }
 
 
         return availableTasks;
-        
+
     }
 
     public void RepairRoom(HazardType _hazardTypeToRepair)
     {
         //TODO: Talk to JS or EN about this
-                //Suggestion 2: Could this be turned into a property of each crewmember later on maybe?
+        //Suggestion 2: Could this be turned into a property of each crewmember later on maybe?
         float _crewMemberRepairSkill = 5;
 
-        foreach(Hazard Hazard in Hazards)
+        foreach (Hazard Hazard in Hazards)
         {
             if (Hazard.HazardType == _hazardTypeToRepair)
             {
                 Hazard.SeverityAmount -= _crewMemberRepairSkill;
                 //TODO: Figure out upper bounds of this, can a fire burn too fast?
-                
+
                 //I think this will mean that the crewmember will do one repair action, and then get sent out of the method.
                 return;
             }
@@ -129,12 +133,12 @@ public class Room : UITrigger
     private void OnMouseOver()
     {
         Debug.Log($"{name} OnMouseOver!");
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             SelectRoom();
             ContextMenuController.instance.CloseContextMenu();
         }
-        else if(Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1))
         {
             SelectRoom();
             var availableTasks = GetAvailableTasks();

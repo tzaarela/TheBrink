@@ -26,9 +26,9 @@ namespace Assets.Scripts
             }
         }
 
-        public void AddTask(TaskType taskType, Waypoint waypoint, string crewName)
+        public void AddTask(TaskType taskType, Room room, string crewName)
         {
-            var task = new Task(taskType, waypoint);
+            var task = new Task(taskType, room);
             tasks.Add(task);
 
             CrewController.Instance.crewMembers.First(x => x.Name == crewName).CurrentTask = task;
