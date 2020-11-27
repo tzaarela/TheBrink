@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CrewMember
   - Highlight
+  - Background
   layers:
   - Default
   - TransparentFX

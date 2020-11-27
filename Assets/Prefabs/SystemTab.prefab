@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8751865170703022702}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8495010473716324400}
   - component: {fileID: 3918649575659063551}
+  - component: {fileID: 1073481616776948398}
   m_Layer: 0
   m_Name: SystemTab
   m_TagString: Untagged
@@ -121,6 +122,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4981054194916034283}
   m_CullTransparentMesh: 0
+--- !u!114 &1073481616776948398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981054194916034283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55905022316872c4eae2476308e90393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8822467102318889845
 GameObject:
   m_ObjectHideFlags: 0
