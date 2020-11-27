@@ -48,6 +48,7 @@ public class CrewMember : UITrigger
     private void Awake()
     {
         _moveController = GetComponent<MoveController>();
+        _moveController.SetCrewMember(this);
     }
 
     public void Start()

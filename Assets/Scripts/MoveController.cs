@@ -14,6 +14,9 @@ public class MoveController : MonoBehaviour
     private Vector2 _velocity;
 
     [SerializeField] private float _speed;
+
+    private CrewMember crewMember;
+
     public float Speed { get => _speed; set => _speed = value; }
 
     public void Move()
@@ -25,9 +28,25 @@ public class MoveController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, _path[0].Position, _speed * Time.deltaTime);
         
         if (WayPointIsReached())
+        {
             _path.RemoveAt(0);
+            if (_path.Count <= 0)
+                FinishTask();
+        }   
         
         DrawPath();
+    }
+
+
+
+    public void SetCrewMember(CrewMember crewMember)
+    {
+        this.crewMember = crewMember; 
+    }
+
+    private void FinishTask()
+    {
+        crewMember.CurrentTask = null;
     }
 
     private bool WayPointIsReached()
