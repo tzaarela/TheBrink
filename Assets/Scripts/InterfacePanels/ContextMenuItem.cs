@@ -58,8 +58,7 @@ namespace Assets.Scripts.InterfacePanels
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            Debug.LogError($"{name} OnPointerClick()...");
-            // CrewController.Instance.GetSelectedCrewMember().CurrentTask = Task;
+            // Debug.Log($"{name} OnPointerClick()...");
             var crewMember = CrewController.Instance.GetSelectedCrewMember();
             crewMember.SetCurrentTask(Task);
 
