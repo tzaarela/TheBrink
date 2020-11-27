@@ -9,11 +9,9 @@ public class Task
 
     public Room Destination { get; set; }
 
-   
     public Task(TaskType taskType, Room destination)
     {
         TaskType = taskType;
         Destination = destination;
     }
-   
 }

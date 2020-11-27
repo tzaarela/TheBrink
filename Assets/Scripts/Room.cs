@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class Room : UITrigger
 {
-
     public float AirLevel { get => airLevel; set => airLevel = value; }
     public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
     public float RoomHealth { get => roomHealth; set => roomHealth = value; }
@@ -25,7 +24,6 @@ public class Room : UITrigger
                 onRoomSelected.Invoke();
             else
                 onRoomDeselected.Invoke();
-
         }
     }
     public List<Hazard> Hazards { get; set; }
@@ -39,6 +37,11 @@ public class Room : UITrigger
     private Transform highlight;
     [SerializeField]
     private Waypoint _waypoint;
+    public Waypoint Waypoint
+    {
+        get { return _waypoint; }
+    }
+    
     [SerializeField]
     private RoomType _roomType;
     [SerializeField]
@@ -104,9 +107,7 @@ public class Room : UITrigger
             availableTasks.Add(new Task(TaskType.Repair, this));
         }
 
-
         return availableTasks;
-
     }
 
     public void RepairRoom(HazardType _hazardTypeToRepair)
@@ -154,5 +155,4 @@ public class Room : UITrigger
 
         IsSelected = true;
     }
-
 }

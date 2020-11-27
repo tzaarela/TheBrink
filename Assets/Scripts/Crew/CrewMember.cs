@@ -64,9 +64,20 @@ public class CrewMember : UITrigger
             highlight.gameObject.SetActive(false);
     }
 
+    public void SetCurrentTask(Task newTask)
+    {
+        CurrentTask = newTask;
+
+        if (CurrentTask.TaskType == TaskType.Move)
+        {
+            Debug.Log($"YOoosod!");
+        }
+    }
+
     public void Move()
     {
         // Debug.Log($"{name} - [CrewMember] - Move");
+        Debug.Log($"{name} - [CrewMember] - Move - Task.dst {CurrentTask.Destination.Waypoint.name}");
         _moveController.Move();
     }
 }
