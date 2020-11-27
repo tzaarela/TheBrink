@@ -19,17 +19,21 @@ public class MoveController : MonoBehaviour
     public void Move()
     {
         // Debug.Log($"{name} - [MoveController] - Move");
-        // DrawPath();
         if (_path == null || _path.Count <= 0)
             return;
 
-        DrawPath();
+        transform.position = Vector3.MoveTowards(transform.position, _path[0].Position, _speed * Time.deltaTime);
         
-        // transform.position = Vector3.MoveTowards(transform.position, _path[0].Position, _speed * Time.deltaTime);
+        if (WayPointIsReached())
+            _path.RemoveAt(0);
+        
+        DrawPath();
     }
 
     private bool WayPointIsReached()
     {
+        if (Vector2.Distance(transform.position, _path[0].Position) <= 0.1f)
+            return true;
         return false;
     }
     
@@ -101,6 +105,9 @@ public class MoveController : MonoBehaviour
 
     private void DrawPath()
     {
+        if (_path == null || _path.Count <= 0)
+            return;
+        
         Debug.DrawLine(transform.position, _path[0].Position, Color.red);
         for (int i = 0; i < _path.Count - 1; i++)
         {
