@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using TMPro;
 
 namespace Assets.Scripts.Systems
 {
@@ -11,17 +12,26 @@ namespace Assets.Scripts.Systems
     {
         List<SystemTab> systemTabs;
 
+        [SerializeField]
+        TextMeshProUGUI systemWindowText;
+
         public void Start()
         {
             systemTabs = gameObject.GetComponentsInChildren<SystemTab>().ToList();
         }
 
-        public void Deselect()
+        public void DeselectActive()
         {
             var tab = systemTabs.FirstOrDefault(x => x.IsSelected);
 
             if (tab != null)
                 tab.IsSelected = false;
+        }
+
+        public void Select(SystemTab systemTab)
+        {
+            systemTab.IsSelected = true;
+            systemWindowText.text = systemTab.name;
         }
     }
 }
