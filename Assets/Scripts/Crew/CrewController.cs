@@ -14,9 +14,6 @@ public class CrewController : MonoBehaviour
 
     public List<CrewMember> crewMembers;
 
-    [SerializeField]
-    private CrewMember _currentCrewMember;
-
     public void Awake()
     {
         if (Instance != null && Instance != this)
@@ -74,8 +71,6 @@ public class CrewController : MonoBehaviour
                 default:
                     break;
             }
-
-
         }
     }
 
@@ -91,10 +86,5 @@ public class CrewController : MonoBehaviour
     public CrewMember GetSelectedCrewMember()
     {
         return crewMembers.FirstOrDefault(x => x.IsSelected);
-    }
-
-    public void SetCurrentCrewMember(int index)
-    {
-        _currentCrewMember = crewMembers[index];
     }
 }

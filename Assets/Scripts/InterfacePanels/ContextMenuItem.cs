@@ -58,7 +58,7 @@ namespace Assets.Scripts.InterfacePanels
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            Debug.Log("click...");
+            Debug.LogError($"{name} OnPointerClick()...");
             CrewController.Instance.GetSelectedCrewMember().CurrentTask = Task;
             ContextMenuController.instance.CloseContextMenu();
 

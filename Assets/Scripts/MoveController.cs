@@ -18,6 +18,7 @@ public class MoveController : MonoBehaviour
 
     public void Move()
     {
+        Debug.Log($"{name} - [MoveController] - Move");
         if (_path == null || _path.Count <= 0)
             return;
 

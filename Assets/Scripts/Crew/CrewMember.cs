@@ -66,6 +66,7 @@ public class CrewMember : UITrigger
 
     public void Move()
     {
-        
+        // Debug.Log($"{name} - [CrewMember] - Move");
+        _moveController.Move();
     }
 }
