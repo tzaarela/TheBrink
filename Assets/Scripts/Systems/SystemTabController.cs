@@ -15,6 +15,8 @@ namespace Assets.Scripts.Systems
         [SerializeField]
         TextMeshProUGUI systemWindowText;
 
+        
+
         public void Start()
         {
             systemTabs = gameObject.GetComponentsInChildren<SystemTab>().ToList();
@@ -31,7 +33,6 @@ namespace Assets.Scripts.Systems
         public void Select(SystemTab systemTab)
         {
             systemTab.IsSelected = true;
-
             //Display System Window
             systemWindowText.text = systemTab.name;
         }

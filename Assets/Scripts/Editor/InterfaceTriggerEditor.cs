@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.InterfacePanels;
+using Assets.Scripts.Systems;
 using UnityEditor;
 using UnityEditor.EventSystems;
 
@@ -40,6 +41,17 @@ namespace Assets.Scripts.Editor
 
     [CustomEditor(typeof(CrewPanelObject))]
     public class CrewPanelTriggerEditor : EventTriggerEditor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            base.OnInspectorGUI();
+        }
+    }
+
+    [CustomEditor(typeof(SystemTab))]
+    public class SystemTabTriggerEditor : EventTriggerEditor
     {
         public override void OnInspectorGUI()
         {
