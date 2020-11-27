@@ -39,8 +39,8 @@ namespace Assets.Scripts.Systems
         {
             if(!isSelected)
             {
-                SystemTabController.Deselect();
-                IsSelected = true;
+                SystemTabController.DeselectActive();
+                SystemTabController.Select(this);
             }
             base.OnPointerClick(eventData);
         }
