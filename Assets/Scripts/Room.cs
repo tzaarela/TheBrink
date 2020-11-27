@@ -132,7 +132,6 @@ public class Room : UITrigger
 
     private void OnMouseOver()
     {
-        Debug.Log($"{name} OnMouseOver!");
         if (Input.GetMouseButtonDown(0))
         {
             SelectRoom();
@@ -147,7 +146,7 @@ public class Room : UITrigger
     }
     public void SelectRoom()
     {
-        Debug.Log("room selected");
+        Debug.Log($"Room \"{name}\" selected");
 
         var previouslySelected = RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true);
         if (previouslySelected != null)

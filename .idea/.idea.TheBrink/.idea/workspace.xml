@@ -22,10 +22,8 @@
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jimmy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jimmy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Room.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,11 +62,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Task.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/WaypointController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +117,7 @@
       <workItem from="1606219853349" duration="5144000" />
       <workItem from="1606292291514" duration="1588000" />
       <workItem from="1606378779216" duration="674000" />
+      <workItem from="1606465283102" duration="754000" />
     </task>
     <servers />
   </component>

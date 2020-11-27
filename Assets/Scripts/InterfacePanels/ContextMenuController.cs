@@ -19,7 +19,6 @@ namespace Assets.Scripts.InterfacePanels
             set { isOpen = value; }
         }
 
-
         [SerializeField]
         private Canvas printToCanvas;
 
@@ -27,6 +26,8 @@ namespace Assets.Scripts.InterfacePanels
         private GameObject menuPanelPrefab;
 
         private GameObject menuPanelObject;
+
+        private Camera _camera;
 
         private void Awake()
         {
@@ -40,11 +41,16 @@ namespace Assets.Scripts.InterfacePanels
             }
         }
 
+        private void Start()
+        {
+            _camera = Camera.main;
+        }
+
         public void OpenContextMenu(List<Task> availableTasks)
         {
             CloseContextMenu();
 
-            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
             menuPanelObject = Instantiate(menuPanelPrefab, new Vector2(mousePos.x, mousePos.y), Quaternion.identity, printToCanvas.transform);
             var menuPanel = menuPanelObject.GetComponent<ContextMenuPanel>();
 
