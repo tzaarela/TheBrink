@@ -70,14 +70,15 @@ public class CrewMember : UITrigger
 
         if (CurrentTask.TaskType == TaskType.Move)
         {
-            Debug.Log($"YOoosod!");
+            Debug.LogWarning($"{_name} got a Move Task!");
+            _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.Waypoint);
         }
     }
 
     public void Move()
     {
         // Debug.Log($"{name} - [CrewMember] - Move");
-        Debug.Log($"{name} - [CrewMember] - Move - Task.dst {CurrentTask.Destination.Waypoint.name}");
+        // Debug.Log($"{name} - [CrewMember] - Move - Task.dst {CurrentTask.Destination.Waypoint.name}");
         _moveController.Move();
     }
 }
