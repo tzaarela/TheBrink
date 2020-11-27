@@ -1,7 +1,4 @@
-﻿using Assets.Scripts;
-using Assets.Scripts.InterfacePanels;
-using System;
-using System.Collections;
+﻿using Assets.Scripts.InterfacePanels;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
