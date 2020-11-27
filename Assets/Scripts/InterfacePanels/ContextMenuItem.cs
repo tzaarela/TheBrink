@@ -60,6 +60,11 @@ namespace Assets.Scripts.InterfacePanels
         {
             // Debug.Log($"{name} OnPointerClick()...");
             var crewMember = CrewController.Instance.GetSelectedCrewMember();
+            if (crewMember == null)
+            {
+                ContextMenuController.instance.CloseContextMenu();
+                return;
+            }
             crewMember.SetCurrentTask(Task);
 
             ContextMenuController.instance.CloseContextMenu();

@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoveController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,9 +60,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Task.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuItem.cs" />
       </list>
     </option>
   </component>
@@ -116,7 +113,7 @@
       <workItem from="1606292291514" duration="1588000" />
       <workItem from="1606378779216" duration="674000" />
       <workItem from="1606465283102" duration="4131000" />
-      <workItem from="1606472098554" duration="2972000" />
+      <workItem from="1606472098554" duration="3593000" />
     </task>
     <servers />
   </component>
