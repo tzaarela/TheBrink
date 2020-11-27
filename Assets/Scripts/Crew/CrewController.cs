@@ -54,9 +54,9 @@ public class CrewController : MonoBehaviour
                     Debug.Log(crewMember.Name + " is repairing...");
                     break;
                 }
-                case TaskType.Investigate:
+                case TaskType.Scan:
                 {
-                    Debug.Log(crewMember.Name + "is investigating...");
+                    Debug.Log(crewMember.Name + "is scanning...");
                         ConsoleController.instance.PrintToConsole(
                             $"Room status [{task.Destination.RoomType.ToString()}]" +
                             "\n -- Oxygen level: " + task.Destination.AirLevel + "%" +

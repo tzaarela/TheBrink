@@ -100,7 +100,7 @@ public class Room : UITrigger
         //TODO - GET CORRECT TASKS FOR ROOM AND CHARACTER
         List<Task> availableTasks = new List<Task>();
         availableTasks.Add(new Task(TaskType.Move, this));
-        availableTasks.Add(new Task(TaskType.Investigate, this));
+        availableTasks.Add(new Task(TaskType.Scan, this));
 
         if (Hazards.Count > 0)
         {

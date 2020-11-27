@@ -6,6 +6,6 @@ public enum TaskType
 {
     Move,
     Repair,
-    Investigate,
+    Scan,
     None
 }
