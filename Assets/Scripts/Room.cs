@@ -133,7 +133,7 @@ public class Room : UITrigger
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !ContextMenuController.instance.IsOpen)
         {
             SelectRoom();
             ContextMenuController.instance.CloseContextMenu();

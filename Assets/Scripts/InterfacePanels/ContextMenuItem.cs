@@ -62,10 +62,10 @@ namespace Assets.Scripts.InterfacePanels
             // CrewController.Instance.GetSelectedCrewMember().CurrentTask = Task;
             var crewMember = CrewController.Instance.GetSelectedCrewMember();
             crewMember.SetCurrentTask(Task);
-            
+
             ContextMenuController.instance.CloseContextMenu();
 
-            base.OnPointerClick(eventData);
+            //base.OnPointerClick(eventData);
         }
 
         public override void OnPointerEnter(PointerEventData eventData)

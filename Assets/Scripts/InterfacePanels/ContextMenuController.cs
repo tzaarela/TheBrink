@@ -49,6 +49,7 @@ namespace Assets.Scripts.InterfacePanels
         public void OpenContextMenu(List<Task> availableTasks)
         {
             CloseContextMenu();
+            isOpen = true;
 
             var mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
             menuPanelObject = Instantiate(menuPanelPrefab, new Vector2(mousePos.x, mousePos.y), Quaternion.identity, printToCanvas.transform);
@@ -60,7 +61,11 @@ namespace Assets.Scripts.InterfacePanels
         public void CloseContextMenu()
         {
             if (menuPanelObject != null)
+            {
                 Destroy(menuPanelObject);
+                isOpen = false;
+            }
+
         }
     }
 }
