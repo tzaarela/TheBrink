@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.5764706, g: 0.5186241, b: 0.10196076, a: 0.2}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5399,6 +5399,7 @@ MonoBehaviour:
   - {fileID: 1804178627}
   - {fileID: 1406231357}
   crewMembers: []
+  _currentCrewMember: {fileID: 0}
 --- !u!1 &2016108631
 GameObject:
   m_ObjectHideFlags: 0

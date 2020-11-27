@@ -7,22 +7,23 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 namespace Assets.Scripts.InterfacePanels
 {
     public class CrewPanelObject : UITrigger
     {
         [SerializeField]
-        GameObject crewName;
+        GameObject crewNameText;
 
         [SerializeField]
-        GameObject profession;
+        GameObject professionText;
 
         [SerializeField]
-        GameObject health;
+        GameObject healthText;
 
         [SerializeField]
-        Image highlight;
+        GameObject highlight;
 
         public CrewMember CrewMember { get => crewMember; set => crewMember = value; }
 
@@ -33,9 +34,9 @@ namespace Assets.Scripts.InterfacePanels
 
         public void Start()
         {
-            nameTextMesh = crewName.GetComponent<TextMeshProUGUI>();
-            professionTextMesh = profession.GetComponent<TextMeshProUGUI>();
-            healthTextMesh = health.GetComponent<TextMeshProUGUI>();
+            nameTextMesh = crewNameText.GetComponent<TextMeshProUGUI>();
+            professionTextMesh = professionText.GetComponent<TextMeshProUGUI>();
+            healthTextMesh = healthText.GetComponent<TextMeshProUGUI>();
         }
 
         public void Update()
@@ -47,19 +48,33 @@ namespace Assets.Scripts.InterfacePanels
                 healthTextMesh.text = crewMember.Health.ToString();
 
                 if (crewMember.IsSelected)
-                    highlight.color = Color.green;
+                    highlight.SetActive(true);
                 else
-                    highlight.color = Color.red;
+                    highlight.SetActive(false);
             }
         }
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            Debug.Log(crewName + " is selected");
+            //Debug.Log(crewName + " is selected");
             CrewController.Instance.crewMembers.ForEach(x => x.IsSelected = false);
             crewMember.IsSelected = true;
 
             base.OnPointerClick(eventData);
+        }
+
+        public override void OnPointerEnter(PointerEventData eventData)
+        {
+            this.transform.DOScale(1.01f, 0.25f);
+            
+            base.OnPointerEnter(eventData);
+        }
+
+        public override void OnPointerExit(PointerEventData eventData)
+        {
+            this.transform.DOScale(1f, 0.25f);
+
+            base.OnPointerExit(eventData);
         }
 
 

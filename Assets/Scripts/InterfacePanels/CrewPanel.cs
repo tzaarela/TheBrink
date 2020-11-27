@@ -20,7 +20,7 @@ namespace Assets.Scripts.InterfacePanels
         {
             crewMembers = new List<CrewMember>();
             crewGameObjects = gameObject.GetComponentsInChildren<CrewPanelObject>();
-            CreateCrewGameObjects();
+            SetCrewGameObjects();
         }
 
         public void Update()
@@ -31,7 +31,7 @@ namespace Assets.Scripts.InterfacePanels
             {
                 if (item.CrewMember == null)
                 {
-                    CreateCrewGameObjects();
+                    SetCrewGameObjects();
                 }
             }
         }
@@ -42,7 +42,7 @@ namespace Assets.Scripts.InterfacePanels
             return crewMembers;
         }
 
-        public void CreateCrewGameObjects()
+        public void SetCrewGameObjects()
         {
             for (int i = 0; i < crewMembers.Count; i++)
             {
