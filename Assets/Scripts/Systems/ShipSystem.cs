@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,7 +42,6 @@ public class ShipSystem : MonoBehaviour
         private float Capacity { get; set; }
         
         private float StoredFuel { get; set; }
-        private float StandardFuelConsumption { get; set; }
         private float FuelConsumption { get; set; }
         
         private float Acceleration { get; set; }
@@ -53,13 +53,17 @@ public class ShipSystem : MonoBehaviour
     /// <param name="_systemType"></param>
     /// <param name="_startingEfficiency"></param>
     /// <param name="_startingFuel"></param>
-    ShipSystem(SystemType _systemType, float _startingEfficiency, float _startingFuel, float _standardFuelConsumption)
+    ShipSystem(SystemType _systemType, float _startingEfficiency, float _startingFuel, float _fuelConsumption, float _acceleration)
     {
         SystemType = _systemType;
+
         Efficiency = _startingEfficiency;
         Capacity = 0;
+
         StoredFuel = _startingFuel;
-        StandardFuelConsumption = _standardFuelConsumption;
+        FuelConsumption = _fuelConsumption;
+
+        Acceleration = _acceleration;
     }
 
     //Here we would need a bunch of methods right? So we are able to change all the things? Or will the values be manipulated from ShipController then?
@@ -69,12 +73,39 @@ public class ShipSystem : MonoBehaviour
     //TODO: Remember that fuel should not be able to go below zero, is so, it is set to zero.
 
 
-    float RunReactor()
+    void RunReactor()
     {
-        FuelConsumption = StandardFuelConsumption * Capacity;
 
-        StoredFuel -= 
-        //Removes fuelConsumption * Capacity from StoredFuel
+        if (ShipController.Instance.Ship.Fuel <= 0)
+        { //Maybe check this outside of this method instead?
+
+            Debug.Log("The reactor has run out of fuel!");
+            return;
+        }
+        else
+        {
+            ShipController.Instance.Ship.Fuel -= FuelConsumption * Capacity;
+            //Put into Ship later, that if below zero or above Max it resets.
+
+            ShipController.Instance.Ship.Capacitor += EnergyOutput * Capacity;
+            //Put into Ship later, that if below zero or above Max it resets.
+
+
+            if (!IsRetrograde)
+            {
+                ShipController.Instance.Ship.Speed += Acceleration * Capacity * Efficiency;
+            }
+            else
+            {
+                ShipController.Instance.Ship.Speed -= Acceleration * Capacity * Efficiency;
+            }
+
+
+
+            //Call on powerbank here
+            EnergyOutput = EnergyOutput * Capacity * Efficiency;
+        }
+
         //sets acceleration * capacity * Efficiency
         //checks if retrograde, if yes, * -1;
         //Sets energyOutput * capacity * Efficiency
