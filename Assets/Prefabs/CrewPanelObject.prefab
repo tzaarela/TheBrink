@@ -42,7 +42,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 867367bf1e4e851478bdf825fad53daf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80c853b64891f4d5fbf35981b3c9590e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 80c853b64891f4d5fbf35981b3c9590e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1187,10 +1187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82eb8ee5b1968ae4d94fc32e6d3f2327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crewName: {fileID: 2015154510714306973}
-  profession: {fileID: 797303363638144506}
-  health: {fileID: 2018389389812123255}
-  highlight: {fileID: 6124575918507453488}
+  m_Delegates: []
+  crewNameText: {fileID: 0}
+  professionText: {fileID: 0}
+  healthText: {fileID: 0}
+  highlight: {fileID: 0}
 --- !u!1 &8809988734354922903
 GameObject:
   m_ObjectHideFlags: 0
