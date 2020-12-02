@@ -42,6 +42,7 @@ public class MissionController : MonoBehaviour
     {
         UpdateShipPosition();
         UpdateRadar();
+        CheckEncounters();
     }
 
     private void UpdateRadar()
@@ -67,10 +68,13 @@ public class MissionController : MonoBehaviour
     {
         foreach (Encounter encounter in route.EncountersOnRoute)
         {
-            if(!encounter.HasTriggered && route.ShipPosition > encounter.Position)
+            Debug.Log("ShipPos: " + route.ShipPosition + " encounterPos: " + encounter.Position);
+            if (!encounter.HasTriggered && route.ShipPosition > encounter.Position)
             {
-                encounter.HasTriggered = true;
-                encounter.Execute();
+                
+                Debug.Log("ENCOUNTERED!!!");
+                //encounter.HasTriggered = true;
+                //encounter.Execute();
             }
         }
     }

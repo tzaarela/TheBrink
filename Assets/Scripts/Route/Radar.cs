@@ -7,6 +7,9 @@ public class Radar : MonoBehaviour
 {
     [SerializeField]
     float routeLengthMultiplier;
+
+    [SerializeField]
+    GameObject enemyEncounterPrefab;
     
     private RectTransform routeLine;
     private RectTransform radarTransform;
@@ -28,9 +31,8 @@ public class Radar : MonoBehaviour
         get { return routeLength; }
         set 
         {
-            routeLine = transform.Find("RouteLine").GetComponent<RectTransform>();
             routeLength = value;
-            routeLine.sizeDelta = new Vector2(4, routeLength * routeLengthMultiplier);
+            CreateRouteLine();
         }
     }
 
@@ -40,9 +42,19 @@ public class Radar : MonoBehaviour
         radarTransform = transform.Find("Radar").GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CreateRouteLine()
     {
-        
+        routeLine = transform.Find("RouteLine").GetComponent<RectTransform>();
+        routeLine.sizeDelta = new Vector2(4, routeLength * routeLengthMultiplier) / 2;
+
+        var encounters = MissionController.Instance.Route.EncountersOnRoute;
+
+        foreach (var encounter in encounters)
+        {
+            var radarEncounter = GameObject.Instantiate(enemyEncounterPrefab, routeLine);
+
+            radarEncounter.transform.Translate(new Vector2(0, encounter.Position * routeLengthMultiplier));
+        }
+
     }
 }

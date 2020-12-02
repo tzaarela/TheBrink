@@ -23,19 +23,19 @@ public class Route
         EncountersOnRoute = new List<Encounter>();
         ShipPosition = 0;
 
-        float _distanceToNextEncounter;
+        float distanceToNextEncounter;
 
         Length = _routeLength;
 
         EncounterAmount = _encounterAmount;
 
-        _distanceToNextEncounter = Length / EncounterAmount + 1;
+        distanceToNextEncounter = Length / EncounterAmount;
 
         for(int i = 1; i <= EncounterAmount; i++)
         {
-            _distanceToNextEncounter *= i;
+            var position = distanceToNextEncounter * i;
 
-            Encounter encounter = new Encounter(_distanceToNextEncounter, _dangerLevel);
+            Encounter encounter = new Encounter(position, _dangerLevel);
 
             EncountersOnRoute.Add(encounter);
         }
