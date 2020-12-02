@@ -53,6 +53,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
   - {fileID: 21300000, guid: 60f86c806c220cc43a7cd9bd53921c90, type: 3}
   - {fileID: 21300000, guid: d6ec6e518ae2f4f5cbcd34b063a04a2d, type: 3}
+  - {fileID: 21300000, guid: 1ce298d1ca34b456b81d73c97f5a7d8e, type: 3}
   - {fileID: 21300000, guid: fba2b4f2364e0423e8831d7a9232b850, type: 3}
   - {fileID: 21300000, guid: 2199744357a3ed342a809ea07673344f, type: 3}
   - {fileID: 21300000, guid: 747d45535920e43c0a1bf6d9c6f53183, type: 3}
@@ -83,6 +84,7 @@ SpriteAtlas:
   - ShipUI_Portrait1
   - Encounter
   - Button_01_8x8
+  - 8x8_ui-border-temp_01_noFill
   - Ship_CargoHold
   - CircleShip
   - 8x8_ui-border3-temp_01
