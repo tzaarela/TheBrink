@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Encounter : MonoBehaviour
+public class Encounter
 {
     public float Position { get; set; }
 
