@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Route : MonoBehaviour
+public class Route
 {
     public float Length { get; set; }
 
@@ -20,6 +20,9 @@ public class Route : MonoBehaviour
     /// <param name="_encounterAmount"></param>
     public Route(float _routeLength, int _encounterAmount, float _dangerLevel)
     {
+        EncountersOnRoute = new List<Encounter>();
+        ShipPosition = 0;
+
         float _distanceToNextEncounter;
 
         Length = _routeLength;

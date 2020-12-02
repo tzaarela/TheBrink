@@ -12,14 +12,14 @@ public class Ship
     public float MaxCapacitor { get; set; }
     public int Cash { get; set; }
 
-        public Ship()
-        {
-            Speed = 100;
-            Position = 0;
-            Fuel = 1000;
-            MaxFuel = 1000;
-            Cash = 0;
-            MaxCapacitor = 1000;
-            Capacitor = MaxCapacitor / 2;
-        }
+    public Ship()
+    {
+        Speed = 1;
+        Position = 0;
+        Fuel = 1000;
+        MaxFuel = 1000;
+        Cash = 0;
+        MaxCapacitor = 1000;
+        Capacitor = MaxCapacitor / 2;
     }
+}

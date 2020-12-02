@@ -7,22 +7,27 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class ShipController : MonoBehaviour
+    public class ShipController
     {
-        public static ShipController Instance { get; set; }
+        private static ShipController instance;
+
+        public static ShipController Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new ShipController();
+
+                return instance;
+            }
+            set { instance = value; }
+        }
 
         public Ship Ship { get; set; }
 
-        void Start()
+        public ShipController()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-                Ship = CreateShip();
-            }
-                
-            else
-                Destroy(this);
+            Ship = CreateShip();
         }
 
         public Ship CreateShip()
