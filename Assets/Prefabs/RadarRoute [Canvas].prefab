@@ -184,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 4, y: 10000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1005160141610664657
@@ -413,7 +413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62023c9455f8e941a873dad8ab33844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  routeLengthMultiplier: 10
   enemyEncounterPrefab: {fileID: 473439668250443280, guid: 369ee989b4fce834f827588184a34b68,
     type: 3}
 --- !u!1 &1005160142375970335

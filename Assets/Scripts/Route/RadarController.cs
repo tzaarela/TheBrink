@@ -12,6 +12,16 @@ public class RadarController : MonoBehaviour
     [SerializeField]
     Camera radarCamera;
 
+
+    [SerializeField]
+    private float routeLengthMultiplier;
+
+    public float RouteLengthMultiplier
+    {
+        get { return routeLengthMultiplier; }
+        set { routeLengthMultiplier = value; }
+    }
+
     [SerializeField]
     Transform UI;
     
@@ -52,7 +62,7 @@ public class RadarController : MonoBehaviour
     {
         if (radarCanvas != null)
         {
-            radarCanvas.RadarTransform.position = new Vector2(-2000, MissionController.Instance.Route.ShipPosition);
+            radarCanvas.RadarTransform.position = new Vector2(-2000, MissionController.Instance.Route.ShipPosition * routeLengthMultiplier);
         }
 
     }

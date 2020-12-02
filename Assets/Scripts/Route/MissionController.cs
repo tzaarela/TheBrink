@@ -52,7 +52,7 @@ public class MissionController : MonoBehaviour
 
     private void UpdateShipPosition()
     {
-        ShipController.Instance.Ship.Position += ShipController.Instance.Ship.Speed;
+        ShipController.Instance.Ship.Position += ShipController.Instance.Ship.Speed * Time.deltaTime;
         Route.ShipPosition = ShipController.Instance.Ship.Position;
     }
 
@@ -68,6 +68,7 @@ public class MissionController : MonoBehaviour
     {
         foreach (Encounter encounter in route.EncountersOnRoute)
         {
+            Debug.Log("Ship: " + ShipController.Instance.Ship.Position);
             Debug.Log("ShipPos: " + route.ShipPosition + " encounterPos: " + encounter.Position);
             if (!encounter.HasTriggered && route.ShipPosition > encounter.Position)
             {
