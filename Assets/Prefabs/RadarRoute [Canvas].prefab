@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1005160140995218969}
   - component: {fileID: 1005160140995218971}
   - component: {fileID: 1005160140995218970}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RadarOuterLine [Image]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1005160141098367638}
   - component: {fileID: 1005160141098367632}
   - component: {fileID: 1005160141098367639}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Ship [Image]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 1005160141610664663}
   - component: {fileID: 1005160141610664657}
   - component: {fileID: 1005160141610664656}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RouteLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 1005160141898371599}
   - component: {fileID: 1005160141898371593}
   - component: {fileID: 1005160141898371592}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RadarInnerLine [Image]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 1005160142257685666}
   - component: {fileID: 1005160142257685665}
   - component: {fileID: 1690164268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RadarRoute [Canvas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 1005160142375970328}
   - component: {fileID: 1839742613}
   - component: {fileID: 1839742612}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Radar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
