@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 55
   m_VolumeTrigger: {fileID: 0}
   m_RenderPostProcessing: 1
   m_Antialiasing: 0
@@ -2752,7 +2752,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 480762253}
   m_PlaneDistance: 1
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -2798,7 +2798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &723290148
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2926,7 +2926,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 480762253}
   m_PlaneDistance: 1
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -5013,7 +5013,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 480762253}
   m_PlaneDistance: 1
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -5489,7 +5489,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 480762253}
   m_PlaneDistance: 1
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -5859,7 +5859,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 480762253}
   m_PlaneDistance: 1
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
