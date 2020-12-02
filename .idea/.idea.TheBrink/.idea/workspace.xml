@@ -20,66 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Main Menu Font.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Main Menu Font.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Perfect DOS VGA 437.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Perfect DOS VGA 437.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/Jenni_spaceport_Hire_Crew.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/Jenni_spaceport_Hire_Crew.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Mockups/Jenni_spaceport_Repair_Bay.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Mockups/Jenni_spaceport_Repair_Bay.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Circle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/Circle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Placeholders/CrewPortrait.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Placeholders/CrewPortrait.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Placeholders/Portrait-Face_Temp_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Placeholders/Portrait-Face_Temp_01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Placeholders/Ship-overview-temp-Top_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/Placeholders/Ship-overview-temp-Top_01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Guide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Guide.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Portrait_Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Portrait_Background.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Systems_Reactor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Systems_Reactor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Systems_Weapons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/ShipUI_Systems_Weapons.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Account Warning_464911.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Account Warning_464911.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Alzheimer_2686167.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Alzheimer_2686167.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Bandage_3408147.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Bandage_3408147.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Cracked brick wall_309351.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Cracked brick wall_309351.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Electricity_2847708.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Electricity_2847708.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Fire_2694481.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Fire_2694481.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Fire_55015.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Fire_55015.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Flame_755585.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Flame_755585.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Heart Bandage_768740.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Heart Bandage_768740.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Injury_3408174.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Injury_3408174.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Radiation_1009162.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Radiation_1009162.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Radiation_34518.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Radiation_34518.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Radiation_7358.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_Radiation_7358.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_bleeding_988020.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_bleeding_988020.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_bleeding_988126.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_bleeding_988126.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_bones fracture_3241693.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_bones fracture_3241693.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_breach protection_2958736.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_breach protection_2958736.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_break_1784917.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_break_1784917.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken cable_3446970.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken cable_3446970.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken cable_916952.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken cable_916952.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken window_396744 (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken window_396744 (1).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken window_396744.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken window_396744.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken_3005819.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_broken_3005819.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_claw_1629065.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_claw_1629065.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_crew neck_485609.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_crew neck_485609.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_electrical_2995272.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_electrical_2995272.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_electrical_3408535.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_electrical_3408535.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_image broken_2279650.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_image broken_2279650.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_mental_2886625.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_mental_2886625.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_person_2088531.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_person_2088531.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_person_574812.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_person_574812.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_puncture_52629.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/icons - kopia/noun_puncture_52629.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Contract [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Contract [Panel].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CrewMember.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CrewMember.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Portrait.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Portrait.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SystemTab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SystemTab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WayPoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WayPoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +120,7 @@
       <workItem from="1606472098554" duration="3593000" />
       <workItem from="1606730966525" duration="680000" />
       <workItem from="1606813970175" duration="204000" />
-      <workItem from="1606846369363" duration="618000" />
+      <workItem from="1606846369363" duration="620000" />
     </task>
     <servers />
   </component>
