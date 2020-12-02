@@ -12,10 +12,11 @@ public class Hazard
 
     private Room _hazardRoom;
 
-    public Hazard(HazardType hazardType, float severityAmount)
+    public Hazard(HazardType hazardType, float severityAmount, Room hazardRoom)
     {
         HazardType = hazardType;
         SeverityAmount = severityAmount;
+        _hazardRoom = hazardRoom;
     }
 
     public void ExecuteHazard()

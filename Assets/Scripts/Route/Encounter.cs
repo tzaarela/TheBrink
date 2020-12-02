@@ -19,7 +19,7 @@ public class Encounter
 
         Severity = _severity;
 
-        EncounterType = EncounterType.SmallMeteorSwarm;
+        EncounterType = EncounterType.SolarFlare;
     }
     public void Execute()
     { 

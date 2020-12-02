@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Radar : MonoBehaviour
 {
-    [SerializeField]
-    float routeLengthMultiplier;
 
     [SerializeField]
     GameObject enemyEncounterPrefab;
@@ -45,7 +43,7 @@ public class Radar : MonoBehaviour
     public void CreateRouteLine()
     {
         routeLine = transform.Find("RouteLine").GetComponent<RectTransform>();
-        routeLine.sizeDelta = new Vector2(4, routeLength * routeLengthMultiplier) / 2;
+        routeLine.sizeDelta = new Vector2(4, routeLength * RadarController.Instance.RouteLengthMultiplier) / 2;
 
         var encounters = MissionController.Instance.Route.EncountersOnRoute;
 
@@ -53,7 +51,7 @@ public class Radar : MonoBehaviour
         {
             var radarEncounter = GameObject.Instantiate(enemyEncounterPrefab, routeLine);
 
-            radarEncounter.transform.Translate(new Vector2(0, encounter.Position * routeLengthMultiplier));
+            radarEncounter.transform.Translate(new Vector2(0, encounter.Position * RadarController.Instance.RouteLengthMultiplier));
         }
 
     }
