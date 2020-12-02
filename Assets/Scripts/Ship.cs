@@ -14,7 +14,7 @@ public class Ship
 
     public Ship()
     {
-        Speed = 4;
+        Speed = 20;
         Position = 0;
         Fuel = 1000;
         MaxFuel = 1000;

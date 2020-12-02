@@ -80,7 +80,7 @@ public class Room : UITrigger
 
     public void CreateHazard(HazardType _hazardType, float _severityAmount)
     {
-        Hazard hazard = new Hazard(_hazardType, _severityAmount);
+        Hazard hazard = new Hazard(_hazardType, _severityAmount, this);
 
         Hazards.Add(hazard);
     }
