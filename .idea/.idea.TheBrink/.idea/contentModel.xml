@@ -103,6 +103,7 @@
           <e p="SceneManager.cs" t="Include" />
           <e p="Ship.cs" t="Include" />
           <e p="ShipController.cs" t="Include" />
+          <e p="SpaceportPanelType.cs" t="Include" />
           <e p="Systems" t="Include">
             <e p="ShipSystem.cs" t="Include" />
             <e p="SystemController.cs" t="Include" />
@@ -112,6 +113,7 @@
           </e>
           <e p="TaskType.cs" t="Include" />
         </e>
+        <e p="SpaceportUIController.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

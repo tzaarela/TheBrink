@@ -34,9 +34,12 @@ public class CrewController : MonoBehaviour
 
     public void Update()
     {
+        if (crewMembers == null || crewMembers.Count <= 0)
+            return;
+        
         foreach (var crewMember in crewMembers)
         {
-            if (crewMember.CurrentTask == null)
+            if (crewMember == null || crewMember.CurrentTask == null)
                 continue;
 
             var task = crewMember.CurrentTask;

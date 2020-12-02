@@ -128,7 +128,7 @@ public class Room : UITrigger
             }
         }
 
-        Debug.Log("The crewmember couldn't find a hazard of the type they were told to repair");
+        Debug.Log("The crewmember couldn't find a hazard of the type that they were told to repair");
     }
 
     private void OnMouseOver()
