@@ -65,7 +65,6 @@ public class Hazard
 
     public void RoomOnFire()
     {
-
         FireGrows();
 
         FireConsumes();
@@ -90,7 +89,7 @@ public class Hazard
     {
         _hazardRoom.AirLevel -= SeverityAmount / 100;
 
-        Debug.Log("The fire consumes oxygen. The airlevel is now" + _hazardRoom.AirLevel ) ;
+        Debug.Log("The fire in the " + _hazardRoom.RoomType + " consumes oxygen. The airlevel is now: " + _hazardRoom.AirLevel + ".") ;
     }
 
     /// <summary>
@@ -100,11 +99,9 @@ public class Hazard
     /// </summary>
     public void FireBurns()
     {
-        float _heatResistance = 60;
-        if(SeverityAmount >= _heatResistance)
-        {
-            Debug.Log("The fire is burning hot enough that this room will be damaged");
-            _hazardRoom.RoomHealth -= 1;
+        if(SeverityAmount >= _hazardRoom.RoomHealth / 2)
+        {   //
+            Debug.Log("The fire is burning hot enough that this room will be damaged!");
         }
     }
 
