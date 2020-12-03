@@ -14,20 +14,21 @@ public class CrewMember : UITrigger
     [SerializeField]
     private Waypoint _spawnPoint;
     [SerializeField]
-    private float _moveSpeed = 6f;
+    private float repairSkill;
     [SerializeField]
     private Transform highlight;
     public string Name { get => _name; set => _name = value; }
     public float Health { get => _health; set => _health = value; }
     public Profession Profession { get => _profession; set => _profession = value; }
-    public float RepairSkill { get; set; }
+    public float RepairSkill { get => repairSkill; set => repairSkill = value; }
     public Task CurrentTask { get; set; }
     public Queue<Task> TaskQueue { get; set; }
     public Waypoint CurrentWayPoint { get; set; }
     public bool IsMoving { get; set; }
-    public bool IsSelected { 
-        get { return isSelected; } 
-        set 
+    public bool IsSelected
+    {
+        get { return isSelected; }
+        set
         {
             isSelected = value;
             if (isSelected)
@@ -49,9 +50,15 @@ public class CrewMember : UITrigger
     }
 
     public void Start()
-    {                                                       
+    {
         CurrentWayPoint = _spawnPoint;
         transform.position = _spawnPoint.transform.position;
+    }
+
+    public void Update()
+    {
+        if (CurrentTask != null && CurrentTask.TaskType == TaskType.Move)
+            Move();
     }
 
     public void ToggleHighlight(bool isOn)
@@ -81,7 +88,7 @@ public class CrewMember : UITrigger
 
     public void Repair()
     {
-        CurrentTask.Destination.RepairRoom(RepairSkill);
+        CurrentTask.Destination.RepairRoom(this);
     }
 
     public void FinishCurrentTask()

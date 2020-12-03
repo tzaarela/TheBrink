@@ -62,6 +62,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a478c683518485b4987b916ff74cd8f6, type: 3}
   - {fileID: 21300000, guid: eef71c74599c33740bff8e5979c4ed12, type: 3}
   - {fileID: 21300000, guid: a0ed8355d22377f4b990386d2d423a75, type: 3}
+  - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
   - {fileID: 21300000, guid: 1dcb40f5ff3a142b490ae4150e0e46a1, type: 3}
   - {fileID: 21300000, guid: 75ecc33653f9c4c27aa5a34709c4b602, type: 3}
   - {fileID: 21300000, guid: bb228876de53543c3a38175f224a83fd, type: 3}
@@ -98,6 +99,7 @@ SpriteAtlas:
   - Circle
   - _rogressBar
   - RadarBackground
+  - _ine
   - ShipUI_Door_Active
   - Button_02_8x8
   - ShipUI_Floor_Active

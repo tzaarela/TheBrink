@@ -48,8 +48,7 @@ public class CrewController : MonoBehaviour
             {
                 case TaskType.Move:
                 {       
-                        Debug.Log(crewMember.Name + " is moving...");
-                        crewMember.Move();
+                       //Moved to CrewMember Update();
                     break;
                 }
                 case TaskType.Repair:
@@ -70,7 +69,7 @@ public class CrewController : MonoBehaviour
                             "\n -- Oxygen level: " + task.Destination.AirLevel + "%" +
                             "\n -- Radiation level: " + task.Destination.RadiationLevel + "%" +
                             "\n -- Hull Integrity: " + task.Destination.RoomHealth + "% ", 0.04f, true);
-                        crewMember.CurrentTask = null;
+                        crewMember.FinishCurrentTask();
                     break;
                 }
 

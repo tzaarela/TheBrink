@@ -43,12 +43,12 @@ public class MissionController : MonoBehaviour
 
     public void Update()
     {
-        tickTimer += Time.deltaTime;
+        UpdateShipPosition();
 
+        tickTimer += Time.deltaTime;
         if (tickTimer >= TICK_TIMER_MAX)
         {
             tickTimer = 0;
-            UpdateShipPosition();
             CheckEncounters();
             CrewController.Instance.UpdateCrew();
             UpdateRoom();
@@ -58,7 +58,7 @@ public class MissionController : MonoBehaviour
 
     private void UpdateShipPosition()
     {
-        ShipController.Instance.Ship.Position += ShipController.Instance.Ship.Speed;
+        ShipController.Instance.Ship.Position += ShipController.Instance.Ship.Speed * Time.deltaTime;
         Route.ShipPosition = ShipController.Instance.Ship.Position;
     }
 

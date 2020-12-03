@@ -117,7 +117,7 @@ public class Room : UITrigger
         return availableTasks;
     }
 
-    public void RepairRoom(float repairSkill)
+    public void RepairRoom(CrewMember crewMember)
     {
         /*
          * So, I need this method to set a priority for what hazard is fixed first right...?
@@ -146,13 +146,20 @@ public class Room : UITrigger
 
         Hazard _hazardToFix = Hazards.FirstOrDefault(x => x.HazardType == HazardType.Fire);
 
+        if (_hazardToFix == null)
+        {
+            crewMember.FinishCurrentTask();
+            return;
+        }
+
         switch (_hazardToFix.HazardType)
         {
             case HazardType.Fire:
-                _hazardToFix.SeverityAmount -= repairSkill * 2;
+                _hazardToFix.SeverityAmount -= crewMember.RepairSkill* 2;
                 Debug.Log("The crewmember is trying to put out the fire.");
                 break;
             default:
+                crewMember.FinishCurrentTask();
                 Debug.Log("The crewmember couldn't find a hazard that they are able told to repair");
                 break;
         }

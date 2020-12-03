@@ -43,7 +43,7 @@ public class Radar : MonoBehaviour
     public void CreateRouteLine()
     {
         routeLine = transform.Find("RouteLine").GetComponent<RectTransform>();
-        routeLine.sizeDelta = new Vector2(4, routeLength * RadarController.Instance.RouteLengthMultiplier) / 2;
+        routeLine.sizeDelta = new Vector2(35, routeLength * RadarController.Instance.RouteLengthMultiplier) / 2;
 
         var encounters = MissionController.Instance.Route.EncountersOnRoute;
 
