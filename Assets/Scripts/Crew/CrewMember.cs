@@ -23,6 +23,7 @@ public class CrewMember : UITrigger
     public float Health { get => _health; set => _health = value; }
     public Profession Profession { get => _profession; set => _profession = value; }
     public Task CurrentTask { get; set; }
+    public Queue<Task> TaskQueue { get; set; }
     public Waypoint CurrentWayPoint { get; set; }
     public bool IsMoving { get; set; }
     public bool IsSelected { 
@@ -37,9 +38,6 @@ public class CrewMember : UITrigger
         } 
     }
 
-    private List<Waypoint> route = new List<Waypoint>();
-    private int routeCount = 0;
-    
     private MoveController _moveController;
     private bool isSelected;
 
@@ -47,10 +45,11 @@ public class CrewMember : UITrigger
     {
         _moveController = GetComponent<MoveController>();
         _moveController.SetCrewMember(this);
+        TaskQueue = new Queue<Task>();
     }
 
     public void Start()
-    {
+    {                                                       
         CurrentWayPoint = _spawnPoint;
         transform.position = _spawnPoint.transform.position;
     }
@@ -63,9 +62,10 @@ public class CrewMember : UITrigger
             highlight.gameObject.SetActive(false);
     }
 
-    public void SetCurrentTask(Task newTask)
+    public void AddTask(Task newTask)
     {
-        CurrentTask = newTask;
+        TaskQueue.Enqueue(newTask);
+        CurrentTask = TaskQueue.Peek();
 
         if (CurrentTask.TaskType == TaskType.Move)
         {
@@ -79,16 +79,25 @@ public class CrewMember : UITrigger
         _moveController.Move();
     }
 
-    public void TaskIsFinished(TaskType taskType)
+    public void Repair()
     {
-        if (taskType == TaskType.Move && CurrentTask.TaskType == TaskType.Move)
-        {
-            CurrentTask = null;
-        }
+        CurrentTask.Destination.RepairRoom();
     }
-    
-    public void TaskIsFinished(Task task)
+
+    public void FinishCurrentTask()
     {
-        
+        TaskQueue.Dequeue();
+
+        if (TaskQueue.Count > 0)
+        {
+            CurrentTask = TaskQueue.Peek();
+
+            if (CurrentTask.TaskType == TaskType.Move)
+            {
+                _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.Waypoint);
+            }
+        }
+        else
+            CurrentTask = null;
     }
 }

@@ -36,6 +36,8 @@ public class Room : UITrigger
     [SerializeField]
     private Transform highlight;
     [SerializeField]
+    private Transform warningHighlight;
+    [SerializeField]
     private Waypoint _waypoint;
     public Waypoint Waypoint
     {
@@ -89,6 +91,11 @@ public class Room : UITrigger
     {
         Hazards.RemoveAll(x => x.IsFinished);
 
+        if(Hazards.Count > 0)
+            warningHighlight.gameObject.SetActive(true);
+        else
+            warningHighlight.gameObject.SetActive(false);
+
         foreach (Hazard hazard in Hazards)
         {
             hazard.ExecuteHazard();
@@ -110,12 +117,11 @@ public class Room : UITrigger
         return availableTasks;
     }
 
-    public void RepairRoom(HazardType _hazardTypeToRepair)
+    public void RepairRoom()
     {
         foreach (Hazard Hazard in Hazards)
         {
-            if (Hazard.HazardType == _hazardTypeToRepair)
-            {
+            
                 //TODO: Ask Saarela about easiest way to do this, should this method be moved to CrewMember instead?
                 //Hazard.SeverityAmount -= _crewMemberRepairSkill;
                 
@@ -123,13 +129,12 @@ public class Room : UITrigger
 
                 //I think this will mean that the crewmember will do one repair action, and then get sent out of the method.
                 return;
-            }
         }
 
         Debug.Log("The crewmember couldn't find a hazard of the type that they were told to repair");
     }
 
-    private void OnMouseOver()
+    public void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && !ContextMenuController.instance.IsOpen)
         {

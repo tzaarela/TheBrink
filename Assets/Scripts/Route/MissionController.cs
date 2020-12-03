@@ -8,8 +8,13 @@ using UnityEngine;
 
 public class MissionController : MonoBehaviour
 {
+
+
+
     public static MissionController Instance { get; set; }
 
+    private const float TICK_TIMER_MAX = 0.1f;
+    private float tickTimer = 0;
     private Route route;
 
     public Route Route
@@ -40,20 +45,21 @@ public class MissionController : MonoBehaviour
 
     public void Update()
     {
-        UpdateShipPosition();
-        UpdateRadar();
-        CheckEncounters();
-        UpdateRoom();
+        tickTimer += Time.deltaTime;
+
+        if (tickTimer >= TICK_TIMER_MAX)
+        {
+            tickTimer = 0;
+            UpdateShipPosition();
+            CheckEncounters();
+            UpdateRoom();
+        }
     }
 
-    private void UpdateRadar()
-    {
-
-    }
 
     private void UpdateShipPosition()
     {
-        ShipController.Instance.Ship.Position += ShipController.Instance.Ship.Speed * Time.deltaTime;
+        ShipController.Instance.Ship.Position += ShipController.Instance.Ship.Speed;
         Route.ShipPosition = ShipController.Instance.Ship.Position;
     }
 

@@ -47,7 +47,7 @@ public class MoveController : MonoBehaviour
 
     private void FinishTask()
     {
-        crewMember.TaskIsFinished(TaskType.Move);
+        crewMember.FinishCurrentTask();
     }
 
     private bool WayPointIsReached()

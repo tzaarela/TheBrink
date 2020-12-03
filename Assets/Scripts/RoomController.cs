@@ -38,6 +38,7 @@ public class RoomController : MonoBehaviour
     {
         _rooms.AddRange(roomGameObjects.Select(x => x.GetComponent<Room>()));
     }
+
     /// <summary>
     /// this method creates an ongoing breach hazard in all corridors of the ship.
     /// It also, when created, decreases the health of the room by the severity, to indicate how the hull has been breached.
@@ -45,23 +46,16 @@ public class RoomController : MonoBehaviour
     /// <param name="severity"></param>
     public void CreateBreachInRoom(float severity)
     {
-        foreach(Room room in Rooms)
-        {
-            if(room.RoomType == RoomType.Corridor)
-            {
-                room.CreateHazard(HazardType.Breach, severity);
-                room.RoomHealth -= severity;
-            }
-        }
+        var randomIndex = UnityEngine.Random.Range(0, Rooms.Count - 1);
+
+        Rooms[randomIndex].CreateHazard(HazardType.Breach, severity);
+        Rooms[randomIndex].RoomHealth -= severity;
     }
+         
     public void CreateFireInRoom(float severity)
     {
-        foreach(Room room in Rooms)
-        {
-            if (room.RoomType == RoomType.CrewQuarters || room.RoomType == RoomType.MedBay)
-            {
-                room.CreateHazard(HazardType.Fire, severity);
-            }
-        }
+        var randomIndex = UnityEngine.Random.Range(0, Rooms.Count - 1);
+
+        Rooms[randomIndex].CreateHazard(HazardType.Fire, severity);
     }
 }

@@ -58,7 +58,11 @@ namespace Assets.Scripts.InterfacePanels
                 ContextMenuController.instance.CloseContextMenu();
                 return;
             }
-            crewMember.SetCurrentTask(Task);
+
+            if (Task.TaskType == TaskType.Repair)
+                crewMember.AddTask(new Task(TaskType.Move, Task.Destination));
+
+            crewMember.AddTask(Task);
 
             ContextMenuController.instance.CloseContextMenu();
 

@@ -58,6 +58,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2199744357a3ed342a809ea07673344f, type: 3}
   - {fileID: 21300000, guid: 747d45535920e43c0a1bf6d9c6f53183, type: 3}
   - {fileID: 21300000, guid: a478c683518485b4987b916ff74cd8f6, type: 3}
+  - {fileID: 21300000, guid: eef71c74599c33740bff8e5979c4ed12, type: 3}
   - {fileID: 21300000, guid: a0ed8355d22377f4b990386d2d423a75, type: 3}
   - {fileID: 21300000, guid: 1dcb40f5ff3a142b490ae4150e0e46a1, type: 3}
   - {fileID: 21300000, guid: 75ecc33653f9c4c27aa5a34709c4b602, type: 3}
@@ -79,6 +80,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
   - {fileID: 21300000, guid: 1c98103eded9d4431b20bac7c098a690, type: 3}
   - {fileID: 21300000, guid: bba9404f5f1b0684daf595edca6beff1, type: 3}
+  - {fileID: 21300000, guid: 30f90eff023a53848beee43da5e2bd18, type: 3}
   - {fileID: 21300000, guid: 33a62eff97eaa44c7a89b39c55c5eed4, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShipUI_Portrait1
@@ -89,6 +91,7 @@ SpriteAtlas:
   - CircleShip
   - 8x8_ui-border3-temp_01
   - Circle
+  - _rogressBar
   - RadarBackground
   - ShipUI_Door_Active
   - Button_02_8x8
@@ -110,6 +113,7 @@ SpriteAtlas:
   - 8x8_ui-border-temp_01
   - circle_32x32-bw_temp_01
   - CircleLine
+  - ProgressBar
   - ShipIcon_105x120
   m_Tag: UI Elements - Atlas
   m_IsVariant: 0
