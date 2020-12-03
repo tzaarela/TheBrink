@@ -1,10 +1,11 @@
 ﻿public enum SystemType 
 {
-    Reactor,
-    Weapons,
+    Bridge,
     Mainframe,
-    Hull,
+    MainBattery,
+    Quarters,
     Medbay,
-    Resources,
-    Navigator
+    Reactor,
+    CargoBay,
+    Corridors
 }

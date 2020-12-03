@@ -58,24 +58,24 @@ namespace Assets.Scripts.Systems
 
             switch (systemType)
             {
-                case SystemType.Reactor:
-                    reactorContent.SetActive(true);
-                    break;
-                case SystemType.Weapons:
-                    weaponsContent.SetActive(true);
-                    break;
-                case SystemType.Mainframe:
-                    break;
-                case SystemType.Hull:
-                    break;
-                case SystemType.Medbay:
-                    break;
-                case SystemType.Resources:
-                    break;
-                case SystemType.Navigator:
-                    break;
-                default:
-                    break;
+                //case SystemType.Reactor:
+                //    reactorContent.SetActive(true);
+                //    break;
+                //case SystemType.Weapons:
+                //    weaponsContent.SetActive(true);
+                //    break;
+                //case SystemType.Mainframe:
+                //    break;
+                //case SystemType.Hull:
+                //    break;
+                //case SystemType.Medbay:
+                //    break;
+                //case SystemType.Resources:
+                //    break;
+                //case SystemType.Navigator:
+                //    break;
+                //default:
+                //    break;
             }
         }
         public override void OnPointerClick(PointerEventData eventData)
