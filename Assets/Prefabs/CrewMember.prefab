@@ -328,6 +328,7 @@ MonoBehaviour:
   _name: 
   _health: 0
   _profession: 0
+  _repairSkill: 5
   _spawnPoint: {fileID: 0}
   _moveSpeed: 6
   highlight: {fileID: 934518919843879268}
@@ -345,4 +346,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _path: []
   _velocity: {x: 0, y: 0}
-  _speed: 120
+  _speed: 220
