@@ -121,13 +121,14 @@ public class Room : UITrigger
     {
         foreach (Hazard Hazard in Hazards)
         {
-            
+                
                 //TODO: Ask Saarela about easiest way to do this, should this method be moved to CrewMember instead?
                 //Hazard.SeverityAmount -= _crewMemberRepairSkill;
                 
                 //TODO: Figure out upper bounds of this, can a fire burn too fast?
 
                 //I think this will mean that the crewmember will do one repair action, and then get sent out of the method.
+                
                 return;
         }
 

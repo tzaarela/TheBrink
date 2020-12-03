@@ -44,17 +44,22 @@ public class CrewController : MonoBehaviour
 
             var task = crewMember.CurrentTask;
 
+           
             switch (task.TaskType)
             {
                 case TaskType.Move:
-                {
+                {       
                         Debug.Log(crewMember.Name + " is moving...");
                         crewMember.Move();
                     break;
                 }
                 case TaskType.Repair:
                 {
-                        Debug.Log(crewMember.Name + " is repairing...");
+                        if (!task.IsExecuted)
+                        {
+                            ConsoleController.instance.PrintToConsole($"{crewMember.Name}: I've started repairs in {task.Destination.name}", 0.04f);
+                            task.IsExecuted = true;
+                        }
                         crewMember.Repair();
                     break;
                 }
