@@ -22,6 +22,7 @@ public class Route
     {
         EncountersOnRoute = new List<Encounter>();
         ShipPosition = 0;
+        //TODO: Think we can delete this now that Encounters checks against the var Position on the Ship instead?
 
         float distanceToNextEncounter;
 

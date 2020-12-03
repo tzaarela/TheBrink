@@ -112,15 +112,13 @@ public class Room : UITrigger
 
     public void RepairRoom(HazardType _hazardTypeToRepair)
     {
-        //TODO: Talk to JS or EN about this
-        //Suggestion 2: Could this be turned into a property of each crewmember later on maybe?
-        float _crewMemberRepairSkill = 5;
-
         foreach (Hazard Hazard in Hazards)
         {
             if (Hazard.HazardType == _hazardTypeToRepair)
             {
-                Hazard.SeverityAmount -= _crewMemberRepairSkill;
+                //TODO: Ask Saarela about easiest way to do this, should this method be moved to CrewMember instead?
+                //Hazard.SeverityAmount -= _crewMemberRepairSkill;
+                
                 //TODO: Figure out upper bounds of this, can a fire burn too fast?
 
                 //I think this will mean that the crewmember will do one repair action, and then get sent out of the method.

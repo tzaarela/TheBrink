@@ -19,6 +19,8 @@ public class Encounter
 
         Severity = _severity;
 
+        //I'm just going to set this here, later on we will have other better constructors that will be able to set encounters
+        //to different types.
         EncounterType = EncounterType.SolarFlare;
     }
     public void Execute()

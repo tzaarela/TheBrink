@@ -12,6 +12,8 @@ public class CrewMember : UITrigger
     [SerializeField]
     private Profession _profession;
     [SerializeField]
+    private float _repairSkill = 5f;
+    [SerializeField]
     private Waypoint _spawnPoint;
     [SerializeField]
     private float _moveSpeed = 6f;
