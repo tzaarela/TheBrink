@@ -99,10 +99,9 @@ public class Hazard
     /// </summary>
     public void FireBurns()
     {
-        if(SeverityAmount >= _hazardRoom.RoomHealth)
-        {
+        if(SeverityAmount >= _hazardRoom.RoomHealth / 2)
+        {   //
             Debug.Log("The fire is burning hot enough that this room will be damaged!");
-            _hazardRoom.RoomHealth -= 1;
         }
     }
 
