@@ -28,8 +28,11 @@ namespace Assets.Scripts
             }
         }
 
-        public void PrintToConsole(string message, float printTime)
+        public void PrintToConsole(string message, float printTime, bool shouldClear)
         {
+            if (shouldClear)
+                ClearConsole();
+
             StartCoroutine(PrintTextDelayed(message, printTime));
         }
         public void PrintToConsole(string message)
@@ -39,11 +42,20 @@ namespace Assets.Scripts
 
         public IEnumerator PrintTextDelayed(string message, float printTime)
         {
+            if (outputField.text != "")
+                outputField.text += "\n \n";
+
+            var previousText = outputField.text;
             for (int i = 0; i < message.Length; i++)
             {
-                outputField.text = message.Substring(0, i);
+                outputField.text = previousText + message.Substring(0, i);
                 yield return new WaitForSeconds(printTime);
             }
+        }
+
+        public void ClearConsole()
+        {
+            outputField.text = "";
         }
 
     }

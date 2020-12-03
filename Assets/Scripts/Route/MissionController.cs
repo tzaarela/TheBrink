@@ -28,14 +28,12 @@ public class MissionController : MonoBehaviour
         set { route = value; }
     }
 
-
     public void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
             Destroy(this);
-
     }
 
     public void Start()
@@ -79,6 +77,7 @@ public class MissionController : MonoBehaviour
             {
                 
                 Debug.Log("Encounter triggered!");
+                
                 encounter.HasTriggered = true;
                 encounter.Execute();
             }

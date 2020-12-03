@@ -44,7 +44,6 @@ public class CrewController : MonoBehaviour
 
             var task = crewMember.CurrentTask;
 
-           
             switch (task.TaskType)
             {
                 case TaskType.Move:
@@ -57,7 +56,7 @@ public class CrewController : MonoBehaviour
                 {
                         if (!task.IsExecuted)
                         {
-                            ConsoleController.instance.PrintToConsole($"{crewMember.Name}: I've started repairs in {task.Destination.name}", 0.04f);
+                            ConsoleController.instance.PrintToConsole($"{crewMember.Name}: I've started repairs in {task.Destination.name}. ", 0.04f, true);
                             task.IsExecuted = true;
                         }
                         crewMember.Repair();
@@ -70,7 +69,7 @@ public class CrewController : MonoBehaviour
                             $"Room status [{task.Destination.RoomType.ToString()}]" +
                             "\n -- Oxygen level: " + task.Destination.AirLevel + "%" +
                             "\n -- Radiation level: " + task.Destination.RadiationLevel + "%" +
-                            "\n -- Hull Integrity: " + task.Destination.RoomHealth + "% ", 0.04f);
+                            "\n -- Hull Integrity: " + task.Destination.RoomHealth + "% ", 0.04f, true);
                         crewMember.CurrentTask = null;
                     break;
                 }

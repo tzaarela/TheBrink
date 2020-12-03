@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +56,7 @@ public class RoomController : MonoBehaviour
     public void CreateFireInRoom(float severity)
     {
         var randomIndex = UnityEngine.Random.Range(0, Rooms.Count - 1);
+        ConsoleController.instance.PrintToConsole("WARNING! Fire in " + Rooms[randomIndex].name + "! ", 0.04f, false);
 
         Rooms[randomIndex].CreateHazard(HazardType.Fire, severity);
     }
