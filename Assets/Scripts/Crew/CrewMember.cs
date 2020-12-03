@@ -12,8 +12,6 @@ public class CrewMember : UITrigger
     [SerializeField]
     private Profession _profession;
     [SerializeField]
-    private float _repairSkill = 5f;
-    [SerializeField]
     private Waypoint _spawnPoint;
     [SerializeField]
     private float _moveSpeed = 6f;
@@ -22,6 +20,7 @@ public class CrewMember : UITrigger
     public string Name { get => _name; set => _name = value; }
     public float Health { get => _health; set => _health = value; }
     public Profession Profession { get => _profession; set => _profession = value; }
+    public float RepairSkill { get; set; }
     public Task CurrentTask { get; set; }
     public Queue<Task> TaskQueue { get; set; }
     public Waypoint CurrentWayPoint { get; set; }
@@ -35,7 +34,8 @@ public class CrewMember : UITrigger
                 ToggleHighlight(true);
             else
                 ToggleHighlight(false);
-        } 
+        }
+
     }
 
     private MoveController _moveController;
@@ -81,7 +81,7 @@ public class CrewMember : UITrigger
 
     public void Repair()
     {
-        CurrentTask.Destination.RepairRoom();
+        CurrentTask.Destination.RepairRoom(RepairSkill);
     }
 
     public void FinishCurrentTask()

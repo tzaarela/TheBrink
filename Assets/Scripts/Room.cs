@@ -117,22 +117,45 @@ public class Room : UITrigger
         return availableTasks;
     }
 
-    public void RepairRoom()
+    public void RepairRoom(float repairSkill)
     {
-        foreach (Hazard Hazard in Hazards)
+        /*
+         * So, I need this method to set a priority for what hazard is fixed first right...?
+         * So it will need to check if the Room has a fire right?
+         * And later on you will need to change so that there can only ever be ONE fire in each room.
+         * And if there is a fire it shouldn't try to solve anything else...
+         * do-while? maybe? so...
+         * if hazard.hazardType == hazardType.Fire then change enum? blah blah
+         * else cont.?
+         * then check enum and go after that?
+         * 
+         * imagine if we had a hazard called "hazard to treat".
+         * and we let that hazard 
+         * 
+         * if we have a first method that checks for fire within the list...
+         * 
+         * and if not it does something else?
+         * 
+         * also, needs a way here to remove hazards if they are finished.
+         * should it go through the list and do that all the time?
+         * 
+         * and something maybe that hurts crewMembers?
+         * 
+         * no this doesn't work at all.
+         */
+
+        Hazard _hazardToFix = Hazards.FirstOrDefault(x => x.HazardType == HazardType.Fire);
+
+        switch (_hazardToFix.HazardType)
         {
-                
-                //TODO: Ask Saarela about easiest way to do this, should this method be moved to CrewMember instead?
-                //Hazard.SeverityAmount -= _crewMemberRepairSkill;
-                
-                //TODO: Figure out upper bounds of this, can a fire burn too fast?
-
-                //I think this will mean that the crewmember will do one repair action, and then get sent out of the method.
-                
-                return;
+            case HazardType.Fire:
+                _hazardToFix.SeverityAmount -= repairSkill * 2;
+                Debug.Log("The crewmember is trying to put out the fire.");
+                break;
+            default:
+                Debug.Log("The crewmember couldn't find a hazard that they are able told to repair");
+                break;
         }
-
-        Debug.Log("The crewmember couldn't find a hazard of the type that they were told to repair");
     }
 
     public void OnMouseOver()

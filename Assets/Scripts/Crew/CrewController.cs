@@ -32,7 +32,7 @@ public class CrewController : MonoBehaviour
         AddCrew();
     }
 
-    public void Update()
+    public void UpdateCrew()
     {
         if (crewMembers == null || crewMembers.Count <= 0)
             return;
