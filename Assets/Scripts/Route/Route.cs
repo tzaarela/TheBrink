@@ -5,6 +5,7 @@ using UnityEngine;
 public class Route
 {
     public float Length { get; set; }
+    public float ShipPosition { get; set; }
     public int EncounterAmount { get; set; }
 
     public List<Encounter> EncountersOnRoute { get; set; }
@@ -18,19 +19,21 @@ public class Route
     public Route(float _routeLength, int _encounterAmount, float _dangerLevel)
     {
         EncountersOnRoute = new List<Encounter>();
-        //TODO: Think we can delete this now that Encounters checks against the var Position on the Ship instead?
 
-        float distanceToNextEncounter;
+        float _distanceToNextEncounter;
+        
+        //TODO: Think we can delete this now that Encounters checks against the var Position on the Ship instead?
+        ShipPosition = 0;
 
         Length = _routeLength;
 
         EncounterAmount = _encounterAmount;
 
-        distanceToNextEncounter = Length / EncounterAmount;
+        _distanceToNextEncounter = Length / EncounterAmount;
 
         for(int i = 1; i <= EncounterAmount; i++)
         {
-            var position = distanceToNextEncounter * i;
+            var position = _distanceToNextEncounter * i;
 
             Encounter encounter = new Encounter(position, _dangerLevel);
 
