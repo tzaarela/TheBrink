@@ -78,7 +78,9 @@ public class Hazard
     /// </summary>
     public void FireGrows()
     {
+
         SeverityAmount += SeverityAmount * ( (_hazardRoom.AirLevel - SeverityAmount) / 100 );
+        Debug.Log("SeverityAmount is: " + SeverityAmount);
     }
 
     /// <summary>
@@ -89,7 +91,7 @@ public class Hazard
     {
         _hazardRoom.AirLevel -= SeverityAmount / 100;
 
-        Debug.Log("The fire in the " + _hazardRoom.RoomType + " consumes oxygen. The airlevel is now: " + _hazardRoom.AirLevel + ".") ;
+        Debug.Log("The airlevel is now: " + _hazardRoom.AirLevel + ".") ;
     }
 
     /// <summary>
@@ -100,8 +102,8 @@ public class Hazard
     public void FireBurns()
     {
         if(SeverityAmount >= _hazardRoom.RoomHealth / 2)
-        {   //
-            Debug.Log("The fire is burning hot enough that this room will be damaged!");
+        {   
+            //Debug.Log("The fire is burning hot enough that this room will be damaged!");
         }
     }
 
