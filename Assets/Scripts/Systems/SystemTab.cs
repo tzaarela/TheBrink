@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 namespace Assets.Scripts.Systems
 {
@@ -13,10 +14,18 @@ namespace Assets.Scripts.Systems
     {
         private bool isSelected;
         private GameObject background;
+        private TextMeshProUGUI tabText;
         private SystemTabController SystemTabController;
+        
 
         [SerializeField]
         private SystemType systemType;
+
+        [SerializeField]
+        Color32 textColorSelected;
+
+        [SerializeField]
+        Color32 textColorUnselected;
 
         [SerializeField]
         GameObject reactorContent;
@@ -32,24 +41,32 @@ namespace Assets.Scripts.Systems
                 isSelected = value;
                 if (isSelected)
                 {
+                    
                     background.SetActive(true);
+                    tabText.color = textColorSelected;
                     SetContent(systemType);
                 }
                 else
+                {
                     background.SetActive(false);
+                    tabText.color = textColorUnselected;
+                }
+
             }
         }
 
         public void Start()
         {
             background = transform.Find("Background").gameObject;
+            tabText = transform.Find("Text").gameObject.GetComponent<TextMeshProUGUI>();
+
             SystemTabController = transform.parent.gameObject.GetComponent<SystemTabController>();
         }
 
         public void DisableAllContent()
         {
-            reactorContent.SetActive(false);
-            weaponsContent.SetActive(false);
+            //reactorContent.SetActive(false);
+            //weaponsContent.SetActive(false);
         }
 
         public void SetContent(SystemType systemType)
