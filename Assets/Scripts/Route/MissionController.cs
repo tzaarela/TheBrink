@@ -8,9 +8,6 @@ using UnityEngine;
 
 public class MissionController : MonoBehaviour
 {
-
-
-
     public static MissionController Instance { get; set; }
 
     private const float TICK_TIMER_MAX = 0.1f;
@@ -22,7 +19,7 @@ public class MissionController : MonoBehaviour
         get 
         { 
             if(route == null)
-                route = new Route(1000, 5, 10);
+                route = new Route(1000, 10, 10);
             return route; 
         }
         set { route = value; }

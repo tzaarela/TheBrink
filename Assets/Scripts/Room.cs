@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.InterfacePanels;
+﻿using Assets.Scripts;
+using Assets.Scripts.InterfacePanels;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -123,6 +124,7 @@ public class Room : UITrigger
 
         if (Hazards.Count <= 0)
         {
+            ConsoleController.instance.PrintToConsole($"{crewMember.name}: I've finished the repairs in {crewMember.CurrentTask.Destination.name}. ", 0.01f, true);
             crewMember.FinishCurrentTask();
             return;
         }
@@ -174,8 +176,12 @@ public class Room : UITrigger
         else if (Input.GetMouseButtonDown(1))
         {
             SelectRoom();
-            var availableTasks = GetAvailableTasks();
-            ContextMenuController.instance.OpenContextMenu(availableTasks);
+
+            if(CrewController.Instance.GetSelectedCrewMember() != null)
+            {
+                var availableTasks = GetAvailableTasks();
+                ContextMenuController.instance.OpenContextMenu(availableTasks);
+            }
         }
     }
     public void SelectRoom()
