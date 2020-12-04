@@ -116,6 +116,7 @@
           </e>
           <e p="TaskType.cs" t="Include" />
         </e>
+        <e p="SpaceportUITest.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
