@@ -3881,6 +3881,11 @@ PrefabInstance:
       propertyPath: _spawnPoint
       value: 
       objectReference: {fileID: 1940076443}
+    - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
+        type: 3}
+      propertyPath: repairSkill
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: -1102832198655145720, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: _speed
@@ -4349,6 +4354,11 @@ PrefabInstance:
       propertyPath: _spawnPoint
       value: 
       objectReference: {fileID: 1354850927}
+    - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
+        type: 3}
+      propertyPath: repairSkill
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: -1102832198655145720, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: _speed
@@ -5781,6 +5791,11 @@ PrefabInstance:
       propertyPath: _spawnPoint
       value: 
       objectReference: {fileID: 2030844285}
+    - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
+        type: 3}
+      propertyPath: repairSkill
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: -1102832198655145720, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: _speed
