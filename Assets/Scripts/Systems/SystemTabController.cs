@@ -34,7 +34,7 @@ namespace Assets.Scripts.Systems
         {
             systemTab.IsSelected = true;
             //Display System Window
-            systemWindowText.text = systemTab.name;
+            //systemWindowText.text = systemTab.name;
         }
     }
 }
