@@ -73,6 +73,6 @@ public class SpaceportUITest : MonoBehaviour
     public void DepartPress()
     {
         Debug.Log($"DepartPress");
-        SceneManager.LoadScene("JEmdi");
+        SceneManager.LoadScene("Jimmy");
     }
 }
