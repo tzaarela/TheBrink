@@ -56,7 +56,7 @@ public class RoomController : MonoBehaviour
     public void CreateFireInRoom(float severity)
     {
         var randomIndex = UnityEngine.Random.Range(0, Rooms.Count - 1);
-        ConsoleController.instance.PrintToConsole("WARNING! Fire in " + Rooms[randomIndex].name + "! ", 0.04f, false);
+        ConsoleController.instance.PrintToConsole("WARNING! Fire in " + Rooms[randomIndex].name + "! ", 0.01f, false);
 
         Rooms[randomIndex].CreateHazard(HazardType.Fire, severity);
     }

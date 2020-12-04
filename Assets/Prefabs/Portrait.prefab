@@ -1103,6 +1103,7 @@ MonoBehaviour:
   crewNameText: {fileID: 2193973714425766465}
   professionText: {fileID: 220437422944431518}
   healthText: {fileID: 7966190674778465517}
+  statusText: {fileID: 8781576348782515694}
   highlight: {fileID: 2001668826779306741}
 --- !u!1 &5821049006557344477
 GameObject:

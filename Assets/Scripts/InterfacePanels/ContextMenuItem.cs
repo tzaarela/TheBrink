@@ -72,12 +72,14 @@ namespace Assets.Scripts.InterfacePanels
         public override void OnPointerEnter(PointerEventData eventData)
         {
             IsHighlighted = true;
+            ContextMenuController.instance.IsMenuItemSelected = true;
             base.OnPointerEnter(eventData);
         }
 
         public override void OnPointerExit(PointerEventData eventData)
         {
             IsHighlighted = false;
+            ContextMenuController.instance.IsMenuItemSelected = false;
             base.OnPointerExit(eventData);
         }
 

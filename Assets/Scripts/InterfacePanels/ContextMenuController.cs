@@ -19,6 +19,8 @@ namespace Assets.Scripts.InterfacePanels
             set { isOpen = value; }
         }
 
+        public bool IsMenuItemSelected { get; set; }
+
         [SerializeField]
         private Canvas printToCanvas;
 
@@ -44,6 +46,12 @@ namespace Assets.Scripts.InterfacePanels
         private void Start()
         {
             _camera = Camera.main;
+        }
+
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(0) && isOpen && !IsMenuItemSelected)
+                CloseContextMenu();
         }
 
         public void OpenContextMenu(List<Task> availableTasks)

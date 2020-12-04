@@ -16,6 +16,8 @@ namespace Assets.Scripts
         [SerializeField]
         private TextMeshProUGUI outputField;
 
+        private Queue<IEnumerator> printQueue;
+
         public void Start()
         {
             if (instance == null)
@@ -26,6 +28,9 @@ namespace Assets.Scripts
             {
                 Destroy(this);
             }
+
+            printQueue = new Queue<IEnumerator>();
+            StartCoroutine(PrintConsoleQueue());
         }
 
         public void PrintToConsole(string message, float printTime, bool shouldClear)
@@ -33,7 +38,9 @@ namespace Assets.Scripts
             if (shouldClear)
                 ClearConsole();
 
-            StartCoroutine(PrintTextDelayed(message, printTime));
+            printQueue.Enqueue(PrintTextDelayed(message, printTime));
+
+            //StartCoroutine(PrintTextDelayed(message, printTime));
         }
         public void PrintToConsole(string message)
         {
@@ -56,6 +63,18 @@ namespace Assets.Scripts
         public void ClearConsole()
         {
             outputField.text = "";
+        }
+
+        IEnumerator PrintConsoleQueue()
+        {
+            while (true)
+            {
+                while (printQueue.Count > 0)
+                {
+                    yield return StartCoroutine(printQueue.Dequeue());
+                }
+                yield return null;
+            }
         }
 
     }

@@ -21,6 +21,7 @@ public class CrewMember : UITrigger
     public float Health { get => _health; set => _health = value; }
     public Profession Profession { get => _profession; set => _profession = value; }
     public float RepairSkill { get => repairSkill; set => repairSkill = value; }
+    public string Status { get; set; }
     public Task CurrentTask { get; set; }
     public Queue<Task> TaskQueue { get; set; }
     public Waypoint CurrentWayPoint { get; set; }
@@ -51,6 +52,7 @@ public class CrewMember : UITrigger
 
     public void Start()
     {
+        Status = "Idle";
         CurrentWayPoint = _spawnPoint;
         transform.position = _spawnPoint.transform.position;
     }
@@ -58,7 +60,10 @@ public class CrewMember : UITrigger
     public void Update()
     {
         if (CurrentTask != null && CurrentTask.TaskType == TaskType.Move)
+        {
+            Status = "Moving";
             Move();
+        }
     }
 
     public void ToggleHighlight(bool isOn)
@@ -88,6 +93,7 @@ public class CrewMember : UITrigger
 
     public void Repair()
     {
+        Status = "Repairing";
         CurrentTask.Destination.RepairRoom(this);
     }
 
@@ -105,6 +111,9 @@ public class CrewMember : UITrigger
             }
         }
         else
+        {
             CurrentTask = null;
+            Status = "Idle";
+        }
     }
 }

@@ -1188,9 +1188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  crewNameText: {fileID: 0}
-  professionText: {fileID: 0}
+  crewNameText: {fileID: 2015154510714306973}
+  professionText: {fileID: 797303363638144506}
   healthText: {fileID: 0}
+  statusText: {fileID: 2018389389812123255}
   highlight: {fileID: 0}
 --- !u!1 &8809988734354922903
 GameObject:

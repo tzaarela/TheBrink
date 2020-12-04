@@ -23,6 +23,9 @@ namespace Assets.Scripts.InterfacePanels
         GameObject healthText;
 
         [SerializeField]
+        GameObject statusText;
+
+        [SerializeField]
         GameObject highlight;
 
         public CrewMember CrewMember { get => crewMember; set => crewMember = value; }
@@ -30,6 +33,8 @@ namespace Assets.Scripts.InterfacePanels
         private TextMeshProUGUI nameTextMesh;
         private TextMeshProUGUI professionTextMesh;
         private TextMeshProUGUI healthTextMesh;
+        private TextMeshProUGUI statusTextMesh;
+
         private CrewMember crewMember;
 
         public void Start()
@@ -37,6 +42,7 @@ namespace Assets.Scripts.InterfacePanels
             nameTextMesh = crewNameText.GetComponent<TextMeshProUGUI>();
             professionTextMesh = professionText.GetComponent<TextMeshProUGUI>();
             healthTextMesh = healthText.GetComponent<TextMeshProUGUI>();
+            statusTextMesh = statusText.GetComponent<TextMeshProUGUI>();
         }
 
         public void Update()
@@ -46,6 +52,7 @@ namespace Assets.Scripts.InterfacePanels
                 nameTextMesh.text = crewMember.Name;
                 professionTextMesh.text = crewMember.Profession.ToString();
                 healthTextMesh.text = crewMember.Health.ToString();
+                statusTextMesh.text = crewMember.Status.ToString();
 
                 if (crewMember.IsSelected)
                     highlight.SetActive(true);
