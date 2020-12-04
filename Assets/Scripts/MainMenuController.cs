@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class MainMenuController : MonoBehaviour
@@ -44,6 +45,10 @@ public class MainMenuController : MonoBehaviour
     
     public void ShowPanel(int panelIndex)
     {
+        // TA BORT
+        if (panelIndex == 1)
+            SceneManager.LoadScene("SpaceportScene");
+        
         ShowPanelOnly(_currentPanel = (MainMenuPanelType)panelIndex);
         Debug.Log($"ShowPanel: {_currentPanel}");
     }
@@ -61,7 +66,8 @@ public class MainMenuController : MonoBehaviour
 
     public void NewOnClick()
     {
-        ShowPanelOnly(_currentPanel = MainMenuPanelType.New);
+        // ShowPanelOnly(_currentPanel = MainMenuPanelType.New);
+        SceneManager.LoadScene("SpaceportScene");
     }
     
     public void LoadOnClick()
