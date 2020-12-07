@@ -51,11 +51,14 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
+  - {fileID: 21300000, guid: 08ee76207d6f945949d8323b1e8490b2, type: 3}
   - {fileID: 21300000, guid: 60f86c806c220cc43a7cd9bd53921c90, type: 3}
   - {fileID: 21300000, guid: d6ec6e518ae2f4f5cbcd34b063a04a2d, type: 3}
   - {fileID: 21300000, guid: f6dc48b1b4a4e4eca8f7a525b1d61be6, type: 3}
   - {fileID: 21300000, guid: 1ce298d1ca34b456b81d73c97f5a7d8e, type: 3}
   - {fileID: 21300000, guid: 40a863620f5594611a9d1952c9646ea1, type: 3}
+  - {fileID: 21300000, guid: 906fbcc28f2c8400585b942e12f2d32f, type: 3}
+  - {fileID: 21300000, guid: 83d229d243a7d4ef183e39aed73e94d8, type: 3}
   - {fileID: 21300000, guid: fba2b4f2364e0423e8831d7a9232b850, type: 3}
   - {fileID: 21300000, guid: 2199744357a3ed342a809ea07673344f, type: 3}
   - {fileID: 21300000, guid: 747d45535920e43c0a1bf6d9c6f53183, type: 3}
@@ -70,12 +73,16 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 80c853b64891f4d5fbf35981b3c9590e, type: 3}
   - {fileID: 21300000, guid: c3875fd66c7f644c188b314def4d9d38, type: 3}
   - {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
+  - {fileID: 21300000, guid: 58900ba8fdd7d4fca9a6d750e4babac3, type: 3}
   - {fileID: 21300000, guid: 8f395fc8959b24d3ea647086592a9694, type: 3}
   - {fileID: -2897203261715952056, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: -9027160683635849523, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: 8082654419782018365, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: -1471556661742532906, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: 1094749345154489322, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
+  - {fileID: 21300000, guid: e845f849ddb9447b080502a6d98f3fc8, type: 3}
+  - {fileID: 21300000, guid: 94d9a65ac637e4447b419b4358c1076e, type: 3}
+  - {fileID: 21300000, guid: 1ba752dae75de4c12a52bf51e53af0e3, type: 3}
   - {fileID: 21300000, guid: ff0fd3da93ecb4fcf9506d6b108d4351, type: 3}
   - {fileID: 21300000, guid: 4720ebfa921a544c8b98ec92dcf8fb11, type: 3}
   - {fileID: 21300000, guid: a211c11bf85c9435eaf0119666a0f933, type: 3}
@@ -90,11 +97,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 33a62eff97eaa44c7a89b39c55c5eed4, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShipUI_Portrait1
+  - tab-border_11x11_01_selected
   - Encounter
   - Button_01_8x8
   - ShipBlueprint_OVER1
   - 8x8_ui-border-temp_01_noFill
   - Box_Logga_75x88_WHITE
+  - Button_Hover
+  - Button_Pressed
   - Ship_CargoHold
   - CircleShip
   - 8x8_ui-border3-temp_01
@@ -109,12 +119,16 @@ SpriteAtlas:
   - 1x1px_white_temp_01
   - Main_Menu_Button-outline_WHITE
   - ShipUI_Portrait2
+  - Button_Normal
   - Ship_MainDeck
   - LogosSPACE_GroupedWhite_1
   - LogosSPACE_GroupedWhite_3
   - LogosSPACE_GroupedWhite_4
   - ship-icon-logo-01
   - spaceport-logo_01
+  - tab-border_14x14_01
+  - 8x8_ui-border_01_selected
+  - Vaning_Icon_Pixelated2
   - ShipUI_Floor_Inactive
   - ShipBlueprint_UNDER1
   - Main_Menu_Button-outline_01
