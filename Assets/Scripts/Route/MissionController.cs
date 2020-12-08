@@ -63,6 +63,7 @@ public class MissionController : MonoBehaviour
     {
         foreach(Room room in RoomController.Instance.Rooms)
         {
+            room.AirDrain();
             room.UpdateHazard();
         }
     }

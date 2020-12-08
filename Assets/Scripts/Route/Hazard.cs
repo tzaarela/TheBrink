@@ -18,8 +18,8 @@ public class Hazard
         SeverityAmount = severityAmount;
         _hazardRoom = hazardRoom;
     }
-
-    public void ExecuteHazard()
+    //Initialize here, add function, that way called only once, called from room. create hazard. So causes inital damange
+    public void UpdateHazard()
     {
         switch (HazardType)
         {
@@ -48,17 +48,10 @@ public class Hazard
     ///AirLevel decreases by less the less air is in the room.
     ///</summary>
     public void RoomWithHullBreach()
-    {
-        //TODO: Make this into one code line
-        //Remove airLeakage here and just put straight into AirLevel?
-        //TODO: The division of hundred here, it might be best to turn that into a named variable, so it can be affected from inside Unity.
-        float _airLeakage;
-        
+    {        
         //TODO: I messed up here, I need to fix so that, in this case, you will decrease the severity when you repair the room (since it is a crack in the hull).
 
-        _airLeakage = ((SeverityAmount * _hazardRoom.AirLevel) / 100);
-
-        _hazardRoom.AirLevel -= _airLeakage;
+        _hazardRoom.AirLevel -= ((SeverityAmount * _hazardRoom.AirLevel) / 100);
 
         Debug.Log("Air is leaving the room, current airlevel is " + _hazardRoom.AirLevel);
     }
