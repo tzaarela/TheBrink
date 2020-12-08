@@ -3,7 +3,7 @@
     Bridge,
     Mainframe,
     MainBattery,
-    Quarters,
+    LifeSupport,
     Medbay,
     Reactor,
     CargoBay,
