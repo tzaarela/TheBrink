@@ -2,6 +2,7 @@
 using Assets.Scripts.Systems;
 using UnityEditor;
 using UnityEditor.EventSystems;
+using UnityEngine;
 
 namespace Assets.Scripts.Editor
 {
@@ -68,6 +69,35 @@ namespace Assets.Scripts.Editor
             DrawDefaultInspector();
 
             base.OnInspectorGUI();
+        }
+    }
+    
+    [CustomEditor(typeof(UIButton))]
+    public class UIButtonEditor : EventTriggerEditor
+    {
+        private SerializedProperty _spriteArray;
+        private string[] _spriteNames = new string[5] {"Normal", "Highlight", "Pressed", "Selected", "Disabled"};
+
+        public override void OnInspectorGUI()
+        {
+            serializedObject.Update();
+            
+            ArrayGUI(serializedObject.FindProperty("_sprites"));
+            
+            serializedObject.ApplyModifiedProperties();
+        }
+
+        private void ArrayGUI(SerializedProperty array)
+        {
+            EditorGUILayout.LabelField("Button Sprites", new GUILayoutOption[0]);
+            EditorGUI.indentLevel++;
+            
+            for (int i = 0; i < array.arraySize; i++)
+            {
+                EditorGUILayout.PropertyField(array.GetArrayElementAtIndex(i), new GUIContent(_spriteNames[i]), true);
+            }
+            
+            EditorGUI.indentLevel--;
         }
     }
 }

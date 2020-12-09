@@ -3756,7 +3756,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2912222243591532463}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &297895948
+--- !u!114 &297895952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3768,6 +3768,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44330599cb504f48b0f95df7b7f2c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Delegates: []
+  _sprites:
+  - {fileID: 21300000, guid: f106351b665ea90479156be5d32855c1, type: 3}
+  - {fileID: 21300000, guid: a7cf1bab579e28541927f71a238e6faa, type: 3}
+  - {fileID: 21300000, guid: b7a00b2baa500bc4b9142a9219f200a0, type: 3}
+  - {fileID: 21300000, guid: f106351b665ea90479156be5d32855c1, type: 3}
+  - {fileID: 21300000, guid: f106351b665ea90479156be5d32855c1, type: 3}
 --- !u!1 &298792674
 GameObject:
   m_ObjectHideFlags: 0
@@ -23463,6 +23470,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1914510172}
     m_Modifications:
+    - target: {fileID: 2912222242139106093, guid: 4fab0e931b8db412e96f22921bfcdc56,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2912222242543479360, guid: 4fab0e931b8db412e96f22921bfcdc56,
         type: 3}
       propertyPath: m_Name
