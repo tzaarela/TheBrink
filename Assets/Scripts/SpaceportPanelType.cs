@@ -1,6 +1,6 @@
-﻿public enum SpaceportPanelType : int
+﻿public enum SpaceportTabType : int
 {
     Contracts,
-    HireCrew,
-    Repair
+    Barrack,
+    Workshop
 }

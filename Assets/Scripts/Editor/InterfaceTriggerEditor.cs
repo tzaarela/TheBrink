@@ -16,7 +16,6 @@ namespace Assets.Scripts.Editor
         }
     }
 
-
     [CustomEditor(typeof(Room))]
     public class RoomTriggerEditor : EventTriggerEditor
     {
@@ -52,6 +51,17 @@ namespace Assets.Scripts.Editor
 
     [CustomEditor(typeof(SystemTab))]
     public class SystemTabTriggerEditor : EventTriggerEditor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            base.OnInspectorGUI();
+        }
+    }
+    
+    [CustomEditor(typeof(SpaceportTabObject))]
+    public class SpaceportTabObjectEditor : EventTriggerEditor
     {
         public override void OnInspectorGUI()
         {
