@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class Room : UITrigger
 {
@@ -166,16 +167,19 @@ public class Room : UITrigger
         }
     }
 
-    public void OnMouseOver()
+    public override void OnPointerEnter(PointerEventData eventData)
     {
-        if (Input.GetMouseButtonDown(0) && !ContextMenuController.instance.IsOpen)
+        //if (Input.GetMouseButtonDown(0) && !ContextMenuController.instance.IsOpen)
+        //{
+        //    Highlight();
+        //    ContextMenuController.instance.CloseContextMenu();
+        //}
+        Highlight(true);
+
+        if (Input.GetMouseButtonDown(1))
         {
-            SelectRoom();
-            ContextMenuController.instance.CloseContextMenu();
-        }
-        else if (Input.GetMouseButtonDown(1))
-        {
-            SelectRoom();
+            RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true).IsSelected = false;
+            IsSelected = true;
 
             if(CrewController.Instance.GetSelectedCrewMember() != null)
             {
@@ -184,14 +188,12 @@ public class Room : UITrigger
             }
         }
     }
-    public void SelectRoom()
+    public override void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log($"Room \"{name}\" selected");
-
-        var previouslySelected = RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true);
-        if (previouslySelected != null)
-            previouslySelected.IsSelected = false;
-
-        IsSelected = true;
+        base.OnPointerExit(eventData);
+    }
+    public void Highlight(bool isOn)
+    {
+        
     }
 }

@@ -63,12 +63,12 @@ namespace Assets.Scripts.InterfacePanels
 
         public override void OnPointerClick(PointerEventData eventData)
         {
-            // Debug.Log(crewName + " is selected");
-            CrewController.Instance.crewMembers.ForEach(x => x.IsSelected = false);
-            crewMember.IsSelected = true;
+            crewMember.Select();
 
             base.OnPointerClick(eventData);
         }
+
+        
 
         public override void OnPointerEnter(PointerEventData eventData)
         {

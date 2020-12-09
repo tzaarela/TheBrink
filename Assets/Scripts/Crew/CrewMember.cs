@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.InterfacePanels;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [System.Serializable]
 public class CrewMember : UITrigger
@@ -33,7 +34,10 @@ public class CrewMember : UITrigger
         {
             isSelected = value;
             if (isSelected)
+            {
                 ToggleHighlight(true);
+            }
+
             else
                 ToggleHighlight(false);
         }
@@ -64,6 +68,12 @@ public class CrewMember : UITrigger
             Status = "Moving";
             Move();
         }
+    }
+
+    public void Select()
+    {
+        CrewController.Instance.crewMembers.ForEach(x => x.IsSelected = false);
+        IsSelected = true;
     }
 
     public void ToggleHighlight(bool isOn)
@@ -115,5 +125,10 @@ public class CrewMember : UITrigger
             CurrentTask = null;
             Status = "Idle";
         }
+    }
+
+    public override void OnPointerClick(PointerEventData eventData)
+    {
+        Select();
     }
 }
