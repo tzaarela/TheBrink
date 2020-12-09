@@ -14,24 +14,17 @@ public class BridgeSystem : ShipSystem
     float TimeUntilRetrogradeBurn;
     float TimeUntilNextEncounter;
 
-    BridgeSystem()
+    public SystemType SystemType { get; set; }
+    public SystemState SystemState { get; set; }
+    public float EnergyWanted { get; set; }
+    public float CurrentEnergy { get; set; }
+    public float EnergyToMaintain { get; set; }
+
+    public void Run()
     {
-        //Needs to get info when Route is selected here
-        //But when?
-        //MissionController gives info when route has been selected, to BridgeSystem.
-    }
-
-    public void BridgeUpdate()
-    {
-        //Check if Docking? But that should be other system surely?
-
-        //UpdateETA,
-
-        //Figure out, should this be sent somewhere else, or should it just be set as field here right?
-
-        //UpdateTimeToRetro
-
-        //UpdateTimeToEncounter
+        UpdateETA();
+        UpdateTimeToRetro();
+        UpdateTimeToEncounter();
     }
 
     public void UpdateETA()
@@ -49,4 +42,13 @@ public class BridgeSystem : ShipSystem
 
     }
 
+    public void Reboot()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void RunDiagnostic()
+    {
+        throw new System.NotImplementedException();
+    }
 }

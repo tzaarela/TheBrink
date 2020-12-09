@@ -9,9 +9,31 @@ public class MedbaySystem : ShipSystem
 
     public Queue<CrewMember> patientsToTreat;
 
+
+    public SystemType SystemType { get; set; }
+    public SystemState SystemState { get; set; }
+    public float EnergyWanted { get; set; }
+    public float CurrentEnergy { get; set; }
+    public float EnergyToMaintain { get; set; }
+
     public MedbaySystem()
     {
         
+    }
+
+    public void Run()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Reboot()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void RunDiagnostic()
+    {
+        throw new System.NotImplementedException();
     }
 
     //public void UpdateMedbay()
@@ -36,7 +58,7 @@ public class MedbaySystem : ShipSystem
     //{
     //    //Checks if there is other CrewMember there, and IF that CrewMember is hurt.
     //}
-    
+
     //public void TreatPatient()
     //{
     //    //Take crewMembers health, increase it by Doctors skill (but not above top value).

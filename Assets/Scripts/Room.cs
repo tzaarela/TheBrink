@@ -15,6 +15,8 @@ public class Room : UITrigger
     public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
     public RoomType RoomType { get; set; }
 
+   
+
     private bool isSelected;
 
     public bool IsSelected
@@ -102,9 +104,9 @@ public class Room : UITrigger
         }
     }
 
-    public void AirDrain()
+    public void AirDrain(float drainLevel)
     {
-        AirLevel -= 0.2f;
+        AirLevel -= drainLevel;
     }
 
     public List<Task> GetAvailableTasks()

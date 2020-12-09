@@ -11,6 +11,11 @@ public class LifeSupportSystem : ShipSystem
     float portionOfAir;
     float totalOxygenNeeded;
 
+    public SystemType SystemType { get; set; }
+    public SystemState SystemState { get; set; }
+    public float EnergyWanted { get; set; }
+    public float CurrentEnergy { get; set; }
+    public float EnergyToMaintain { get; set; }
 
     public LifeSupportSystem()
     {
@@ -21,19 +26,11 @@ public class LifeSupportSystem : ShipSystem
 
     }
 
-    public void LifeSupportUpdate()
-    {
-        GetOxygenNeeded();
-
-        ProduceOxygen();
-
-        SendOxygenOut();
-    }
     public void GetOxygenNeeded()
     {
         for (int i = 0; i < rooms.Count; i++)
         {
-            if (rooms[i].AirLevel < 95)
+            if (rooms[i].AirLevel < SystemController.Instance.optimalAirLevel)
             {
                 airMissingPerRoom[i] = 100 - rooms[i].AirLevel;
             }
@@ -47,11 +44,11 @@ public class LifeSupportSystem : ShipSystem
             totalOxygenNeeded += airMissingPerRoom[i];
         }
 
-        while (totalAirProduced > totalOxygenNeeded || currentEnergy >= 2)
+        while (totalAirProduced > totalOxygenNeeded || CurrentEnergy > SystemController.Instance.airProduceCost)
         {
             totalAirProduced++;
 
-            currentEnergy -= 3;
+            CurrentEnergy -= SystemController.Instance.airProduceCost;
         }
 
     }
@@ -64,5 +61,24 @@ public class LifeSupportSystem : ShipSystem
 
         }
 
+    }
+
+    public void Run()
+    {
+        GetOxygenNeeded();
+
+        ProduceOxygen();
+
+        SendOxygenOut();
+    }
+
+    public void Reboot()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void RunDiagnostic()
+    {
+        throw new System.NotImplementedException();
     }
 }
