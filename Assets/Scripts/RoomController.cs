@@ -24,9 +24,9 @@ public class RoomController : MonoBehaviour
 
     public static RoomController Instance;
 
-    private void Start()
+    private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
             _rooms = new List<Room>();
@@ -36,6 +36,11 @@ public class RoomController : MonoBehaviour
         {
             Destroy(this);
         }
+    }
+
+    private void Start()
+    {
+        
     }
 
     public void UpdateRooms()

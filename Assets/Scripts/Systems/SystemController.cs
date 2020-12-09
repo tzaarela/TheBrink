@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SystemController : MonoBehaviour
@@ -45,11 +46,14 @@ public class SystemController : MonoBehaviour
 
     public void ShipSystemUpdate()
     {
-        foreach(ShipSystem ShipSystem in ShipSystems)
+        if(ShipSystems.Select(x => x == null).Count() == 0)
         {
-            if (ShipSystem.SystemState == SystemState.IsOn)
+            foreach(ShipSystem ShipSystem in ShipSystems)
             {
-                ShipSystem.Run();
+                if (ShipSystem.SystemState == SystemState.IsOn)
+                {
+                    ShipSystem.Run();
+                }
             }
         }
     }
