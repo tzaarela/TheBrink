@@ -21,6 +21,16 @@ public class SpaceportTabController : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
 
+        GetAllComponents();
+    }
+
+    private void Start()
+    {
+        SelectTab(SpaceportTabType.Contracts);
+    }
+
+    private void GetAllComponents()
+    {
         _images = new Image[transform.childCount];
         for (int i = 0; i < _images.Length; i++)
         {
@@ -32,11 +42,6 @@ public class SpaceportTabController : MonoBehaviour
         {
             _texts[i] = _images[i].GetComponentInChildren<TMP_Text>();
         }
-    }
-
-    private void Start()
-    {
-        SelectTab(SpaceportTabType.Contracts);
     }
 
     private void ResetAllPanels()

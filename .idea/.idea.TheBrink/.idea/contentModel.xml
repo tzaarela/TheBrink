@@ -105,8 +105,17 @@
           <e p="SceneManager.cs" t="Include" />
           <e p="Ship.cs" t="Include" />
           <e p="ShipController.cs" t="Include" />
-          <e p="SpaceportPanelType.cs" t="Include" />
-          <e p="SpaceportTabController.cs" t="Include" />
+          <e p="Spaceport" t="Include">
+            <e p="SpaceportBarrackController.cs" t="Include" />
+            <e p="SpaceportContractsController.cs" t="Include" />
+            <e p="SpaceportPanelController.cs" t="Include" />
+            <e p="SpaceportPanelType.cs" t="Include" />
+            <e p="SpaceportTabController.cs" t="Include" />
+            <e p="SpaceportTabObject.cs" t="Include" />
+            <e p="SpaceportUIController.cs" t="Include" />
+            <e p="SpaceportUITest.cs" t="Include" />
+            <e p="SpaceportWorkshopController.cs" t="Include" />
+          </e>
           <e p="Systems" t="Include">
             <e p="BridgeSystem.cs" t="Include" />
             <e p="CargoHoldSystem.cs" t="Include" />
@@ -114,6 +123,7 @@
             <e p="LifeSupportSystem.cs" t="Include" />
             <e p="MainBatterySystem.cs" t="Include" />
             <e p="MainframeSystem.cs" t="Include" />
+            <e p="MedbaySystem.cs" t="Include" />
             <e p="ReactorSystem.cs" t="Include" />
             <e p="ShipSystem.cs" t="Include" />
             <e p="SystemController.cs" t="Include" />
@@ -124,9 +134,6 @@
           </e>
           <e p="TaskType.cs" t="Include" />
         </e>
-        <e p="SpaceportTabObject.cs" t="Include" />
-        <e p="SpaceportUIController.cs" t="Include" />
-        <e p="SpaceportUITest.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

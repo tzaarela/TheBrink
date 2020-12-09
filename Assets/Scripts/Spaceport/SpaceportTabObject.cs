@@ -10,8 +10,7 @@ public class SpaceportTabObject : UITrigger
 
     public override void OnPointerClick(PointerEventData eventData)
     {
-        // base.OnPointerClick(eventData);
-        // Debug.Log($"{name} was clicked on!");
         SpaceportTabController.instance.SelectTab(_tabType);
+        SpaceportUIController.instance.ShowPanel(_tabType);
     }
 }
