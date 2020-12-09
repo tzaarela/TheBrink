@@ -13,6 +13,7 @@ public class MissionController : MonoBehaviour
     private const float TICK_TIMER_MAX = 0.1f;
     private float tickTimer = 0;
     private Route route;
+    private Ship ship;
 
     public Route Route
     {
@@ -35,7 +36,7 @@ public class MissionController : MonoBehaviour
 
     public void Start()
     {
-        
+        ship = ShipController.Instance.CreateShip();
     }
 
     public void Update()
@@ -48,24 +49,15 @@ public class MissionController : MonoBehaviour
             tickTimer = 0;
             CheckEncounters();
             CrewController.Instance.UpdateCrew();
-            UpdateRoom();
+            RoomController.Instance.UpdateRooms();
+            SystemController.Instance.ShipSystemUpdate();
         }
     }
-
 
     private void UpdateShipPosition()
     {
-        ShipController.Instance.Ship.Position += ShipController.Instance.Ship.Speed * Time.deltaTime;
-        Route.ShipPosition = ShipController.Instance.Ship.Position;
-    }
-
-    private void UpdateRoom()
-    {
-        foreach(Room room in RoomController.Instance.Rooms)
-        {
-            room.AirDrain();
-            room.UpdateHazard();
-        }
+        ship.Position += ship.Speed * Time.deltaTime;
+        Route.ShipPosition = ship.Position;
     }
 
     private void CheckEncounters()

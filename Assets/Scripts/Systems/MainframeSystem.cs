@@ -9,18 +9,15 @@ public class MainframeSystem : ShipSystem
 
     bool isCharging;
 
+    public SystemType SystemType { get; set; }
+    public SystemState SystemState { get; set; }
+    public float EnergyWanted { get; set; }
+    public float CurrentEnergy { get; set; }
+    public float EnergyToMaintain { get; set; }
+
     public MainframeSystem()
     {
     
-    }
-
-    public void MainframeUpdate()
-    {
-        GetEnergyNeeded();
-
-        DivideEnergy();
-
-        SendEnergyOut();
     }
 
     public void GetEnergyNeeded()
@@ -36,5 +33,24 @@ public class MainframeSystem : ShipSystem
     public void SendEnergyOut()
     {
 
+    }
+
+    public void Run()
+    {
+        GetEnergyNeeded();
+
+        DivideEnergy();
+
+        SendEnergyOut();
+    }
+
+    public void Reboot()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void RunDiagnostic()
+    {
+        throw new System.NotImplementedException();
     }
 }

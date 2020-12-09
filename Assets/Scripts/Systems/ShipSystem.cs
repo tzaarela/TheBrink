@@ -3,71 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipSystem
+public interface ShipSystem 
 {
-    public SystemType SystemType;
-    public SystemState SystemState;
+    SystemType SystemType { get; set; }
+    SystemState SystemState  { get; set; }
 
-    public float EnergyWanted = 0;
-    public float currentEnergy = 0;
-    public float EnergyToMaintain = 0;
+    float EnergyWanted { get; set; }
 
-    public ShipSystem()
-    {
-        SystemState = SystemState.IsOn;
-    }
+    float CurrentEnergy { get; set; }
 
-    public void Run()
-    {
-        switch (SystemType)
-        {
-            case SystemType.Bridge:
+    float EnergyToMaintain { get; set; }
 
-                break;
-            
-            case SystemType.Mainframe:
+    void Run();
 
-                break;
-            
-            case SystemType.MainBattery:
+    void Reboot();
 
-                break;
-            
-            case SystemType.LifeSupport:
-
-                break;
-            
-            case SystemType.Medbay:
-
-                break;
-            
-            case SystemType.Reactor:
-
-                var shipSystem = this as ReactorSystem;
-                shipSystem.ReactorUpdate();
-                
-                break;
-            
-            case SystemType.CargoBay:
-
-                break;
-            
-            case SystemType.Corridors:
-
-                break;
-            
-            default:
-                
-                break;
-        }
-    }
-
-    public void RebootingSystem()
-    {
-
-    }
-    public void DiagnosingSystem()
-    {
-
-    }
+    void RunDiagnostic();
 }

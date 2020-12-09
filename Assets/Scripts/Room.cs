@@ -15,6 +15,8 @@ public class Room : UITrigger
     public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
     public RoomType RoomType { get; set; }
 
+   
+
     private bool isSelected;
 
     public bool IsSelected
@@ -102,9 +104,9 @@ public class Room : UITrigger
         }
     }
 
-    public void AirDrain()
+    public void AirDrain(float drainLevel)
     {
-        AirLevel -= 0.2f;
+        AirLevel -= drainLevel;
     }
 
     public List<Task> GetAvailableTasks()
@@ -176,28 +178,33 @@ public class Room : UITrigger
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
+        Highlight(true);
+    }
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        Highlight(false);
+    }
+
+  
+
+    public override void OnPointerClick(PointerEventData eventData)
+    {
         //if (Input.GetMouseButtonDown(0) && !ContextMenuController.instance.IsOpen)
         //{
-        //    Highlight();
         //    ContextMenuController.instance.CloseContextMenu();
         //}
-        Highlight(true);
 
-        if (Input.GetMouseButtonDown(1))
+        if (eventData.button == PointerEventData.InputButton.Right)
         {
-            RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true).IsSelected = false;
-            IsSelected = true;
+            //RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true).IsSelected = false;
+            //IsSelected = true;
 
-            if(CrewController.Instance.GetSelectedCrewMember() != null)
+            if (CrewController.Instance.GetSelectedCrewMember() != null)
             {
                 var availableTasks = GetAvailableTasks();
                 ContextMenuController.instance.OpenContextMenu(availableTasks);
             }
         }
-    }
-    public override void OnPointerExit(PointerEventData eventData)
-    {
-        Highlight(false);
     }
     public void Highlight(bool isOn)
     {

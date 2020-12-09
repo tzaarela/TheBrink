@@ -13,6 +13,9 @@ public class RoomController : MonoBehaviour
     [SerializeField]
     private List<GameObject> roomGameObjects;
 
+    [SerializeField]
+    private float airDrainLevel = 0.2f;
+
     public List<Room> Rooms
     {
         get { return _rooms; }
@@ -21,9 +24,9 @@ public class RoomController : MonoBehaviour
 
     public static RoomController Instance;
 
-    private void Start()
+    private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
             _rooms = new List<Room>();
@@ -32,6 +35,20 @@ public class RoomController : MonoBehaviour
         else
         {
             Destroy(this);
+        }
+    }
+
+    private void Start()
+    {
+        
+    }
+
+    public void UpdateRooms()
+    {
+        foreach (Room room in Rooms)
+        {
+            room.AirDrain(airDrainLevel);
+            room.UpdateHazard();
         }
     }
 

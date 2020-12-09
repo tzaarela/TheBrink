@@ -15,11 +15,17 @@ public class ReactorSystem : ShipSystem
 
     private bool IsRetrograde;
 
+    public SystemType SystemType { get; set; }
+    public SystemState SystemState { get; set; }
+    public float EnergyWanted { get; set; }
+    public float CurrentEnergy { get; set; }
+    public float EnergyToMaintain { get; set; }
+
     public ReactorSystem()
     {
-        SystemType SystemType = SystemType.Reactor;
+        SystemType = SystemType.Reactor;
 
-        SystemState SystemState = SystemState.IsOn;
+        SystemState = SystemState.IsOn;
 
         Fuel = 100;
         FuelMax = 100;
@@ -27,14 +33,6 @@ public class ReactorSystem : ShipSystem
         Efficiency = 100;
 
         IsRetrograde = false;
-    }
-    public void ReactorUpdate()
-    {
-        BurnsFuel();
-
-        ProdEnergy();
-
-        ProdSpeed();
     }
 
     public void BurnsFuel()
@@ -48,6 +46,25 @@ public class ReactorSystem : ShipSystem
     public void ProdSpeed()
     {
 
+    }
+
+    public void Run()
+    {
+        BurnsFuel();
+
+        ProdEnergy();
+
+        ProdSpeed();
+    }
+
+    public void Reboot()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void RunDiagnostic()
+    {
+        throw new System.NotImplementedException();
     }
 }
 /*

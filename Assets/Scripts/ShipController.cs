@@ -25,14 +25,10 @@ namespace Assets.Scripts
 
         public Ship Ship { get; set; }
 
-        public ShipController()
-        {
-            Ship = CreateShip();
-        }
-
         public Ship CreateShip()
         {
-            return new Ship();
+            Ship = new Ship();
+            return Ship;
         }
     }
 }
