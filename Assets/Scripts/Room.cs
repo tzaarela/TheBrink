@@ -178,12 +178,12 @@ public class Room : UITrigger
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
+        Highlight(true);
+
         //if (Input.GetMouseButtonDown(0) && !ContextMenuController.instance.IsOpen)
         //{
-        //    Highlight();
         //    ContextMenuController.instance.CloseContextMenu();
         //}
-        Highlight(true);
 
         if (Input.GetMouseButtonDown(1))
         {

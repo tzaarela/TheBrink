@@ -16,7 +16,7 @@ public class CargoHoldSystem : ShipSystem
     
     public CargoHoldSystem()
     {
-
+        SystemState = SystemState.IsOn;
     }
 
     public void Run()

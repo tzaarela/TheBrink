@@ -20,6 +20,11 @@ public class BridgeSystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
 
+    public BridgeSystem()
+    {
+        SystemState = SystemState.IsOn;
+    }
+
     public void Run()
     {
         UpdateETA();

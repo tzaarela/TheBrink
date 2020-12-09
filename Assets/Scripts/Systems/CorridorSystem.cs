@@ -10,6 +10,11 @@ public class CorridorSystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
 
+    public CorridorSystem()
+    {
+        SystemState = SystemState.IsOn;
+    }
+
     public void Reboot()
     {
         throw new System.NotImplementedException();

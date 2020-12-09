@@ -18,7 +18,7 @@ public class MedbaySystem : ShipSystem
 
     public MedbaySystem()
     {
-        
+        SystemState = SystemState.IsOn;
     }
 
     public void Run()

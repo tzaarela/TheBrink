@@ -12,15 +12,13 @@ public class MainBatterySystem : ShipSystem
 
 
     public MainBatterySystem()
-
-
     {
-
+        SystemState = SystemState.IsOn;
     }
 
     public void Run()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public void Reboot()

@@ -19,10 +19,11 @@ public class LifeSupportSystem : ShipSystem
 
     public LifeSupportSystem()
     {
+        SystemState = SystemState.IsOn;
 
-    rooms = RoomController.Instance.Rooms;
+        rooms = RoomController.Instance.Rooms;
 
-    airMissingPerRoom = new float[rooms.Count];
+        airMissingPerRoom = new float[rooms.Count];
 
     }
 
