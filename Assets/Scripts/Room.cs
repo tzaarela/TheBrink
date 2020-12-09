@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 
 public class Room : UITrigger
 {
+    //Remove all of these gets and sets?
     public float AirLevel { get => airLevel; set => airLevel = value; }
     public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
     public float RoomHealth { get => roomHealth; set => roomHealth = value; }
@@ -93,15 +94,17 @@ public class Room : UITrigger
     {
         Hazards.RemoveAll(x => x.IsFinished);
 
-        if(Hazards.Count > 0)
-            warningHighlight.gameObject.SetActive(true);
-        else
-            warningHighlight.gameObject.SetActive(false);
-
+        warningHighlight.gameObject.SetActive(Hazards.Count > 0);
+        
         foreach (Hazard hazard in Hazards)
         {
-            hazard.ExecuteHazard();
+            hazard.UpdateHazard();
         }
+    }
+
+    public void AirDrain()
+    {
+        AirLevel -= 0.2f;
     }
 
     public List<Task> GetAvailableTasks()
@@ -155,9 +158,13 @@ public class Room : UITrigger
                     hazardToFix.SeverityAmount -= crewMember.RepairSkill;
                     Debug.Log("The crewmember is trying to put out the fire.");
                     break;
+                    ///<summary>
+                    ///Important to know here, is that the Breach only fixes the oxygen leakage.
+                    ///It does not fix the actual damage to the roomHealth, which will need to be fixed in starport. 
+                    ///</summary>
                 case HazardType.Breach:
-                    hazardToFix.SeverityAmount -= crewMember.RepairSkill / 5;
-                    Debug.Log("The crewmember is trying to fix the hull breach.");
+                    hazardToFix.SeverityAmount -= crewMember.RepairSkill;
+                    Debug.Log("The crewmember is trying to patch over the hull breach.");
                     break;
                 default:
                     crewMember.FinishCurrentTask();
