@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipSystem : MonoBehaviour
+public class ShipSystem
 {
     public SystemType SystemType;
     public SystemState SystemState;
 
     public float EnergyWanted = 0;
-    public float EnergyGained = 0;
+    public float currentEnergy = 0;
     public float EnergyToMaintain = 0;
 
     public ShipSystem()
@@ -17,7 +17,7 @@ public class ShipSystem : MonoBehaviour
         SystemState = SystemState.IsOn;
     }
 
-    public void Update()
+    public void Run()
     {
         switch (SystemType)
         {
@@ -42,8 +42,9 @@ public class ShipSystem : MonoBehaviour
                 break;
             
             case SystemType.Reactor:
-                
-                // ReactorSystem.ReactorUpdate();
+
+                var shipSystem = this as ReactorSystem;
+                shipSystem.ReactorUpdate();
                 
                 break;
             

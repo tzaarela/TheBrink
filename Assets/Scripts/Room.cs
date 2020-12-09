@@ -197,10 +197,13 @@ public class Room : UITrigger
     }
     public override void OnPointerExit(PointerEventData eventData)
     {
-        base.OnPointerExit(eventData);
+        Highlight(false);
     }
     public void Highlight(bool isOn)
     {
-        
+        if(isOn)
+            highlight.gameObject.SetActive(true);
+        else
+            highlight.gameObject.SetActive(false);
     }
 }

@@ -4,36 +4,65 @@ using UnityEngine;
 
 public class LifeSupportSystem : ShipSystem
 {
-    public float[] AirPerRoom;
+    public float[] airMissingPerRoom;
+    public List<Room> rooms;
 
-    int amountOfRooms;
     float totalAirProduced;
     float portionOfAir;
+    float totalOxygenNeeded;
+
 
     public LifeSupportSystem()
     {
-        //This does not work, I need to get this some way right? Maybe I could just "get" it with some command?
-        foreach (Room room in RoomController.Instance.Rooms)
-        {
-            amountOfRooms++;
-        }
 
+    rooms = RoomController.Instance.Rooms;
 
-        //Dubbelkolla imorgon!
-        AirPerRoom = new float[RoomController.Instance.Rooms.Count];
+    airMissingPerRoom = new float[rooms.Count];
 
     }
 
+    public void LifeSupportUpdate()
+    {
+        GetOxygenNeeded();
+
+        ProduceOxygen();
+
+        SendOxygenOut();
+    }
     public void GetOxygenNeeded()
     {
-
+        for (int i = 0; i < rooms.Count; i++)
+        {
+            if (rooms[i].AirLevel < 95)
+            {
+                airMissingPerRoom[i] = 100 - rooms[i].AirLevel;
+            }
+        }
     }
+
     public void ProduceOxygen()
     {
+        for (int i = 0; i < airMissingPerRoom.Length; i++)
+        {
+            totalOxygenNeeded += airMissingPerRoom[i];
+        }
+
+        while (totalAirProduced > totalOxygenNeeded || currentEnergy >= 2)
+        {
+            totalAirProduced++;
+
+            currentEnergy -= 3;
+        }
 
     }
+
     public void SendOxygenOut()
     {
+
+        foreach (Room room in RoomController.Instance.Rooms)
+        {
+
+        }
 
     }
 }

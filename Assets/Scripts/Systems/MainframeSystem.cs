@@ -14,6 +14,15 @@ public class MainframeSystem : ShipSystem
     
     }
 
+    public void MainframeUpdate()
+    {
+        GetEnergyNeeded();
+
+        DivideEnergy();
+
+        SendEnergyOut();
+    }
+
     public void GetEnergyNeeded()
     {
 
