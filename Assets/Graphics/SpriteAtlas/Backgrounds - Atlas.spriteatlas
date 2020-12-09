@@ -49,9 +49,11 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 92dd2a806d8a84733ac2ca7548903e5c, type: 3}
+  - {fileID: 21300000, guid: daccbd815d19742fda8befda55fbdc1b, type: 3}
   - {fileID: 21300000, guid: 96037f5a731af4c87baccab994949cb6, type: 3}
   m_PackedSpriteNamesToIndex:
   - Main_Menu_Background_01
+  - Galaxymap_WIP1
   - ShipUI_Background
   m_Tag: Backgrounds - Atlas
   m_IsVariant: 0
