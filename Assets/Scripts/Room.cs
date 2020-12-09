@@ -179,27 +179,32 @@ public class Room : UITrigger
     public override void OnPointerEnter(PointerEventData eventData)
     {
         Highlight(true);
+    }
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        Highlight(false);
+    }
 
+  
+
+    public override void OnPointerClick(PointerEventData eventData)
+    {
         //if (Input.GetMouseButtonDown(0) && !ContextMenuController.instance.IsOpen)
         //{
         //    ContextMenuController.instance.CloseContextMenu();
         //}
 
-        if (Input.GetMouseButtonDown(1))
+        if (eventData.button == PointerEventData.InputButton.Right)
         {
-            RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true).IsSelected = false;
-            IsSelected = true;
+            //RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true).IsSelected = false;
+            //IsSelected = true;
 
-            if(CrewController.Instance.GetSelectedCrewMember() != null)
+            if (CrewController.Instance.GetSelectedCrewMember() != null)
             {
                 var availableTasks = GetAvailableTasks();
                 ContextMenuController.instance.OpenContextMenu(availableTasks);
             }
         }
-    }
-    public override void OnPointerExit(PointerEventData eventData)
-    {
-        Highlight(false);
     }
     public void Highlight(bool isOn)
     {
