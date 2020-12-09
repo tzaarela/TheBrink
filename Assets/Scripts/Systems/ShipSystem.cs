@@ -43,7 +43,7 @@ public class ShipSystem : MonoBehaviour
             
             case SystemType.Reactor:
                 
-                ReactorSystem.ReactorUpdate();
+                // ReactorSystem.ReactorUpdate();
                 
                 break;
             

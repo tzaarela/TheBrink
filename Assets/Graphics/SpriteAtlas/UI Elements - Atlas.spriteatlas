@@ -51,8 +51,8 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
-  - {fileID: 21300000, guid: 08ee76207d6f945949d8323b1e8490b2, type: 3}
   - {fileID: 21300000, guid: 60f86c806c220cc43a7cd9bd53921c90, type: 3}
+  - {fileID: 21300000, guid: cc448b11a68f24bc59595089c5d06f1e, type: 3}
   - {fileID: 21300000, guid: d6ec6e518ae2f4f5cbcd34b063a04a2d, type: 3}
   - {fileID: 21300000, guid: f6dc48b1b4a4e4eca8f7a525b1d61be6, type: 3}
   - {fileID: 21300000, guid: 1ce298d1ca34b456b81d73c97f5a7d8e, type: 3}
@@ -92,13 +92,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 808287dde39e2c145bddb075ddeecada, type: 3}
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
   - {fileID: 21300000, guid: 1c98103eded9d4431b20bac7c098a690, type: 3}
+  - {fileID: 21300000, guid: 1ad0b6ae7758e49988f07e3aa851e87d, type: 3}
   - {fileID: 21300000, guid: bba9404f5f1b0684daf595edca6beff1, type: 3}
   - {fileID: 21300000, guid: 30f90eff023a53848beee43da5e2bd18, type: 3}
   - {fileID: 21300000, guid: 33a62eff97eaa44c7a89b39c55c5eed4, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShipUI_Portrait1
-  - tab-border_11x11_01_selected
   - Encounter
+  - left-arrow_10x6_01_white
   - Button_01_8x8
   - ShipBlueprint_OVER1
   - 8x8_ui-border-temp_01_noFill
@@ -123,7 +124,7 @@ SpriteAtlas:
   - LogosSPACE_GroupedWhite_4
   - ship-icon-logo-01
   - spaceport-logo_01
-  - tab-border_14x14_01
+  - tab-border_13x13_01
   - 8x8_ui-border_01_selected
   - Vaning_Icon_Pixelated2
   - ShipUI_Floor_Inactive
@@ -138,6 +139,7 @@ SpriteAtlas:
   - gubb_icon__01
   - 8x8_ui-border-temp_01
   - circle_32x32-bw_temp_01
+  - tab-border_13x10_01_selected
   - CircleLine
   - ProgressBar
   - ShipIcon_105x120
