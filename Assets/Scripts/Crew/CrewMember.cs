@@ -92,7 +92,7 @@ public class CrewMember : UITrigger
         if (CurrentTask.TaskType == TaskType.Move)
         {
             Debug.Log($"{_name} got a Move Task!");
-            _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.Waypoint);
+            _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.waypoints[0]);
         }
     }
 
@@ -117,7 +117,7 @@ public class CrewMember : UITrigger
 
             if (CurrentTask.TaskType == TaskType.Move)
             {
-                _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.Waypoint);
+                _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.waypoints[0]);
             }
         }
         else

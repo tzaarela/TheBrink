@@ -59,7 +59,7 @@ namespace Assets.Scripts.InterfacePanels
                 return;
             }
 
-            if (Task.TaskType == TaskType.Repair && crewMember.CurrentWayPoint != Task.Destination.Waypoint)
+            if (Task.TaskType == TaskType.Repair && crewMember.CurrentWayPoint != Task.Destination.waypoints[0])
                 crewMember.AddTask(new Task(TaskType.Move, Task.Destination));
 
             crewMember.AddTask(Task);

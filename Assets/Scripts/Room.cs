@@ -35,7 +35,6 @@ public class Room : UITrigger
 
     private Door _door;
     private UnityEvent onRoomSelected;
-
     private UnityEvent onRoomDeselected;
 
     [SerializeField]
@@ -43,12 +42,7 @@ public class Room : UITrigger
     [SerializeField]
     private Transform warningHighlight;
     [SerializeField]
-    private Waypoint _waypoint;
-    public Waypoint Waypoint
-    {
-        get { return _waypoint; }
-    }
-    
+    public List<Waypoint> waypoints;
     [SerializeField]
     private RoomType _roomType;
     [SerializeField]
@@ -180,12 +174,11 @@ public class Room : UITrigger
     {
         Highlight(true);
     }
+
     public override void OnPointerExit(PointerEventData eventData)
     {
         Highlight(false);
     }
-
-  
 
     public override void OnPointerClick(PointerEventData eventData)
     {
