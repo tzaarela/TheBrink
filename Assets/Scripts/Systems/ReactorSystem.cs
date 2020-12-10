@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Systems;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,12 +9,9 @@ public class ReactorSystem : ShipSystem
     private float FuelCost;
     //I might later "just" make this into a max for the float "Fuel" instead.
     private float FuelMax;
-    //TODO: And turn this into something that only has three possible values yes? But maybe *not* a enum.
-    private float Capacity;
-    //TODO: Make sure does not go above 100? Or below 1 actually, hm, problem...
     private float Efficiency;
-
     private bool IsRetrograde;
+    private float capacityLevel;
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
@@ -24,20 +22,17 @@ public class ReactorSystem : ShipSystem
     public ReactorSystem()
     {
         SystemType = SystemType.Reactor;
-
         SystemState = SystemState.IsOn;
-
+        FuelCost = 1;
         Fuel = 100;
         FuelMax = 100;
-
-        Efficiency = 100;
-
+        capacityLevel = 2;
         IsRetrograde = false;
     }
 
     public void BurnsFuel()
     {
-
+        Fuel -= capacityLevel * FuelCost;
     }
     public void ProdEnergy()
     {
@@ -50,9 +45,11 @@ public class ReactorSystem : ShipSystem
 
     public void Run()
     {
-        BurnsFuel();
-
-        ProdEnergy();
+        if(Fuel > 0)
+        {
+            BurnsFuel();
+            ProdEnergy();
+        }
 
         ProdSpeed();
     }

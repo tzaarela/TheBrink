@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Route;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,11 @@ public class MissionController : MonoBehaviour
     public void Start()
     {
         ship = ShipController.Instance.CreateShip();
+    }
+
+    public void StartMissions(Mission mission)
+    {
+        //Create route
     }
 
     public void Update()
