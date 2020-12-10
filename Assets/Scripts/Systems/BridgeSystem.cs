@@ -1,9 +1,16 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BridgeSystem : ShipSystem
 {
+    Route route = new Route();
+    Ship ship = new Ship();
+
+    //TODO: Fix, should this pass reference instead? And also do so to SystemController.
+    float timeMax = 0.1f;
+
     //Navigationvariables
     float DistanceToStarport;
     float DistanceToRetrogradeBurn;
@@ -23,6 +30,9 @@ public class BridgeSystem : ShipSystem
     public BridgeSystem()
     {
         SystemState = SystemState.IsOn;
+
+        route = MissionController.Instance.Route;
+        ship = ShipController.Instance.Ship;
     }
 
     public void Run()
@@ -34,12 +44,14 @@ public class BridgeSystem : ShipSystem
 
     public void UpdateETA()
     {
-
-    }
+        EstimatedTimetoArrival = (((route.Length - route.ShipPosition) / ship.Speed) * 0.1f);
+        //TODO: Really needs to check this with Saarela
+            }
 
     public void UpdateTimeToRetro()
     {
-
+        //Take current speed, see, how many times you can remove that speed before it goes within benchmarks.
+        //Then, take that number, divide by update time yes?
     }
 
     public void UpdateTimeToEncounter()

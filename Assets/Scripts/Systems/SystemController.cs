@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,9 +7,23 @@ using UnityEngine;
 public class SystemController : MonoBehaviour
 {
 
+    [Header("BridgeSystem")]
+
+    [Header("MainframeSystem")]
+
+    [Header("MainBatterySystem")]
+
     [Header("Life Support")]
     public float optimalAirLevel = 95f;
     public float airProduceCost = 3f;
+
+    [Header("MedbaySystem")]
+
+    [Header("ReactorSystem")]
+
+    [Header("CargoHoldSystem")]
+
+    [Header("CorridorsSystem")]
 
 
     private int amountOfSystems;
@@ -26,22 +41,25 @@ public class SystemController : MonoBehaviour
 
     public void Start()
     {
-        //I HATE this line soooo much, but it seems liek the best way to do it, weirdly enough.
-        //TODO: See if you can get it to work some other way if you use that GetValue thing later...
         amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
+        Ship ship = ShipController.Instance.Ship;
+
 
         ShipSystems = new ShipSystem[amountOfSystems];
 
-        //I do feel like there should be possible here to make this into a loop, and have index and enumtype just increase by one each time.
-        //And also send them to ShipSystem, and then have ShipSystem send it on to the correct subclass based on the type of the enum...
-        ShipSystems[0] = new ReactorSystem();
-        ShipSystems[1] = new MainframeSystem();
+        ShipSystems[0] = new ReactorSystem(ship);
+        ShipSystems[1] = new MainframeSystem(ship);
         ShipSystems[2] = new MainBatterySystem();
         ShipSystems[3] = new LifeSupportSystem();
         ShipSystems[4] = new BridgeSystem();
         ShipSystems[5] = new MedbaySystem();
         ShipSystems[6] = new CargoHoldSystem();
         ShipSystems[7] = new CorridorSystem();
+    }
+
+    public List<ShipSystem> GetActiveSystems()
+    {
+            return ShipSystems.Where(x => x.SystemState == SystemState.IsOn).ToList();
     }
 
     public void ShipSystemUpdate()
