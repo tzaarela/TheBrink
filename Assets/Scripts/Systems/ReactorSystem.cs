@@ -28,7 +28,7 @@ public class ReactorSystem : ShipSystem
         FuelCost = 1;
         capacityLevel = 2;
         IsRetrograde = false;
-        energyOutput = 70;
+        energyOutput = ship.CapacitorBottleNeck / 3;
         Efficiency = 1.00f;
     }
 
