@@ -8,6 +8,7 @@ using TMPro;
 public class SpaceportTabController : MonoBehaviour
 {
     public static SpaceportTabController instance;
+    [SerializeField] private SpaceportTabObject[] _tabs;
     
     private Image[] _images;
     [SerializeField] private Sprite[] _sprites;
@@ -26,12 +27,18 @@ public class SpaceportTabController : MonoBehaviour
 
     private void Start()
     {
-        SelectTab(SpaceportTabType.Contracts);
+        SelectTab(_tabs[(int)SpaceportTabType.Contracts]);
     }
 
     private void GetAllComponents()
     {
-        _images = new Image[transform.childCount];
+        _tabs = new SpaceportTabObject[transform.childCount];
+        for (int i = 0; i < _tabs.Length; i++)
+        {
+            _tabs[i] = transform.GetChild(i).GetComponent<SpaceportTabObject>();
+        }
+        
+        _images = new Image[_tabs.Length];
         for (int i = 0; i < _images.Length; i++)
         {
             _images[i] = transform.GetChild(i).GetComponent<Image>();
@@ -55,19 +62,26 @@ public class SpaceportTabController : MonoBehaviour
         {
             text.color = _colors[(int) TabState.Inactive];
         }
+
+        foreach (SpaceportTabObject tab in _tabs)
+        {
+            tab.tabState = TabState.Inactive;
+        }
     }
 
-    public void SelectTab(SpaceportTabType tabType)
+    public void SelectTab(SpaceportTabObject tab)
     {
         ResetAllPanels();
-        
-        _images[(int)tabType].sprite = _sprites[(int)TabState.Active];
-        _texts[(int)tabType].color = _colors[(int)TabState.Active];
-    }
-}
 
-enum TabState : int
-{
-    Inactive,
-    Active
+        _tabs[(int) tab.tabType].tabState = TabState.Active;
+        _images[(int)tab.tabType].sprite = _sprites[(int)TabState.Active * 3 + (int)ButtonState.Highlight];
+        _texts[(int)tab.tabType].color = _colors[(int)TabState.Active * 3];
+    }
+
+    public void SetButtonState(SpaceportTabObject tab, ButtonState buttonState)
+    {
+        // Debug.Log($"tabType: {tab.tabType}({(int)tab.tabType}) - tab.tabState: {tab.tabState}({((tab.tabState == TabState.Active) ? 3 : 0)}) * buttonState: {buttonState}({(int)buttonState}) = {((tab.tabState == TabState.Active) ? 3 : 0) + (int)buttonState}");
+        _images[(int)tab.tabType].sprite = _sprites[((tab.tabState == TabState.Active) ? 3 : 0) + (int)buttonState];
+        _texts[(int) tab.tabType].color = _colors[(int)buttonState];
+    }
 }

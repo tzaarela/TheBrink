@@ -53,6 +53,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
   - {fileID: 21300000, guid: 60f86c806c220cc43a7cd9bd53921c90, type: 3}
   - {fileID: 21300000, guid: cc448b11a68f24bc59595089c5d06f1e, type: 3}
+  - {fileID: 21300000, guid: 0f66ef11b3ff742868a9b71248ce95ad, type: 3}
   - {fileID: 21300000, guid: d6ec6e518ae2f4f5cbcd34b063a04a2d, type: 3}
   - {fileID: 21300000, guid: f6dc48b1b4a4e4eca8f7a525b1d61be6, type: 3}
   - {fileID: 21300000, guid: 1ce298d1ca34b456b81d73c97f5a7d8e, type: 3}
@@ -65,6 +66,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: eef71c74599c33740bff8e5979c4ed12, type: 3}
   - {fileID: 21300000, guid: a0ed8355d22377f4b990386d2d423a75, type: 3}
   - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
+  - {fileID: 21300000, guid: 67c603a5f83ef42e7830e3e0db76d701, type: 3}
   - {fileID: 21300000, guid: 1dcb40f5ff3a142b490ae4150e0e46a1, type: 3}
   - {fileID: 21300000, guid: 75ecc33653f9c4c27aa5a34709c4b602, type: 3}
   - {fileID: 21300000, guid: bb228876de53543c3a38175f224a83fd, type: 3}
@@ -78,6 +80,8 @@ SpriteAtlas:
   - {fileID: -1471556661742532906, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: 1094749345154489322, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: 21300000, guid: e845f849ddb9447b080502a6d98f3fc8, type: 3}
+  - {fileID: 21300000, guid: 6454a479a357f4ac3a8e22282312133d, type: 3}
+  - {fileID: 21300000, guid: d26db72abe4854aed9dd6135c3be8c22, type: 3}
   - {fileID: 21300000, guid: 94d9a65ac637e4447b419b4358c1076e, type: 3}
   - {fileID: 21300000, guid: 1ba752dae75de4c12a52bf51e53af0e3, type: 3}
   - {fileID: 21300000, guid: ff0fd3da93ecb4fcf9506d6b108d4351, type: 3}
@@ -100,6 +104,7 @@ SpriteAtlas:
   - ShipUI_Portrait1
   - Encounter
   - left-arrow_10x6_01_white
+  - tab-border_13x10_01_selected_Pressed
   - Button_01_8x8
   - ShipBlueprint_OVER1
   - 8x8_ui-border-temp_01_noFill
@@ -112,6 +117,7 @@ SpriteAtlas:
   - _rogressBar
   - RadarBackground
   - _ine
+  - tab-border_13x13_01_Highlight
   - ShipUI_Door_Active
   - Button_02_8x8
   - ShipUI_Floor_Active
@@ -124,7 +130,9 @@ SpriteAtlas:
   - LogosSPACE_GroupedWhite_4
   - ship-icon-logo-01
   - spaceport-logo_01
-  - tab-border_13x13_01
+  - tab-border_13x13_01_Normal
+  - tab-border_13x13_01_Pressed
+  - tab-border_13x10_01_selected_Highlight
   - 8x8_ui-border_01_selected
   - Vaning_Icon_Pixelated2
   - ShipUI_Floor_Inactive
@@ -133,7 +141,7 @@ SpriteAtlas:
   - Button_03_Normal
   - 8x8_ui-border2-temp_01
   - Button_03_Pressed
-  - Button_03_Hover
+  - Button_03_Highlight
   - ShipUI_Portrait3
   - ShipUI_Door_Inactive
   - gubb_icon__01
