@@ -15,6 +15,8 @@ public class MainframeSystem : ShipSystem
     public MainframeSystem(Ship ship)
     {
         this.ship = ship;
+
+        EnergyWanted = 0;
     }
 
     public void Run()

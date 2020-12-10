@@ -13,6 +13,8 @@ public class CorridorSystem : ShipSystem
     public CorridorSystem()
     {
         SystemState = SystemState.IsOn;
+
+        EnergyWanted = 0;
     }
 
     public void SetEnergyWanted()

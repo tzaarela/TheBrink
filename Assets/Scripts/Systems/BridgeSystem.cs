@@ -33,6 +33,8 @@ public class BridgeSystem : ShipSystem
 
         route = MissionController.Instance.Route;
         ship = ShipController.Instance.Ship;
+
+        EnergyWanted = 0;
     }
 
     public void Run()

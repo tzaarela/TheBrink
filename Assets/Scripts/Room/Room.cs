@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 
 public class Room : UITrigger
 {
-    public float AirLevel
+    public float OxygenLevel
     {
         get { return airLevel; }
         set { airLevel = Mathf.Clamp(value, 0, 100); }
@@ -101,7 +101,7 @@ public class Room : UITrigger
 
     public void AirDrain(float drainLevel)
     {
-        AirLevel -= drainLevel;
+        OxygenLevel -= drainLevel;
     }
 
     public List<Task> GetAvailableTasks()

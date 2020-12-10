@@ -51,9 +51,9 @@ public class Hazard
     {        
         //TODO: I messed up here, I need to fix so that, in this case, you will decrease the severity when you repair the room (since it is a crack in the hull).
 
-        _hazardRoom.AirLevel -= ((SeverityAmount * _hazardRoom.AirLevel) / 100);
+        _hazardRoom.OxygenLevel -= ((SeverityAmount * _hazardRoom.OxygenLevel) / 100);
 
-        Debug.Log("Air is leaving the room, current airlevel is " + _hazardRoom.AirLevel);
+        Debug.Log("Air is leaving the room, current airlevel is " + _hazardRoom.OxygenLevel);
     }
 
     public void RoomOnFire()
@@ -72,7 +72,7 @@ public class Hazard
     public void FireGrows()
     {
 
-        SeverityAmount += SeverityAmount * ( (_hazardRoom.AirLevel - SeverityAmount) / 100 );
+        SeverityAmount += SeverityAmount * ( (_hazardRoom.OxygenLevel - SeverityAmount) / 100 );
         Debug.Log("SeverityAmount is: " + SeverityAmount);
     }
 
@@ -82,9 +82,9 @@ public class Hazard
     /// </summary>
     public void FireConsumes()
     {
-        _hazardRoom.AirLevel -= SeverityAmount / 100;
+        _hazardRoom.OxygenLevel -= SeverityAmount / 100;
 
-        Debug.Log("The airlevel is now: " + _hazardRoom.AirLevel + ".") ;
+        Debug.Log("The airlevel is now: " + _hazardRoom.OxygenLevel + ".") ;
     }
 
     /// <summary>

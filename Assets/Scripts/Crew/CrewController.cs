@@ -66,7 +66,7 @@ public class CrewController : MonoBehaviour
                         Debug.Log(crewMember.Name + "is scanning...");
                         ConsoleController.instance.PrintToConsole(
                             $"Room status [{task.Destination.RoomType.ToString()}]" +
-                            "\n -- Oxygen level: " + task.Destination.AirLevel + "%" +
+                            "\n -- Oxygen level: " + task.Destination.OxygenLevel + "%" +
                             "\n -- Radiation level: " + task.Destination.RadiationLevel + "%" +
                             "\n -- Hull Integrity: " + task.Destination.RoomHealth + "% ", 0.01f, true);
                         crewMember.FinishCurrentTask();
