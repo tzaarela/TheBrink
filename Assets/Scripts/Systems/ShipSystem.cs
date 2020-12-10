@@ -16,6 +16,8 @@ public interface ShipSystem
 
     void Run();
 
+    void SetEnergyWanted();
+
     void Reboot();
 
     void RunDiagnostic();

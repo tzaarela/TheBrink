@@ -8,7 +8,6 @@ public class LifeSupportSystem : ShipSystem
     public List<Room> rooms;
 
     float totalAirProduced;
-    float portionOfAir;
     float totalOxygenNeeded;
 
     public SystemType SystemType { get; set; }
@@ -24,7 +23,6 @@ public class LifeSupportSystem : ShipSystem
         rooms = RoomController.Instance.Rooms;
 
         airMissingPerRoom = new float[rooms.Count];
-
     }
     
     public void Run()
@@ -34,6 +32,8 @@ public class LifeSupportSystem : ShipSystem
         var oxygenFragment = ProduceOxygen();
 
         SendOxygenOut(oxygenFragment);
+
+
     }
 
     public void GetOxygenNeeded()
@@ -73,7 +73,11 @@ public class LifeSupportSystem : ShipSystem
         }
     }
 
-    
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void Reboot()
     {
         throw new System.NotImplementedException();

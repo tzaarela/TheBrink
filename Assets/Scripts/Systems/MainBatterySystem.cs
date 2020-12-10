@@ -16,6 +16,11 @@ public class MainBatterySystem : ShipSystem
         SystemState = SystemState.IsOn;
     }
 
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void Run()
     {
         //throw new System.NotImplementedException();

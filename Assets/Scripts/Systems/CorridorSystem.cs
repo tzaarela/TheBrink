@@ -15,6 +15,11 @@ public class CorridorSystem : ShipSystem
         SystemState = SystemState.IsOn;
     }
 
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void Reboot()
     {
         throw new System.NotImplementedException();

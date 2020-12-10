@@ -61,6 +61,11 @@ public class ReactorSystem : ShipSystem
             ConsoleController.instance.PrintToConsole("Reactor has no more fuel");
     }
 
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
+    }
+    
     public void Reboot()
     {
         throw new System.NotImplementedException();
