@@ -44,7 +44,12 @@ public class MainframeSystem : ShipSystem
         }
         return totalEnergyNeeded;
     }
-
+    /// <summary>
+    /// Takes in float energyNeeded, decreases the ship Capacitor & increases MainframeStsten.CurrentEnergy
+    /// in a while loop until it has enough energy OR has hit the Ship.CapacitorBottleNeck OR ship.Capacitor is zero.
+    /// </summary>
+    /// <param name="energyNeeded"></param>
+    /// <returns>CurrentEnergy divided by energyNeeded</returns>
     public float DivideEnergy(float energyNeeded)
     {
         while(energyNeeded >= ship.CapacitorBottleNeck && ship.Capacitor > 0)
@@ -55,7 +60,12 @@ public class MainframeSystem : ShipSystem
 
         return CurrentEnergy / energyNeeded;
     }
-
+    /// <summary>
+    /// Goes through all active systems, and sets their CurrentEnergy =
+    /// energyFragment mult * EnergyWanted of that system.
+    /// This means that each system will receive energy proportional to their need.
+    /// </summary>
+    /// <param name="energyFragment"></param>
     public void SendEnergyOut(float energyFragment)
     {
         var activeSystems = SystemController.Instance.GetActiveSystems();

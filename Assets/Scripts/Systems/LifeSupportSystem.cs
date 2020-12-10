@@ -26,6 +26,15 @@ public class LifeSupportSystem : ShipSystem
         airMissingPerRoom = new float[rooms.Count];
 
     }
+    
+    public void Run()
+    {
+        GetOxygenNeeded();
+
+        var oxygenFragment = ProduceOxygen();
+
+        SendOxygenOut(oxygenFragment);
+    }
 
     public void GetOxygenNeeded()
     {
@@ -38,41 +47,33 @@ public class LifeSupportSystem : ShipSystem
         }
     }
 
-    public void ProduceOxygen()
+    public float ProduceOxygen()
     {
         for (int i = 0; i < airMissingPerRoom.Length; i++)
         {
             totalOxygenNeeded += airMissingPerRoom[i];
         }
 
-        while (totalAirProduced > totalOxygenNeeded || CurrentEnergy > SystemController.Instance.airProduceCost)
+        while (totalAirProduced < totalOxygenNeeded || CurrentEnergy > SystemController.Instance.airProduceCost)
         {
             totalAirProduced++;
 
             CurrentEnergy -= SystemController.Instance.airProduceCost;
         }
 
+        return totalAirProduced / totalOxygenNeeded;
+
     }
 
-    public void SendOxygenOut()
+    public void SendOxygenOut(float oxygenFragment)
     {
-
-        foreach (Room room in RoomController.Instance.Rooms)
+        for(int i = 0; i < rooms.Count; i++)
         {
-
+            rooms[i].AirLevel += oxygenFragment * airMissingPerRoom[i];
         }
-
     }
 
-    public void Run()
-    {
-        GetOxygenNeeded();
-
-        ProduceOxygen();
-
-        SendOxygenOut();
-    }
-
+    
     public void Reboot()
     {
         throw new System.NotImplementedException();
