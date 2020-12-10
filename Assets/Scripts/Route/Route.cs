@@ -10,6 +10,11 @@ public class Route
 
     public List<Encounter> EncountersOnRoute { get; set; }
 
+    public Route()
+    {
+
+    }
+
     /// <summary>
     /// This constructor creates a route with a number of Encounters evenly spaced along it's length.
     /// The reason there is no encounter at the end of the route is because that is where the next Starport is obv.//DJ

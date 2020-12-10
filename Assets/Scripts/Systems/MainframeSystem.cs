@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MainframeSystem : ShipSystem
 {
+    Ship ship;
+
     float CapacitorMax;
     float CapacitorHolds;
 
@@ -15,17 +17,35 @@ public class MainframeSystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
 
-    public MainframeSystem()
+    public MainframeSystem(Ship ship)
     {
-    
+        this.ship = ship;
+        
     }
 
-    public void GetEnergyNeeded()
+    public void Run()
     {
+        var energyNeeded = GetEnergyNeeded();
 
+        DivideEnergy(energyNeeded);
+
+        SendEnergyOut();
     }
 
-    public void DivideEnergy()
+    public float GetEnergyNeeded()
+    {
+        float totalEnergyNeeded = 0;
+
+        var activeSystems = SystemController.Instance.GetActiveSystems();
+
+        foreach (var activeSystem in activeSystems)
+        {
+            totalEnergyNeeded += activeSystem.EnergyWanted;
+        }
+        return totalEnergyNeeded;
+    }
+
+    public void DivideEnergy(float energyNeeded)
     {
 
     }
@@ -35,14 +55,7 @@ public class MainframeSystem : ShipSystem
 
     }
 
-    public void Run()
-    {
-        GetEnergyNeeded();
-
-        DivideEnergy();
-
-        SendEnergyOut();
-    }
+   
 
     public void Reboot()
     {
