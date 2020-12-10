@@ -8,14 +8,15 @@ using UnityEngine.EventSystems;
 
 public class Room : UITrigger
 {
-    //Remove all of these gets and sets?
-    public float AirLevel { get => airLevel; set => airLevel = value; }
+    public float AirLevel
+    {
+        get { return airLevel; }
+        set { airLevel = Mathf.Clamp(value, 0, 100); }
+    }
     public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
     public float RoomHealth { get => roomHealth; set => roomHealth = value; }
     public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
     public RoomType RoomType { get; set; }
-
-   
 
     private bool isSelected;
 
@@ -45,7 +46,7 @@ public class Room : UITrigger
     public List<Waypoint> waypoints;
     [SerializeField]
     private RoomType _roomType;
-    [SerializeField]
+    [SerializeField, Range(0, 100)]
     private float airLevel;
     [SerializeField]
     private float radiationLevel;
