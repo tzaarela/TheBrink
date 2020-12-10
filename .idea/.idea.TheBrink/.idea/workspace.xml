@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIButton.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +139,7 @@
       <workItem from="1606846369363" duration="620000" />
       <workItem from="1606895702839" duration="659000" />
       <workItem from="1607079324334" duration="3122000" />
-      <workItem from="1607503110218" duration="16883000" />
+      <workItem from="1607503110218" duration="17118000" />
     </task>
     <servers />
   </component>
