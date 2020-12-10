@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class BridgeSystem : ShipSystem
 {
-    Route route = new Route();
-    Ship ship = new Ship();
+    Route route;
+    Ship ship;
 
     //TODO: Fix, should this pass reference instead? And also do so to SystemController.
-    float timeMax = 0.1f;
+    //float timeMax = 0.1f;
 
     //Navigationvariables
     float DistanceToStarport;
@@ -40,13 +40,15 @@ public class BridgeSystem : ShipSystem
         UpdateETA();
         UpdateTimeToRetro();
         UpdateTimeToEncounter();
+
+        SetEnergyWanted();
     }
 
     public void UpdateETA()
     {
         EstimatedTimetoArrival = (((route.Length - route.ShipPosition) / ship.Speed) * 0.1f);
         //TODO: Really needs to check this with Saarela
-            }
+    }
 
     public void UpdateTimeToRetro()
     {

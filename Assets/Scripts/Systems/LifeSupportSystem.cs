@@ -7,7 +7,7 @@ public class LifeSupportSystem : ShipSystem
     public float[] airMissingPerRoom;
     public List<Room> rooms;
 
-    float totalAirProduced;
+    float totalOxygenProduced;
     float totalOxygenNeeded;
 
     public SystemType SystemType { get; set; }
@@ -33,7 +33,7 @@ public class LifeSupportSystem : ShipSystem
 
         SendOxygenOut(oxygenFragment);
 
-
+        SetEnergyWanted();
     }
 
     public void GetOxygenNeeded()
@@ -54,15 +54,13 @@ public class LifeSupportSystem : ShipSystem
             totalOxygenNeeded += airMissingPerRoom[i];
         }
 
-        while (totalAirProduced < totalOxygenNeeded || CurrentEnergy > SystemController.Instance.airProduceCost)
+        while (totalOxygenProduced < totalOxygenNeeded || CurrentEnergy > SystemController.Instance.airProduceCost)
         {
-            totalAirProduced++;
+            totalOxygenProduced++;
 
             CurrentEnergy -= SystemController.Instance.airProduceCost;
         }
-
-        return totalAirProduced / totalOxygenNeeded;
-
+        return totalOxygenProduced / totalOxygenNeeded;
     }
 
     public void SendOxygenOut(float oxygenFragment)
@@ -75,6 +73,11 @@ public class LifeSupportSystem : ShipSystem
 
     public void SetEnergyWanted()
     {
+        if (totalOxygenNeeded > totalOxygenProduced)
+        {
+            EnergyWanted = (totalOxygenNeeded - totalOxygenProduced) * SystemController.Instance.airProduceCost;
+        }
+
         throw new System.NotImplementedException();
     }
 
