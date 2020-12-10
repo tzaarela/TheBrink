@@ -24,12 +24,21 @@ public class SpaceportPanelController : MonoBehaviour
         _rootPanel = transform.GetChild((int)_tabType).gameObject;
     }
     
-    protected void HideAllPanels()
+    protected void SetAllPanels(bool active)
     {
+        foreach (GameObject panel in _panels)
+        {
+            panel.SetActive(active);
+        }
     }
 
-    public void SetPanel(bool active)
+    public void SetRootPanel(bool active)
     {
         _rootPanel.SetActive(active);
+    }
+
+    protected void SetPanel(int panelIndex, bool active)
+    {
+        _panels[panelIndex].SetActive(active);
     }
 }

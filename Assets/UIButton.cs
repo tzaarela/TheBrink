@@ -11,7 +11,8 @@ public class UIButton : UITrigger
 {
     private Image _image;
     private TMP_Text _text;
-    [SerializeField] public Sprite[] _sprites;
+    [SerializeField] private Sprite[] _sprites = new Sprite[5];
+    [SerializeField] private Color[] _colors = new Color[5];
 
     private void Awake()
     {
@@ -20,6 +21,9 @@ public class UIButton : UITrigger
 
     private void Start()
     {
+        // Debug.Log($"_sprites.Length: {_sprites.Length}");
+        // Debug.Log($"_colors.Length: {_colors.Length}");
+        SetButtonState(ButtonState.Normal);
     }
 
     private void GetAllComponents()
@@ -31,6 +35,7 @@ public class UIButton : UITrigger
     private void SetButtonState(ButtonState buttonState)
     {
         _image.sprite = _sprites[(int) buttonState];
+        _text.color = _colors[(int) buttonState];
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
