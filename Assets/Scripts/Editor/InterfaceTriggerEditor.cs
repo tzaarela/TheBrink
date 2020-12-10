@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.InterfacePanels;
 using Assets.Scripts.Systems;
+using Unity.Collections;
 using UnityEditor;
 using UnityEditor.EventSystems;
 using UnityEngine;
@@ -76,21 +77,31 @@ namespace Assets.Scripts.Editor
     public class UIButtonEditor : EventTriggerEditor
     {
         private SerializedProperty _spriteArray;
+        private SerializedProperty _colorArray;
         private string[] _spriteNames = new string[5] {"Normal", "Highlight", "Pressed", "Selected", "Disabled"};
+        private bool _showSprites;
+        private bool _showColors;
 
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
             
-            ArrayGUI(serializedObject.FindProperty("_sprites"));
+            _showSprites = EditorGUILayout.Foldout(_showSprites, "Button Sprites");
+            if (_showSprites)
+                ArrayGUI(serializedObject.FindProperty("_sprites"));
+
+            _showColors = EditorGUILayout.Foldout(_showColors, "Button Colors");
+            if (_showColors)
+                ArrayGUI(serializedObject.FindProperty("_colors"));
             
             serializedObject.ApplyModifiedProperties();
         }
 
         private void ArrayGUI(SerializedProperty array)
         {
-            EditorGUILayout.LabelField("Button Sprites", new GUILayoutOption[0]);
             EditorGUI.indentLevel++;
+            
+            // Debug.Log($"{array.name}.arraySize: {array.arraySize}");
             
             for (int i = 0; i < array.arraySize; i++)
             {

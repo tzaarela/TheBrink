@@ -23,10 +23,20 @@ public class SpaceportContractsController : SpaceportPanelController
     protected override void Start()
     {
         base.Start();
+        
+        SetAllPanels(false);
+        SetPanel((int)ContractsPanelType.List, true);
     }
 
     protected override void GetAllComponents()
     {
         base.GetAllComponents();
     }
+}
+
+enum ContractsPanelType : int
+{
+    List,
+    Info,
+    GalaxyMap
 }

@@ -44,13 +44,13 @@ public class SpaceportUIController : MonoBehaviour
     {
         foreach (SpaceportPanelController panelController in _panelControllers)
         {
-            panelController.SetPanel(false);
+            panelController.SetRootPanel(false);
         }
     }
 
     public void ShowPanel(SpaceportTabType tabType)
     {
         HideAllPanels();
-        _panelControllers[(int)tabType].SetPanel(true);
+        _panelControllers[(int)tabType].SetRootPanel(true);
     }
 }
