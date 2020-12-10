@@ -13,6 +13,9 @@ public class MainBatterySystem : ShipSystem
     public MainBatterySystem()
     {
         SystemState = SystemState.IsOn;
+
+        EnergyWanted = 0;
+
     }
 
     public void Run()

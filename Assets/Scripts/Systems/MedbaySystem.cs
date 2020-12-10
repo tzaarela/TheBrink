@@ -18,6 +18,8 @@ public class MedbaySystem : ShipSystem
     public MedbaySystem()
     {
         SystemState = SystemState.IsOn;
+
+        EnergyWanted = 0;
     }
 
     public void SetEnergyWanted()
