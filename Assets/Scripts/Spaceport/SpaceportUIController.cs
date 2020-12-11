@@ -57,6 +57,6 @@ public class SpaceportUIController : MonoBehaviour
 
     public void Depart()
     {
-        SceneManager.LoadScene("Jimmy");
+        SceneManager.LoadScene("MissionScene");
     }
 }

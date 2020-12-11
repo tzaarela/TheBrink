@@ -32,6 +32,21 @@ public class SpaceportContractsController : SpaceportPanelController
     {
         base.GetAllComponents();
     }
+
+    public void ViewContract()
+    {
+        SetAllPanels(false);
+        
+        SetPanel(1, true);
+        SetPanel(2, true);
+    }
+
+    public void SHOW()
+    {
+        SetAllPanels(false);
+        
+        SetPanel(0, true);
+    }
 }
 
 enum ContractsPanelType : int

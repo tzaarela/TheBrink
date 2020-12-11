@@ -14,7 +14,7 @@ public class RoomController : MonoBehaviour
     private List<GameObject> roomGameObjects;
 
     [SerializeField]
-    private float airDrainLevel = 0.2f;
+    private float airDrainLevel = 0.01f;
 
     public List<Room> Rooms
     {

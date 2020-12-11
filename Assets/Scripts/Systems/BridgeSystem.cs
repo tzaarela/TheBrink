@@ -60,7 +60,10 @@ public class BridgeSystem : ShipSystem
 
     public void UpdateTimeToEncounter()
     {
-
+        //Go through the route, look at all encounters in array,
+        //find the encounters that are still bool "on" and has the lowest position.
+        //Take that encounter and compare it to figure things out.
+        
     }
 
     public void SetEnergyWanted()

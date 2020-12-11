@@ -58,16 +58,19 @@
         <e p="Scripts" t="Include">
           <e p="ConsoleController.cs" t="Include" />
           <e p="Crew" t="Include">
+            <e p="CommandController.cs" t="Include" />
             <e p="CrewController.cs" t="Include" />
             <e p="CrewMember.cs" t="Include" />
+            <e p="IdleCommand.cs" t="Include" />
+            <e p="MoveCommand.cs" t="Include" />
             <e p="Pathfinder.cs" t="Include" />
             <e p="Profession.cs" t="Include" />
-            <e p="Task.cs" t="Include" />
-            <e p="TaskController.cs" t="Include" />
+            <e p="RepairCommand.cs" t="Include" />
             <e p="TaskType.cs" t="Include" />
             <e p="WayPoint.cs" t="Include" />
             <e p="WayPointController.cs" t="Include" />
           </e>
+          <e p="DebugScript.cs" t="Include" />
           <e p="Door.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="InterfaceTriggerEditor.cs" t="Include" />
@@ -116,6 +119,7 @@
           <e p="Spaceport" t="Include">
             <e p="ButtonState.cs" t="Include" />
             <e p="SpaceportBarrackController.cs" t="Include" />
+            <e p="SpaceportContract.cs" t="Include" />
             <e p="SpaceportContractsController.cs" t="Include" />
             <e p="SpaceportPanelController.cs" t="Include" />
             <e p="SpaceportPanelType.cs" t="Include" />
@@ -125,6 +129,7 @@
             <e p="SpaceportUITest.cs" t="Include" />
             <e p="SpaceportWorkshopController.cs" t="Include" />
             <e p="TabState.cs" t="Include" />
+            <e p="UIButton.cs" t="Include" />
           </e>
           <e p="Systems" t="Include">
             <e p="BridgeSystem.cs" t="Include" />
@@ -136,14 +141,17 @@
             <e p="MedbaySystem.cs" t="Include" />
             <e p="ReactorSystem.cs" t="Include" />
             <e p="ShipSystem.cs" t="Include" />
+            <e p="SystemContent.cs" t="Include" />
             <e p="SystemController.cs" t="Include" />
             <e p="SystemState.cs" t="Include" />
             <e p="SystemTab.cs" t="Include" />
             <e p="SystemTabController.cs" t="Include" />
             <e p="SystemType.cs" t="Include" />
           </e>
+          <e p="Utility" t="Include">
+            <e p="Command.cs" t="Include" />
+          </e>
         </e>
-        <e p="UIButton.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

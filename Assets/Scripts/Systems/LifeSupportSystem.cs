@@ -80,6 +80,10 @@ public class LifeSupportSystem : ShipSystem
         {
             EnergyWanted = (totalOxygenNeeded - totalOxygenProduced) * SystemController.Instance.oxygenProduceCost;
         }
+        else
+        {
+            EnergyWanted = 0;
+        }
 
         throw new System.NotImplementedException();
     }
