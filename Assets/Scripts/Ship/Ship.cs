@@ -8,8 +8,9 @@ public class Ship
     public float Position { get; set; }
     public float Fuel { get; set; }
     public float MaxFuel { get; set; }
-    public float Capacitor { get; set; }
     public float MaxCapacitor { get; set; }
+    public float Capacitor { get; set; }
+    public float CapacitorBottleNeck { get; set; }
     public int Cash { get; set; }
 
     public Ship()

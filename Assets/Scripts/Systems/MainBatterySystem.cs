@@ -10,15 +10,22 @@ public class MainBatterySystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
 
-
     public MainBatterySystem()
     {
         SystemState = SystemState.IsOn;
+
+        EnergyWanted = 0;
+
     }
 
     public void Run()
     {
         //throw new System.NotImplementedException();
+    }
+
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
     }
 
     public void Reboot()

@@ -17,6 +17,13 @@ public class CargoHoldSystem : ShipSystem
     public CargoHoldSystem()
     {
         SystemState = SystemState.IsOn;
+
+        EnergyWanted = 0;
+    }
+
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
     }
 
     public void Run()

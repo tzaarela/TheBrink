@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class LifeSupportSystem : ShipSystem
 {
-    public float[] airMissingPerRoom;
+    public float[] oxygenMissingPerRoom;
     public List<Room> rooms;
 
-    float totalAirProduced;
-    float portionOfAir;
+    float totalOxygenProduced;
     float totalOxygenNeeded;
 
     public SystemType SystemType { get; set; }
@@ -23,44 +22,9 @@ public class LifeSupportSystem : ShipSystem
 
         rooms = RoomController.Instance.Rooms;
 
-        airMissingPerRoom = new float[rooms.Count];
+        oxygenMissingPerRoom = new float[rooms.Count];
 
-    }
-
-    public void GetOxygenNeeded()
-    {
-        for (int i = 0; i < rooms.Count; i++)
-        {
-            if (rooms[i].AirLevel < SystemController.Instance.optimalAirLevel)
-            {
-                airMissingPerRoom[i] = 100 - rooms[i].AirLevel;
-            }
-        }
-    }
-
-    public void ProduceOxygen()
-    {
-        for (int i = 0; i < airMissingPerRoom.Length; i++)
-        {
-            totalOxygenNeeded += airMissingPerRoom[i];
-        }
-
-        while (totalAirProduced > totalOxygenNeeded || CurrentEnergy > SystemController.Instance.airProduceCost)
-        {
-            totalAirProduced++;
-
-            CurrentEnergy -= SystemController.Instance.airProduceCost;
-        }
-
-    }
-
-    public void SendOxygenOut()
-    {
-
-        foreach (Room room in RoomController.Instance.Rooms)
-        {
-
-        }
+        EnergyWanted = 0;
 
     }
 
@@ -68,9 +32,56 @@ public class LifeSupportSystem : ShipSystem
     {
         GetOxygenNeeded();
 
-        ProduceOxygen();
+        var oxygenFragment = ProduceOxygen();
 
-        SendOxygenOut();
+        SendOxygenOut(oxygenFragment);
+
+        SetEnergyWanted();
+    }
+
+    public void GetOxygenNeeded()
+    {
+        for (int i = 0; i < rooms.Count; i++)
+        {
+            if (rooms[i].OxygenLevel < SystemController.Instance.optimalOxygenLevel)
+            {
+                oxygenMissingPerRoom[i] = 100 - rooms[i].OxygenLevel;
+            }
+        }
+    }
+
+    public float ProduceOxygen()
+    {
+        for (int i = 0; i < oxygenMissingPerRoom.Length; i++)
+        {
+            totalOxygenNeeded += oxygenMissingPerRoom[i];
+        }
+
+        while (totalOxygenProduced < totalOxygenNeeded || CurrentEnergy > SystemController.Instance.oxygenProduceCost)
+        {
+            totalOxygenProduced++;
+
+            CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
+        }
+        return totalOxygenProduced / totalOxygenNeeded;
+    }
+
+    public void SendOxygenOut(float oxygenFragment)
+    {
+        for(int i = 0; i < rooms.Count; i++)
+        {
+            rooms[i].OxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
+        }
+    }
+
+    public void SetEnergyWanted()
+    {
+        if (totalOxygenNeeded > totalOxygenProduced)
+        {
+            EnergyWanted = (totalOxygenNeeded - totalOxygenProduced) * SystemController.Instance.oxygenProduceCost;
+        }
+
+        throw new System.NotImplementedException();
     }
 
     public void Reboot()

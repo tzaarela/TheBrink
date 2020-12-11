@@ -13,6 +13,7 @@ public class UIButton : UITrigger
     private TMP_Text _text;
     [SerializeField] private Sprite[] _sprites = new Sprite[5];
     [SerializeField] private Color[] _colors = new Color[5];
+    private bool _mouseOver;
 
     private void Awake()
     {
@@ -41,29 +42,28 @@ public class UIButton : UITrigger
     public override void OnPointerEnter(PointerEventData eventData)
     {
         SetButtonState(ButtonState.Highlight);
+        _mouseOver = true;
     }
     
     public override void OnPointerExit(PointerEventData eventData)
     {
         SetButtonState(ButtonState.Normal);
-    }
-
-    public override void OnPointerDown(PointerEventData eventData)
-    {
-        SetButtonState(ButtonState.Pressed);
+        _mouseOver = false;
     }
     
     public override void OnPointerUp(PointerEventData eventData)
     {
+        if (!_mouseOver)
+            return;
+        
         SetButtonState(ButtonState.Highlight);
     }
-}
 
-enum ButtonState : int
-{
-    Normal,
-    Highlight,
-    Pressed,
-    Selected,
-    Disabled
+    public override void OnPointerDown(PointerEventData eventData)
+    {
+        if (!_mouseOver)
+            return;
+        
+        SetButtonState(ButtonState.Pressed);
+    }
 }

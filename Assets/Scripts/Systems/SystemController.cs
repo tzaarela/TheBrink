@@ -14,8 +14,8 @@ public class SystemController : MonoBehaviour
     [Header("MainBatterySystem")]
 
     [Header("Life Support")]
-    public float optimalAirLevel = 95f;
-    public float airProduceCost = 3f;
+    public float optimalOxygenLevel = 95f;
+    public float oxygenProduceCost = 3f;
 
     [Header("MedbaySystem")]
 

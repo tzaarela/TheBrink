@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SpaceportUIController : MonoBehaviour
@@ -52,5 +53,10 @@ public class SpaceportUIController : MonoBehaviour
     {
         HideAllPanels();
         _panelControllers[(int)tabType].SetRootPanel(true);
+    }
+
+    public void Depart()
+    {
+        SceneManager.LoadScene("Jimmy");
     }
 }

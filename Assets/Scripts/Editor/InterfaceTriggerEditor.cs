@@ -85,24 +85,27 @@ namespace Assets.Scripts.Editor
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
-            
-            _showSprites = EditorGUILayout.Foldout(_showSprites, "Button Sprites");
-            if (_showSprites)
-                ArrayGUI(serializedObject.FindProperty("_sprites"));
 
-            _showColors = EditorGUILayout.Foldout(_showColors, "Button Colors");
-            if (_showColors)
-                ArrayGUI(serializedObject.FindProperty("_colors"));
-            
+            ArrayGUI(ref _showSprites, "_sprites", "Button Sprites");
+            ArrayGUI(ref _showColors, "_colors", "Button Colors");
+
             serializedObject.ApplyModifiedProperties();
+            
+            // DrawDefaultInspector();
+            
+            base.OnInspectorGUI();
         }
 
-        private void ArrayGUI(SerializedProperty array)
+        private void ArrayGUI(ref bool foldout, string propertyName, string displayName)
         {
+            foldout = EditorGUILayout.Foldout(foldout, displayName);
+            if (!foldout)
+                return;
+            
             EditorGUI.indentLevel++;
-            
-            // Debug.Log($"{array.name}.arraySize: {array.arraySize}");
-            
+
+            SerializedProperty array = serializedObject.FindProperty(propertyName);
+
             for (int i = 0; i < array.arraySize; i++)
             {
                 EditorGUILayout.PropertyField(array.GetArrayElementAtIndex(i), new GUIContent(_spriteNames[i]), true);

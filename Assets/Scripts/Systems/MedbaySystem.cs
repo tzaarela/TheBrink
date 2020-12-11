@@ -9,7 +9,6 @@ public class MedbaySystem : ShipSystem
 
     public Queue<CrewMember> patientsToTreat;
 
-
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
     public float EnergyWanted { get; set; }
@@ -19,6 +18,13 @@ public class MedbaySystem : ShipSystem
     public MedbaySystem()
     {
         SystemState = SystemState.IsOn;
+
+        EnergyWanted = 0;
+    }
+
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
     }
 
     public void Run()
