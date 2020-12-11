@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Hazard
 {
-    public float SeverityAmount { get; set; }
-
+    public float SeverityAmount
+    {
+        get { return severityAmount; }
+        set { severityAmount = Mathf.Clamp(value, 0f, 100f); }
+    }
+    private float severityAmount;
     public HazardType HazardType { get; set; }
 
     public bool IsFinished { get; set; }
@@ -18,7 +22,7 @@ public class Hazard
         SeverityAmount = severityAmount;
         _hazardRoom = hazardRoom;
     }
-    //Initialize here, add function, that way called only once, called from room. create hazard. So causes inital damange
+    //Initialize here, add function, that way called only once, called from room. create hazard. So causes inital damage
     public void UpdateHazard()
     {
         switch (HazardType)

@@ -11,8 +11,8 @@ public class Room : UITrigger
 {
     public float OxygenLevel
     {
-        get { return airLevel; }
-        set { airLevel = Mathf.Clamp(value, 0, 100); }
+        get { return oxygenLevel; }
+        set { oxygenLevel = Mathf.Clamp(value, 0, 100); }
     }
     public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
     public float RoomHealth { get => roomHealth; set => roomHealth = value; }
@@ -48,7 +48,7 @@ public class Room : UITrigger
     [SerializeField]
     private RoomType _roomType;
     [SerializeField, Range(0, 100)]
-    private float airLevel;
+    private float oxygenLevel;
     [SerializeField]
     private float radiationLevel;
     [SerializeField]
