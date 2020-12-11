@@ -70,6 +70,7 @@
             <e p="WayPoint.cs" t="Include" />
             <e p="WayPointController.cs" t="Include" />
           </e>
+          <e p="DebugScript.cs" t="Include" />
           <e p="Door.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="InterfaceTriggerEditor.cs" t="Include" />
@@ -118,6 +119,7 @@
           <e p="Spaceport" t="Include">
             <e p="ButtonState.cs" t="Include" />
             <e p="SpaceportBarrackController.cs" t="Include" />
+            <e p="SpaceportContract.cs" t="Include" />
             <e p="SpaceportContractsController.cs" t="Include" />
             <e p="SpaceportPanelController.cs" t="Include" />
             <e p="SpaceportPanelType.cs" t="Include" />
@@ -127,6 +129,7 @@
             <e p="SpaceportUITest.cs" t="Include" />
             <e p="SpaceportWorkshopController.cs" t="Include" />
             <e p="TabState.cs" t="Include" />
+            <e p="UIButton.cs" t="Include" />
           </e>
           <e p="Systems" t="Include">
             <e p="BridgeSystem.cs" t="Include" />
@@ -149,8 +152,6 @@
             <e p="Command.cs" t="Include" />
           </e>
         </e>
-        <e p="SpaceportContract.cs" t="Include" />
-        <e p="UIButton.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
