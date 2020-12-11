@@ -149,6 +149,7 @@
             <e p="Command.cs" t="Include" />
           </e>
         </e>
+        <e p="SpaceportContract.cs" t="Include" />
         <e p="UIButton.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
