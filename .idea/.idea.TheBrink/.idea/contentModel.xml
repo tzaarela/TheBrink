@@ -58,12 +58,14 @@
         <e p="Scripts" t="Include">
           <e p="ConsoleController.cs" t="Include" />
           <e p="Crew" t="Include">
+            <e p="CommandController.cs" t="Include" />
             <e p="CrewController.cs" t="Include" />
             <e p="CrewMember.cs" t="Include" />
+            <e p="IdleCommand.cs" t="Include" />
+            <e p="MoveCommand.cs" t="Include" />
             <e p="Pathfinder.cs" t="Include" />
             <e p="Profession.cs" t="Include" />
-            <e p="Task.cs" t="Include" />
-            <e p="TaskController.cs" t="Include" />
+            <e p="RepairCommand.cs" t="Include" />
             <e p="TaskType.cs" t="Include" />
             <e p="WayPoint.cs" t="Include" />
             <e p="WayPointController.cs" t="Include" />
@@ -136,11 +138,15 @@
             <e p="MedbaySystem.cs" t="Include" />
             <e p="ReactorSystem.cs" t="Include" />
             <e p="ShipSystem.cs" t="Include" />
+            <e p="SystemContent.cs" t="Include" />
             <e p="SystemController.cs" t="Include" />
             <e p="SystemState.cs" t="Include" />
             <e p="SystemTab.cs" t="Include" />
             <e p="SystemTabController.cs" t="Include" />
             <e p="SystemType.cs" t="Include" />
+          </e>
+          <e p="Utility" t="Include">
+            <e p="Command.cs" t="Include" />
           </e>
         </e>
         <e p="UIButton.cs" t="Include" />
