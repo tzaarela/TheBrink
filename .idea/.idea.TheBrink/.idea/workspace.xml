@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/WayPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/TaskController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Pathfinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Crew/WaypointController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuController.cs" />
@@ -91,6 +88,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportTabController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +148,7 @@
       <workItem from="1607503110218" duration="17118000" />
       <workItem from="1607588034649" duration="3634000" />
       <workItem from="1607620695032" duration="10442000" />
-      <workItem from="1607673785434" duration="428000" />
+      <workItem from="1607673785434" duration="1083000" />
     </task>
     <servers />
   </component>

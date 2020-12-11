@@ -21,7 +21,8 @@ public class Waypoint : MonoBehaviour
 
     private void Awake()
     {
-        Position = transform.position;
+        // Position = transform.position;
+        Position = transform.localPosition;
     }
 
     public List<Waypoint> GetNeighbours()
