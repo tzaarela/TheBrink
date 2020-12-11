@@ -45,7 +45,7 @@ public class CrewMember : UITrigger
 
     }
 
-    public MoveController moveController;
+    [HideInInspector] public MoveController moveController;
     private bool isSelected;
 
     private void Awake()
