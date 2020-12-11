@@ -54,7 +54,7 @@ public class MissionController : MonoBehaviour
         {
             tickTimer = 0;
             CheckEncounters();
-            CrewController.Instance.UpdateCrew();
+            CrewController.Instance.UpdateCrewCommands();
             RoomController.Instance.UpdateRooms();
             SystemController.Instance.ShipSystemUpdate();
         }

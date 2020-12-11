@@ -31,8 +31,7 @@ public class MoveController : MonoBehaviour
         {
             crewMember.CurrentWayPoint = _path[0];
             _path.RemoveAt(0);
-            if (_path.Count <= 0)
-                FinishTask();
+           
         }   
         
         DrawPath();
@@ -47,7 +46,7 @@ public class MoveController : MonoBehaviour
 
     private void FinishTask()
     {
-        crewMember.FinishCurrentTask();
+        //crewMember.FinishCurrentTask();
     }
 
     private bool WayPointIsReached()

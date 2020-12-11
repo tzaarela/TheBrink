@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Utility;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -10,12 +11,12 @@ namespace Assets.Scripts.InterfacePanels
 
         bool _isHighlighted;
 
-        private Task task;
+        private Command command;
 
-        public Task Task
+        public Command Command
         {
-            get { return task; }
-            set { task = value; }
+            get { return command; }
+            set { command = value; }
         }
 
 
@@ -58,12 +59,8 @@ namespace Assets.Scripts.InterfacePanels
                 ContextMenuController.instance.CloseContextMenu();
                 return;
             }
-
-            if (Task.TaskType == TaskType.Repair && crewMember.CurrentWayPoint != Task.Destination.waypoints[0])
-                crewMember.AddTask(new Task(TaskType.Move, Task.Destination));
-
-            crewMember.AddTask(Task);
-
+            crewMember.CurrentCommand = Command;
+            crewMember.AddCommand(Command);
             ContextMenuController.instance.CloseContextMenu();
 
             //base.OnPointerClick(eventData);

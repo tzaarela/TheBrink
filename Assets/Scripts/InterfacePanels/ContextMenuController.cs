@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,7 +55,7 @@ namespace Assets.Scripts.InterfacePanels
                 CloseContextMenu();
         }
 
-        public void OpenContextMenu(List<Task> availableTasks)
+        public void OpenContextMenu(List<Command> availableTasks)
         {
             CloseContextMenu();
             isOpen = true;

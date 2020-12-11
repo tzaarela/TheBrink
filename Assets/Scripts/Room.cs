@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.InterfacePanels;
+using Assets.Scripts.Utility;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -103,16 +104,17 @@ public class Room : UITrigger
         AirLevel -= drainLevel;
     }
 
-    public List<Task> GetAvailableTasks()
+    public List<Command> GetAvailableCommandsForRoom(CrewMember crewMember)
     {
         //TODO - GET CORRECT TASKS FOR ROOM AND CHARACTER
-        List<Task> availableTasks = new List<Task>();
-        availableTasks.Add(new Task(TaskType.Move, this));
-        availableTasks.Add(new Task(TaskType.Scan, this));
+        List<Command> availableTasks = new List<Command>();
+
+        if(crewMember.CurrentWayPoint != waypoints[0])
+            availableTasks.Add(new MoveCommand(crewMember, this));
 
         if (Hazards.Count > 0)
         {
-            availableTasks.Add(new Task(TaskType.Repair, this));
+            availableTasks.Add(new RepairCommand(crewMember, this));
         }
 
         return availableTasks;
@@ -124,8 +126,7 @@ public class Room : UITrigger
 
         if (Hazards.Count <= 0)
         {
-            ConsoleController.instance.PrintToConsole($"{crewMember.name}: I've finished the repairs in {crewMember.CurrentTask.Destination.name}. ", 0.01f, true);
-            crewMember.FinishCurrentTask();
+            ConsoleController.instance.PrintToConsole($"{crewMember.name}: I've finished the repairs in {crewMember.CurrentCommand.Destination.name}. ", 0.01f, true);
             return;
         }
         else
@@ -163,7 +164,7 @@ public class Room : UITrigger
                     Debug.Log("The crewmember is trying to patch over the hull breach.");
                     break;
                 default:
-                    crewMember.FinishCurrentTask();
+                    //crewMember.FinishCurrentTask();
                     Debug.Log("The crewmember couldn't find a hazard that they are able told to repair");
                     break;
             }
@@ -194,7 +195,7 @@ public class Room : UITrigger
 
             if (CrewController.Instance.GetSelectedCrewMember() != null)
             {
-                var availableTasks = GetAvailableTasks();
+                var availableTasks = GetAvailableCommandsForRoom(CrewController.Instance.GetSelectedCrewMember());
                 ContextMenuController.instance.OpenContextMenu(availableTasks);
             }
         }

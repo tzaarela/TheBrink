@@ -1,4 +1,6 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Crew;
+using Assets.Scripts.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +15,7 @@ public class CrewController : MonoBehaviour
     private CrewMember[] crewMembersPrefab = new CrewMember[3];
 
     public List<CrewMember> crewMembers;
+
 
     public void Awake()
     {
@@ -32,51 +35,28 @@ public class CrewController : MonoBehaviour
         AddCrew();
     }
 
-    public void UpdateCrew()
+    //Updates all commands but Move, crewMember.Update() handles this 
+    public void UpdateCrewCommands()
     {
-        if (crewMembers == null || crewMembers.Count <= 0)
-            return;
-        
         foreach (var crewMember in crewMembers)
         {
-            if (crewMember == null || crewMember.CurrentTask == null)
-                continue;
-
-            var task = crewMember.CurrentTask;
-
-            switch (task.TaskType)
+            var commandQueue = crewMember.CommandQueue;
+            if(commandQueue.Count() > 0 && commandQueue.Peek().GetType() != typeof(MoveCommand))
             {
-                case TaskType.Move:
-                {       
-                       //Moved to CrewMember Update();
-                    break;
-                }
-                case TaskType.Repair:
+                if (commandQueue.Peek().IsFinished)
                 {
-                        if (!task.IsExecuted)
-                        {
-                            ConsoleController.instance.PrintToConsole($"{crewMember.Name}: I've started repairs in {task.Destination.name}. ", 0.01f, true);
-                            task.IsExecuted = true;
-                        }
-                        crewMember.Repair();
-                    break;
-                }
-                case TaskType.Scan:
-                {
-                        Debug.Log(crewMember.Name + "is scanning...");
-                        ConsoleController.instance.PrintToConsole(
-                            $"Room status [{task.Destination.RoomType.ToString()}]" +
-                            "\n -- Oxygen level: " + task.Destination.AirLevel + "%" +
-                            "\n -- Radiation level: " + task.Destination.RadiationLevel + "%" +
-                            "\n -- Hull Integrity: " + task.Destination.RoomHealth + "% ", 0.01f, true);
-                        crewMember.FinishCurrentTask();
-                    break;
+                    commandQueue.Dequeue();
+                    if(commandQueue.Count > 0)
+                        crewMember.CurrentCommand = commandQueue.Peek();
                 }
 
-                case TaskType.None:
-                    break;
-                default:
-                    break;
+                if (commandQueue.Count > 0)
+                {
+                    crewMember.Status = commandQueue.Peek().StatusText;
+                    commandQueue.Peek().Execute();
+                }
+                else
+                    crewMember.CurrentCommand = null;
             }
         }
     }

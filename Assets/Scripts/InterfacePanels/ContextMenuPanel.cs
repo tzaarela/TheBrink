@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
+using Assets.Scripts.Utility;
 
 namespace Assets.Scripts.InterfacePanels
 {
@@ -17,13 +18,13 @@ namespace Assets.Scripts.InterfacePanels
         //{
         //    this.availableTasks = availableTasks;
 
-        public void CreateMenuItems(List<Task> availableTasks)
+        public void CreateMenuItems(List<Command> availableTasks)
         {
-            foreach (Task task in availableTasks)
+            foreach (Command command in availableTasks)
             {
                 var menuItem = Instantiate(menuItemPrefab, transform.position, Quaternion.identity, transform);
-                menuItem.Task = task;
-                menuItem.GetComponentInChildren<TextMeshProUGUI>().text = task.TaskType.ToString();
+                menuItem.Command = command;
+                menuItem.GetComponentInChildren<TextMeshProUGUI>().text = command.Name.ToString();
             }
                      
         }

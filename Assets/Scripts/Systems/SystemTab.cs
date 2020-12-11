@@ -19,7 +19,7 @@ namespace Assets.Scripts.Systems
         
 
         [SerializeField]
-        private SystemType systemType;
+        private ShipSystem shipSystem;
 
         [SerializeField]
         Color32 textColorSelected;
@@ -28,10 +28,7 @@ namespace Assets.Scripts.Systems
         Color32 textColorUnselected;
 
         [SerializeField]
-        GameObject reactorContent;
-
-        [SerializeField]
-        GameObject weaponsContent;
+        SystemContent content;
 
         public bool IsSelected
         {
@@ -44,7 +41,7 @@ namespace Assets.Scripts.Systems
                     
                     background.SetActive(true);
                     tabText.color = textColorSelected;
-                    SetContent(systemType);
+                    //SetContent(shipSystem);
                 }
                 else
                 {
@@ -69,31 +66,12 @@ namespace Assets.Scripts.Systems
             //weaponsContent.SetActive(false);
         }
 
-        public void SetContent(SystemType systemType)
+        public void SetContent()
         {
             DisableAllContent();
 
-            switch (systemType)
-            {
-                //case SystemType.Reactor:
-                //    reactorContent.SetActive(true);
-                //    break;
-                //case SystemType.Weapons:
-                //    weaponsContent.SetActive(true);
-                //    break;
-                //case SystemType.Mainframe:
-                //    break;
-                //case SystemType.Hull:
-                //    break;
-                //case SystemType.Medbay:
-                //    break;
-                //case SystemType.Resources:
-                //    break;
-                //case SystemType.Navigator:
-                //    break;
-                //default:
-                //    break;
-            }
+            content.SetActive(true);
+
         }
         public override void OnPointerClick(PointerEventData eventData)
         {

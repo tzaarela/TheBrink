@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.InterfacePanels;
+using Assets.Scripts.Utility;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -23,8 +24,8 @@ public class CrewMember : UITrigger
     public Profession Profession { get => _profession; set => _profession = value; }
     public float RepairSkill { get => repairSkill; set => repairSkill = value; }
     public string Status { get; set; }
-    public Task CurrentTask { get; set; }
-    public Queue<Task> TaskQueue { get; set; }
+    public Command CurrentCommand { get; set; }
+    public Queue<Command> CommandQueue { get; set; }
     public Waypoint CurrentWayPoint { get; set; }
     public bool IsMoving { get; set; }
     public bool IsSelected
@@ -44,14 +45,14 @@ public class CrewMember : UITrigger
 
     }
 
-    private MoveController _moveController;
+    public MoveController moveController;
     private bool isSelected;
 
     private void Awake()
     {
-        _moveController = GetComponent<MoveController>();
-        _moveController.SetCrewMember(this);
-        TaskQueue = new Queue<Task>();
+        moveController = GetComponent<MoveController>();
+        moveController.SetCrewMember(this);
+        CommandQueue = new Queue<Command>();
     }
 
     public void Start()
@@ -63,11 +64,23 @@ public class CrewMember : UITrigger
 
     public void Update()
     {
-        if (CurrentTask != null && CurrentTask.TaskType == TaskType.Move)
+        if (CommandQueue.Count > 0 && CommandQueue.Peek().GetType() == typeof(MoveCommand))
         {
-            Status = "Moving";
-            Move();
+            if (CommandQueue.Peek().IsFinished)
+            {
+                CommandQueue.Dequeue();
+                if (CommandQueue.Count > 0)
+                    this.CurrentCommand = CommandQueue.Peek();
+            }
+
+            if (CommandQueue.Count > 0)
+            {
+                Status = CommandQueue.Peek().StatusText;
+                CommandQueue.Peek().Execute();
+            }
         }
+        else if (CommandQueue.Count == 0)
+            Status = "Idle";
     }
 
     public void Select()
@@ -84,47 +97,23 @@ public class CrewMember : UITrigger
             highlight.gameObject.SetActive(false);
     }
 
-    public void AddTask(Task newTask)
+    public void AddCommand(Command command)
     {
-        TaskQueue.Enqueue(newTask);
-        CurrentTask = TaskQueue.Peek();
+        //If we are not there, make sure to add a move command first.
+        if (command.GetType() != typeof(MoveCommand) && CurrentWayPoint != command.Destination.waypoints[0])
+            CommandQueue.Enqueue(new MoveCommand(this, command.Destination));
 
-        if (CurrentTask.TaskType == TaskType.Move)
-        {
-            Debug.Log($"{_name} got a Move Task!");
-            _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.waypoints[0]);
-        }
+        CommandQueue.Enqueue(command);
     }
 
     public void Move()
     {
-        _moveController.Move();
+        moveController.Move();
     }
 
     public void Repair()
     {
-        Status = "Repairing";
-        CurrentTask.Destination.RepairRoom(this);
-    }
-
-    public void FinishCurrentTask()
-    {
-        TaskQueue.Dequeue();
-
-        if (TaskQueue.Count > 0)
-        {
-            CurrentTask = TaskQueue.Peek();
-
-            if (CurrentTask.TaskType == TaskType.Move)
-            {
-                _moveController.FindShortestPath(CurrentWayPoint, CurrentTask.Destination.waypoints[0]);
-            }
-        }
-        else
-        {
-            CurrentTask = null;
-            Status = "Idle";
-        }
+        CurrentCommand.Destination.RepairRoom(this);
     }
 
     public override void OnPointerClick(PointerEventData eventData)
