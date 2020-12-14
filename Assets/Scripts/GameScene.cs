@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts
 {
-    public enum GameState
+    public enum GameScene
     {
         InMainMenu,
         InMission,
-        InGameOver
+        InSpaceport
     }
 }

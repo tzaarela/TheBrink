@@ -19,20 +19,15 @@ public class CrewController : MonoBehaviour
 
     public void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance == null)
         {
-            Destroy(this.gameObject);
+            Instance = this;
+            crewMembers = new List<CrewMember>();
         }
         else
         {
-            Instance = this;
+            Destroy(this.gameObject);
         }
-    }
-
-    public void Start()
-    {
-        crewMembers = new List<CrewMember>();
-        AddCrew();
     }
 
     //Updates all commands but Move, crewMember.Update() handles this 
@@ -61,7 +56,7 @@ public class CrewController : MonoBehaviour
         }
     }
 
-    private void AddCrew()
+    public void CreateShipCrew()
     {
         Debug.Log("Adding crew...");
         foreach (CrewMember crewMember in crewMembersPrefab)

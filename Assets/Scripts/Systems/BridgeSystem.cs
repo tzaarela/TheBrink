@@ -26,10 +26,12 @@ public class BridgeSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     public BridgeSystem()
     {
         SystemState = SystemState.IsOn;
+        SystemType = SystemType.Bridge;
 
         route = MissionController.Instance.Route;
         ship = ShipController.Instance.Ship;
@@ -48,7 +50,7 @@ public class BridgeSystem : ShipSystem
 
     public void UpdateETA()
     {
-        EstimatedTimetoArrival = (((route.Length - route.ShipPosition) / ship.Speed) * 0.1f);
+        EstimatedTimetoArrival = (((route.Length - route.ShipPosition) / ship.speed) * 0.1f);
         //TODO: Really needs to check this with Saarela
     }
 

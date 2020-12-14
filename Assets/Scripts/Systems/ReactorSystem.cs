@@ -31,6 +31,7 @@ public class ReactorSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     public ReactorSystem(Ship ship)
     {
@@ -40,7 +41,7 @@ public class ReactorSystem : ShipSystem
         FuelCost = 1;
         CapacityLevel = 2;
         IsRetrograde = false;
-        energyOutput = ship.CapacitorBottleNeck / 3;
+        energyOutput = ship.capacitorBottleNeck / 3;
         Efficiency = 1.00f;
 
         EnergyWanted = 0;
@@ -48,24 +49,24 @@ public class ReactorSystem : ShipSystem
 
 public void BurnsFuel()
     {
-        ship.Fuel -= CapacityLevel * FuelCost;
+        ship.fuel -= CapacityLevel * FuelCost;
     }
 
     public void ProdEnergy()
     {
         energyOutput = energyOutput * CapacityLevel * Efficiency;
 
-        ship.Capacitor += energyOutput;
+        ship.capacitor += energyOutput;
     }
 
     public void ProdSpeed()
     {
-        ship.Speed = CapacityLevel;
+        ship.speed = CapacityLevel;
     }
 
     public void Run()
     {
-        if (ship.Fuel > 0)
+        if (ship.fuel > 0)
         {
             BurnsFuel();
             ProdEnergy();

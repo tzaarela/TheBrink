@@ -15,10 +15,12 @@ public class LifeSupportSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     public LifeSupportSystem()
     {
         SystemState = SystemState.IsOn;
+        SystemType = SystemType.LifeSupport;
 
         rooms = RoomController.Instance.Rooms;
 

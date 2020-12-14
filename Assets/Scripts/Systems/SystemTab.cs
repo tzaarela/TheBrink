@@ -41,12 +41,13 @@ namespace Assets.Scripts.Systems
                     
                     background.SetActive(true);
                     tabText.color = textColorSelected;
-                    //SetContent(shipSystem);
+                    ActivateContent();
                 }
                 else
                 {
                     background.SetActive(false);
                     tabText.color = textColorUnselected;
+                    DisableContent();
                 }
 
             }
@@ -60,27 +61,14 @@ namespace Assets.Scripts.Systems
             SystemTabController = transform.parent.gameObject.GetComponent<SystemTabController>();
         }
 
-        public void DisableAllContent()
+        public void DisableContent()
         {
-            //reactorContent.SetActive(false);
-            //weaponsContent.SetActive(false);
+            content.gameObject.SetActive(false);
         }
 
-        public void SetContent()
+        public void ActivateContent()
         {
-            DisableAllContent();
-
-            content.SetActive(true);
-
-        }
-        public override void OnPointerClick(PointerEventData eventData)
-        {
-            if(!isSelected)
-            {
-                SystemTabController.DeselectActive();
-                SystemTabController.Select(this);
-            }
-            base.OnPointerClick(eventData);
+            content.gameObject.SetActive(true);
         }
     }
 }

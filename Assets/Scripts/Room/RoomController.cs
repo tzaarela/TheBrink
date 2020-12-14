@@ -29,8 +29,6 @@ public class RoomController : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            _rooms = new List<Room>();
-            CreateRooms();
         }
         else
         {
@@ -54,6 +52,7 @@ public class RoomController : MonoBehaviour
 
     public void CreateRooms()
     {
+        _rooms = new List<Room>();
         _rooms.AddRange(roomGameObjects.Select(x => x.GetComponent<Room>()));
     }
 

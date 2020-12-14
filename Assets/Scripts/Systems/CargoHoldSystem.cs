@@ -9,6 +9,7 @@ public class CargoHoldSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     float Load;
     //Decide here, what should the load be? Look up how much the ship should carry.
@@ -17,6 +18,7 @@ public class CargoHoldSystem : ShipSystem
     public CargoHoldSystem()
     {
         SystemState = SystemState.IsOn;
+        SystemType = SystemType.CargoBay;
 
         EnergyWanted = 0;
     }

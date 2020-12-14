@@ -9,10 +9,12 @@ public class CorridorSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     public CorridorSystem()
     {
         SystemState = SystemState.IsOn;
+        SystemType = SystemType.Corridors;
 
         EnergyWanted = 0;
     }

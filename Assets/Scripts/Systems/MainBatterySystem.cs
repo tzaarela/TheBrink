@@ -9,10 +9,12 @@ public class MainBatterySystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     public MainBatterySystem()
     {
         SystemState = SystemState.IsOn;
+        SystemType = SystemType.MainBattery;
 
         EnergyWanted = 0;
 

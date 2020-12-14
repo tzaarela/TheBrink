@@ -91,6 +91,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5698c82bad194418daec14536de3962e, type: 3}
   - {fileID: 21300000, guid: b7a00b2baa500bc4b9142a9219f200a0, type: 3}
   - {fileID: 21300000, guid: a7cf1bab579e28541927f71a238e6faa, type: 3}
+  - {fileID: 21300000, guid: fcf875fc8eb4a324ab27feb3c41b06bb, type: 3}
   - {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
   - {fileID: 21300000, guid: 7cc8676d8db2144e69a26c39e800e17b, type: 3}
   - {fileID: 21300000, guid: 808287dde39e2c145bddb075ddeecada, type: 3}
@@ -142,6 +143,7 @@ SpriteAtlas:
   - 8x8_ui-border2-temp_01
   - Button_03_Pressed
   - Button_03_Highlight
+  - crew_idcard_BG
   - ShipUI_Portrait3
   - ShipUI_Door_Inactive
   - gubb_icon__01

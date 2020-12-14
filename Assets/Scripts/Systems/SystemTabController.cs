@@ -13,13 +13,12 @@ namespace Assets.Scripts.Systems
         List<SystemTab> systemTabs;
 
         [SerializeField]
-        TextMeshProUGUI systemWindowText;
-
-        
+        SystemTab startingTab;
 
         public void Start()
         {
             systemTabs = gameObject.GetComponentsInChildren<SystemTab>().ToList();
+            Select(startingTab);
         }
 
         public void DeselectActive()
@@ -32,6 +31,7 @@ namespace Assets.Scripts.Systems
 
         public void Select(SystemTab systemTab)
         {
+            DeselectActive();
             systemTab.IsSelected = true;
             //Display System Window
             //systemWindowText.text = systemTab.name;
