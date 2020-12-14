@@ -56,6 +56,13 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Audio" t="Include">
+            <e p="AudioBGMType.cs" t="Include" />
+            <e p="AudioController.cs" t="Include" />
+            <e p="AudioSourceType.cs" t="Include" />
+            <e p="BGMClipType.cs" t="Include" />
+            <e p="SFXClipType.cs" t="Include" />
+          </e>
           <e p="ConsoleController.cs" t="Include" />
           <e p="Crew" t="Include">
             <e p="CommandController.cs" t="Include" />
