@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class SystemController : MonoBehaviour
 {
-
     [Header("BridgeSystem")]
 
     [Header("MainframeSystem")]
@@ -31,20 +30,24 @@ public class SystemController : MonoBehaviour
 
     public static SystemController Instance;
 
-    public void Awake()
+    public void OnEnable()
     {
         if (Instance == null)
+        {
             Instance = this;
-        else
+            amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
+        }
+        else if (Instance != this)
             Destroy(this);
     }
 
-    public void Start()
+    public void Awake()
     {
-        amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
-        Ship ship = ShipController.Instance.Ship;
 
+    }
 
+    public void CreateShipSystems(Ship ship)
+    {
         ShipSystems = new ShipSystem[amountOfSystems];
 
         ShipSystems[0] = new ReactorSystem(ship);

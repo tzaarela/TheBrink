@@ -461,6 +461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74564ecf80f4f54481d0722f41ea064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  systemType: 0
+  airLevel: {fileID: 7195976559525260590}
+  energyLevel: {fileID: 7195976560155426174}
 --- !u!1001 &212586013238375383
 PrefabInstance:
   m_ObjectHideFlags: 0

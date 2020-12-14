@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveController : MonoBehaviour
+public class MoveController
 {
-    // private List<Transform> _wayPoints;
-    // [SerializeField]
-    // private int _currentWayPoint;
+    private List<Waypoint> _path;
+    private float _speed;
+    private CrewMember _crewMember;
 
-    [SerializeField] private List<Waypoint> _path;
-
-    [SerializeField]
-    private Vector2 _velocity;
-
-    [SerializeField] private float _speed;
-
-    private CrewMember crewMember;
-
-    public float Speed { get => _speed; set => _speed = value; }
+    public MoveController(float speed, CrewMember crewMember)
+    {
+        _speed = speed;
+        _crewMember = crewMember;
+    }
 
     public void Move()
     {
@@ -25,33 +20,20 @@ public class MoveController : MonoBehaviour
         if (_path == null || _path.Count <= 0)
             return;
 
-        transform.position = Vector3.MoveTowards(transform.position, _path[0].Position, _speed * Time.deltaTime);
+        _crewMember.transform.position = Vector3.MoveTowards(_crewMember.transform.position, _path[0].Position, _speed * Time.deltaTime);
         
         if (WayPointIsReached())
         {
-            crewMember.CurrentWayPoint = _path[0];
+            _crewMember.CurrentWayPoint = _path[0];
             _path.RemoveAt(0);
-           
         }   
         
         DrawPath();
     }
 
-
-
-    public void SetCrewMember(CrewMember crewMember)
-    {
-        this.crewMember = crewMember; 
-    }
-
-    private void FinishTask()
-    {
-        //crewMember.FinishCurrentTask();
-    }
-
     private bool WayPointIsReached()
     {
-        if (Vector2.Distance(transform.position, _path[0].Position) <= 0.1f)
+        if (Vector2.Distance(_crewMember.transform.position, _path[0].Position) <= 0.1f)
             return true;
         return false;
     }
@@ -127,7 +109,7 @@ public class MoveController : MonoBehaviour
         if (_path == null || _path.Count <= 0)
             return;
         
-        Debug.DrawLine(transform.position, _path[0].Position, Color.red);
+        Debug.DrawLine(_crewMember.transform.position, _path[0].Position, Color.red);
         for (int i = 0; i < _path.Count - 1; i++)
         {
             Debug.DrawLine(_path[i].Position, _path[i+1].Position, Color.blue);

@@ -2,39 +2,70 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+[CreateAssetMenu(fileName = "GameController", menuName = "GameController")]
+public class GameController : ScriptableObject
 {
-    public static GameController Instance { get; set; }
+    public static GameController Instance;
 
-    public GameState GameState { get; set; }
+    public Ship ship;
 
-    public void Start()
+    public GameScene GameScene { get => gameScene; 
+        set 
+        {
+            gameScene = value;
+            SwitchScene(gameScene);
+        } 
+    }
+
+    private GameScene gameScene = GameScene.InMainMenu;
+    private TransitionController transitionController;
+
+    public void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
-        else
+        else if (Instance != this)
         {
             Destroy(this);
         }
-
-        GameState = GameState.InMainMenu;
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void Init(Ship ship)
     {
-        switch (GameState)
+        this.ship = ship;
+        SystemController.Instance.CreateShipSystems(this.ship);
+        RoomController.Instance.CreateRooms();
+        CrewController.Instance.CreateShipCrew();
+        transitionController = TransitionController.Instance;
+    }
+
+    public void SwitchScene(GameScene gameScene)
+    {
+        switch (gameScene)
         {
-            case GameState.InMainMenu:
-                break;
-            case GameState.InMission:
-                break;
-            case GameState.InGameOver:
-                break;
+            case GameScene.InMainMenu:
+                {
+                    transitionController.RunTransitionAnimation("Menu Animation");
+                    SceneManager.LoadScene("MainMenuScene");
+                    break;
+
+                }
+            case GameScene.InMission:
+                {
+                    transitionController.RunTransitionAnimation("Menu Animation");
+                    SceneManager.LoadScene("MissionScene");
+                    break;
+                }
+            case GameScene.InSpaceport:
+                {
+                    transitionController.RunTransitionAnimation("Menu Animation");
+                    SceneManager.LoadScene("SpaceportScene");
+                    break;
+                }
             default:
                 break;
         }

@@ -14,10 +14,12 @@ public class MedbaySystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     public MedbaySystem()
     {
         SystemState = SystemState.IsOn;
+        SystemType = SystemType.Medbay;
 
         EnergyWanted = 0;
     }

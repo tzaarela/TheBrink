@@ -11,10 +11,13 @@ public class MainframeSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
     public MainframeSystem(Ship ship)
     {
         this.ship = ship;
+
+        SystemType = SystemType.Mainframe;
 
         EnergyWanted = 0;
     }
@@ -54,10 +57,10 @@ public class MainframeSystem : ShipSystem
     /// <returns>CurrentEnergy divided by energyNeeded</returns>
     public float DivideEnergy(float energyNeeded)
     {
-        while(energyNeeded >= ship.CapacitorBottleNeck && ship.Capacitor > 0)
+        while(energyNeeded >= ship.capacitorBottleNeck && ship.capacitor > 0)
         {
             CurrentEnergy++;
-            ship.Capacitor--;
+            ship.capacitor--;
         }
 
         return CurrentEnergy / energyNeeded;

@@ -237,7 +237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4805307133351959513}
   - component: {fileID: -2236792370988146526}
-  - component: {fileID: -1102832198655145720}
   - component: {fileID: 2974096332505733812}
   m_Layer: 5
   m_Name: CrewMember
@@ -285,21 +284,7 @@ MonoBehaviour:
   _spawnPoint: {fileID: 0}
   repairSkill: 0
   highlight: {fileID: 5673322050813828289}
---- !u!114 &-1102832198655145720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7632025308335919965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737f8afc9c5e0b24eaeecff8355a782f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _path: []
-  _velocity: {x: 0, y: 0}
-  _speed: 300
+  speed: 0
 --- !u!222 &2974096332505733812
 CanvasRenderer:
   m_ObjectHideFlags: 0
