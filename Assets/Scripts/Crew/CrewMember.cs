@@ -50,16 +50,16 @@ public class CrewMember : UITrigger
 
     private void Awake()
     {
+        Status = "Idle";
         moveController = GetComponent<MoveController>();
         moveController.SetCrewMember(this);
         CommandQueue = new Queue<Command>();
+        CurrentWayPoint = _spawnPoint;
+        transform.position = _spawnPoint.transform.position;
     }
 
     public void Start()
     {
-        Status = "Idle";
-        CurrentWayPoint = _spawnPoint;
-        transform.position = _spawnPoint.transform.position;
     }
 
     public void Update()
