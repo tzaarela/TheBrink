@@ -1,10 +1,10 @@
 ﻿public enum RoomType
 {
     Reactor,
-    CargoBay,
+    CargoHold,
     MainFrame,
     Bridge,
-    CrewQuarters,
+    LifeSupport,
     MedBay,
     MainBattery,
     AirLock,

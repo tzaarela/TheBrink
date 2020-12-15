@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
-using Assets.Scripts.Utility;
 
 namespace Assets.Scripts.InterfacePanels
 {

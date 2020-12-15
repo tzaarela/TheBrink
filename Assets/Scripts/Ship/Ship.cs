@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,11 +14,13 @@ public class Ship : ScriptableObject
     public float maxCapacitor = 1000;
     public float capacitor = 1000;
     public float capacitorBottleNeck;
-    public int cash = 123; 
+    public int cash = 123;
 
-    public List<float> GetRoomsHealths()
+    public RoomDataArray roomData;
+
+    public List<float> GetRoomHealths()
     {
-        return RoomController.Instance.Rooms.Select(x => x.RoomHealth).ToList();
+        return RoomController.Instance.Rooms.Where(x => x.RoomType != RoomType.Corridor).Select(x => x.RoomHealth).ToList();
     }
 
     public List<CrewMember> GetCrewMembers()

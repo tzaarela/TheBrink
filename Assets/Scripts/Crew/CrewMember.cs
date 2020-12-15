@@ -1,6 +1,5 @@
 ﻿using Assets.Scripts.Crew;
 using Assets.Scripts.InterfacePanels;
-using Assets.Scripts.Utility;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;

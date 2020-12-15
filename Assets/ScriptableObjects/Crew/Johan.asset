@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: CrewJimmy
+  m_Name: Johan
   m_EditorClassIdentifier: 
-  crewName: Jimmy
-  health: 100
+  crewName: Johan
+  health: 99
   repairSkill: 3
-  sprite: {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
-  profession: 1
+  sprite: {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
+  profession: 0

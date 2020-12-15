@@ -1,13 +1,12 @@
-﻿using Assets.Scripts.Utility;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Assets.Scripts.Rooms;
 
 namespace Assets.Scripts
 {
     public class CommandController : MonoBehaviour
     {
-
         public Queue<Command> commandQueue;
 
         public static CommandController instance;

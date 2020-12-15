@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25853490263f0ba44841a23a80e2051d, type: 3}
-  m_Name: Ship
+  m_Script: {fileID: 11500000, guid: 1854302ec1ae1d342b9965a9a8007b75, type: 3}
+  m_Name: CargoholdRightData
   m_EditorClassIdentifier: 
-  speed: 10
-  position: 383.9886
-  fuel: 1000
-  maxFuel: 1000
-  maxCapacitor: 0
-  capacitor: 0
-  capacitorBottleNeck: 0
-  cash: 123
+  health: 100
+  roomType: 1
