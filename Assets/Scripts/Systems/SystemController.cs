@@ -25,23 +25,27 @@ public class SystemController : ScriptableObject
 
     [Header("CorridorsSystem")]
 
-
-    private int amountOfSystems;
     public ShipSystem[] ShipSystems;
 
-    public static SystemController Instance;
-
-    public void Awake()
+    private static SystemController _instance;
+    public static SystemController Instance
     {
-        if (Instance == null)
+        get
         {
-            Instance = this;
-            amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
+            if (_instance == null)
+            {
+                _instance = (SystemController)Resources.FindObjectsOfTypeAll(typeof(SystemController)).FirstOrDefault();
+            }
+
+            return _instance;
         }
+        private set { }
     }
 
     public void CreateShipSystems(Ship ship)
     {
+        var amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
+
         ShipSystems = new ShipSystem[amountOfSystems];
 
         ShipSystems[0] = new ReactorSystem(ship);

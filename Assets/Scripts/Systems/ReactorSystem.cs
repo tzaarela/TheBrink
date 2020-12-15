@@ -41,6 +41,7 @@ public class ReactorSystem : ShipSystem
         FuelCost = 1;
         CapacityLevel = 2;
         IsRetrograde = false;
+        //Wait, surely this is bizzarre? What was I thinking? Having an energyoutput that is LOWER than the bottleneck?
         energyOutput = ship.capacitorBottleNeck / 3;
         Efficiency = 1.00f;
 

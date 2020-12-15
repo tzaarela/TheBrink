@@ -37,9 +37,7 @@ public class GameController : ScriptableObject
     public void Init(Ship ship)
     {
         this.ship = ship;
-        SystemController.Instance.CreateShipSystems(this.ship);
-        RoomController.Instance.CreateRooms();
-        CrewController.Instance.CreateShipCrew();
+        
         transitionController = TransitionController.Instance;
     }
 
@@ -49,21 +47,33 @@ public class GameController : ScriptableObject
         {
             case GameScene.InMainMenu:
                 {
-                    transitionController.RunTransitionAnimation("Menu Animation");
                     SceneManager.LoadScene("MainMenuScene");
+                    transitionController.RunTransitionAnimation("Playing menu transition");
                     break;
 
                 }
             case GameScene.InMission:
                 {
-                    transitionController.RunTransitionAnimation("Menu Animation");
-                    SceneManager.LoadScene("MissionScene");
+                    var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
+
+                    AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+
+                    op.completed += (AsyncOperation o) =>
+                    {
+                        SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
+                        RoomController.Instance.CreateRooms();
+                        SystemController.Instance.CreateShipSystems(ship);
+                        CrewController.Instance.CreateShipCrew();
+                    };
+
+                    transitionController.RunTransitionAnimation("Playing mission transition....");
+
                     break;
                 }
             case GameScene.InSpaceport:
                 {
-                    transitionController.RunTransitionAnimation("Menu Animation");
                     SceneManager.LoadScene("SpaceportScene");
+                    transitionController.RunTransitionAnimation("Playing spaceport transition....");
                     break;
                 }
             default:

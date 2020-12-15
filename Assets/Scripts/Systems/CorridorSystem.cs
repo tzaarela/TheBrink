@@ -6,9 +6,11 @@ public class CorridorSystem : ShipSystem
 {
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
+
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+
     public float AirLevel { get; set; }
 
     public CorridorSystem()
@@ -17,6 +19,18 @@ public class CorridorSystem : ShipSystem
         SystemType = SystemType.Corridors;
 
         EnergyWanted = 0;
+
+        /*
+         * It needs a list of all corridors & airlocks.
+         * Goes through the list, and updates the airvalues etc on each.
+         * Remember that they update their air in Life Support, so here we only need to update the amount.
+         * Have we decided if corridoes need energy or not?
+         */
+    }
+
+    public void Run()
+    {
+        throw new System.NotImplementedException();
     }
 
     public void SetEnergyWanted()
@@ -25,11 +39,6 @@ public class CorridorSystem : ShipSystem
     }
 
     public void Reboot()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void Run()
     {
         throw new System.NotImplementedException();
     }

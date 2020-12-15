@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Starter : MonoBehaviour
 {
+    public SystemController systemController;
+
     [SerializeField]
     Ship ship;
 

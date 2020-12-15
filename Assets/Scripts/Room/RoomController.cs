@@ -8,14 +8,12 @@ using UnityEngine;
 public class RoomController : MonoBehaviour
 {
     [SerializeField]
-    private List<Room> _rooms;
-    
-    [SerializeField]
     private List<GameObject> roomGameObjects;
 
     [SerializeField]
     private float airDrainLevel = 0.01f;
 
+    private List<Room> _rooms;
     public List<Room> Rooms
     {
         get { return _rooms; }
@@ -30,17 +28,11 @@ public class RoomController : MonoBehaviour
         {
             Instance = this;
         }
-        else
+        else if(Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
-
-    private void Start()
-    {
-        
-    }
-
     public void UpdateRooms()
     {
         foreach (Room room in Rooms)

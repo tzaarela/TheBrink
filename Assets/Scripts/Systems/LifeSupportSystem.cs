@@ -12,9 +12,11 @@ public class LifeSupportSystem : ShipSystem
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
+
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+
     public float AirLevel { get; set; }
 
     public LifeSupportSystem()
@@ -27,7 +29,6 @@ public class LifeSupportSystem : ShipSystem
         oxygenMissingPerRoom = new float[rooms.Count];
 
         EnergyWanted = 0;
-
     }
 
     public void Run()
@@ -65,6 +66,7 @@ public class LifeSupportSystem : ShipSystem
 
             CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
         }
+
         return totalOxygenProduced / totalOxygenNeeded;
     }
 

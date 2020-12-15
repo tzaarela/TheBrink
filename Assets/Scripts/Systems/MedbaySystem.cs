@@ -11,9 +11,11 @@ public class MedbaySystem : ShipSystem
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
+    
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    
     public float AirLevel { get; set; }
 
     public MedbaySystem()
@@ -23,13 +25,25 @@ public class MedbaySystem : ShipSystem
 
         EnergyWanted = 0;
     }
-
-    public void SetEnergyWanted()
+    
+    public void Run()
     {
+
+
+        if(hasPatient == true)
+        {
+            hasDoctor = CheckForDoctor();
+
+            if (hasDoctor == true)
+            { 
+
+            }
+    }
+
         throw new System.NotImplementedException();
     }
 
-    public void Run()
+    public void SetEnergyWanted()
     {
         throw new System.NotImplementedException();
     }
@@ -44,31 +58,34 @@ public class MedbaySystem : ShipSystem
         throw new System.NotImplementedException();
     }
 
-    //public void UpdateMedbay()
-    //{
-    //    hasDoctor = CheckForDoctor();
+    public void UpdateMedbay()
+    {
+        hasDoctor = CheckForDoctor();
 
-    //    hasPatient = CheckForPatient();
+        hasPatient = CheckForPatient();
 
-    //    if (hasDoctor == true && hasPatient == true)
-    //    {
-    //        TreatPatient();
-    //    }
+        if (hasDoctor == true && hasPatient == true)
+        {
+            TreatPatient();
+        }
 
-    //}
+    }
 
-    ////public bool CheckForDoctor()
-    //{
-    //    //Checks if doctor is in the room and unoccupied
-    //}
+    public bool CheckForDoctor()
 
-    //public bool CheckForPatient()
-    //{
-    //    //Checks if there is other CrewMember there, and IF that CrewMember is hurt.
-    //}
+    {
+        return true;
+        //checks if doctor is in the room and unoccupied
+    }
 
-    //public void TreatPatient()
-    //{
-    //    //Take crewMembers health, increase it by Doctors skill (but not above top value).
-    //}
+    public bool CheckForPatient()
+    {
+        return true;
+    //checks if there is other crewmember there, and if that crewmember is hurt.
+    }
+
+    public void TreatPatient()
+    {
+    //take crewmembers health, increase it by doctors skill (but not above top value).
+    }
 }
