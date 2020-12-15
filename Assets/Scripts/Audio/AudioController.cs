@@ -49,9 +49,6 @@ public class AudioController : MonoBehaviour
 
             for (int j = 0; j < _audioSources[i].Length; j++)
             {
-                if (i == (int)AudioSourceType.Music)
-                    Debug.Log($"Music.name: {(AudioBGMType)j}");
-
                 GameObject audioObject = new GameObject();
                 audioObject.transform.SetParent(audioPanelObject.transform);
                 _audioSources[i][j] = audioObject.AddComponent<AudioSource>();
