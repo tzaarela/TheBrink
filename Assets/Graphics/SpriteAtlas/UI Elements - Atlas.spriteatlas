@@ -59,6 +59,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1ce298d1ca34b456b81d73c97f5a7d8e, type: 3}
   - {fileID: 21300000, guid: 40a863620f5594611a9d1952c9646ea1, type: 3}
   - {fileID: 21300000, guid: fba2b4f2364e0423e8831d7a9232b850, type: 3}
+  - {fileID: 21300000, guid: 0ed497336563b5e47a7ef97f5efb6edb, type: 3}
   - {fileID: 21300000, guid: 2199744357a3ed342a809ea07673344f, type: 3}
   - {fileID: 21300000, guid: 747d45535920e43c0a1bf6d9c6f53183, type: 3}
   - {fileID: 21300000, guid: a478c683518485b4987b916ff74cd8f6, type: 3}
@@ -111,6 +112,7 @@ SpriteAtlas:
   - 8x8_ui-border-temp_01_noFill
   - Box_Logga_75x88_WHITE
   - Ship_CargoHold
+  - 1x1px_white_temp_01 1
   - CircleShip
   - 8x8_ui-border3-temp_01
   - Circle
