@@ -14535,6 +14535,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: $$$STARTER$$$
       objectReference: {fileID: 0}
+    - target: {fileID: 5790217213662827542, guid: b572113be8ee71e41934eeb8c25d4612,
+        type: 3}
+      propertyPath: crew
+      value: 
+      objectReference: {fileID: 11400000, guid: 15759ed0fa2eaad4e9c538c5bd3cc0db,
+        type: 2}
     - target: {fileID: 5790217213662827543, guid: b572113be8ee71e41934eeb8c25d4612,
         type: 3}
       propertyPath: m_RootOrder

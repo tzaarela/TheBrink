@@ -153,7 +153,7 @@ public class Room : UITrigger
             switch (hazardToFix.HazardType)
             {
                 case HazardType.Fire:
-                    hazardToFix.SeverityAmount -= crewMember.RepairSkill;
+                    hazardToFix.SeverityAmount -= crewMember.crewData.repairSkill;
                     Debug.Log("The crewmember is trying to put out the fire.");
                     break;
                     ///<summary>
@@ -161,7 +161,7 @@ public class Room : UITrigger
                     ///It does not fix the actual damage to the roomHealth, which will need to be fixed in starport. 
                     ///</summary>
                 case HazardType.Breach:
-                    hazardToFix.SeverityAmount -= crewMember.RepairSkill;
+                    hazardToFix.SeverityAmount -= crewMember.crewData.repairSkill;
                     Debug.Log("The crewmember is trying to patch over the hull breach.");
                     break;
                 default:

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Crew;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class GameController : ScriptableObject
     public static GameController Instance;
 
     public Ship ship;
+    public Crew crew;
 
     public GameScene GameScene { get => gameScene; 
         set 
@@ -28,15 +30,12 @@ public class GameController : ScriptableObject
         {
             Instance = this;
         }
-        else if (Instance != this)
-        {
-            Destroy(this);
-        }
     }
 
-    public void Init(Ship ship)
+    public void Init(Ship ship, Crew crew)
     {
         this.ship = ship;
+        this.crew = crew;
         
         transitionController = TransitionController.Instance;
     }
@@ -63,7 +62,7 @@ public class GameController : ScriptableObject
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
-                        CrewController.Instance.CreateShipCrew();
+                        CrewController.Instance.CreateShipCrew(crew);
                     };
 
                     transitionController.RunTransitionAnimation("Playing mission transition....");
