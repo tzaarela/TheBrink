@@ -24,6 +24,11 @@ public class CorridorSystem : ShipSystem
          * It needs a list of all corridors & airlocks.
          * Goes through the list, and updates the airvalues etc on each.
          * Remember that they update their air in Life Support, so here we only need to update the amount.
+         * 
+         * And then, we need to be able to close and open doors from here. There is a bool I think? Right?
+         * 
+         * But how does it know which door? And this method should maybe be on ALL shipSystems right?
+         * 
          * Have we decided if corridoes need energy or not?
          */
     }
