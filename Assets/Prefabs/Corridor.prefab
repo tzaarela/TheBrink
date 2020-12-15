@@ -160,7 +160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 639067107563876834}
   - component: {fileID: 639067107563876846}
-  - component: {fileID: 639067107563876833}
   - component: {fileID: 639067107563876832}
   - component: {fileID: 639067107563876835}
   m_Layer: 5
@@ -221,32 +220,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!61 &639067107563876833
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639067107563876837}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.07839966, y: 53.262955}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 262.13184, y: 106.52591}
-  m_EdgeRadius: 0
 --- !u!114 &639067107563876832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +238,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   _roomType: 8
-  airLevel: 95
+  oxygenLevel: 0
   radiationLevel: 20
   roomHealth: 100
   hasElectricity: 1
