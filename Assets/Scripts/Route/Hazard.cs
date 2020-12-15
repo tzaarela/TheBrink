@@ -77,7 +77,6 @@ public class Hazard
     {
 
         SeverityAmount += SeverityAmount * ( (_hazardRoom.OxygenLevel - SeverityAmount) / 100 );
-        Debug.Log("SeverityAmount is: " + SeverityAmount);
     }
 
     /// <summary>
@@ -87,8 +86,6 @@ public class Hazard
     public void FireConsumes()
     {
         _hazardRoom.OxygenLevel -= SeverityAmount / 100;
-
-        Debug.Log("The airlevel is now: " + _hazardRoom.OxygenLevel + ".") ;
     }
 
     /// <summary>

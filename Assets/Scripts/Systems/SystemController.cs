@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SystemController : MonoBehaviour
+[CreateAssetMenu(fileName = "SystemController", menuName = "SystemController")]
+public class SystemController : ScriptableObject
 {
     [Header("BridgeSystem")]
 
@@ -30,20 +31,13 @@ public class SystemController : MonoBehaviour
 
     public static SystemController Instance;
 
-    public void OnEnable()
+    public void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
         }
-        else if (Instance != this)
-            Destroy(this);
-    }
-
-    public void Awake()
-    {
-
     }
 
     public void CreateShipSystems(Ship ship)

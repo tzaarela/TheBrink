@@ -45,5 +45,10 @@ namespace Assets.Scripts.Systems
             airLevel.fillAmount = shipSystem.AirLevel * 0.01f;
             //energyLevel.fillAmount = shipSystem.CurrentEnergy
         }
+
+        public void ToggleSystemPower()
+        {
+            shipSystem.SystemState = SystemState.IsOn;
+        }
     }
 }

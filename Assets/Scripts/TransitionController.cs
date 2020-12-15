@@ -9,24 +9,28 @@ namespace Assets.Scripts
 {
     public class TransitionController : ScriptableObject
     {
-        public static TransitionController Instance;
+        private static TransitionController _instance;
+        public static TransitionController Instance { 
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = (TransitionController)CreateInstance(typeof(TransitionController));
+                }
+                
+                return _instance;
+            }
+            private set { }
+        }
 
         public void Awake()
         {
-            if(Instance == null)
-            {
-                Instance = this;
-            }
-            else if (Instance != this)
-            {
-                Destroy(this);
-            }
+           
         }
-
 
         public void RunTransitionAnimation(object animation)
         {
-            
+            Debug.Log("Running animation........");
         }
     }
 }
