@@ -41,11 +41,6 @@ public class SystemController : MonoBehaviour
             Destroy(this);
     }
 
-    public void Awake()
-    {
-
-    }
-
     public void CreateShipSystems(Ship ship)
     {
         ShipSystems = new ShipSystem[amountOfSystems];
