@@ -86,7 +86,7 @@
             <e p="RoomTrigger.cs" t="Include" />
           </e>
           <e p="GameController.cs" t="Include" />
-          <e p="GameState.cs" t="Include" />
+          <e p="GameScene.cs" t="Include" />
           <e p="InterfacePanels" t="Include">
             <e p="ContextMenuController.cs" t="Include" />
             <e p="ContextMenuItem.cs" t="Include" />
@@ -118,7 +118,6 @@
             <e p="Route.cs" t="Include" />
             <e p="RouteType.cs" t="Include" />
           </e>
-          <e p="SceneManager.cs" t="Include" />
           <e p="Ship" t="Include">
             <e p="Ship.cs" t="Include" />
             <e p="ShipController.cs" t="Include" />
@@ -155,10 +154,12 @@
             <e p="SystemTabController.cs" t="Include" />
             <e p="SystemType.cs" t="Include" />
           </e>
+          <e p="TransitionController.cs" t="Include" />
           <e p="Utility" t="Include">
             <e p="Command.cs" t="Include" />
           </e>
         </e>
+        <e p="Starter.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
