@@ -48,7 +48,23 @@ public class ReactorSystem : ShipSystem
         EnergyWanted = 0;
     }
 
-public void BurnsFuel()
+    public void Run()
+    {
+        if (ship.fuel > 0)
+        {
+            BurnsFuel();
+            ProdEnergy();
+            ProdSpeed();
+        }
+        else
+        {
+            ConsoleController.instance.PrintToConsole("Reactor has no more fuel");
+            //Remove this later, if you implement the other way for the ship speed and travel and momentum to happen.
+            ship.speed = 0;
+        }
+    }
+
+    public void BurnsFuel()
     {
         ship.fuel -= CapacityLevel * FuelCost;
     }
@@ -65,17 +81,7 @@ public void BurnsFuel()
         ship.speed = CapacityLevel;
     }
 
-    public void Run()
-    {
-        if (ship.fuel > 0)
-        {
-            BurnsFuel();
-            ProdEnergy();
-            ProdSpeed();
-        }
-        else
-            ConsoleController.instance.PrintToConsole("Reactor has no more fuel");
-    }
+   
 
     public void SetEnergyWanted()
     {
