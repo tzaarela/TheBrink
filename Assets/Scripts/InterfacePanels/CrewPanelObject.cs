@@ -49,9 +49,9 @@ namespace Assets.Scripts.InterfacePanels
         {
             if (CrewMember != null)
             {
-                nameTextMesh.text = crewMember.Name;
-                professionTextMesh.text = crewMember.Profession.ToString();
-                healthTextMesh.text = crewMember.Health.ToString();
+                nameTextMesh.text = crewMember.crewData.name;
+                professionTextMesh.text = crewMember.crewData.profession.ToString();
+                healthTextMesh.text = crewMember.crewData.health.ToString();
                 statusTextMesh.text = crewMember.Status.ToString();
 
                 if (crewMember.IsSelected)

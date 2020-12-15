@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25853490263f0ba44841a23a80e2051d, type: 3}
-  m_Name: Ship
+  m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
+  m_Name: Johan
   m_EditorClassIdentifier: 
-  speed: 10
-  position: 383.9886
-  fuel: 1000
-  maxFuel: 1000
-  maxCapacitor: 0
-  capacitor: 0
-  capacitorBottleNeck: 0
-  cash: 123
+  crewName: Johan
+  health: 99
+  repairSkill: 3
+  sprite: {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
+  profession: 0

@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   systemController: {fileID: 11400000, guid: f55f1b39dc15c8f4096b8b156e6394d8, type: 2}
   ship: {fileID: 11400000, guid: bd50f08c2fd4df340b3529f5093831b8, type: 2}
+  crew: {fileID: 11400000, guid: 15759ed0fa2eaad4e9c538c5bd3cc0db, type: 2}

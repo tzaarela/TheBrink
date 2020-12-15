@@ -10280,6 +10280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
+      propertyPath: crewData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
+        type: 3}
       propertyPath: _spawnPoint
       value: 
       objectReference: {fileID: 2082764805}
@@ -10361,7 +10366,7 @@ PrefabInstance:
     - target: {fileID: 7632025308335919965, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: m_Name
-      value: Jennifer
+      value: Slot1
       objectReference: {fileID: 0}
     - target: {fileID: 7632025308335919965, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
@@ -11227,6 +11232,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
+      propertyPath: crewData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
+        type: 3}
       propertyPath: _profession
       value: 2
       objectReference: {fileID: 0}
@@ -11423,7 +11433,7 @@ PrefabInstance:
     - target: {fileID: 7632025308335919965, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: m_Name
-      value: Isabelle
+      value: Slot3
       objectReference: {fileID: 0}
     - target: {fileID: 7632025308335919965, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
@@ -14277,7 +14287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc5e567b08cc4c4fac3d39bc3d41f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crewMembersPrefab:
+  crewMemberSlots:
   - {fileID: 1125139358}
   - {fileID: 1006713984}
   - {fileID: 336039395}
@@ -15263,6 +15273,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
+      propertyPath: crewData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
+        type: 3}
       propertyPath: _profession
       value: 1
       objectReference: {fileID: 0}
@@ -15449,7 +15464,7 @@ PrefabInstance:
     - target: {fileID: 7632025308335919965, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: m_Name
-      value: Johan
+      value: Slot2
       objectReference: {fileID: 0}
     - target: {fileID: 7632025308335919965, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
@@ -16967,6 +16982,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: $$$STARTER$$$
       objectReference: {fileID: 0}
+    - target: {fileID: 5790217213662827542, guid: b572113be8ee71e41934eeb8c25d4612,
+        type: 3}
+      propertyPath: crew
+      value: 
+      objectReference: {fileID: 11400000, guid: 15759ed0fa2eaad4e9c538c5bd3cc0db,
+        type: 2}
     - target: {fileID: 5790217213662827542, guid: b572113be8ee71e41934eeb8c25d4612,
         type: 3}
       propertyPath: systemController

@@ -86,10 +86,13 @@
             <e p="BGMClipType.cs" t="Include" />
             <e p="SFXClipType.cs" t="Include" />
           </e>
+          <e p="Command.cs" t="Include" />
+          <e p="CommandController.cs" t="Include" />
           <e p="ConsoleController.cs" t="Include" />
           <e p="Crew" t="Include">
-            <e p="CommandController.cs" t="Include" />
+            <e p="Crew.cs" t="Include" />
             <e p="CrewController.cs" t="Include" />
+            <e p="CrewData.cs" t="Include" />
             <e p="CrewMember.cs" t="Include" />
             <e p="IdleCommand.cs" t="Include" />
             <e p="MoveCommand.cs" t="Include" />
@@ -123,9 +126,11 @@
           <e p="MainMenuController.cs" t="Include" />
           <e p="MainMenuPanelType.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />
-          <e p="Room" t="Include">
+          <e p="Rooms" t="Include">
             <e p="Room.cs" t="Include" />
             <e p="RoomController.cs" t="Include" />
+            <e p="RoomData.cs" t="Include" />
+            <e p="RoomDataArray.cs" t="Include" />
             <e p="RoomType.cs" t="Include" />
           </e>
           <e p="Route" t="Include">
@@ -160,6 +165,7 @@
             <e p="TabState.cs" t="Include" />
             <e p="UIButton.cs" t="Include" />
           </e>
+          <e p="Starter.cs" t="Include" />
           <e p="Systems" t="Include">
             <e p="BridgeSystem.cs" t="Include" />
             <e p="CargoHoldSystem.cs" t="Include" />
@@ -178,11 +184,7 @@
             <e p="SystemType.cs" t="Include" />
           </e>
           <e p="TransitionController.cs" t="Include" />
-          <e p="Utility" t="Include">
-            <e p="Command.cs" t="Include" />
-          </e>
         </e>
-        <e p="Starter.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
