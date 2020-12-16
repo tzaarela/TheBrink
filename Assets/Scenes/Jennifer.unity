@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 7908058}
   - component: {fileID: 7908060}
   - component: {fileID: 7908059}
+  - component: {fileID: 7908061}
   m_Layer: 5
   m_Name: Radar [Image]
   m_TagString: Untagged
@@ -151,7 +152,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1275148919}
+  - {fileID: 1182377031}
   m_Father: {fileID: 1388245975}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,6 +198,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7908057}
   m_CullTransparentMesh: 0
+--- !u!95 &7908061
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908057}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62e6d873a9df1204cb2229629eaea294, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &25753702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -524,9 +546,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 1279017786}
   warningHighlight: {fileID: 2125228042}
-  _waypoint: {fileID: 264276755}
+  waypoints: []
   _roomType: 5
-  airLevel: 100
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -830,9 +852,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 903599083}
   warningHighlight: {fileID: 1994149591}
-  _waypoint: {fileID: 881062303}
+  waypoints: []
   _roomType: 0
-  airLevel: 95
+  oxygenLevel: 0
   radiationLevel: 20
   roomHealth: 98
   hasElectricity: 1
@@ -1019,7 +1041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4131b6e0f62cfc34f9de27d2ae3b58de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  systemWindowText: {fileID: 958445497}
+  startingTab: {fileID: 0}
 --- !u!1 &145291453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,9 +1131,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 2078513889}
   warningHighlight: {fileID: 1753191176}
-  _waypoint: {fileID: 2082764805}
+  waypoints: []
   _roomType: 4
-  airLevel: 98
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -1593,18 +1615,6 @@ Transform:
   m_Father: {fileID: 1014322062}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &264276755 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3512179006001709224, guid: abea9dafb0df44149b3b36ce83bcc71d,
-    type: 3}
-  m_PrefabInstance: {fileID: 326006672044599185}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &285656159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2027,6 +2037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed85bb21e40b98840b8f525995c2ef40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ship: {fileID: 0}
 --- !u!4 &329082391
 Transform:
   m_ObjectHideFlags: 0
@@ -2246,18 +2257,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 332803564}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &336039395 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470930310}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7f3d73383481547b61cb534dad8a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &383916991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2736,9 +2735,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 413084175}
   warningHighlight: {fileID: 1571112015}
-  _waypoint: {fileID: 517153453}
+  waypoints: []
   _roomType: 2
-  airLevel: 97
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -3171,24 +3170,12 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 2020513023}
   warningHighlight: {fileID: 493970888}
-  _waypoint: {fileID: 2082764805}
+  waypoints: []
   _roomType: 4
-  airLevel: 98
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
---- !u!114 &517153453 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3512179006493280673, guid: abea9dafb0df44149b3b36ce83bcc71d,
-    type: 3}
-  m_PrefabInstance: {fileID: 326006672044599185}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &535532215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4127,9 +4114,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 2132086316}
   warningHighlight: {fileID: 1458847091}
-  _waypoint: {fileID: 881062303}
+  waypoints: []
   _roomType: 0
-  airLevel: 95
+  oxygenLevel: 0
   radiationLevel: 20
   roomHealth: 98
   hasElectricity: 1
@@ -4677,9 +4664,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 1389529916}
   warningHighlight: {fileID: 220077038}
-  _waypoint: {fileID: 1265321897}
+  waypoints: []
   _roomType: 6
-  airLevel: 99
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 0
@@ -5092,9 +5079,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 748346076}
   warningHighlight: {fileID: 1802395319}
-  _waypoint: {fileID: 517153453}
+  waypoints: []
   _roomType: 2
-  airLevel: 97
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -5197,18 +5184,6 @@ Canvas:
   m_SortingLayerID: -1616610217
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &881062303 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3512179007100544416, guid: abea9dafb0df44149b3b36ce83bcc71d,
-    type: 3}
-  m_PrefabInstance: {fileID: 326006672044599185}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &885692453
 GameObject:
   m_ObjectHideFlags: 0
@@ -5410,9 +5385,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 1136753546}
   warningHighlight: {fileID: 1246236111}
-  _waypoint: {fileID: 264276755}
+  waypoints: []
   _roomType: 5
-  airLevel: 100
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -6366,18 +6341,6 @@ Transform:
   m_Father: {fileID: 707298873}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1006713984 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 2094473112}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7f3d73383481547b61cb534dad8a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1014322061
 GameObject:
   m_ObjectHideFlags: 0
@@ -6774,18 +6737,6 @@ Transform:
   m_Father: {fileID: 245278025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1125139358 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1353437872}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7f3d73383481547b61cb534dad8a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1136753545
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,6 +6811,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136753545}
+  m_CullTransparentMesh: 0
+--- !u!1 &1182377030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182377031}
+  - component: {fileID: 1182377033}
+  - component: {fileID: 1182377032}
+  m_Layer: 5
+  m_Name: radarmock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1182377031
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182377030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4649969, y: 0.4649969, z: 0.4649969}
+  m_Children: []
+  m_Father: {fileID: 7908058}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.000030518}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1182377032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182377030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a6fde61393c74ec489c54d5dd6af8203, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1182377033
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182377030}
   m_CullTransparentMesh: 0
 --- !u!1 &1197167038
 GameObject:
@@ -7308,18 +7334,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246236110}
   m_CullTransparentMesh: 0
---- !u!114 &1265321897 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3512179006946954903, guid: abea9dafb0df44149b3b36ce83bcc71d,
-    type: 3}
-  m_PrefabInstance: {fileID: 326006672044599185}
+--- !u!1 &1275148918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275148919}
+  - component: {fileID: 1275148921}
+  - component: {fileID: 1275148920}
+  m_Layer: 5
+  m_Name: radarswish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1275148919
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275148918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7908058}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 126, y: 152}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &1275148920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275148918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acab82c71713d8c408b45feca4a4d4b1, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f325b039f53be214ab3f08d802c4ea49, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1275148921
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275148918}
+  m_CullTransparentMesh: 0
 --- !u!1 &1279017785
 GameObject:
   m_ObjectHideFlags: 0
@@ -9172,7 +9261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4131b6e0f62cfc34f9de27d2ae3b58de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  systemWindowText: {fileID: 0}
+  startingTab: {fileID: 0}
 --- !u!114 &1561942242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9835,9 +9924,9 @@ MonoBehaviour:
   m_Delegates: []
   highlight: {fileID: 1062435940}
   warningHighlight: {fileID: 2041892214}
-  _waypoint: {fileID: 1265321897}
+  waypoints: []
   _roomType: 6
-  airLevel: 99
+  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 0
@@ -11426,10 +11515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc5e567b08cc4c4fac3d39bc3d41f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crewMembersPrefab:
-  - {fileID: 1125139358}
-  - {fileID: 1006713984}
-  - {fileID: 336039395}
+  crewMemberSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   crewMembers: []
 --- !u!1001 &2018588109
 PrefabInstance:
@@ -12814,13 +12903,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e36e3b633986c047a8175e51a210413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rooms: []
   roomGameObjects:
   - {fileID: 733175597}
   - {fileID: 145291453}
   - {fileID: 1698666217}
   - {fileID: 449850059}
   - {fileID: 41654214}
+  airDrainLevel: 0.01
 --- !u!4 &2145493753
 Transform:
   m_ObjectHideFlags: 0
