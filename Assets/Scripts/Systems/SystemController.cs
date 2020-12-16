@@ -18,6 +18,7 @@ public class SystemController : ScriptableObject
     public float oxygenProduceCost = 3f;
 
     [Header("MedbaySystem")]
+    public float healingAmount = 1f;
 
     [Header("ReactorSystem")]
 
@@ -46,6 +47,7 @@ public class SystemController : ScriptableObject
 
     public void CreateShipSystems(Ship ship)
     {
+        var rooms = RoomController.Instance.Rooms;
         var amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
 
         ShipSystems = new ShipSystem[amountOfSystems];
@@ -55,7 +57,7 @@ public class SystemController : ScriptableObject
         ShipSystems[2] = new MainBatterySystem();
         ShipSystems[3] = new LifeSupportSystem();
         ShipSystems[4] = new BridgeSystem();
-        ShipSystems[5] = new MedbaySystem();
+        ShipSystems[5] = new MedbaySystem(rooms);
         ShipSystems[6] = new CargoHoldSystem();
         ShipSystems[7] = new CorridorSystem();
     }

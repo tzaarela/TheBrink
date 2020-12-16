@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class MedbaySystem : ShipSystem
 {
@@ -15,32 +17,37 @@ public class MedbaySystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
-    
+
     public float AirLevel { get; set; }
 
-    public MedbaySystem()
+    private List<CrewMember> patients;
+    private List<Room> rooms;
+    private Room systemRoom;
+
+    public MedbaySystem(List<Room> rooms)
     {
         SystemState = SystemState.IsOn;
         SystemType = SystemType.Medbay;
+        patients = new List<CrewMember>();
+        this.rooms = rooms;
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MedBay);
 
         EnergyWanted = 0;
     }
     
     public void Run()
     {
+        var patients = GetPatients(systemRoom);
 
-
-        if(hasPatient == true)
+        if (patients.Count > 0)
         {
-            hasDoctor = CheckForDoctor();
+            var doctor = GetDoctor(systemRoom);
 
-            if (hasDoctor == true)
-            { 
-
+            if (doctor != null)
+            {
+                TreatPatients(patients, doctor);
             }
-    }
-
-        throw new System.NotImplementedException();
+        }
     }
 
     public void SetEnergyWanted()
@@ -58,34 +65,22 @@ public class MedbaySystem : ShipSystem
         throw new System.NotImplementedException();
     }
 
-    public void UpdateMedbay()
+    public CrewMember GetDoctor(Room systemRoom)
     {
-        hasDoctor = CheckForDoctor();
+        return systemRoom.PresentCrewMembers.FirstOrDefault(x => x.crewData.profession == Profession.Scientist);
+    }
 
-        hasPatient = CheckForPatient();
+    public List<CrewMember> GetPatients(Room systemRoom)
+    {
+        return systemRoom.PresentCrewMembers.Where(x => x.crewData.health < 100).ToList();
+    }
 
-        if (hasDoctor == true && hasPatient == true)
+    public void TreatPatients(List<CrewMember> patients, CrewMember doctor)
+    {
+        foreach (var patient in patients)
         {
-            TreatPatient();
+            patient.crewData.health += SystemController.Instance.healingAmount;
+            patient.crewData.health = Mathf.Clamp(patient.crewData.health, 0, 100);
         }
-
-    }
-
-    public bool CheckForDoctor()
-
-    {
-        return true;
-        //checks if doctor is in the room and unoccupied
-    }
-
-    public bool CheckForPatient()
-    {
-        return true;
-    //checks if there is other crewmember there, and if that crewmember is hurt.
-    }
-
-    public void TreatPatient()
-    {
-    //take crewmembers health, increase it by doctors skill (but not above top value).
     }
 }

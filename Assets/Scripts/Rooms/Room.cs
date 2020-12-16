@@ -20,6 +20,8 @@ namespace Assets.Scripts.Rooms
         public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
         public RoomType RoomType { get; set; }
 
+        public List<CrewMember> PresentCrewMembers { get; set; }
+
         private bool isSelected;
 
         public bool IsSelected
@@ -60,6 +62,7 @@ namespace Assets.Scripts.Rooms
         public void Start()
         {
             Hazards = new List<Hazard>();
+            PresentCrewMembers = new List<CrewMember>();
             RoomType = _roomType;
 
             if (onRoomSelected == null)
@@ -209,6 +212,24 @@ namespace Assets.Scripts.Rooms
             else
                 highlight.gameObject.SetActive(false);
         }
-}
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.gameObject.tag == "Player")
+            {
+                var crewMember = collision.GetComponent<CrewMember>();
+                PresentCrewMembers.Add(crewMember);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                var crewMember = collision.GetComponent<CrewMember>();
+                PresentCrewMembers.Remove(crewMember);
+            }
+        }
+    }
 }
 
