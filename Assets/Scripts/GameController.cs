@@ -36,8 +36,13 @@ public class GameController : ScriptableObject
     {
         this.ship = ship;
         this.crew = crew;
+
+       
         
         transitionController = TransitionController.Instance;
+
+        //Debug.
+        //SwitchScene(GameScene.InMission);
     }
 
     public void SwitchScene(GameScene gameScene)

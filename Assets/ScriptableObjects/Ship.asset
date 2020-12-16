@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ship
   m_EditorClassIdentifier: 
   speed: 10
-  position: 8741.269
+  position: 0
   fuel: 1000
   maxFuel: 1000
   maxCapacitor: 0

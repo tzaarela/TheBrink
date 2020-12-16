@@ -27,6 +27,8 @@ public class SystemController : ScriptableObject
 
     public ShipSystem[] ShipSystems;
 
+    //Add reference to all rooms (for airLevel in Life Support & DoorSystem).
+
     private static SystemController _instance;
     public static SystemController Instance
     {

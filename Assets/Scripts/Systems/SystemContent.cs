@@ -19,21 +19,13 @@ namespace Assets.Scripts.Systems
         [SerializeField]
         Image energyLevel;
 
+        [SerializeField]
+        Button powerButton;
+
         //[SerializeField]
         //float energyWanted;
         
         ShipSystem shipSystem;
-
-        public void OnEnable()
-        {
-            
-        }
-
-
-        public void Awake()
-        {
-            
-        }
 
         public void Start()
         {
@@ -45,9 +37,10 @@ namespace Assets.Scripts.Systems
             airLevel.fillAmount = shipSystem.AirLevel * 0.01f;
             //energyLevel.fillAmount = shipSystem.CurrentEnergy
         }
-
+        //If on, turn off, if off turn on.
         public void ToggleSystemPower()
         {
+            
             shipSystem.SystemState = SystemState.IsOn;
         }
     }
