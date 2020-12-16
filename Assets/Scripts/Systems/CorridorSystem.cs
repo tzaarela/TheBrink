@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CorridorSystem : ShipSystem
@@ -12,11 +14,14 @@ public class CorridorSystem : ShipSystem
     public float EnergyToMaintain { get; set; }
 
     public float AirLevel { get; set; }
+    private Room systemRoom;
 
-    public CorridorSystem()
+    public CorridorSystem(List<Room> rooms)
     {
         SystemState = SystemState.IsOn;
         SystemType = SystemType.Corridors;
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Corridor);
+
 
         EnergyWanted = 0;
 
@@ -35,7 +40,7 @@ public class CorridorSystem : ShipSystem
 
     public void Run()
     {
-        throw new System.NotImplementedException();
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void SetEnergyWanted()

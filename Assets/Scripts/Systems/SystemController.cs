@@ -52,32 +52,28 @@ public class SystemController : ScriptableObject
 
         ShipSystems = new ShipSystem[amountOfSystems];
 
-        ShipSystems[0] = new ReactorSystem(ship);
-        ShipSystems[1] = new MainframeSystem(ship);
-        ShipSystems[2] = new MainBatterySystem();
-        ShipSystems[3] = new LifeSupportSystem();
-        ShipSystems[4] = new BridgeSystem();
+        ShipSystems[0] = new ReactorSystem(ship, rooms);
+        ShipSystems[1] = new MainframeSystem(ship, rooms);
+        ShipSystems[2] = new MainBatterySystem(rooms);
+        ShipSystems[3] = new LifeSupportSystem(rooms);
+        ShipSystems[4] = new BridgeSystem(rooms);
         ShipSystems[5] = new MedbaySystem(rooms);
-        ShipSystems[6] = new CargoHoldSystem();
-        ShipSystems[7] = new CorridorSystem();
+        ShipSystems[6] = new CargoHoldSystem(rooms);
+        ShipSystems[7] = new CorridorSystem(rooms);
     }
 
     public List<ShipSystem> GetActiveSystems()
     {
-            return ShipSystems.Where(x => x.SystemState == SystemState.IsOn).ToList();
+        return ShipSystems.Where(x => x.SystemState == SystemState.IsOn).ToList();
     }
 
     public void ShipSystemUpdate()
     {
-        if(ShipSystems.Select(x => x == null).Count() == 0)
+        var activeSystems = GetActiveSystems();
+
+        foreach (var activeSystem in activeSystems)
         {
-            foreach(ShipSystem ShipSystem in ShipSystems)
-            {
-                if (ShipSystem.SystemState == SystemState.IsOn)
-                {
-                    ShipSystem.Run();
-                }
-            }
+            activeSystem.Run();
         }
     }
 }

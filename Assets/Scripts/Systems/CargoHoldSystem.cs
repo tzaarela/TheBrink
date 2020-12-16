@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CargoHoldSystem : ShipSystem
@@ -14,11 +16,14 @@ public class CargoHoldSystem : ShipSystem
     float Load;
     //Decide here, what should the load be? Look up how much the ship should carry.
     float MaxLoad;
-    
-    public CargoHoldSystem()
+    private Room systemRoom;
+
+    public CargoHoldSystem(List<Room> rooms)
     {
         SystemState = SystemState.IsOn;
         SystemType = SystemType.CargoBay;
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.CargoHold);
+
 
         EnergyWanted = 0;
     }
@@ -30,7 +35,7 @@ public class CargoHoldSystem : ShipSystem
 
     public void Run()
     {
-        throw new System.NotImplementedException();
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Reboot()

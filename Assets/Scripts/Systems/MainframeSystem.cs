@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MainframeSystem : ShipSystem
@@ -12,10 +14,12 @@ public class MainframeSystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
+    private Room systemRoom;
 
-    public MainframeSystem(Ship ship)
+    public MainframeSystem(Ship ship, List<Room> rooms)
     {
         this.ship = ship;
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MainFrame);
 
         SystemType = SystemType.Mainframe;
 
@@ -24,6 +28,8 @@ public class MainframeSystem : ShipSystem
 
     public void Run()
     {
+        AirLevel = systemRoom.OxygenLevel;
+
         var energyNeeded = GetEnergyNeeded();
 
         if (energyNeeded > 0)

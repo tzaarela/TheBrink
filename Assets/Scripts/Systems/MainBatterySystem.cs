@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MainBatterySystem : ShipSystem
@@ -10,9 +12,12 @@ public class MainBatterySystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
+    private Room systemRoom;
 
-    public MainBatterySystem()
+    public MainBatterySystem(List<Room> rooms)
     {
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MainBattery);
+
         SystemState = SystemState.IsOn;
         SystemType = SystemType.MainBattery;
 
@@ -22,7 +27,7 @@ public class MainBatterySystem : ShipSystem
 
     public void Run()
     {
-        //throw new System.NotImplementedException();
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void SetEnergyWanted()

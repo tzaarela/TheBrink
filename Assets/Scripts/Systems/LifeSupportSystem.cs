@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.Rooms;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LifeSupportSystem : ShipSystem
@@ -20,12 +21,14 @@ public class LifeSupportSystem : ShipSystem
 
     public float AirLevel { get; set; }
 
-    public LifeSupportSystem()
+    private Room systemRoom;
+
+    public LifeSupportSystem(List<Room> rooms)
     {
         SystemState = SystemState.IsOn;
         SystemType = SystemType.LifeSupport;
-
-        rooms = RoomController.Instance.Rooms;
+        this.rooms = rooms;
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
 
         oxygenMissingPerRoom = new float[rooms.Count];
 
@@ -34,6 +37,9 @@ public class LifeSupportSystem : ShipSystem
 
     public void Run()
     {
+
+        AirLevel = systemRoom.OxygenLevel;
+
         GetOxygenNeeded();
 
         var oxygenFragment = ProduceOxygen();

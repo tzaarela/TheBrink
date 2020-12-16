@@ -37,6 +37,8 @@ public class MedbaySystem : ShipSystem
     
     public void Run()
     {
+        AirLevel = systemRoom.OxygenLevel;
+
         var patients = GetPatients(systemRoom);
 
         if (patients.Count > 0)

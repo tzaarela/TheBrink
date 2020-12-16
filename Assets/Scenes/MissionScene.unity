@@ -520,11 +520,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 2125228042}
   waypoints:
   - {fileID: 264276755}
-  _roomType: 5
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 11400000, guid: 2e227c9db1fef804083b71584dcdd8ce, type: 2}
 --- !u!114 &41654219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,11 +951,11 @@ MonoBehaviour:
   highlight: {fileID: 903599083}
   warningHighlight: {fileID: 1994149591}
   waypoints: []
-  _roomType: 0
   oxygenLevel: 0
   radiationLevel: 20
   roomHealth: 98
   hasElectricity: 1
+  data: {fileID: 0}
 --- !u!61 &86844475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1335,11 +1335,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 1753191176}
   waypoints:
   - {fileID: 2082764805}
-  _roomType: 4
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 11400000, guid: fc27879a9f6abd74b90fa52227b8f2e6, type: 2}
 --- !u!114 &145291458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3670,11 +3670,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 1571112015}
   waypoints:
   - {fileID: 517153453}
-  _roomType: 2
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 11400000, guid: 6b3796b2d302f1c4d8ed9ae0d34601f8, type: 2}
 --- !u!114 &449850064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4421,11 +4421,11 @@ MonoBehaviour:
   highlight: {fileID: 2020513023}
   warningHighlight: {fileID: 493970888}
   waypoints: []
-  _roomType: 4
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 0}
 --- !u!114 &517153453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3512179006493280673, guid: abea9dafb0df44149b3b36ce83bcc71d,
@@ -5555,11 +5555,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 1458847091}
   waypoints:
   - {fileID: 881062303}
-  _roomType: 0
-  oxygenLevel: 0
+  oxygenLevel: 100
   radiationLevel: 20
   roomHealth: 98
   hasElectricity: 1
+  data: {fileID: 11400000, guid: 37dff2cb0a80ae1408aeacb62ca1ac2c, type: 2}
 --- !u!114 &733175602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5730,11 +5730,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 1808101362}
   waypoints:
   - {fileID: 1194821474}
-  _roomType: 1
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 11400000, guid: 1d3b9672d1a3d9e4a91f155e6bd7658a, type: 2}
 --- !u!114 &746413032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6344,11 +6344,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 974128352}
   waypoints:
   - {fileID: 229626845}
-  _roomType: 3
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 11400000, guid: e86af6258200fd94b84f476113dc958a, type: 2}
 --- !u!114 &817595655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6470,11 +6470,11 @@ MonoBehaviour:
   highlight: {fileID: 1389529916}
   warningHighlight: {fileID: 220077038}
   waypoints: []
-  _roomType: 6
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 0
+  data: {fileID: 0}
 --- !u!61 &818847370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6901,11 +6901,11 @@ MonoBehaviour:
   highlight: {fileID: 748346076}
   warningHighlight: {fileID: 1802395319}
   waypoints: []
-  _roomType: 2
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 0}
 --- !u!1 &874543784
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,11 +7337,11 @@ MonoBehaviour:
   highlight: {fileID: 1136753546}
   warningHighlight: {fileID: 1246236111}
   waypoints: []
-  _roomType: 5
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 0}
 --- !u!1 &918053151
 GameObject:
   m_ObjectHideFlags: 0
@@ -10088,11 +10088,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 1562866322}
   waypoints:
   - {fileID: 1987516167}
-  _roomType: 1
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 11400000, guid: 2bfc19af8a57d64478bd40aafd645ef8, type: 2}
 --- !u!114 &1287071974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12602,11 +12602,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 2041892214}
   waypoints:
   - {fileID: 1265321897}
-  _roomType: 6
   oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 0
+  data: {fileID: 11400000, guid: f9c2b594ffcb2db4f9940472835daf47, type: 2}
 --- !u!114 &1698666223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15352,7 +15352,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7195976560952850008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2084085510
+--- !u!114 &2084085511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

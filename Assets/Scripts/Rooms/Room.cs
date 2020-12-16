@@ -49,8 +49,6 @@ namespace Assets.Scripts.Rooms
         [SerializeField]
         public List<Waypoint> waypoints;
         [SerializeField]
-        private RoomType _roomType;
-        [SerializeField, Range(0, 100)]
         private float oxygenLevel;
         [SerializeField]
         private float radiationLevel;
@@ -59,11 +57,16 @@ namespace Assets.Scripts.Rooms
         [SerializeField]
         private bool hasElectricity;
 
+        public RoomData data;
+
         public void Start()
         {
+            RoomType = data.roomType;
+            RoomHealth = data.health;
+            OxygenLevel = 100;
             Hazards = new List<Hazard>();
             PresentCrewMembers = new List<CrewMember>();
-            RoomType = _roomType;
+            
 
             if (onRoomSelected == null)
                 onRoomSelected = new UnityEvent();

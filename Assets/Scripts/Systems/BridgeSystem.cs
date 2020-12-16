@@ -1,6 +1,8 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Rooms;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BridgeSystem : ShipSystem
@@ -17,9 +19,9 @@ public class BridgeSystem : ShipSystem
     float DisanceToNextEncounter;
 
     //Time variables
-    public float estimatedTimetoArrival;
-    public float timeUntilRetrogradeBurn;
-    public float timeUntilNextEncounter;
+    public float EstimatedTimetoArrival { get; set; }
+    public float TimeUntilRetrogradeBurn { get; set; }
+    public float TimeUntilNextEncounter { get; set; }
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
@@ -28,10 +30,14 @@ public class BridgeSystem : ShipSystem
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
 
-    public BridgeSystem()
+    private Room systemRoom;
+
+    public BridgeSystem(List<Room> rooms)
     {
         SystemState = SystemState.IsOn;
         SystemType = SystemType.Bridge;
+
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
 
         route = MissionController.Instance.Route;
         ship = ShipController.Instance.Ship;
@@ -41,11 +47,10 @@ public class BridgeSystem : ShipSystem
 
     public void Run()
     {
-        estimatedTimetoArrival = UpdateETA();
-
-        timeUntilRetrogradeBurn = UpdateTimeToRetro();
-        
-        timeUntilNextEncounter = UpdateTimeToEncounter();
+        AirLevel = systemRoom.OxygenLevel;
+        EstimatedTimetoArrival = UpdateETA();
+        TimeUntilRetrogradeBurn = UpdateTimeToRetro();
+        TimeUntilNextEncounter = UpdateTimeToEncounter();
 
         //So, I leave this here atm so I can turn the method below into returning a float later.
         //EnergyWanted = 
@@ -55,8 +60,6 @@ public class BridgeSystem : ShipSystem
     public float UpdateETA()
     {
         return (((route.Length - route.ShipPosition) / ship.speed) * MissionController.TICK_TIMER_MAX);
-        //TODO: Really needs to check this with Saarela
-        //How should I best do with update here? 
     }
 
     public float UpdateTimeToRetro()
