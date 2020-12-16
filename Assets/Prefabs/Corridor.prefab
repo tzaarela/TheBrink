@@ -237,11 +237,11 @@ MonoBehaviour:
   warningHighlight: {fileID: 639067106424990929}
   waypoints:
   - {fileID: 0}
-  _roomType: 8
   oxygenLevel: 0
   radiationLevel: 20
   roomHealth: 100
   hasElectricity: 1
+  data: {fileID: 11400000, guid: 92028214eebe55a49b0a05db23d05805, type: 2}
 --- !u!222 &639067107563876835
 CanvasRenderer:
   m_ObjectHideFlags: 0

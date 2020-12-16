@@ -1,7 +1,9 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Rooms;
 using Assets.Scripts.Systems;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ReactorSystem : ShipSystem
@@ -34,9 +36,14 @@ public class ReactorSystem : ShipSystem
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
 
-    public ReactorSystem(Ship ship)
+    private Room systemRoom;
+
+    public ReactorSystem(Ship ship, List<Room> rooms)
     {
         this.ship = ship;
+
+
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Reactor);
         SystemType = SystemType.Reactor;
         SystemState = SystemState.IsOn;
         FuelCost = 1;
@@ -53,6 +60,9 @@ public class ReactorSystem : ShipSystem
 
     public void Run()
     {
+        AirLevel = systemRoom.OxygenLevel;
+
+
         if (ship.fuel > 0)
         {
             //TODO: I think JS talked about this being a bit "stiff" I might wish that the methods sends things into each other instead?

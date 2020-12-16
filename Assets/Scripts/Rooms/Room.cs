@@ -20,6 +20,8 @@ namespace Assets.Scripts.Rooms
         public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
         public RoomType RoomType { get; set; }
 
+        public List<CrewMember> PresentCrewMembers { get; set; }
+
         private bool isSelected;
 
         public bool IsSelected
@@ -47,8 +49,6 @@ namespace Assets.Scripts.Rooms
         [SerializeField]
         public List<Waypoint> waypoints;
         [SerializeField]
-        private RoomType _roomType;
-        [SerializeField, Range(0, 100)]
         private float oxygenLevel;
         [SerializeField]
         private float radiationLevel;
@@ -57,10 +57,16 @@ namespace Assets.Scripts.Rooms
         [SerializeField]
         private bool hasElectricity;
 
+        public RoomData data;
+
         public void Start()
         {
+            RoomType = data.roomType;
+            RoomHealth = data.health;
+            OxygenLevel = 100;
             Hazards = new List<Hazard>();
-            RoomType = _roomType;
+            PresentCrewMembers = new List<CrewMember>();
+            
 
             if (onRoomSelected == null)
                 onRoomSelected = new UnityEvent();
@@ -209,6 +215,24 @@ namespace Assets.Scripts.Rooms
             else
                 highlight.gameObject.SetActive(false);
         }
-}
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.gameObject.tag == "Player")
+            {
+                var crewMember = collision.GetComponent<CrewMember>();
+                PresentCrewMembers.Add(crewMember);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                var crewMember = collision.GetComponent<CrewMember>();
+                PresentCrewMembers.Remove(crewMember);
+            }
+        }
+    }
 }
 
