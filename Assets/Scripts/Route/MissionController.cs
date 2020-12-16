@@ -13,7 +13,7 @@ public class MissionController : MonoBehaviour
 
     public Ship ship;
 
-    private const float TICK_TIMER_MAX = 0.1f;
+    public const float TICK_TIMER_MAX = 0.1f;
     private float tickTimer = 0;
     private Route route;
 

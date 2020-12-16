@@ -17,9 +17,9 @@ public class BridgeSystem : ShipSystem
     float DisanceToNextEncounter;
 
     //Time variables
-    float EstimatedTimetoArrival;
-    float TimeUntilRetrogradeBurn;
-    float TimeUntilNextEncounter;
+    public float estimatedTimetoArrival;
+    public float timeUntilRetrogradeBurn;
+    public float timeUntilNextEncounter;
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
@@ -41,11 +41,11 @@ public class BridgeSystem : ShipSystem
 
     public void Run()
     {
-        EstimatedTimetoArrival = UpdateETA();
+        estimatedTimetoArrival = UpdateETA();
 
-        TimeUntilRetrogradeBurn = UpdateTimeToRetro();
+        timeUntilRetrogradeBurn = UpdateTimeToRetro();
         
-        TimeUntilNextEncounter = UpdateTimeToEncounter();
+        timeUntilNextEncounter = UpdateTimeToEncounter();
 
         //So, I leave this here atm so I can turn the method below into returning a float later.
         //EnergyWanted = 
@@ -54,7 +54,7 @@ public class BridgeSystem : ShipSystem
 
     public float UpdateETA()
     {
-        return (((route.Length - route.ShipPosition) / ship.speed) * 0.1f);
+        return (((route.Length - route.ShipPosition) / ship.speed) * MissionController.TICK_TIMER_MAX);
         //TODO: Really needs to check this with Saarela
         //How should I best do with update here? 
     }
