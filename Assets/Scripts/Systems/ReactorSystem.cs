@@ -60,7 +60,7 @@ public class ReactorSystem : ShipSystem
 
     public void Run()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = systemRoom.oxygenLevel;
 
 
         if (ship.fuel > 0)
@@ -94,8 +94,6 @@ public class ReactorSystem : ShipSystem
     {
         ship.speed = CapacityLevel;
     }
-
-   
 
     public void SetEnergyWanted()
     {

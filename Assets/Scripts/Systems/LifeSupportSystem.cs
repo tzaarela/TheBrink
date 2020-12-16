@@ -38,7 +38,7 @@ public class LifeSupportSystem : ShipSystem
     public void Run()
     {
 
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = systemRoom.oxygenLevel;
 
         GetOxygenNeeded();
 
@@ -53,9 +53,9 @@ public class LifeSupportSystem : ShipSystem
     {
         for (int i = 0; i < rooms.Count; i++)
         {
-            if (rooms[i].OxygenLevel < SystemController.Instance.optimalOxygenLevel)
+            if (rooms[i].oxygenLevel < SystemController.Instance.optimalOxygenLevel)
             {
-                oxygenMissingPerRoom[i] = 100 - rooms[i].OxygenLevel;
+                oxygenMissingPerRoom[i] = 100 - rooms[i].oxygenLevel;
             }
         }
     }
@@ -74,6 +74,11 @@ public class LifeSupportSystem : ShipSystem
             CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
         }
 
+        if(totalOxygenNeeded == 0)
+        {
+            return 0;
+        }
+
         return totalOxygenProduced / totalOxygenNeeded;
     }
 
@@ -81,7 +86,7 @@ public class LifeSupportSystem : ShipSystem
     {
         for(int i = 0; i < rooms.Count; i++)
         {
-            rooms[i].OxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
+            rooms[i].oxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
         }
     }
 
@@ -95,8 +100,6 @@ public class LifeSupportSystem : ShipSystem
         {
             EnergyWanted = 0;
         }
-
-        throw new System.NotImplementedException();
     }
 
     public void Reboot()

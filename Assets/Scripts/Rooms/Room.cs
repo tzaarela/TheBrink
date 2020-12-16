@@ -10,11 +10,7 @@ namespace Assets.Scripts.Rooms
 {
     public class Room : UITrigger
     {
-        public float OxygenLevel
-        {
-            get { return oxygenLevel; }
-            set { oxygenLevel = Mathf.Clamp(value, 0, 100); }
-        }
+        public float oxygenLevel;
         public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
         public float RoomHealth { get => roomHealth; set => roomHealth = value; }
         public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
@@ -49,8 +45,6 @@ namespace Assets.Scripts.Rooms
         [SerializeField]
         public List<Waypoint> waypoints;
         [SerializeField]
-        private float oxygenLevel;
-        [SerializeField]
         private float radiationLevel;
         [SerializeField]
         private float roomHealth;
@@ -59,14 +53,14 @@ namespace Assets.Scripts.Rooms
 
         public RoomData data;
 
-        public void Start()
+        public void Awake()
         {
             RoomType = data.roomType;
             RoomHealth = data.health;
-            OxygenLevel = 100;
+            oxygenLevel = 100;
             Hazards = new List<Hazard>();
             PresentCrewMembers = new List<CrewMember>();
-            
+
 
             if (onRoomSelected == null)
                 onRoomSelected = new UnityEvent();
@@ -109,7 +103,7 @@ namespace Assets.Scripts.Rooms
 
         public void AirDrain(float drainLevel)
         {
-            OxygenLevel -= drainLevel;
+            oxygenLevel -= drainLevel;
         }
 
         public List<Command> GetAvailableCommandsForRoom(CrewMember crewMember)

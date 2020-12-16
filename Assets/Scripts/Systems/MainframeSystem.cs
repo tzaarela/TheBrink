@@ -28,7 +28,7 @@ public class MainframeSystem : ShipSystem
 
     public void Run()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = systemRoom.oxygenLevel;
 
         var energyNeeded = GetEnergyNeeded();
 

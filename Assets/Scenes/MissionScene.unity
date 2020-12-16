@@ -516,11 +516,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 1279017786}
   warningHighlight: {fileID: 2125228042}
   waypoints:
   - {fileID: 264276755}
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -948,10 +948,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 903599083}
   warningHighlight: {fileID: 1994149591}
   waypoints: []
-  oxygenLevel: 0
   radiationLevel: 20
   roomHealth: 98
   hasElectricity: 1
@@ -1331,11 +1331,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 2078513889}
   warningHighlight: {fileID: 1753191176}
   waypoints:
   - {fileID: 2082764805}
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -3666,11 +3666,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 413084175}
   warningHighlight: {fileID: 1571112015}
   waypoints:
   - {fileID: 517153453}
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -4418,10 +4418,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 2020513023}
   warningHighlight: {fileID: 493970888}
   waypoints: []
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -5551,11 +5551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 2132086316}
   warningHighlight: {fileID: 1458847091}
   waypoints:
   - {fileID: 881062303}
-  oxygenLevel: 100
   radiationLevel: 20
   roomHealth: 98
   hasElectricity: 1
@@ -5726,11 +5726,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 141698823}
   warningHighlight: {fileID: 1808101362}
   waypoints:
   - {fileID: 1194821474}
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -6340,11 +6340,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 469850250}
   warningHighlight: {fileID: 974128352}
   waypoints:
   - {fileID: 229626845}
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -6467,10 +6467,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 1389529916}
   warningHighlight: {fileID: 220077038}
   waypoints: []
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 0
@@ -6898,10 +6898,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 748346076}
   warningHighlight: {fileID: 1802395319}
   waypoints: []
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -7334,10 +7334,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 1136753546}
   warningHighlight: {fileID: 1246236111}
   waypoints: []
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -10084,11 +10084,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 1330374263}
   warningHighlight: {fileID: 1562866322}
   waypoints:
   - {fileID: 1987516167}
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
   hasElectricity: 1
@@ -12598,14 +12598,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  oxygenLevel: 0
   highlight: {fileID: 1062435940}
   warningHighlight: {fileID: 2041892214}
   waypoints:
   - {fileID: 1265321897}
-  oxygenLevel: 0
   radiationLevel: 0
   roomHealth: 100
-  hasElectricity: 0
+  hasElectricity: 1
   data: {fileID: 11400000, guid: f9c2b594ffcb2db4f9940472835daf47, type: 2}
 --- !u!114 &1698666223
 MonoBehaviour:
@@ -16391,6 +16391,7 @@ MonoBehaviour:
   - {fileID: 1578475645}
   - {fileID: 523103483}
   - {fileID: 1950661330}
+  - {fileID: 817595650}
   airDrainLevel: 0.2
 --- !u!4 &2145493753
 Transform:
