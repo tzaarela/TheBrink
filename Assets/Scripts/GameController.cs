@@ -52,12 +52,15 @@ public class GameController : ScriptableObject
             case GameScene.InMainMenu:
                 {
                     SceneManager.LoadScene("MainMenuScene");
-                    transitionController.RunTransitionAnimation("Playing menu transition");
+                    transitionController.RunTransitionAnimation(gameScene);
                     break;
 
                 }
             case GameScene.InMission:
                 {
+                    
+                    transitionController.RunTransitionAnimation(gameScene);
+
                     var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
 
                     AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
@@ -70,14 +73,13 @@ public class GameController : ScriptableObject
                         CrewController.Instance.CreateShipCrew(crew);
                     };
 
-                    transitionController.RunTransitionAnimation("Playing mission transition....");
 
                     break;
                 }
             case GameScene.InSpaceport:
                 {
                     SceneManager.LoadScene("SpaceportScene");
-                    transitionController.RunTransitionAnimation("Playing spaceport transition....");
+                    transitionController.RunTransitionAnimation(gameScene);
                     break;
                 }
             default:
