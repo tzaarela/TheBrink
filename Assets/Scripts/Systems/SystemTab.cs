@@ -63,12 +63,12 @@ namespace Assets.Scripts.Systems
 
         public void DisableContent()
         {
-            content.SetActive(false);
+            content.gameObject.SetActive(false);
         }
 
         public void ActivateContent()
         {
-            content.SetActive(true);
+            content.gameObject.SetActive(true);
         }
     }
 }

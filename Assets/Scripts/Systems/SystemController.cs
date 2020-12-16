@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SystemController : MonoBehaviour
+[CreateAssetMenu(fileName = "SystemController", menuName = "SystemController")]
+public class SystemController : ScriptableObject
 {
-
     [Header("BridgeSystem")]
 
     [Header("MainframeSystem")]
@@ -18,6 +18,7 @@ public class SystemController : MonoBehaviour
     public float oxygenProduceCost = 3f;
 
     [Header("MedbaySystem")]
+    public float healingAmount = 1f;
 
     [Header("ReactorSystem")]
 
@@ -25,54 +26,54 @@ public class SystemController : MonoBehaviour
 
     [Header("CorridorsSystem")]
 
-
-    private int amountOfSystems;
     public ShipSystem[] ShipSystems;
 
-    public static SystemController Instance;
+    //Add reference to all rooms (for airLevel in Life Support & DoorSystem).
 
-    public void Awake()
+    private static SystemController _instance;
+    public static SystemController Instance
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(this);
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = (SystemController)Resources.FindObjectsOfTypeAll(typeof(SystemController)).FirstOrDefault();
+            }
+
+            return _instance;
+        }
+        private set { }
     }
 
-    public void Start()
+    public void CreateShipSystems(Ship ship)
     {
-        amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
-        Ship ship = ShipController.Instance.Ship;
-
+        var rooms = RoomController.Instance.Rooms;
+        var amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
 
         ShipSystems = new ShipSystem[amountOfSystems];
 
-        ShipSystems[0] = new ReactorSystem(ship);
-        ShipSystems[1] = new MainframeSystem(ship);
-        ShipSystems[2] = new MainBatterySystem();
-        ShipSystems[3] = new LifeSupportSystem();
-        ShipSystems[4] = new BridgeSystem();
-        ShipSystems[5] = new MedbaySystem();
-        ShipSystems[6] = new CargoHoldSystem();
-        ShipSystems[7] = new CorridorSystem();
+        ShipSystems[0] = new ReactorSystem(ship, rooms);
+        ShipSystems[1] = new MainframeSystem(ship, rooms);
+        ShipSystems[2] = new MainBatterySystem(rooms);
+        ShipSystems[3] = new LifeSupportSystem(rooms);
+        ShipSystems[4] = new BridgeSystem(ship, rooms);
+        ShipSystems[5] = new MedbaySystem(rooms);
+        ShipSystems[6] = new CargoHoldSystem(rooms);
+        ShipSystems[7] = new CorridorSystem(rooms);
     }
 
     public List<ShipSystem> GetActiveSystems()
     {
-            return ShipSystems.Where(x => x.SystemState == SystemState.IsOn).ToList();
+        return ShipSystems.Where(x => x.SystemState == SystemState.IsOn).ToList();
     }
 
     public void ShipSystemUpdate()
     {
-        if(ShipSystems.Select(x => x == null).Count() == 0)
+        var activeSystems = GetActiveSystems();
+
+        foreach (var activeSystem in activeSystems)
         {
-            foreach(ShipSystem ShipSystem in ShipSystems)
-            {
-                if (ShipSystem.SystemState == SystemState.IsOn)
-                {
-                    ShipSystem.Run();
-                }
-            }
+            activeSystem.Run();
         }
     }
 }

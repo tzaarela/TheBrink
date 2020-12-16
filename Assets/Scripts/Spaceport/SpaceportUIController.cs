@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Assets.Scripts;
 
 public class SpaceportUIController : MonoBehaviour
 {
@@ -57,6 +58,6 @@ public class SpaceportUIController : MonoBehaviour
 
     public void Depart()
     {
-        SceneManager.LoadScene("MissionScene");
+        GameController.Instance.GameScene = GameScene.InMission;
     }
 }

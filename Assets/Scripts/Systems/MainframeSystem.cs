@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MainframeSystem : ShipSystem
@@ -11,16 +13,23 @@ public class MainframeSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
+    private Room systemRoom;
 
-    public MainframeSystem(Ship ship)
+    public MainframeSystem(Ship ship, List<Room> rooms)
     {
         this.ship = ship;
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MainFrame);
+
+        SystemType = SystemType.Mainframe;
 
         EnergyWanted = 0;
     }
 
     public void Run()
     {
+        AirLevel = systemRoom.oxygenLevel;
+
         var energyNeeded = GetEnergyNeeded();
 
         if (energyNeeded > 0)
@@ -47,17 +56,17 @@ public class MainframeSystem : ShipSystem
         return totalEnergyNeeded;
     }
     /// <summary>
-    /// Takes in float energyNeeded, decreases the ship Capacitor & increases MainframeStsten.CurrentEnergy
+    /// Takes in float energyNeeded, decreases the ship Capacitor & increases MainframeSystem.CurrentEnergy
     /// in a while loop until it has enough energy OR has hit the Ship.CapacitorBottleNeck OR ship.Capacitor is zero.
     /// </summary>
     /// <param name="energyNeeded"></param>
     /// <returns>CurrentEnergy divided by energyNeeded</returns>
     public float DivideEnergy(float energyNeeded)
     {
-        while(energyNeeded >= ship.CapacitorBottleNeck && ship.Capacitor > 0)
+        while(energyNeeded >= ship.capacitorBottleNeck && ship.capacitor > 0)
         {
             CurrentEnergy++;
-            ship.Capacitor--;
+            ship.capacitor--;
         }
 
         return CurrentEnergy / energyNeeded;

@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LifeSupportSystem : ShipSystem
@@ -12,24 +14,32 @@ public class LifeSupportSystem : ShipSystem
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
+
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
 
-    public LifeSupportSystem()
+    public float AirLevel { get; set; }
+
+    private Room systemRoom;
+
+    public LifeSupportSystem(List<Room> rooms)
     {
         SystemState = SystemState.IsOn;
-
-        rooms = RoomController.Instance.Rooms;
+        SystemType = SystemType.LifeSupport;
+        this.rooms = rooms;
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
 
         oxygenMissingPerRoom = new float[rooms.Count];
 
         EnergyWanted = 0;
-
     }
 
     public void Run()
     {
+
+        AirLevel = systemRoom.oxygenLevel;
+
         GetOxygenNeeded();
 
         var oxygenFragment = ProduceOxygen();
@@ -43,9 +53,9 @@ public class LifeSupportSystem : ShipSystem
     {
         for (int i = 0; i < rooms.Count; i++)
         {
-            if (rooms[i].OxygenLevel < SystemController.Instance.optimalOxygenLevel)
+            if (rooms[i].oxygenLevel < SystemController.Instance.optimalOxygenLevel)
             {
-                oxygenMissingPerRoom[i] = 100 - rooms[i].OxygenLevel;
+                oxygenMissingPerRoom[i] = 100 - rooms[i].oxygenLevel;
             }
         }
     }
@@ -63,6 +73,12 @@ public class LifeSupportSystem : ShipSystem
 
             CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
         }
+
+        if(totalOxygenNeeded == 0)
+        {
+            return 0;
+        }
+
         return totalOxygenProduced / totalOxygenNeeded;
     }
 
@@ -70,7 +86,7 @@ public class LifeSupportSystem : ShipSystem
     {
         for(int i = 0; i < rooms.Count; i++)
         {
-            rooms[i].OxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
+            rooms[i].oxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
         }
     }
 
@@ -84,8 +100,6 @@ public class LifeSupportSystem : ShipSystem
         {
             EnergyWanted = 0;
         }
-
-        throw new System.NotImplementedException();
     }
 
     public void Reboot()

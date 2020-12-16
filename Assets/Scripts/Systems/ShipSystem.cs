@@ -8,6 +8,8 @@ public interface ShipSystem
     SystemType SystemType { get; set; }
     SystemState SystemState  { get; set; }
 
+    float AirLevel { get; set; }
+
     float EnergyWanted { get; set; }
 
     float CurrentEnergy { get; set; }

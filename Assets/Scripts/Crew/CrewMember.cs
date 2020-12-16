@@ -1,5 +1,5 @@
-﻿using Assets.Scripts.InterfacePanels;
-using Assets.Scripts.Utility;
+﻿using Assets.Scripts.Crew;
+using Assets.Scripts.InterfacePanels;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,21 +8,13 @@ using UnityEngine.EventSystems;
 public class CrewMember : UITrigger
 {
     [SerializeField]
-    private string _name;
-    [SerializeField]
-    private float _health;
-    [SerializeField]
-    private Profession _profession;
-    [SerializeField]
     private Waypoint _spawnPoint;
     [SerializeField]
-    private float repairSkill;
-    [SerializeField]
     private Transform highlight;
-    public string Name { get => _name; set => _name = value; }
-    public float Health { get => _health; set => _health = value; }
-    public Profession Profession { get => _profession; set => _profession = value; }
-    public float RepairSkill { get => repairSkill; set => repairSkill = value; }
+    [SerializeField]
+    private float speed;
+
+    public CrewData crewData;
     public string Status { get; set; }
     public Command CurrentCommand { get; set; }
     public Queue<Command> CommandQueue { get; set; }
@@ -45,14 +37,13 @@ public class CrewMember : UITrigger
 
     }
 
-    [HideInInspector] public MoveController moveController;
+    public MoveController moveController;
     private bool isSelected;
 
     private void Awake()
     {
         Status = "Idle";
-        moveController = GetComponent<MoveController>();
-        moveController.SetCrewMember(this);
+        moveController = new MoveController(speed, this);
         CommandQueue = new Queue<Command>();
         CurrentWayPoint = _spawnPoint;
         transform.position = _spawnPoint.transform.position;

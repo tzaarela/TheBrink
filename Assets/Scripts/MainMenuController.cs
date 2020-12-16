@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Assets.Scripts;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -47,8 +48,7 @@ public class MainMenuController : MonoBehaviour
     {
         // TA BORT
         if (panelIndex == 1)
-            SceneManager.LoadScene("SpaceportScene");
-        
+            GameController.Instance.GameScene = GameScene.InSpaceport;
         ShowPanelOnly(_currentPanel = (MainMenuPanelType)panelIndex);
         Debug.Log($"ShowPanel: {_currentPanel}");
     }

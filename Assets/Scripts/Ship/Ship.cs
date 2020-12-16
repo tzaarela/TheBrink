@@ -1,26 +1,35 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class Ship
+[CreateAssetMenu(fileName = "Ship", menuName = "Ship")]
+public class Ship : ScriptableObject
 {
-    public float Speed { get; set; }
-    public float Position { get; set; }
-    public float Fuel { get; set; }
-    public float MaxFuel { get; set; }
-    public float MaxCapacitor { get; set; }
-    public float Capacitor { get; set; }
-    public float CapacitorBottleNeck { get; set; }
-    public int Cash { get; set; }
+    public float speed = 10;
+    public float position = 0;
+    public float fuel = 1000;
+    public float maxFuel = 1000;
+    public float maxCapacitor = 1000;
+    public float capacitor = 1000;
+    public float capacitorBottleNeck;
+    public int cash = 123;
 
-    public Ship()
+    public RoomDataArray roomData;
+
+    public List<float> GetRoomHealths()
     {
-        Speed = 10; //6 is pretty good
-        Position = 0;
-        Fuel = 1000;
-        MaxFuel = 1000;
-        Cash = 0;
-        MaxCapacitor = 1000;
-        Capacitor = MaxCapacitor / 2;
+        return RoomController.Instance.Rooms.Where(x => x.RoomType != RoomType.Corridor).Select(x => x.RoomHealth).ToList();
+    }
+
+    public List<CrewMember> GetCrewMembers()
+    {
+        return CrewController.Instance.crewMembers;
+    }
+
+    public void SetCrewMember(int index, CrewMember crewMember)
+    {
+        CrewController.Instance.crewMembers[index] = crewMember;
     }
 }

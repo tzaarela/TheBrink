@@ -1,7 +1,9 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Rooms;
 using Assets.Scripts.Systems;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ReactorSystem : ShipSystem
@@ -23,7 +25,8 @@ public class ReactorSystem : ShipSystem
     }
     private int _capacityLevel;
 
-    private bool IsRetrograde;
+    //TODO: I'll remove this for now.
+    //private bool IsRetrograde;
     private float energyOutput;
 
     public SystemType SystemType { get; set; }
@@ -31,48 +34,65 @@ public class ReactorSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
-    public ReactorSystem(Ship ship)
+    private Room systemRoom;
+
+    public ReactorSystem(Ship ship, List<Room> rooms)
     {
         this.ship = ship;
+
+
+        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Reactor);
         SystemType = SystemType.Reactor;
         SystemState = SystemState.IsOn;
         FuelCost = 1;
         CapacityLevel = 2;
-        IsRetrograde = false;
-        energyOutput = ship.CapacitorBottleNeck / 3;
+        //Removed this for now, so we won't have that annoying notice.
+        //IsRetrograde = false;
+        
+        //Wait, surely this is bizzarre? What was I thinking? Having an energyoutput that is LOWER than the bottleneck?
+        energyOutput = ship.capacitorBottleNeck / 3;
         Efficiency = 1.00f;
 
         EnergyWanted = 0;
     }
 
-public void BurnsFuel()
+    public void Run()
     {
-        ship.Fuel -= CapacityLevel * FuelCost;
+        AirLevel = systemRoom.oxygenLevel;
+
+
+        if (ship.fuel > 0)
+        {
+            //TODO: I think JS talked about this being a bit "stiff" I might wish that the methods sends things into each other instead?
+            BurnsFuel();
+            ProdEnergy();
+            ProdSpeed();
+        }
+        else
+        {
+            ConsoleController.instance.PrintToConsole("Reactor has no more fuel");
+            //TODO: Remove this later, if you implement the other way for the ship speed and travel and momentum to happen.
+            ship.speed = 0;
+        }
+    }
+
+    public void BurnsFuel()
+    {
+        ship.fuel -= CapacityLevel * FuelCost;
     }
 
     public void ProdEnergy()
     {
         energyOutput = energyOutput * CapacityLevel * Efficiency;
 
-        ship.Capacitor += energyOutput;
+        ship.capacitor += energyOutput;
     }
 
     public void ProdSpeed()
     {
-        ship.Speed = CapacityLevel;
-    }
-
-    public void Run()
-    {
-        if (ship.Fuel > 0)
-        {
-            BurnsFuel();
-            ProdEnergy();
-            ProdSpeed();
-        }
-        else
-            ConsoleController.instance.PrintToConsole("Reactor has no more fuel");
+        ship.speed = CapacityLevel;
     }
 
     public void SetEnergyWanted()

@@ -1,6 +1,5 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.Crew;
-using Assets.Scripts.Utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,27 +11,22 @@ public class CrewController : MonoBehaviour
     public static CrewController Instance;
     
     [SerializeField]
-    private CrewMember[] crewMembersPrefab = new CrewMember[3];
+    private CrewMember[] crewMemberSlots = new CrewMember[3];
 
     public List<CrewMember> crewMembers;
 
 
     public void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance == null)
         {
-            Destroy(this.gameObject);
+            Instance = this;
+            crewMembers = new List<CrewMember>();
         }
         else
         {
-            Instance = this;
+            Destroy(this.gameObject);
         }
-    }
-
-    public void Start()
-    {
-        crewMembers = new List<CrewMember>();
-        AddCrew();
     }
 
     //Updates all commands but Move, crewMember.Update() handles this 
@@ -61,12 +55,12 @@ public class CrewController : MonoBehaviour
         }
     }
 
-    private void AddCrew()
+    public void CreateShipCrew(Crew crew)
     {
-        Debug.Log("Adding crew...");
-        foreach (CrewMember crewMember in crewMembersPrefab)
+        for (int i = 0; i < crewMemberSlots.Length; i++)
         {
-            crewMembers.Add(crewMember);
+            crewMemberSlots[i].crewData = crew.crewDataArray[i];
+            crewMembers.Add(crewMemberSlots[i]);
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.InterfacePanels;
+using Assets.Scripts.Rooms;
 using Assets.Scripts.Systems;
 using Unity.Collections;
 using UnityEditor;

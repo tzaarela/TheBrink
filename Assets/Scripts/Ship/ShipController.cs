@@ -24,11 +24,6 @@ namespace Assets.Scripts
         }
 
         public Ship Ship { get; set; }
-
-        public Ship CreateShip()
-        {
-            Ship = new Ship();
-            return Ship;
-        }
+        
     }
 }

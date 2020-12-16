@@ -1,6 +1,8 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Rooms;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BridgeSystem : ShipSystem
@@ -8,7 +10,7 @@ public class BridgeSystem : ShipSystem
     Route route;
     Ship ship;
 
-    //TODO: Fix, should this pass reference instead? And also do so to SystemController.
+    //TODO: Fix, should this pass reference instead? And also do so to SystemController, so we might interact with it from there?
     //float timeMax = 0.1f;
 
     //Navigationvariables
@@ -17,58 +19,73 @@ public class BridgeSystem : ShipSystem
     float DisanceToNextEncounter;
 
     //Time variables
-    float EstimatedTimetoArrival;
-    float TimeUntilRetrogradeBurn;
-    float TimeUntilNextEncounter;
+    public float EstimatedTimetoArrival { get; set; }
+    public float TimeUntilRetrogradeBurn { get; set; }
+    public float TimeUntilNextEncounter { get; set; }
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
+    public float AirLevel { get; set; }
 
-    public BridgeSystem()
+    private Room systemRoom;
+    private List<Room> rooms;
+
+    public BridgeSystem(Ship ship, List<Room> rooms)
     {
+        this.ship = ship;
+        this.rooms = rooms;
         SystemState = SystemState.IsOn;
+        SystemType = SystemType.Bridge;
+
+        systemRoom = this.rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
 
         route = MissionController.Instance.Route;
-        ship = ShipController.Instance.Ship;
 
         EnergyWanted = 0;
     }
 
     public void Run()
     {
-        UpdateETA();
-        UpdateTimeToRetro();
-        UpdateTimeToEncounter();
+        AirLevel = systemRoom.oxygenLevel;
+        EstimatedTimetoArrival = UpdateETA();
+        TimeUntilRetrogradeBurn = UpdateTimeToRetro();
+        TimeUntilNextEncounter = UpdateTimeToEncounter();
 
+        //So, I leave this here atm so I can turn the method below into returning a float later.
+        //EnergyWanted = 
         SetEnergyWanted();
     }
 
-    public void UpdateETA()
+    public float UpdateETA()
     {
-        EstimatedTimetoArrival = (((route.Length - route.ShipPosition) / ship.Speed) * 0.1f);
-        //TODO: Really needs to check this with Saarela
+        return (((route.Length - route.ShipPosition) / ship.speed) * MissionController.TICK_TIMER_MAX);
     }
 
-    public void UpdateTimeToRetro()
+    public float UpdateTimeToRetro()
     {
         //Take current speed, see, how many times you can remove that speed before it goes within benchmarks.
         //Then, take that number, divide by update time yes?
+
+        return 10;
     }
 
-    public void UpdateTimeToEncounter()
+    public float UpdateTimeToEncounter()
     {
         //Go through the route, look at all encounters in array,
         //find the encounters that are still bool "on" and has the lowest position.
         //Take that encounter and compare it to figure things out.
-        
+
+        return 10;
     }
 
     public void SetEnergyWanted()
     {
-        throw new System.NotImplementedException();
+        //TODO: Set this method to return a float instead?
+        //Based on what Saarela mentioned that might be the best way to handle this sort of things.
+        EnergyWanted = EnergyToMaintain;
     }
 
     public void Reboot()

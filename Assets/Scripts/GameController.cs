@@ -1,40 +1,85 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Crew;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+[CreateAssetMenu(fileName = "GameController", menuName = "GameController")]
+public class GameController : ScriptableObject
 {
-    public static GameController Instance { get; set; }
+    public static GameController Instance;
 
-    public GameState GameState { get; set; }
+    public Ship ship;
+    public Crew crew;
 
-    public void Start()
+    public GameScene GameScene { get => gameScene; 
+        set 
+        {
+            gameScene = value;
+            SwitchScene(gameScene);
+        } 
+    }
+
+    private GameScene gameScene = GameScene.InMainMenu;
+    private TransitionController transitionController;
+
+    public void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
-        else
-        {
-            Destroy(this);
-        }
-
-        GameState = GameState.InMainMenu;
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void Init(Ship ship, Crew crew)
     {
-        switch (GameState)
+        this.ship = ship;
+        this.crew = crew;
+
+       
+        
+        transitionController = TransitionController.Instance;
+
+        //Debug.
+        SwitchScene(GameScene.InMission);
+    }
+
+    public void SwitchScene(GameScene gameScene)
+    {
+        switch (gameScene)
         {
-            case GameState.InMainMenu:
-                break;
-            case GameState.InMission:
-                break;
-            case GameState.InGameOver:
-                break;
+            case GameScene.InMainMenu:
+                {
+                    SceneManager.LoadScene("MainMenuScene");
+                    transitionController.RunTransitionAnimation("Playing menu transition");
+                    break;
+
+                }
+            case GameScene.InMission:
+                {
+                    var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
+
+                    AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+
+                    op.completed += (AsyncOperation o) =>
+                    {
+                        SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
+                        RoomController.Instance.CreateRooms();
+                        SystemController.Instance.CreateShipSystems(ship);
+                        CrewController.Instance.CreateShipCrew(crew);
+                    };
+
+                    transitionController.RunTransitionAnimation("Playing mission transition....");
+
+                    break;
+                }
+            case GameScene.InSpaceport:
+                {
+                    SceneManager.LoadScene("SpaceportScene");
+                    transitionController.RunTransitionAnimation("Playing spaceport transition....");
+                    break;
+                }
             default:
                 break;
         }

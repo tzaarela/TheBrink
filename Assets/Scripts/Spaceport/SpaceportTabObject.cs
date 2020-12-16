@@ -10,6 +10,7 @@ public class SpaceportTabObject : UITrigger
     public SpaceportTabType tabType;
     [HideInInspector] public TabState tabState;
     private bool _mouseOver;
+    private const float ClickVolume = 0.5f;
 
     private void Awake()
     {
@@ -21,6 +22,9 @@ public class SpaceportTabObject : UITrigger
     
     public override void OnPointerClick(PointerEventData eventData)
     {
+        if (!Input.GetMouseButtonUp(0))
+            return;
+        
         SpaceportTabController.instance.SetButtonState(this, ButtonState.Pressed);
         SpaceportTabController.instance.SelectTab(this);
         SpaceportUIController.instance.ShowPanel(tabType);
@@ -44,13 +48,17 @@ public class SpaceportTabObject : UITrigger
             return;
         
         SpaceportTabController.instance.SetButtonState(this, ButtonState.Highlight);
+        
+        if (Input.GetMouseButtonUp(0))
+            AudioController.instance.PlaySFX(SFXClipType.ButtonClickUp, ClickVolume);
     }
     
     public override void OnPointerDown(PointerEventData eventData)
     {
-        if (!_mouseOver)
+        if (!_mouseOver || !Input.GetMouseButton(0))
             return;
         
         SpaceportTabController.instance.SetButtonState(this, ButtonState.Pressed);
+        AudioController.instance.PlaySFX(SFXClipType.ButtonClickDown, ClickVolume);
     }
 }

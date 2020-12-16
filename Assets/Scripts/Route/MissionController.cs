@@ -11,10 +11,11 @@ public class MissionController : MonoBehaviour
 {
     public static MissionController Instance { get; set; }
 
-    private const float TICK_TIMER_MAX = 0.1f;
+    public Ship ship;
+
+    public const float TICK_TIMER_MAX = 0.1f;
     private float tickTimer = 0;
     private Route route;
-    private Ship ship;
 
     public Route Route
     {
@@ -33,11 +34,12 @@ public class MissionController : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
+
     }
 
     public void Start()
     {
-        ship = ShipController.Instance.CreateShip();
+        ship = GameController.Instance.ship;
     }
 
     public void StartMissions(Mission mission)
@@ -62,8 +64,8 @@ public class MissionController : MonoBehaviour
 
     private void UpdateShipPosition()
     {
-        ship.Position += ship.Speed * Time.deltaTime;
-        Route.ShipPosition = ship.Position;
+        ship.position += ship.speed * Time.deltaTime;
+        Route.ShipPosition = ship.position;
     }
 
     private void CheckEncounters()

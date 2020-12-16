@@ -14,6 +14,7 @@ public class UIButton : UITrigger
     [SerializeField] private Sprite[] _sprites = new Sprite[5];
     [SerializeField] private Color[] _colors = new Color[5];
     private bool _mouseOver;
+    private const float ClickVolume = 0.5f;
 
     private void Awake()
     {
@@ -36,7 +37,17 @@ public class UIButton : UITrigger
     private void SetButtonState(ButtonState buttonState)
     {
         _image.sprite = _sprites[(int) buttonState];
-        _text.color = _colors[(int) buttonState];
+        if (_text != null)
+            _text.color = _colors[(int) buttonState];
+    }
+
+    public override void OnPointerClick(PointerEventData eventData)
+    {
+        if (!Input.GetMouseButtonUp(0))
+            return;
+        
+        base.OnPointerClick(eventData);
+        SetButtonState(ButtonState.Normal);
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
@@ -57,13 +68,17 @@ public class UIButton : UITrigger
             return;
         
         SetButtonState(ButtonState.Highlight);
+        
+        if (Input.GetMouseButtonUp(0))
+            AudioController.instance.PlaySFX(SFXClipType.ButtonClickUp, ClickVolume);
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        if (!_mouseOver)
+        if (!_mouseOver || !Input.GetMouseButton(0))
             return;
         
         SetButtonState(ButtonState.Pressed);
+        AudioController.instance.PlaySFX(SFXClipType.ButtonClickDown, ClickVolume);
     }
 }
