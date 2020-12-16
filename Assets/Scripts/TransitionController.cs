@@ -28,9 +28,22 @@ namespace Assets.Scripts
            
         }
 
-        public void RunTransitionAnimation(object animation)
+        public void RunTransitionAnimation(GameScene gameScene)
         {
-            Debug.Log("Running animation........");
+            switch (gameScene)
+            {
+                case GameScene.InMainMenu:
+                    break;
+                case GameScene.InMission:
+                    {
+
+                        break;
+                    }
+                case GameScene.InSpaceport:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
