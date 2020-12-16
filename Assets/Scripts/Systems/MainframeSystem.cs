@@ -50,7 +50,7 @@ public class MainframeSystem : ShipSystem
         return totalEnergyNeeded;
     }
     /// <summary>
-    /// Takes in float energyNeeded, decreases the ship Capacitor & increases MainframeStsten.CurrentEnergy
+    /// Takes in float energyNeeded, decreases the ship Capacitor & increases MainframeSystem.CurrentEnergy
     /// in a while loop until it has enough energy OR has hit the Ship.CapacitorBottleNeck OR ship.Capacitor is zero.
     /// </summary>
     /// <param name="energyNeeded"></param>
