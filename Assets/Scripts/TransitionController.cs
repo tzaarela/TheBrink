@@ -10,6 +10,9 @@ namespace Assets.Scripts
     [CreateAssetMenu(fileName = "TranitionController", menuName = "TransitionController")]
     public class TransitionController : ScriptableObject
     {
+        public Canvas mainMenu;
+        public Canvas loginCanvas;
+
         public void RunTransitionAnimation(GameScene gameScene)
         {
             switch (gameScene)
@@ -18,11 +21,14 @@ namespace Assets.Scripts
                     break;
                 case GameScene.InMission:
                     {
-
+                        
                         break;
                     }
                 case GameScene.InSpaceport:
-                    break;
+                    {
+                        
+                        break;
+                    }
                 default:
                     break;
             }

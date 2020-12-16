@@ -26,5 +26,4 @@ public class Starter : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
 }
