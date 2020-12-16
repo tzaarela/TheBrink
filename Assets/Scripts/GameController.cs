@@ -42,7 +42,7 @@ public class GameController : ScriptableObject
         transitionController = TransitionController.Instance;
 
         //Debug.
-        SwitchScene(GameScene.InMission);
+        //SwitchScene(GameScene.InMission);
     }
 
     public void SwitchScene(GameScene gameScene)
