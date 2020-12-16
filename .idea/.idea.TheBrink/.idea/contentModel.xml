@@ -86,6 +86,7 @@
             <e p="BGMClipType.cs" t="Include" />
             <e p="SFXClipType.cs" t="Include" />
           </e>
+          <e p="BridgeControls.cs" t="Include" />
           <e p="Command.cs" t="Include" />
           <e p="CommandController.cs" t="Include" />
           <e p="ConsoleController.cs" t="Include" />
@@ -152,6 +153,9 @@
           </e>
           <e p="Spaceport" t="Include">
             <e p="ButtonState.cs" t="Include" />
+            <e p="FuelContent.cs" t="Include" />
+            <e p="FuelPanel.cs" t="Include" />
+            <e p="RepairContent.cs" t="Include" />
             <e p="SpaceportBarrackController.cs" t="Include" />
             <e p="SpaceportContract.cs" t="Include" />
             <e p="SpaceportContractsController.cs" t="Include" />
@@ -164,6 +168,7 @@
             <e p="SpaceportWorkshopController.cs" t="Include" />
             <e p="TabState.cs" t="Include" />
             <e p="UIButton.cs" t="Include" />
+            <e p="WorkshopPanelType.cs" t="Include" />
           </e>
           <e p="Starter.cs" t="Include" />
           <e p="Systems" t="Include">
@@ -191,7 +196,7 @@
       <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="TheBrink.sln" t="IncludeFlat" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_TheBrink.453134923.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_TheBrink.453134923.00" t="ExcludeRecursive" />
   </component>
 </project>

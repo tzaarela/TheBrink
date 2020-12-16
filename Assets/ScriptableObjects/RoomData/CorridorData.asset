@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: CorridorData
   m_EditorClassIdentifier: 
   health: 100
+  _defaultHealth: 100
+  _beginWithDefault: 1
   roomType: 8

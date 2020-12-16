@@ -345,7 +345,6 @@ GameObject:
   - component: {fileID: 54105802589853327}
   - component: {fileID: 54105802589853320}
   - component: {fileID: 54105802589853321}
-  - component: {fileID: 54105802589853326}
   - component: {fileID: 6069807959722281403}
   m_Layer: 5
   m_Name: Workshop-Part [Button]
@@ -412,50 +411,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &54105802589853326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54105802589853324}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7,
-      type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 54105802589853321}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &6069807959722281403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +423,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44330599cb504f48b0f95df7b7f2c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4197740371126334358}
+          m_TargetAssemblyTypeName: RepairContent, Assembly-CSharp
+          m_MethodName: ToggleSelectedObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   _sprites:
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
@@ -491,6 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54105802698552706}
   - component: {fileID: 54105802698552732}
+  - component: {fileID: 4197740371126334358}
   - component: {fileID: 54105802698552733}
   m_Layer: 5
   m_Name: Repair-Part [Panel]
@@ -529,6 +501,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54105802698552707}
   m_CullTransparentMesh: 0
+--- !u!114 &4197740371126334358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54105802698552707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b15383fcfdc14f3c8cb86bbde6b5076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  _roomData: {fileID: 0}
+  _selectionObject: {fileID: 1530274360943117893}
+  _roomName: {fileID: 54105802109991120}
+  _roomCost: {fileID: 54105802489892145}
+  _fillBar: {fileID: 328541849516612889}
+  _warningIcon: {fileID: 2140688580474654636}
+  _normalColor: {r: 1, g: 1, b: 1, a: 1}
+  _warningColor: {r: 0.61960787, g: 0.22352941, b: 0.16078432, a: 1}
 --- !u!114 &54105802698552733
 MonoBehaviour:
   m_ObjectHideFlags: 0
