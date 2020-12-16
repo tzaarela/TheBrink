@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Crew;
+﻿using Assets.Scripts;
+using Assets.Scripts.Crew;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,12 +14,15 @@ public class Starter : MonoBehaviour
     [SerializeField]
     private Crew crew;
 
+    [SerializeField]
+    private TransitionController transitionController;
+
     public void Awake()
     {
         if(GameController.Instance == null)
         {
             var gameController = (GameController)ScriptableObject.CreateInstance(typeof(GameController));
-            gameController.Init(ship, crew);
+            gameController.Init(ship, crew, transitionController);
             DontDestroyOnLoad(gameObject);
         }
     }

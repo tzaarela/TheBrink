@@ -7,27 +7,9 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
+    [CreateAssetMenu(fileName = "TranitionController", menuName = "TransitionController")]
     public class TransitionController : ScriptableObject
     {
-        private static TransitionController _instance;
-        public static TransitionController Instance { 
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = (TransitionController)CreateInstance(typeof(TransitionController));
-                }
-                
-                return _instance;
-            }
-            private set { }
-        }
-
-        public void Awake()
-        {
-           
-        }
-
         public void RunTransitionAnimation(GameScene gameScene)
         {
             switch (gameScene)

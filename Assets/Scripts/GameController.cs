@@ -12,6 +12,7 @@ public class GameController : ScriptableObject
 
     public Ship ship;
     public Crew crew;
+    public TransitionController transitionController;
 
     public GameScene GameScene { get => gameScene; 
         set 
@@ -22,7 +23,6 @@ public class GameController : ScriptableObject
     }
 
     private GameScene gameScene = GameScene.InMainMenu;
-    private TransitionController transitionController;
 
     public void Awake()
     {
@@ -32,14 +32,11 @@ public class GameController : ScriptableObject
         }
     }
 
-    public void Init(Ship ship, Crew crew)
+    public void Init(Ship ship, Crew crew, TransitionController transitionController)
     {
         this.ship = ship;
         this.crew = crew;
-
-       
-        
-        transitionController = TransitionController.Instance;
+        this.transitionController = transitionController;
 
         //Debug.
         //SwitchScene(GameScene.InMission);
