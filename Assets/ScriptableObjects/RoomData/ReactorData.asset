@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1854302ec1ae1d342b9965a9a8007b75, type: 3}
   m_Name: ReactorData
   m_EditorClassIdentifier: 
-  health: 100
+  health: 90
+  _defaultHealth: 90
+  _beginWithDefault: 1
   roomType: 0

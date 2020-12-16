@@ -20,7 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BridgeControls.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BridgeControls.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Menu Thinner Font.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Menu Thinner Font.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Highlight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Highlight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Pressed.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Pressed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Highlight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Highlight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Pressed.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Pressed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fuel-Stack [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fuel-Stack [Panel].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Repair-Part [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Repair-Part [Panel].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/BridgeData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/BridgeData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdLeftData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdLeftData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdRightData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdRightData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CorridorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CorridorData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/LifeSupportData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/LifeSupportData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainBatteryData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainBatteryData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainFrameData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainFrameData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MedbayData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MedbayData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/ReactorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/ReactorData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,73 +63,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/TabState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportPanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/ButtonState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FCFB6FCD-3E9A-4E12-8C14-260F742E2185/ff/20b4ca42/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/ButtonState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/TabState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/CrewController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CrewMember.cs" />
-        <option value="$PROJECT_DIR$/Assets/TestScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" />
-        <option value="$PROJECT_DIR$/Assets/MainMenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Node.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RoomController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MissionController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Node.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/WayPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/TaskController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Pathfinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/WaypointController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Task.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MoveController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/ContextMenuItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SpaceportUITest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceportUIController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceportPanelType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceportTabController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SpaceportTabObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/SpaceportUIController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/ShipSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportPanelController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ButtonState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/TabState.cs" />
-        <option value="$PROJECT_DIR$/Assets/UIButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewMember.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportTabController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SFXClipType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AudioSourceType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AudioController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BGMClipType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/SFXClipType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioBGMType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportTabObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
   <component name="ProjectViewState">
@@ -107,6 +98,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34975636" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -118,16 +111,16 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7801">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7801" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -159,6 +152,8 @@
       <workItem from="1607690366848" duration="740000" />
       <workItem from="1607941223176" duration="19234000" />
       <workItem from="1608026237357" duration="942000" />
+      <workItem from="1608110017544" duration="291000" />
+      <workItem from="1608123007942" duration="19621000" />
     </task>
     <servers />
   </component>
@@ -181,12 +176,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="623" y="259" width="672" height="609" key="search.everywhere.popup" timestamp="1607977978449">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="623" y="286" width="672" height="678" key="search.everywhere.popup/0.-1057.1920.1057/0.23.1920.1177@0.23.1920.1177" timestamp="1606303035967" />
-    <state x="623" y="259" width="672" height="609" key="search.everywhere.popup/2944.0.1920.1080/0.23.1920.1057@0.23.1920.1057" timestamp="1607977978449" />
   </component>
 </project>

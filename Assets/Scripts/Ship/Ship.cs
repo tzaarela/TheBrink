@@ -1,22 +1,55 @@
-﻿using Assets.Scripts.Rooms;
+﻿using System;
+using Assets.Scripts.Rooms;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 [CreateAssetMenu(fileName = "Ship", menuName = "Ship")]
 public class Ship : ScriptableObject
 {
-    public float speed = 10;
-    public float position = 0;
-    public float fuel = 1000;
-    public float maxFuel = 1000;
-    public float maxCapacitor = 1000;
-    public float capacitor = 1000;
+    public float speed = 10f;
+    public float position = 0f;
+    public float fuel = 1000f;
+    public float maxFuel = 1000f;
+    public float capacitor = 1000f;
+    public float maxCapacitor = 1000f;
     public float capacitorBottleNeck;
-    public int cash = 123;
-
+    public int cash = 1000000;
+    
     public RoomDataArray roomData;
+    
+    [Header("DEBUG")]
+    [SerializeField] private float _defaultSpeed = 10f;
+    [SerializeField] private float _defaultPosition = 0f;
+    [SerializeField] private float _defaultFuel = 568f;
+    [SerializeField] private float _defaultCapacitor = 1000f;
+    [SerializeField] private int _defaultCash = 1000000;
+    [SerializeField] private bool _beginWithDefault;
+
+    private void OnEnable()
+    {
+        Reset();
+    }
+
+    public void Reset()
+    {
+        if (_beginWithDefault)
+        {
+            speed = _defaultSpeed;
+            position = _defaultPosition;
+            fuel = _defaultFuel;
+            capacitor = _defaultCapacitor;
+            cash = _defaultCash;
+            return;
+        }
+        
+        position = 0;
+        cash = 1000000;
+        fuel = maxFuel;
+        capacitor = maxCapacitor;
+    }
 
     public List<float> GetRoomHealths()
     {

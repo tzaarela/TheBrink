@@ -7,12 +7,15 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Assets.Scripts;
+using UnityEngine.PlayerLoop;
 
 public class SpaceportUIController : MonoBehaviour
 {
     public static SpaceportUIController instance;
 
     private SpaceportPanelController[] _panelControllers;
+
+    [SerializeField] private TMP_Text _cashText;
 
     private void Awake()
     {
@@ -27,7 +30,7 @@ public class SpaceportUIController : MonoBehaviour
     private void Start()
     {
         SetAllComponents();
-        ShowPanel(SpaceportTabType.Contracts);
+        Init();
     }
 
     private void GetAllComponents()
@@ -40,6 +43,14 @@ public class SpaceportUIController : MonoBehaviour
         _panelControllers[(int)SpaceportTabType.Contracts] = SpaceportContractsController.instance;
         _panelControllers[(int)SpaceportTabType.Barrack] = SpaceportBarrackController.instance;
         _panelControllers[(int)SpaceportTabType.Workshop] = SpaceportWorkshopController.instance;
+    }
+
+    private void Init()
+    {
+        ShowPanel(SpaceportTabType.Contracts);
+        // ShowPanel(SpaceportTabType.Barrack);   // TODO Debug Only.
+        // ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
+        UpdateCash(0);
     }
 
     private void HideAllPanels()
@@ -59,5 +70,11 @@ public class SpaceportUIController : MonoBehaviour
     public void Depart()
     {
         GameController.Instance.GameScene = GameScene.InMission;
+    }
+
+    public void UpdateCash(int increaseAmount)
+    {
+        GameController.Instance.ship.cash += increaseAmount;
+        _cashText.text = "$" + GameController.Instance.ship.cash.ToString("N0");
     }
 }

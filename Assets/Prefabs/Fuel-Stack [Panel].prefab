@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5182693356326179100}
+  - component: {fileID: 8618989251328827771}
   m_Layer: 5
   m_Name: Fuel-Stack [Panel]
   m_TagString: Untagged
@@ -149,6 +150,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 22, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8618989251328827771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182693356326179107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b1923ee189496e950983f232c312a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentFuelImage: {fileID: 7223457706288534921}
+  _changedFuelImage: {fileID: 1888346272}
+  _normalColor: {r: 1, g: 1, b: 1, a: 1}
+  _negativeColor: {r: 0.43529415, g: 0.25882354, b: 0.08627451, a: 1}
+  _positiveColor: {r: 0.7019608, g: 0.9803922, b: 0.9960785, a: 1}
 --- !u!1 &5182693356438234584
 GameObject:
   m_ObjectHideFlags: 0
