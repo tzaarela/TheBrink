@@ -31,23 +31,25 @@ public class BridgeSystem : ShipSystem
     public float AirLevel { get; set; }
 
     private Room systemRoom;
+    private List<Room> rooms;
 
-    public BridgeSystem(List<Room> rooms)
+    public BridgeSystem(Ship ship, List<Room> rooms)
     {
+        this.ship = ship;
+        this.rooms = rooms;
         SystemState = SystemState.IsOn;
         SystemType = SystemType.Bridge;
 
-        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
+        systemRoom = this.rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
 
         route = MissionController.Instance.Route;
-        ship = ShipController.Instance.Ship;
 
         EnergyWanted = 0;
     }
 
     public void Run()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = systemRoom.oxygenLevel;
         EstimatedTimetoArrival = UpdateETA();
         TimeUntilRetrogradeBurn = UpdateTimeToRetro();
         TimeUntilNextEncounter = UpdateTimeToEncounter();
@@ -84,7 +86,6 @@ public class BridgeSystem : ShipSystem
         //TODO: Set this method to return a float instead?
         //Based on what Saarela mentioned that might be the best way to handle this sort of things.
         EnergyWanted = EnergyToMaintain;
-        throw new System.NotImplementedException();
     }
 
     public void Reboot()
