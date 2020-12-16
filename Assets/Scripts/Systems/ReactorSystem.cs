@@ -23,7 +23,8 @@ public class ReactorSystem : ShipSystem
     }
     private int _capacityLevel;
 
-    private bool IsRetrograde;
+    //TODO: I'll remove this for now.
+    //private bool IsRetrograde;
     private float energyOutput;
 
     public SystemType SystemType { get; set; }
@@ -40,7 +41,9 @@ public class ReactorSystem : ShipSystem
         SystemState = SystemState.IsOn;
         FuelCost = 1;
         CapacityLevel = 2;
-        IsRetrograde = false;
+        //Removed this for now, so we won't have that annoying notice.
+        //IsRetrograde = false;
+        
         //Wait, surely this is bizzarre? What was I thinking? Having an energyoutput that is LOWER than the bottleneck?
         energyOutput = ship.capacitorBottleNeck / 3;
         Efficiency = 1.00f;
@@ -52,6 +55,7 @@ public class ReactorSystem : ShipSystem
     {
         if (ship.fuel > 0)
         {
+            //TODO: I think JS talked about this being a bit "stiff" I might wish that the methods sends things into each other instead?
             BurnsFuel();
             ProdEnergy();
             ProdSpeed();
@@ -59,7 +63,7 @@ public class ReactorSystem : ShipSystem
         else
         {
             ConsoleController.instance.PrintToConsole("Reactor has no more fuel");
-            //Remove this later, if you implement the other way for the ship speed and travel and momentum to happen.
+            //TODO: Remove this later, if you implement the other way for the ship speed and travel and momentum to happen.
             ship.speed = 0;
         }
     }

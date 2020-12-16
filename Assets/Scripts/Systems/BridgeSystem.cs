@@ -8,7 +8,7 @@ public class BridgeSystem : ShipSystem
     Route route;
     Ship ship;
 
-    //TODO: Fix, should this pass reference instead? And also do so to SystemController.
+    //TODO: Fix, should this pass reference instead? And also do so to SystemController, so we might interact with it from there?
     //float timeMax = 0.1f;
 
     //Navigationvariables
@@ -17,9 +17,9 @@ public class BridgeSystem : ShipSystem
     float DisanceToNextEncounter;
 
     //Time variables
-    float EstimatedTimetoArrival;
-    float TimeUntilRetrogradeBurn;
-    float TimeUntilNextEncounter;
+    public float estimatedTimetoArrival;
+    public float timeUntilRetrogradeBurn;
+    public float timeUntilNextEncounter;
 
     public SystemType SystemType { get; set; }
     public SystemState SystemState { get; set; }
@@ -41,35 +41,46 @@ public class BridgeSystem : ShipSystem
 
     public void Run()
     {
-        UpdateETA();
-        UpdateTimeToRetro();
-        UpdateTimeToEncounter();
+        estimatedTimetoArrival = UpdateETA();
 
+        timeUntilRetrogradeBurn = UpdateTimeToRetro();
+        
+        timeUntilNextEncounter = UpdateTimeToEncounter();
+
+        //So, I leave this here atm so I can turn the method below into returning a float later.
+        //EnergyWanted = 
         SetEnergyWanted();
     }
 
-    public void UpdateETA()
+    public float UpdateETA()
     {
-        EstimatedTimetoArrival = (((route.Length - route.ShipPosition) / ship.speed) * 0.1f);
+        return (((route.Length - route.ShipPosition) / ship.speed) * MissionController.TICK_TIMER_MAX);
         //TODO: Really needs to check this with Saarela
+        //How should I best do with update here? 
     }
 
-    public void UpdateTimeToRetro()
+    public float UpdateTimeToRetro()
     {
         //Take current speed, see, how many times you can remove that speed before it goes within benchmarks.
         //Then, take that number, divide by update time yes?
+
+        return 10;
     }
 
-    public void UpdateTimeToEncounter()
+    public float UpdateTimeToEncounter()
     {
         //Go through the route, look at all encounters in array,
         //find the encounters that are still bool "on" and has the lowest position.
         //Take that encounter and compare it to figure things out.
-        
+
+        return 10;
     }
 
     public void SetEnergyWanted()
     {
+        //TODO: Set this method to return a float instead?
+        //Based on what Saarela mentioned that might be the best way to handle this sort of things.
+        EnergyWanted = EnergyToMaintain;
         throw new System.NotImplementedException();
     }
 
