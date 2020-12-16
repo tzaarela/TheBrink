@@ -47,8 +47,9 @@ public class SpaceportUIController : MonoBehaviour
 
     private void Init()
     {
-        // ShowPanel(SpaceportTabType.Contracts);
-        ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
+        ShowPanel(SpaceportTabType.Contracts);
+        // ShowPanel(SpaceportTabType.Barrack);   // TODO Debug Only.
+        // ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
         UpdateCash(0);
     }
 
