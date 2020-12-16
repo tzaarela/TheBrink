@@ -37,7 +37,8 @@ public class UIButton : UITrigger
     private void SetButtonState(ButtonState buttonState)
     {
         _image.sprite = _sprites[(int) buttonState];
-        _text.color = _colors[(int) buttonState];
+        if (_text != null)
+            _text.color = _colors[(int) buttonState];
     }
 
     public override void OnPointerClick(PointerEventData eventData)
