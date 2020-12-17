@@ -518,10 +518,15 @@ MonoBehaviour:
   _selectionObject: {fileID: 1530274360943117893}
   _roomName: {fileID: 54105802109991120}
   _roomCost: {fileID: 54105802489892145}
+  _roomHighlight: {fileID: 0}
   _fillBar: {fileID: 328541849516612889}
   _warningIcon: {fileID: 2140688580474654636}
   _normalColor: {r: 1, g: 1, b: 1, a: 1}
   _warningColor: {r: 0.61960787, g: 0.22352941, b: 0.16078432, a: 1}
+  _highlightColors:
+  - {r: 0.101960786, g: 0.5764706, b: 0.30980393, a: 0.4}
+  - {r: 1, g: 0.827451, b: 0.30588236, a: 0.4}
+  - {r: 0.61960787, g: 0.22352941, b: 0.16078432, a: 0.4}
 --- !u!114 &54105802698552733
 MonoBehaviour:
   m_ObjectHideFlags: 0

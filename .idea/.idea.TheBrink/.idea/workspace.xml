@@ -20,13 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/ShipHighlightColorType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/ShipHighlightColorType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RadarRoute [Canvas].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RadarRoute [Canvas].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Route/Radar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Route/Radar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Version2/ShipUI_ShipOverview_Floor.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Version2/ShipUI_ShipOverview_Floor.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Repair-Part [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Repair-Part [Panel].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
@@ -65,6 +66,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Route/Radar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Systems/SystemContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ShipHighlightColorType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -131,7 +134,7 @@
       <workItem from="1608026237357" duration="942000" />
       <workItem from="1608110017544" duration="291000" />
       <workItem from="1608123007942" duration="19948000" />
-      <workItem from="1608199471885" duration="1505000" />
+      <workItem from="1608199471885" duration="4012000" />
     </task>
     <servers />
   </component>
