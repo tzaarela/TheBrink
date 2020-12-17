@@ -64,6 +64,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2199744357a3ed342a809ea07673344f, type: 3}
   - {fileID: 21300000, guid: 747d45535920e43c0a1bf6d9c6f53183, type: 3}
   - {fileID: 21300000, guid: a478c683518485b4987b916ff74cd8f6, type: 3}
+  - {fileID: 21300000, guid: c2184544714128a49ba58abad5bc0afe, type: 3}
   - {fileID: 21300000, guid: ac7a2a640f9adce47bc34010a03a1b2e, type: 3}
   - {fileID: 21300000, guid: eef71c74599c33740bff8e5979c4ed12, type: 3}
   - {fileID: 21300000, guid: 4bf699842cd6c4843b4015008d10333c, type: 3}
@@ -83,6 +84,7 @@ SpriteAtlas:
   - {fileID: 8082654419782018365, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: -1471556661742532906, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: 1094749345154489322, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
+  - {fileID: 21300000, guid: f325b039f53be214ab3f08d802c4ea49, type: 3}
   - {fileID: 21300000, guid: e845f849ddb9447b080502a6d98f3fc8, type: 3}
   - {fileID: 21300000, guid: c482f6598e1aec94380a642a24757678, type: 3}
   - {fileID: 21300000, guid: 6454a479a357f4ac3a8e22282312133d, type: 3}
@@ -123,6 +125,7 @@ SpriteAtlas:
   - CircleShip
   - 8x8_ui-border3-temp_01
   - Circle
+  - loading circle_gameover
   - _ire_icon
   - _rogressBar
   - ALERT BIG UI_border
@@ -142,6 +145,7 @@ SpriteAtlas:
   - LogosSPACE_GroupedWhite_4
   - ship-icon-logo-01
   - spaceport-logo_01
+  - _adar swish
   - tab-border_13x13_01_Normal
   - Box_Logga(LoginScreen-Spaceport)_161x186
   - tab-border_13x13_01_Pressed
