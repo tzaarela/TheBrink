@@ -38,16 +38,18 @@ public class FuelPanel : MonoBehaviour
         if (applyChanges)
             GameController.Instance.ship.fuel = _modifiedFuel;
     
-        // float fuelPercent = GameController.Instance.ship.GetFuelPercent();
-        float fuelPercent = _modifiedFuel / GameController.Instance.ship.maxFuel;
-        _fuelText.text = Mathf.CeilToInt(fuelPercent * 100) + "%";
-        _distanceText.text = $"{Mathf.CeilToInt(fuelPercent * MaxFuelDistance)} light years";
+        int fuelPercentInt = Mathf.CeilToInt(GameController.Instance.ship.GetFuelPercent() * 100);
+        float modifiedPercent = _modifiedFuel / GameController.Instance.ship.maxFuel;
+        int modifiedPercentInt = Mathf.CeilToInt(modifiedPercent * 100);
         
-        fuelPercent *= 10f;
+        _fuelText.text = $"{fuelPercentInt}%\n({modifiedPercentInt}%)";
+        _distanceText.text = $"{fuelPercentInt * MaxFuelDistance} light years\n({modifiedPercentInt * MaxFuelDistance})";
+        
+        modifiedPercent *= 10f;
         foreach (FuelContent fuelContent in _fuelBars)
         {
-            fuelContent.UpdateUI(Mathf.Clamp(fuelPercent, 0f, 1f), applyChanges);
-            fuelPercent -= 1f;
+            fuelContent.UpdateUI(Mathf.Clamp(modifiedPercent, 0f, 1f), applyChanges);
+            modifiedPercent -= 1f;
         }
         
         SpaceportWorkshopController.instance.UpdateTotalFuelCostUI();
