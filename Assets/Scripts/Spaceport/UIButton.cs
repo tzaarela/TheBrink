@@ -58,12 +58,14 @@ public class UIButton : UITrigger
     
     public override void OnPointerExit(PointerEventData eventData)
     {
+        base.OnPointerExit(eventData);
         SetButtonState(ButtonState.Normal);
         _mouseOver = false;
     }
     
     public override void OnPointerUp(PointerEventData eventData)
     {
+        base.OnPointerUp(eventData);
         if (!_mouseOver)
             return;
         
@@ -75,6 +77,8 @@ public class UIButton : UITrigger
 
     public override void OnPointerDown(PointerEventData eventData)
     {
+        base.OnPointerDown(eventData);
+        Debug.Log($"{name} PointerDown - HOLD!?");
         if (!_mouseOver || !Input.GetMouseButton(0))
             return;
         

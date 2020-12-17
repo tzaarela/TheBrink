@@ -13,10 +13,16 @@ public class FuelPanel : MonoBehaviour
     [SerializeField] private TMP_Text _distanceText;
     
     private const int MaxFuelDistance = 10000;
-    private const int MinFuelModifier = 20;
+    private const int MinFuelModifier = 10;
     private const int CashPerFuel = 10;
 
     private float _modifiedFuel;
+
+    private float _holdTimer;
+    private const float MaxHoldTime = 0.05f;
+    private const float HoldTimeStartDelay = 0.3f;
+    private bool _holdButton;
+    private bool _refuel;
 
     private void Awake()
     {
@@ -25,6 +31,22 @@ public class FuelPanel : MonoBehaviour
     private void Start()
     {
         Init();
+    }
+
+    public void Update()
+    {
+        if (!_holdButton)
+            return;
+
+        _holdTimer += Time.deltaTime;
+        if (_holdTimer >= MaxHoldTime)
+        {
+            _holdTimer = 0f;
+            if (_refuel)
+                Refuel();
+            else
+                Defuel();
+        }
     }
 
     private void Init()
@@ -57,16 +79,26 @@ public class FuelPanel : MonoBehaviour
 
     public void Refuel()
     {
-        // GameController.Instance.ship.ModifyFuel(true);
         _modifiedFuel = Mathf.Clamp(_modifiedFuel + MinFuelModifier, 0f, GameController.Instance.ship.maxFuel);
         UpdateFuelUI(false);
+    }
+    
+    public void StartHold(bool refuel)
+    {
+        _holdButton = true;
+        _holdTimer = -(HoldTimeStartDelay - MaxHoldTime);
+        _refuel = refuel;
     }
 
     public void Defuel()
     {
-        // GameController.Instance.ship.ModifyFuel(false);
         _modifiedFuel = Mathf.Clamp(_modifiedFuel - MinFuelModifier, 0f, GameController.Instance.ship.maxFuel);
         UpdateFuelUI(false);
+    }
+
+    public void StopHold()
+    {
+        _holdButton = false;
     }
 
     public int GetTotalFuelCost()
