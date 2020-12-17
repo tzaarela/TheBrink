@@ -70,4 +70,9 @@ public class Ship : ScriptableObject
     {
         return fuel / maxFuel;
     }
+
+    public int GetCrewCount()
+    {
+        return 99; // TODO DEBUG ONLY
+    }
 }
