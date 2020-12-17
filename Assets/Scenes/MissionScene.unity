@@ -1543,7 +1543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197322431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2740.7874, y: 411.89618, z: -5242.9336}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2547,7 +2547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329082389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4477.6636, y: 1202.7106, z: -5497.1846}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16134,16 +16134,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1078634785}
     m_Modifications:
-    - target: {fileID: 1005160141098367637, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1005160141098367639, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1005160142257685667, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_Camera
@@ -16153,11 +16143,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RadarRoute [Canvas]
-      objectReference: {fileID: 0}
-    - target: {fileID: 1005160142257685670, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}

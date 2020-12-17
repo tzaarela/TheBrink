@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RadarRoute [Canvas].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RadarRoute [Canvas].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Route/Radar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Route/Radar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Route/Radar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Systems/SystemContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -83,10 +92,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24876">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="24876" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -122,6 +131,7 @@
       <workItem from="1608026237357" duration="942000" />
       <workItem from="1608110017544" duration="291000" />
       <workItem from="1608123007942" duration="19948000" />
+      <workItem from="1608199471885" duration="1505000" />
     </task>
     <servers />
   </component>
@@ -144,5 +154,26 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/SystemContent.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Systems/SystemContent.cs" initialLine="31" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="608" />
+              <option value="679" />
+            </startOffsets>
+            <endOffsets>
+              <option value="707" />
+              <option value="705" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

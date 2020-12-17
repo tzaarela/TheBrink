@@ -3,7 +3,11 @@ guid: be9d64738067ac847bc0ab322c81aa78
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ship: {fileID: 11400000, guid: bd50f08c2fd4df340b3529f5093831b8, type: 2}
+  - crew: {fileID: 11400000, guid: 15759ed0fa2eaad4e9c538c5bd3cc0db, type: 2}
+  - transitionController: {fileID: 11400000, guid: 3ef6ba9508b95654bb87fa302fdb3c17,
+      type: 2}
   executionOrder: 100
   icon: {instanceID: 0}
   userData: 
