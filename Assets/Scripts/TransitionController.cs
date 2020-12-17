@@ -7,30 +7,31 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
+    [CreateAssetMenu(fileName = "TranitionController", menuName = "TransitionController")]
     public class TransitionController : ScriptableObject
     {
-        private static TransitionController _instance;
-        public static TransitionController Instance { 
-            get
+        public Canvas mainMenu;
+        public Canvas loginCanvas;
+
+        public void RunTransitionAnimation(GameScene gameScene)
+        {
+            switch (gameScene)
             {
-                if (_instance == null)
-                {
-                    _instance = (TransitionController)CreateInstance(typeof(TransitionController));
-                }
-                
-                return _instance;
+                case GameScene.InMainMenu:
+                    break;
+                case GameScene.InMission:
+                    {
+                        
+                        break;
+                    }
+                case GameScene.InSpaceport:
+                    {
+                        
+                        break;
+                    }
+                default:
+                    break;
             }
-            private set { }
-        }
-
-        public void Awake()
-        {
-           
-        }
-
-        public void RunTransitionAnimation(object animation)
-        {
-            Debug.Log("Running animation........");
         }
     }
 }

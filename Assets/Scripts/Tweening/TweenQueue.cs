@@ -1,0 +1,62 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+public class TweenQueue : MonoBehaviour
+{
+    private Queue<ITweenObject> _queue;
+
+    private bool _tweenQueueRunning;
+
+    private float _timeUntilNextTween;
+
+    public bool TweenQueueIsEmpty { get; private set; }
+
+    private void Start()
+    {
+        _queue = new Queue<ITweenObject>();
+        _tweenQueueRunning = false;
+        _timeUntilNextTween = 0f;
+        TweenQueueIsEmpty = true;
+    }
+
+    public void AddTweenToQueue(ITweenObject tweenObject)
+    {
+        _queue.Enqueue(tweenObject);
+        TweenQueueIsEmpty = false;
+
+        if (_tweenQueueRunning) return;
+
+        _tweenQueueRunning = true;
+        StartCoroutine(RunTweenQueue());
+    }
+
+    private IEnumerator RunTweenQueue()
+    {
+        while (true)
+        {
+            if (_queue.Count == 0)
+            {
+                TweenQueueIsEmpty = true;
+                yield return null;
+            }
+            else
+            {
+                yield return new WaitForSeconds(_timeUntilNextTween);
+                var tween = _queue.Dequeue();
+                tween.ExecuteTween();
+                _timeUntilNextTween = tween.TimeUntilNextTween;
+                yield return new WaitForSeconds(tween.CompletionTime);
+                    
+            }
+        }
+    }
+
+    public void Reset()
+    {
+        _queue = new Queue<ITweenObject>();
+        _tweenQueueRunning = false;
+        TweenQueueIsEmpty = true;
+        StopCoroutine(RunTweenQueue());
+    }
+}
+

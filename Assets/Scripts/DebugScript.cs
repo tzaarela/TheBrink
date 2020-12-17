@@ -10,8 +10,5 @@ public class DebugScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             SceneManager.LoadScene("MainMenuScene");
-
-        if (Input.GetKeyDown(KeyCode.A))
-            TransitionController.Instance.RunTransitionAnimation(null);
     }
 }
