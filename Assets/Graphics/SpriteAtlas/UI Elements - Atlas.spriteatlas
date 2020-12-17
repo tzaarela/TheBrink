@@ -51,7 +51,6 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
-  - {fileID: 21300000, guid: 60f86c806c220cc43a7cd9bd53921c90, type: 3}
   - {fileID: 21300000, guid: cc448b11a68f24bc59595089c5d06f1e, type: 3}
   - {fileID: 21300000, guid: 0f66ef11b3ff742868a9b71248ce95ad, type: 3}
   - {fileID: 21300000, guid: d6ec6e518ae2f4f5cbcd34b063a04a2d, type: 3}
@@ -61,14 +60,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5bc06f920b357434e98ae6a65ffbb24d, type: 3}
   - {fileID: 21300000, guid: fba2b4f2364e0423e8831d7a9232b850, type: 3}
   - {fileID: 21300000, guid: 0ed497336563b5e47a7ef97f5efb6edb, type: 3}
-  - {fileID: 21300000, guid: 2199744357a3ed342a809ea07673344f, type: 3}
   - {fileID: 21300000, guid: 747d45535920e43c0a1bf6d9c6f53183, type: 3}
   - {fileID: 21300000, guid: a478c683518485b4987b916ff74cd8f6, type: 3}
+  - {fileID: 21300000, guid: 23f88ac3ae124490596c2da64c1ae5c7, type: 3}
   - {fileID: 21300000, guid: c2184544714128a49ba58abad5bc0afe, type: 3}
   - {fileID: 21300000, guid: ac7a2a640f9adce47bc34010a03a1b2e, type: 3}
   - {fileID: 21300000, guid: eef71c74599c33740bff8e5979c4ed12, type: 3}
   - {fileID: 21300000, guid: 4bf699842cd6c4843b4015008d10333c, type: 3}
-  - {fileID: 21300000, guid: a0ed8355d22377f4b990386d2d423a75, type: 3}
   - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
   - {fileID: 21300000, guid: 67c603a5f83ef42e7830e3e0db76d701, type: 3}
   - {fileID: 21300000, guid: 1dcb40f5ff3a142b490ae4150e0e46a1, type: 3}
@@ -107,12 +105,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
   - {fileID: 21300000, guid: 1c98103eded9d4431b20bac7c098a690, type: 3}
   - {fileID: 21300000, guid: 1ad0b6ae7758e49988f07e3aa851e87d, type: 3}
-  - {fileID: 21300000, guid: bba9404f5f1b0684daf595edca6beff1, type: 3}
   - {fileID: 21300000, guid: 30f90eff023a53848beee43da5e2bd18, type: 3}
   - {fileID: 21300000, guid: 33a62eff97eaa44c7a89b39c55c5eed4, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShipUI_Portrait1
-  - Encounter
   - left-arrow_10x6_01_white
   - tab-border_13x10_01_selected_Pressed
   - Button_01_8x8
@@ -122,14 +118,13 @@ SpriteAtlas:
   - death-icon
   - Ship_CargoHold
   - 1x1px_white_temp_01 1
-  - CircleShip
   - 8x8_ui-border3-temp_01
   - Circle
+  - RadarClock_01_resized
   - loading circle_gameover
   - _ire_icon
   - _rogressBar
   - ALERT BIG UI_border
-  - RadarBackground
   - _ine
   - tab-border_13x13_01_Highlight
   - ShipUI_Door_Active
@@ -168,7 +163,6 @@ SpriteAtlas:
   - 8x8_ui-border-temp_01
   - circle_32x32-bw_temp_01
   - tab-border_13x10_01_selected
-  - CircleLine
   - ProgressBar
   - ShipIcon_105x120
   m_Tag: UI Elements - Atlas

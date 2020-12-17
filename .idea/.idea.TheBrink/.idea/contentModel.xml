@@ -189,6 +189,14 @@
             <e p="SystemType.cs" t="Include" />
           </e>
           <e p="TransitionController.cs" t="Include" />
+          <e p="Tweening" t="Include">
+            <e p="Animations" t="Include">
+              <e p="TextSequence.cs" t="Include" />
+              <e p="TextSequenceAnimator.cs" t="Include" />
+            </e>
+            <e p="ITweenObject.cs" t="Include" />
+            <e p="TweenQueue.cs" t="Include" />
+          </e>
         </e>
         <e p="TimeCounter.cs" t="Include" />
       </e>
