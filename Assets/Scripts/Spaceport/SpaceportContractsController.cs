@@ -13,6 +13,7 @@ public class SpaceportContractsController : SpaceportPanelController
 
     [SerializeField] private ContractContent _contractContent;
     private int _activeContractIndex = -1;
+    private bool _accepted;
 
     protected override void Awake()
     {
@@ -71,8 +72,9 @@ public class SpaceportContractsController : SpaceportPanelController
     public void ViewContract(int index)
     {
         SetAllPanels(false);
-        
-        _contractContent.SetupContract(_missionContracts[index], _activeContractIndex == index);
+
+        _activeContractIndex = index;
+        _contractContent.SetupContract(_missionContracts[index], _accepted);
         
         SetPanel((int) ContractsPanelType.Info, true);
         SetPanel((int) ContractsPanelType.GalaxyMap, true);
@@ -85,11 +87,11 @@ public class SpaceportContractsController : SpaceportPanelController
         SetPanel((int) ContractsPanelType.List, true);
     }
 
-    public void AcceptContract(int index)
+    public void AcceptContract()
     {
         if (_contractContent.RequirementsMet())
         {
-            _activeContractIndex = index;
+            _accepted = true;
             UpdateContractsDescriptionUI();
             Show();
         }
@@ -107,6 +109,7 @@ public class SpaceportContractsController : SpaceportPanelController
     public void AbortContract()
     {
         _activeContractIndex = -1;
+        _accepted = false;
         UpdateContractsDescriptionUI();
         Show();
     }

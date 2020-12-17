@@ -878,6 +878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2912222242543479391}
+  - component: {fileID: 4331134579376711638}
   m_Layer: 5
   m_Name: CrewMember-Barrack [Panel]
   m_TagString: Untagged
@@ -907,6 +908,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 740, y: 215}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &4331134579376711638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2912222242543479360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaf1c96afe8d45008f7b84cf2a5d863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _crewData: {fileID: 0}
+  _portrait: {fileID: 7930853129045895954}
+  _name: {fileID: 178792780785638684}
+  _age: {fileID: 7918710785791652256}
+  _gender: {fileID: 1159452174709878723}
+  _quirk: {fileID: 1483056739323068580}
+  _length: {fileID: 4424916844535741028}
+  _profession: {fileID: 8114149044575602878}
+  _bloodType: {fileID: 6247014753176702425}
 --- !u!1 &2912222243217193758
 GameObject:
   m_ObjectHideFlags: 0

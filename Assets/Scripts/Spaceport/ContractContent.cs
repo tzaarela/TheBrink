@@ -63,6 +63,10 @@ public class ContractContent : MonoBehaviour
         
         _routeLength.text = $"{contract.routeLength.ToString("N0")}";
         _routeTime.text = $"{contract.routeTime.ToString("N0")}";
+        
+        _buttons[(int) ContractButtonType.Accept].SetActive(!accepted);
+        _buttons[(int) ContractButtonType.Decline].SetActive(!accepted);
+        _buttons[(int) ContractButtonType.Abort].SetActive(accepted);
     }
 
     public bool RequirementsMet()

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   position: 0
-  fuel: 568
+  fuel: 848
   maxFuel: 1000
   capacitor: 1000
   maxCapacitor: 1000
   capacitorBottleNeck: 0
-  cash: 1000000
+  cash: 997200
   roomData: {fileID: 11400000, guid: 8fb5ec5723b4d2d4896b81c981ae577a, type: 2}
   _defaultSpeed: 10
   _defaultPosition: 0
-  _defaultFuel: 568
+  _defaultFuel: 789
   _defaultCapacitor: 1000
   _defaultCash: 1000000
   _beginWithDefault: 1

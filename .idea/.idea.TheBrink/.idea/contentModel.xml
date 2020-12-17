@@ -153,11 +153,15 @@
             <e p="ShipController.cs" t="Include" />
           </e>
           <e p="Spaceport" t="Include">
+            <e p="BloodType.cs" t="Include" />
             <e p="ButtonState.cs" t="Include" />
             <e p="ContractButtonType.cs" t="Include" />
             <e p="ContractContent.cs" t="Include" />
+            <e p="EmployeeContent.cs" t="Include" />
+            <e p="EmployeeContractContent.cs" t="Include" />
             <e p="FuelContent.cs" t="Include" />
             <e p="FuelPanel.cs" t="Include" />
+            <e p="GenderType.cs" t="Include" />
             <e p="MissionContract.cs" t="Include" />
             <e p="RepairContent.cs" t="Include" />
             <e p="ShipHighlightColorType.cs" t="Include" />

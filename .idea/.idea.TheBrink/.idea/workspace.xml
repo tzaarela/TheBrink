@@ -20,18 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractButtonType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractButtonType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Main Menu Font.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Main Menu Font.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Contract [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Contract [Panel].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CrewMember-Barrack [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CrewMember-Barrack [Panel].prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Eddie.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Eddie.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Jimmy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Jimmy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Johan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Johan.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportTabController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportTabController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportPanelController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,6 +55,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FCFB6FCD-3E9A-4E12-8C14-260F742E2185/ff/20b4ca42/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" root0="FORCE_HIGHLIGHTING" />
@@ -65,22 +69,27 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Route/Radar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Systems/SystemContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ShipHighlightColorType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportTabController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContract.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractButtonType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/GenderType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -147,7 +156,7 @@
       <workItem from="1608026237357" duration="942000" />
       <workItem from="1608110017544" duration="291000" />
       <workItem from="1608123007942" duration="19948000" />
-      <workItem from="1608199471885" duration="15635000" />
+      <workItem from="1608199471885" duration="23417000" />
     </task>
     <servers />
   </component>
