@@ -21,6 +21,7 @@ public class FuelPanel : MonoBehaviour
     private float _holdTimer;
     private const float MaxHoldTime = 0.05f;
     private const float HoldTimeStartDelay = 0.3f;
+    private int holdCounter; // TODO Make holding down count faster with time.
     private bool _holdButton;
     private bool _refuel;
 
@@ -59,15 +60,21 @@ public class FuelPanel : MonoBehaviour
     {
         if (applyChanges)
             GameController.Instance.ship.fuel = _modifiedFuel;
+        
+        
     
         int fuelPercentInt = Mathf.CeilToInt(GameController.Instance.ship.GetFuelPercent() * 100);
         float modifiedPercent = _modifiedFuel / GameController.Instance.ship.maxFuel;
         int modifiedPercentInt = Mathf.CeilToInt(modifiedPercent * 100);
         
-        _fuelText.text = $"{fuelPercentInt}%\n({modifiedPercentInt}%)";
-        _distanceText.text = $"{fuelPercentInt * MaxFuelDistance} light years\n({modifiedPercentInt * MaxFuelDistance})";
+        Debug.Log($"fuelPercentInt: {fuelPercentInt}\n" +
+                            $"modifiedPercent: {modifiedPercent}\n" +
+                            $"modifiedPercentInt: {modifiedPercentInt}");
         
-        modifiedPercent *= 10f;
+        _fuelText.text = $"{fuelPercentInt}%\n({modifiedPercentInt}%)";
+        _distanceText.text = $"{Mathf.CeilToInt(GameController.Instance.ship.GetFuelPercent() * MaxFuelDistance)} light years\n({modifiedPercent * MaxFuelDistance})";
+        
+        modifiedPercent *= 18f;
         foreach (FuelContent fuelContent in _fuelBars)
         {
             fuelContent.UpdateUI(Mathf.Clamp(modifiedPercent, 0f, 1f), applyChanges);
