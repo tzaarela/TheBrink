@@ -20,39 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BridgeControls.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BridgeControls.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Menu Thinner Font.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Menu Thinner Font.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Highlight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Highlight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Pressed.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x10_01_selected_Pressed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Highlight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Highlight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Pressed.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Element/tab-border_13x13_01_Pressed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fuel-Stack [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fuel-Stack [Panel].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Repair-Part [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Repair-Part [Panel].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/BridgeData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/BridgeData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdLeftData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdLeftData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdRightData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CargoholdRightData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CorridorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/CorridorData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/LifeSupportData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/LifeSupportData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainBatteryData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainBatteryData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainFrameData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MainFrameData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MedbayData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/MedbayData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/ReactorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/RoomData/ReactorData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +49,13 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -115,10 +83,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7801">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7801" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -153,7 +121,7 @@
       <workItem from="1607941223176" duration="19234000" />
       <workItem from="1608026237357" duration="942000" />
       <workItem from="1608110017544" duration="291000" />
-      <workItem from="1608123007942" duration="19621000" />
+      <workItem from="1608123007942" duration="19948000" />
     </task>
     <servers />
   </component>
