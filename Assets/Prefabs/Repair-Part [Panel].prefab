@@ -129,7 +129,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bridge
+  m_text: Cargo Hold R.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06f5a9cc0818b471b8a37ffe0819cfa8, type: 2}
   m_sharedMaterial: {fileID: 3154492308259162985, guid: 06f5a9cc0818b471b8a37ffe0819cfa8,
@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  _name: 
   _roomData: {fileID: 0}
   _selectionObject: {fileID: 1530274360943117893}
   _roomName: {fileID: 54105802109991120}
@@ -628,7 +629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: 0}
+  m_AnchoredPosition: {x: 155, y: 0}
   m_SizeDelta: {x: 43, y: 33}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1306267580106241718
@@ -777,11 +778,11 @@ RectTransform:
   m_Father: {fileID: 1248372092276852779}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 170, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 260, y: 32}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &3043448590951462418
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -855,7 +856,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 430, y: 40}
+  m_SizeDelta: {x: 464, y: 40}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &4696435567302068949
 GameObject:

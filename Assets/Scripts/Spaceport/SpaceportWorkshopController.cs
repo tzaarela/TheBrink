@@ -66,21 +66,21 @@ public class SpaceportWorkshopController : SpaceportPanelController
     public void UpdateTotalRepairCostUI()
     {
         int cost = GetAllRoomCost(true);
-        _repairsCostText.text = $"${cost}";
+        _repairsCostText.text = $"${-cost}";
         UpdateTotalCostUI();
     }
 
     public void UpdateTotalFuelCostUI()
     {
         int cost = _fuelPanel.GetTotalFuelCost();
-        _fuelCostText.text = $"${cost}";
+        _fuelCostText.text = $"${-cost}";
         UpdateTotalCostUI();
     }
 
     public void UpdateTotalCostUI()
     {
         int cost = GetAllRoomCost(true) + _fuelPanel.GetTotalFuelCost();
-        _totalCostText.text = $"${cost}";
+        _totalCostText.text = $"${-cost}";
     }
 
     private int GetAllRoomCost(bool selected)
