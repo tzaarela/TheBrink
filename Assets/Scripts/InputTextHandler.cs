@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class InputTextHandler : MonoBehaviour
 {
-    InputField input;
+    public InputField input;
 
     private void Awake()
     {
