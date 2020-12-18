@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25853490263f0ba44841a23a80e2051d, type: 3}
   m_Name: Ship
   m_EditorClassIdentifier: 
-  speed: 10
-  position: 0
-  fuel: 848
+  speed: 0
+  position: 84.2556
+  fuel: -1
   maxFuel: 1000
   capacitor: 1000
   maxCapacitor: 1000
   capacitorBottleNeck: 0
-  cash: 997200
+  cash: 1000000
+  missionContract: {fileID: 0}
   roomData: {fileID: 11400000, guid: 8fb5ec5723b4d2d4896b81c981ae577a, type: 2}
   _defaultSpeed: 10
   _defaultPosition: 0
-  _defaultFuel: 789
+  _defaultFuel: 2000
   _defaultCapacitor: 1000
   _defaultCash: 1000000
   _beginWithDefault: 1

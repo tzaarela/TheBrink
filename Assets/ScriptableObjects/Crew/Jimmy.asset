@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crewName: Jimmy
   health: 100
-  repairSkill: 3
+  repairSkill: 10
   sprite: {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
   profession: 1
   age: 32

@@ -86,7 +86,7 @@ public class Hazard
     /// </summary>
     public void FireConsumes()
     {
-        _hazardRoom.oxygenLevel -= SeverityAmount / 100;
+        _hazardRoom.oxygenLevel -= SeverityAmount / 50;
     }
 
     /// <summary>
