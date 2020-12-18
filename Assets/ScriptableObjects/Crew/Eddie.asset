@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crewName: Eddie
   health: 100
-  repairSkill: 10
+  repairSkill: 50
   sprite: {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
   profession: 2
   age: 32

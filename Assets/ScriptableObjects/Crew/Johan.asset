@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crewName: Johan
   health: 99
-  repairSkill: 10
+  repairSkill: 50
   sprite: {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
   profession: 0
   age: -1
