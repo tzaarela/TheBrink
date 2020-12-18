@@ -2,5 +2,6 @@
 {
     MainMenu,
     Spaceport,
-    Mission
+    Mission,
+    MissionAmbient
 }

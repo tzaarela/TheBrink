@@ -48,9 +48,9 @@ public class SpaceportUIController : MonoBehaviour
 
     private void Init()
     {
-        // ShowPanel(SpaceportTabType.Contracts);
+        ShowPanel(SpaceportTabType.Contracts);
         // ShowPanel(SpaceportTabType.Barrack);   // TODO Debug Only.
-        ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
+        // ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
         UpdateCash(0);
         _captainName.text = $"Ship Name: The Brink\n" +
                             $"Captain: {GameController.Instance.ship.captainName}\n" +

@@ -53,6 +53,7 @@ public class GameController : ScriptableObject
         {
             case GameScene.MainMenu:
                 {
+                    AudioController.instance.StopAllSound();
                     AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
                     SceneManager.LoadScene("MainMenuScene");
                     break;
@@ -66,7 +67,9 @@ public class GameController : ScriptableObject
 
                     op.completed += (AsyncOperation o) =>
                     {
+                        AudioController.instance.StopAllSound();
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
+                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
                         
                         if(!_debuging)
@@ -89,6 +92,7 @@ public class GameController : ScriptableObject
                 }
 
             case GameScene.Start:
+                AudioController.instance.StopAllSound();
                 AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
                 break;
             default:
@@ -98,6 +102,7 @@ public class GameController : ScriptableObject
 
     private void HandleLoginComplete()
     {
+        AudioController.instance.StopAllSound();
         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Spaceport, 0.1f);
         SceneManager.LoadScene("SpaceportScene");
         

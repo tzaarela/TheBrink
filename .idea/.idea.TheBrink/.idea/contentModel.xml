@@ -86,9 +86,12 @@
             <e p="BGMClipType.cs" t="Include" />
             <e p="SFXClipType.cs" t="Include" />
           </e>
-          <e p="BridgeControls.cs" t="Include" />
           <e p="Command.cs" t="Include" />
           <e p="ConsoleController.cs" t="Include" />
+          <e p="Controls" t="Include">
+            <e p="BridgeControls.cs" t="Include" />
+            <e p="ReactorControls.cs" t="Include" />
+          </e>
           <e p="Crew" t="Include">
             <e p="Crew.cs" t="Include" />
             <e p="CrewController.cs" t="Include" />
@@ -197,6 +200,7 @@
           </e>
           <e p="T.cs" t="Include" />
           <e p="TimeCounter.cs" t="Include" />
+          <e p="ToggleButton.cs" t="Include" />
           <e p="Tweening" t="Include">
             <e p="Animations" t="Include">
               <e p="TextPrint.cs" t="Include" />
