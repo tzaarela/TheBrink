@@ -35,5 +35,6 @@ MonoBehaviour:
   threatPercent: 50
   alienLevel: -1
   pirateLevel: 3
+  encounterAmount: 100
   routeLength: 1000
   routeTime: 150

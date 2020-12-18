@@ -17,6 +17,14 @@ public class MissionContract : ScriptableObject
     public int threatPercent;
     public int alienLevel;
     public int pirateLevel;
+    public int encounterAmount;
     public int routeLength;
     public int routeTime;
+    public Route route;
+
+    private void OnEnable()
+    {
+        route = new Route(routeLength, encounterAmount, pirateLevel);
+    }
+
 }

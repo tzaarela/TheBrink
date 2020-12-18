@@ -91,6 +91,7 @@ public class SpaceportContractsController : SpaceportPanelController
     {
         if (_contractContent.RequirementsMet())
         {
+            GameController.Instance.ship.missionContract = _missionContracts[_activeContractIndex];
             _accepted = true;
             UpdateContractsDescriptionUI();
             Show();
@@ -108,6 +109,7 @@ public class SpaceportContractsController : SpaceportPanelController
 
     public void AbortContract()
     {
+        GameController.Instance.ship.missionContract = null;
         _activeContractIndex = -1;
         _accepted = false;
         UpdateContractsDescriptionUI();

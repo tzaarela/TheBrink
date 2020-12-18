@@ -9,7 +9,7 @@ public class Radar : MonoBehaviour
     [SerializeField]
     GameObject enemyEncounterPrefab;
     
-    [SerializeField] private RectTransform routeLine;
+    private RectTransform routeLine;
     private RectTransform radarTransform;
     private float routeLength;
 
@@ -42,8 +42,8 @@ public class Radar : MonoBehaviour
 
     public void CreateRouteLine()
     {
-        // routeLine = transform.Find("RouteLine").GetComponent<RectTransform>();
-        routeLine.sizeDelta = new Vector2(35, routeLength * RadarController.Instance.RouteLengthMultiplier) / 2;
+        routeLine = transform.Find("RouteLine").GetComponent<RectTransform>();
+        routeLine.sizeDelta = new Vector2(100, routeLength * RadarController.Instance.RouteLengthMultiplier) / 2;
 
         var encounters = MissionController.Instance.Route.EncountersOnRoute;
 

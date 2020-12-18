@@ -170,7 +170,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7908057}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -10276,8 +10276,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnPoint
       value: 
-      objectReference: {fileID: 5047853793196236512, guid: 3881d78841c274137b3536bd0b7b25e0,
-        type: 3}
+      objectReference: {fileID: 517153453}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: repairSkill
@@ -11351,8 +11350,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnPoint
       value: 
-      objectReference: {fileID: 5047853793812876098, guid: 3881d78841c274137b3536bd0b7b25e0,
-        type: 3}
+      objectReference: {fileID: 264276755}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: repairSkill
@@ -15615,8 +15613,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnPoint
       value: 
-      objectReference: {fileID: 5047853792274083345, guid: 3881d78841c274137b3536bd0b7b25e0,
-        type: 3}
+      objectReference: {fileID: 2082764805}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: repairSkill
@@ -16147,6 +16144,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1078634785}
     m_Modifications:
+    - target: {fileID: 1005160141098367637, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005160141098367639, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005160141898371598, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1005160142257685667, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_Camera
@@ -16156,6 +16168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RadarRoute [Canvas]
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005160142257685670, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
@@ -16260,6 +16277,16 @@ PrefabInstance:
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978501108679377583, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051194911672182309, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

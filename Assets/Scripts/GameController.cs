@@ -65,6 +65,7 @@ public class GameController : ScriptableObject
                     op.completed += (AsyncOperation o) =>
                     {
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
+                        //MissionController.Instance.Route = ship.contract.route
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
                         CrewController.Instance.CreateShipCrew(crew);
