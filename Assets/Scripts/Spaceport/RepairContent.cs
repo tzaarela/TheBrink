@@ -17,13 +17,17 @@ public class RepairContent : UITrigger
     [SerializeField] private TMP_Text _roomName;
     [SerializeField] private TMP_Text _roomCost;
 
+    [SerializeField] private Image _roomHighlight;
     [SerializeField] private Image _fillBar;
     [SerializeField] private GameObject _warningIcon;
 
     [SerializeField] private Color _normalColor;
     [SerializeField] private Color _warningColor;
 
-    private float _warningLimit = 0.4f;
+    [SerializeField] private Color[] _highlightColors;
+
+    private const float WarningLimit = 0.7f;
+    private const float DangerLimit = 0.3f;
 
     private bool _isSelected;
     public bool IsSelected
@@ -84,10 +88,36 @@ public class RepairContent : UITrigger
 
     private void UpdateUI()
     {
-        _fillBar.fillAmount = GetHealthPercent();
-        _warningIcon.SetActive(_fillBar.fillAmount <= _warningLimit);
-        _fillBar.color = (_warningIcon.activeSelf) ? _warningColor : _normalColor;
+        float healthPercent = GetHealthPercent();
+        _fillBar.fillAmount = healthPercent;
+        _warningIcon.SetActive(_fillBar.fillAmount <= DangerLimit);
+        // _fillBar.color = (_warningIcon.activeSelf) ? _warningColor : _normalColor;
         _roomCost.text = "$" + GetCost().ToString("N0");
+
+        if (healthPercent <= DangerLimit)
+        {
+            _roomHighlight.color = _highlightColors[(int) ShipHighlightColorType.Danger];
+            _fillBar.color = _highlightColors[(int) ShipHighlightColorType.Danger];
+        }
+        else if (healthPercent <= WarningLimit)
+        {
+            _roomHighlight.color = _highlightColors[(int) ShipHighlightColorType.Warning];
+            _fillBar.color = _highlightColors[(int) ShipHighlightColorType.Warning];
+        }
+        else if (healthPercent < 1f)
+        {
+            _roomHighlight.color = _highlightColors[(int) ShipHighlightColorType.Fine];
+            _fillBar.color = _highlightColors[(int) ShipHighlightColorType.Fine];
+            // _fillBar.color = _highlightColors[(int) ShipHighlightColorType.Fine];
+        }
+        else
+        {
+            _roomHighlight.color = _normalColor;
+            _roomHighlight.color = new Color(_roomHighlight.color.r, _roomHighlight.color.g, _roomHighlight.color.b, 0.4f);
+            _fillBar.color = _normalColor;
+        }
+
+        _fillBar.color = new Color(_fillBar.color.r, _fillBar.color.g, _fillBar.color.b, 1f);
     }
 
     public int GetCost()

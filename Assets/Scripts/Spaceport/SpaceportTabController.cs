@@ -78,7 +78,7 @@ public class SpaceportTabController : MonoBehaviour
         _texts[(int)tab.tabType].color = _colors[(int)TabState.Active * 3];
 
         if (tab.tabType == SpaceportTabType.Contracts)
-            SpaceportContractsController.instance.SHOW();
+            SpaceportContractsController.instance.Show();
     }
 
     public void SetButtonState(SpaceportTabObject tab, ButtonState buttonState)

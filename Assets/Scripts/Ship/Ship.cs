@@ -65,4 +65,14 @@ public class Ship : ScriptableObject
     {
         CrewController.Instance.crewMembers[index] = crewMember;
     }
+
+    public float GetFuelPercent()
+    {
+        return fuel / maxFuel;
+    }
+
+    public int GetCrewCount()
+    {
+        return 99; // TODO DEBUG ONLY
+    }
 }

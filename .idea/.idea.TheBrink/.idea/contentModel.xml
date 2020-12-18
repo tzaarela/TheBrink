@@ -114,6 +114,7 @@
           </e>
           <e p="GameController.cs" t="Include" />
           <e p="GameScene.cs" t="Include" />
+          <e p="InputTextHandler.cs" t="Include" />
           <e p="InterfacePanels" t="Include">
             <e p="ContextMenuController.cs" t="Include" />
             <e p="ContextMenuItem.cs" t="Include" />
@@ -152,10 +153,18 @@
             <e p="ShipController.cs" t="Include" />
           </e>
           <e p="Spaceport" t="Include">
+            <e p="BloodType.cs" t="Include" />
             <e p="ButtonState.cs" t="Include" />
+            <e p="ContractButtonType.cs" t="Include" />
+            <e p="ContractContent.cs" t="Include" />
+            <e p="EmployeeContent.cs" t="Include" />
+            <e p="EmployeeContractContent.cs" t="Include" />
             <e p="FuelContent.cs" t="Include" />
             <e p="FuelPanel.cs" t="Include" />
+            <e p="GenderType.cs" t="Include" />
+            <e p="MissionContract.cs" t="Include" />
             <e p="RepairContent.cs" t="Include" />
+            <e p="ShipHighlightColorType.cs" t="Include" />
             <e p="SpaceportBarrackController.cs" t="Include" />
             <e p="SpaceportContract.cs" t="Include" />
             <e p="SpaceportContractsController.cs" t="Include" />
@@ -188,9 +197,18 @@
             <e p="SystemTabController.cs" t="Include" />
             <e p="SystemType.cs" t="Include" />
           </e>
+          <e p="T.cs" t="Include" />
+          <e p="TimeCounter.cs" t="Include" />
           <e p="TransitionController.cs" t="Include" />
+          <e p="Tweening" t="Include">
+            <e p="Animations" t="Include">
+              <e p="TextSequence.cs" t="Include" />
+              <e p="TextSequenceAnimator.cs" t="Include" />
+            </e>
+            <e p="ITweenObject.cs" t="Include" />
+            <e p="TweenQueue.cs" t="Include" />
+          </e>
         </e>
-        <e p="TimeCounter.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
