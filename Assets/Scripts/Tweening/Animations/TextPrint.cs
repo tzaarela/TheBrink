@@ -16,7 +16,6 @@ namespace Assets.Scripts.Tweening.Animations
 
         private Text uiText;
         private string endValue;
-        private float timeUntilNextTween;
 
         public void Awake()
         {
@@ -28,11 +27,6 @@ namespace Assets.Scripts.Tweening.Animations
         public float CompletionTime
         {
             get { return timeInSeconds + delayInSeconds; }
-        }
-
-        public float TimeUntilNextTween
-        {
-            get { return timeUntilNextTween; }
         }
 
         public Tween ExecuteTween()

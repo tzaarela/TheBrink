@@ -8,7 +8,7 @@ using UnityEngine;
 public class SystemController : ScriptableObject
 {
     [Header("BridgeSystem")]
-
+    public float estimatedTimeToArrival = 0f;
     [Header("MainframeSystem")]
 
     [Header("MainBatterySystem")]
@@ -56,7 +56,7 @@ public class SystemController : ScriptableObject
         ShipSystems[1] = new MainframeSystem(ship, rooms);
         ShipSystems[2] = new MainBatterySystem(rooms);
         ShipSystems[3] = new LifeSupportSystem(rooms);
-        ShipSystems[4] = new BridgeSystem(ship, rooms);
+        ShipSystems[4] = new BridgeSystem(ship, rooms, this);
         ShipSystems[5] = new MedbaySystem(rooms);
         ShipSystems[6] = new CargoHoldSystem(rooms);
         ShipSystems[7] = new CorridorSystem(rooms);

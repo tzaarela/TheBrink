@@ -22,7 +22,7 @@ public class MissionController : MonoBehaviour
         get 
         { 
             if(route == null)
-                route = new Route(1000, 10, 10);
+                route = new Route(1000, 100, 10);
             return route; 
         }
         set { route = value; }

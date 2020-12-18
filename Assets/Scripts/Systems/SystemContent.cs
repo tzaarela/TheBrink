@@ -41,8 +41,8 @@ namespace Assets.Scripts.Systems
         //If on, turn off, if off turn on.
         public void ToggleSystemPower()
         {
-            
-            shipSystem.SystemState = SystemState.IsOn;
+
+            shipSystem.SystemState = shipSystem.SystemState == SystemState.IsOn ? SystemState.IsOff : SystemState.IsOn;
         }
     }
 }

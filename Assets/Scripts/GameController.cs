@@ -41,8 +41,6 @@ public class GameController : ScriptableObject
         // TODO DEBUG ONLY
         if (_debuging)
             SwitchScene(_beginDebugScene);
-        // SwitchScene(GameScene.InMission);
-
         else
             SwitchScene(GameScene.Start);
     }
@@ -70,7 +68,10 @@ public class GameController : ScriptableObject
                     {
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
-                        MissionController.Instance.Route = ship.missionContract.route;
+
+                        if(!_debuging)
+                            MissionController.Instance.Route = ship.missionContract.route;
+
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
                         CrewController.Instance.CreateShipCrew(crew);

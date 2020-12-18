@@ -32,11 +32,13 @@ public class BridgeSystem : ShipSystem
 
     private Room systemRoom;
     private List<Room> rooms;
+    private SystemController systemController;
 
-    public BridgeSystem(Ship ship, List<Room> rooms)
+    public BridgeSystem(Ship ship, List<Room> rooms, SystemController systemController)
     {
         this.ship = ship;
         this.rooms = rooms;
+        this.systemController = systemController;
         SystemState = SystemState.IsOn;
         SystemType = SystemType.Bridge;
 
@@ -61,7 +63,9 @@ public class BridgeSystem : ShipSystem
 
     public float UpdateETA()
     {
-        return (((route.Length - route.ShipPosition) / ship.speed) * MissionController.TICK_TIMER_MAX);
+        float eta = ((route.Length - route.ShipPosition) / ship.speed);
+        systemController.estimatedTimeToArrival = eta;
+        return eta; 
     }
 
     public float UpdateTimeToRetro()
