@@ -30,7 +30,7 @@ public class GameController : ScriptableObject
         } 
     }
 
-    private GameScene gameScene = GameScene.MainMenu;
+    private GameScene gameScene = GameScene.Start;
 
     public void Init(Ship ship, Crew crew)
     {
@@ -68,13 +68,14 @@ public class GameController : ScriptableObject
                     {
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
-
+                        
                         if(!_debuging)
                             MissionController.Instance.Route = ship.missionContract.route;
 
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
                         CrewController.Instance.CreateShipCrew(crew);
+
                     };
 
                     break;

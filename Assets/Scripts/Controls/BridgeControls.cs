@@ -18,6 +18,6 @@ public class BridgeControls : MonoBehaviour
 
     void Update()
     {
-        etaValue.text = Convert.ToInt32(systemController.estimatedTimeToArrival).ToString();
+        //etaValue.text = Convert.ToInt32(systemController.estimatedTimeToArrival).ToString();
     }
 }

@@ -47,7 +47,9 @@ public class TextSequence : MonoBehaviour
     IEnumerator WaitForInput()
     {
         yield return new WaitUntil(isEnterPressed);
-            onComplete.Invoke();
+
+        GameController.Instance.ship.captainName = inputTextHandler.input.text;
+        onComplete.Invoke();
     }
 
     public bool isEnterPressed()
