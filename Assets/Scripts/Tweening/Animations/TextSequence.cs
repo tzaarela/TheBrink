@@ -1,43 +1,59 @@
-﻿using DG.Tweening;
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+using Assets.Scripts.Tweening.Animations;
+using System;
+using DG.Tweening;
 
-
-namespace Assets.Scripts.Tweening.Animations
+public class TextSequence : MonoBehaviour 
 {
-    [Serializable]
-    public class TextSequence : MonoBehaviour, ITweenObject
+    public List<TextPrint> textPrints;
+    public InputTextHandler inputTextHandler;
+    public Action onComplete;
+    public bool isExecuted;
+
+    private Sequence sequence;
+
+    private void Awake()
     {
-        public float timeInSeconds;
-        public float delayInSeconds;
+        sequence = DOTween.Sequence();
+        if (inputTextHandler != null)
+            sequence.onComplete += () => ExecuteInput();
+        else
+            sequence.onComplete += () => onComplete.Invoke();
+    }
 
-        private Text uiText;
-        private string endValue;
-        private float timeUntilNextTween;
+    public void AddTweens(Sequence sequence)
+    {
+        textPrints.ForEach(x => sequence.Append(x.ExecuteTween()));
 
-        public void Start()
-        {
-            uiText = GetComponent<Text>();
-            endValue = uiText.text;
-            uiText.text = "";
-        }
+        sequence.Play();
+    }
 
-        public float CompletionTime
-        {
-            get { return timeInSeconds + delayInSeconds; }
-        }
+    public void ExecuteSequence()
+    {
+        gameObject.SetActive(true);
+        isExecuted = true;
+        AddTweens(sequence);
+    }
 
-        public float TimeUntilNextTween
-        {
-            get { return timeUntilNextTween; }
-        }
+    public void ExecuteInput()
+    {
+        inputTextHandler.ActivateInputField();
+        StartCoroutine(WaitForInput());
+    }
 
-        public void ExecuteTween()
-        {
-            uiText.DOText(endValue, timeInSeconds).SetDelay(delayInSeconds);
-        }
+    IEnumerator WaitForInput()
+    {
+        yield return new WaitUntil(isEnterPressed);
+            onComplete.Invoke();
+    }
+
+    public bool isEnterPressed()
+    {
+        return Input.GetKeyDown(KeyCode.Return);
     }
 }
+

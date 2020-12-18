@@ -1,5 +1,7 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.Crew;
+using Assets.Scripts.Tweening.Animations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +14,8 @@ public class GameController : ScriptableObject
 
     public Ship ship;
     public Crew crew;
-    public TransitionController transitionController;
+
+    private Action onTransitionComplete;
 
     public GameScene GameScene { get => gameScene; 
         set 
@@ -32,11 +35,11 @@ public class GameController : ScriptableObject
         }
     }
 
-    public void Init(Ship ship, Crew crew, TransitionController transitionController)
+    public void Init(Ship ship, Crew crew)
     {
         this.ship = ship;
         this.crew = crew;
-        this.transitionController = transitionController;
+        
 
         //Debug.
         //SwitchScene(GameScene.InMission);
@@ -44,20 +47,18 @@ public class GameController : ScriptableObject
 
     public void SwitchScene(GameScene gameScene)
     {
+        TransitionController transitionController = TransitionController.Instance;
+
         switch (gameScene)
         {
             case GameScene.InMainMenu:
                 {
                     SceneManager.LoadScene("MainMenuScene");
-                    transitionController.RunTransitionAnimation(gameScene);
                     break;
 
                 }
             case GameScene.InMission:
                 {
-                    
-                    transitionController.RunTransitionAnimation(gameScene);
-
                     var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
 
                     AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
@@ -70,17 +71,22 @@ public class GameController : ScriptableObject
                         CrewController.Instance.CreateShipCrew(crew);
                     };
 
-
                     break;
                 }
             case GameScene.InSpaceport:
                 {
-                    SceneManager.LoadScene("SpaceportScene");
-                    transitionController.RunTransitionAnimation(gameScene);
+                    onTransitionComplete += HandleLoginComplete;
+                    transitionController.PlayLogin(onTransitionComplete);
+
                     break;
                 }
             default:
                 break;
         }
+    }
+
+    private void HandleLoginComplete()
+    {
+        SceneManager.LoadScene("SpaceportScene");
     }
 }
