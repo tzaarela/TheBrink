@@ -69,7 +69,7 @@ public class SpaceportUIController : MonoBehaviour
 
     public void Depart()
     {
-        GameController.Instance.GameScene = GameScene.InMission;
+        GameController.Instance.GameScene = GameScene.Mission;
     }
 
     public void UpdateCash(int increaseAmount)

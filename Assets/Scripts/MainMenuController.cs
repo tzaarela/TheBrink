@@ -48,7 +48,7 @@ public class MainMenuController : MonoBehaviour
     {
         // TA BORT
         if (panelIndex == 1)
-            GameController.Instance.GameScene = GameScene.InSpaceport;
+            GameController.Instance.GameScene = GameScene.Spaceport;
         ShowPanelOnly(_currentPanel = (MainMenuPanelType)panelIndex);
         Debug.Log($"ShowPanel: {_currentPanel}");
     }

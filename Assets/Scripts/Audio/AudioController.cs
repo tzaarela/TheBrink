@@ -58,6 +58,7 @@ public class AudioController : MonoBehaviour
 
                 _audioSources[i][j].volume = i == (int) AudioSourceType.Music ? _globalBGMVolume : _globalSFXVolume;
                 _audioSources[i][j].playOnAwake = false;
+                _audioSources[i][j].loop = i == (int)AudioSourceType.Music ? true : false;
             }
         }
     }

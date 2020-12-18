@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+
 [Serializable]
 public struct TransitionLayer
 {
@@ -17,6 +18,8 @@ namespace Assets.Scripts.Tweening.Animations
     {
         public Canvas mainMenuCanvas;
         public Canvas loginCanvas;
+        public List<Canvas> canvases;
+
         public List<TransitionLayer> transitionLayers;
         public Queue<TextSequence> transitionQueue;
 

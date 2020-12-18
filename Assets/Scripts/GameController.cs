@@ -30,7 +30,7 @@ public class GameController : ScriptableObject
         } 
     }
 
-    private GameScene gameScene = GameScene.InMainMenu;
+    private GameScene gameScene = GameScene.MainMenu;
 
     public void Init(Ship ship, Crew crew)
     {
@@ -42,6 +42,9 @@ public class GameController : ScriptableObject
         if (_debuging)
             SwitchScene(_beginDebugScene);
         // SwitchScene(GameScene.InMission);
+
+        else
+            SwitchScene(GameScene.Start);
     }
 
     public void SwitchScene(GameScene gameScene)
@@ -50,13 +53,14 @@ public class GameController : ScriptableObject
 
         switch (gameScene)
         {
-            case GameScene.InMainMenu:
+            case GameScene.MainMenu:
                 {
+                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
                     SceneManager.LoadScene("MainMenuScene");
                     break;
 
                 }
-            case GameScene.InMission:
+            case GameScene.Mission:
                 {
                     var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
 
@@ -64,8 +68,9 @@ public class GameController : ScriptableObject
 
                     op.completed += (AsyncOperation o) =>
                     {
+                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
-                        //MissionController.Instance.Route = ship.contract.route
+                        MissionController.Instance.Route = ship.missionContract.route;
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
                         CrewController.Instance.CreateShipCrew(crew);
@@ -73,13 +78,17 @@ public class GameController : ScriptableObject
 
                     break;
                 }
-            case GameScene.InSpaceport:
+            case GameScene.Spaceport:
                 {
                     onTransitionComplete += HandleLoginComplete;
                     transitionController.PlayLogin(onTransitionComplete);
-
+                    AudioController.instance.StopAllBGM();
                     break;
                 }
+
+            case GameScene.Start:
+                AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
+                break;
             default:
                 break;
         }
@@ -87,6 +96,8 @@ public class GameController : ScriptableObject
 
     private void HandleLoginComplete()
     {
+        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Spaceport, 0.1f);
         SceneManager.LoadScene("SpaceportScene");
+        
     }
 }

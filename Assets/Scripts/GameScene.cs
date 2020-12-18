@@ -8,8 +8,9 @@ namespace Assets.Scripts
 {
     public enum GameScene
     {
-        InMainMenu,
-        InMission,
-        InSpaceport
+        Start,
+        MainMenu,
+        Mission,
+        Spaceport
     }
 }
