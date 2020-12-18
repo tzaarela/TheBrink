@@ -88,7 +88,6 @@
           </e>
           <e p="BridgeControls.cs" t="Include" />
           <e p="Command.cs" t="Include" />
-          <e p="CommandController.cs" t="Include" />
           <e p="ConsoleController.cs" t="Include" />
           <e p="Crew" t="Include">
             <e p="Crew.cs" t="Include" />
@@ -102,7 +101,6 @@
             <e p="RepairCommand.cs" t="Include" />
             <e p="TaskType.cs" t="Include" />
             <e p="WayPoint.cs" t="Include" />
-            <e p="WayPointController.cs" t="Include" />
           </e>
           <e p="DebugScript.cs" t="Include" />
           <e p="Door.cs" t="Include" />
@@ -199,14 +197,12 @@
           </e>
           <e p="T.cs" t="Include" />
           <e p="TimeCounter.cs" t="Include" />
-          <e p="TransitionController.cs" t="Include" />
           <e p="Tweening" t="Include">
             <e p="Animations" t="Include">
+              <e p="TextPrint.cs" t="Include" />
               <e p="TextSequence.cs" t="Include" />
-              <e p="TextSequenceAnimator.cs" t="Include" />
+              <e p="TransitionController.cs" t="Include" />
             </e>
-            <e p="ITweenObject.cs" t="Include" />
-            <e p="TweenQueue.cs" t="Include" />
           </e>
         </e>
       </e>

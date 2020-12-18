@@ -10,6 +10,7 @@ using TMPro;
 
 public class RepairContent : UITrigger
 {
+    [SerializeField] private string _name;
     [SerializeField] private RoomData _roomData;
 
     [SerializeField] private GameObject _selectionObject;
@@ -43,12 +44,19 @@ public class RepairContent : UITrigger
         SetSelectedObject(_isSelected = false);
     }
 
+    // private void OnValidate()
+    // {
+    //     // TODO Make a button that changes names instead. So no errors will ocurre.
+    //     UpdateUI();
+    // }
+
     public void Init()
     {
         if (_roomData == null)
             return;
         
-        _roomName.text = Enum.GetName(typeof(RoomType), _roomData.roomType);
+        // _roomName.text = Enum.GetName(typeof(RoomType), _roomData.roomType);
+        _roomName.text = _name;
 
         UpdateUI();
     }
@@ -118,6 +126,10 @@ public class RepairContent : UITrigger
         }
 
         _fillBar.color = new Color(_fillBar.color.r, _fillBar.color.g, _fillBar.color.b, 1f);
+        
+        #if UNITY_EDITOR
+            _roomName.text = _name;
+        #endif
     }
 
     public int GetCost()
