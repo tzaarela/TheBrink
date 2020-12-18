@@ -477,6 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1279017786}
   warningHighlight: {fileID: 2125228042}
   waypoints:
@@ -909,6 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 903599083}
   warningHighlight: {fileID: 1994149591}
   waypoints: []
@@ -1293,6 +1295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 2078513889}
   warningHighlight: {fileID: 1753191176}
   waypoints:
@@ -3618,6 +3621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 413084175}
   warningHighlight: {fileID: 1571112015}
   waypoints:
@@ -4262,6 +4266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 2020513023}
   warningHighlight: {fileID: 493970888}
   waypoints: []
@@ -5459,6 +5464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 2132086316}
   warningHighlight: {fileID: 1458847091}
   waypoints:
@@ -5634,6 +5640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 141698823}
   warningHighlight: {fileID: 1808101362}
   waypoints:
@@ -6248,6 +6255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 469850250}
   warningHighlight: {fileID: 974128352}
   waypoints:
@@ -6375,6 +6383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1389529916}
   warningHighlight: {fileID: 220077038}
   waypoints: []
@@ -6794,6 +6803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 748346076}
   warningHighlight: {fileID: 1802395319}
   waypoints: []
@@ -7231,6 +7241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1136753546}
   warningHighlight: {fileID: 1246236111}
   waypoints: []
@@ -10045,6 +10056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1330374263}
   warningHighlight: {fileID: 1562866322}
   waypoints:
@@ -12589,6 +12601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1062435940}
   warningHighlight: {fileID: 2041892214}
   waypoints:
@@ -17556,6 +17569,12 @@ PrefabInstance:
       propertyPath: crew
       value: 
       objectReference: {fileID: 11400000, guid: 15759ed0fa2eaad4e9c538c5bd3cc0db,
+        type: 2}
+    - target: {fileID: 5790217213662827542, guid: b572113be8ee71e41934eeb8c25d4612,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 11400000, guid: 69a652324fa6b384ca03a54505af7722,
         type: 2}
     - target: {fileID: 5790217213662827542, guid: b572113be8ee71e41934eeb8c25d4612,
         type: 3}

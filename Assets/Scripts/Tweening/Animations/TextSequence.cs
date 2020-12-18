@@ -28,7 +28,6 @@ public class TextSequence : MonoBehaviour
     public void AddTweens(Sequence sequence)
     {
         textPrints.ForEach(x => sequence.Append(x.ExecuteTween()));
-
         sequence.Play();
     }
 

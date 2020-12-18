@@ -14,7 +14,7 @@ namespace Assets.Scripts.Rooms
         public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
         public float RoomHealth { get => roomHealth; set => roomHealth = value; }
         public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
-        public RoomType RoomType { get; set; }
+        public RoomType RoomType;
 
         public List<CrewMember> PresentCrewMembers { get; set; }
 

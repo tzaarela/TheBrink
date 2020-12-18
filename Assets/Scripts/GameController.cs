@@ -14,7 +14,6 @@ public class GameController : ScriptableObject
 
     public Ship ship;
     public Crew crew;
-    public TransitionController transitionController;
     
     [Header("DEBUG")]
     public bool _debuging;
@@ -33,19 +32,11 @@ public class GameController : ScriptableObject
 
     private GameScene gameScene = GameScene.InMainMenu;
 
-    public void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
-
     public void Init(Ship ship, Crew crew)
     {
+        Instance = this;
         this.ship = ship;
         this.crew = crew;
-        this.transitionController = transitionController;
 
         // TODO DEBUG ONLY
         if (_debuging)
