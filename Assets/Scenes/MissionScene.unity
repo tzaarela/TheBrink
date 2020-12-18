@@ -170,7 +170,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7908057}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -477,6 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1279017786}
   warningHighlight: {fileID: 2125228042}
   waypoints:
@@ -909,6 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 903599083}
   warningHighlight: {fileID: 1994149591}
   waypoints: []
@@ -1293,6 +1295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 2078513889}
   warningHighlight: {fileID: 1753191176}
   waypoints:
@@ -1543,7 +1546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197322431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2740.7874, y: 411.89618, z: -5242.9336}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2547,7 +2550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329082389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4477.6636, y: 1202.7106, z: -5497.1846}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3618,6 +3621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 413084175}
   warningHighlight: {fileID: 1571112015}
   waypoints:
@@ -4262,6 +4266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 2020513023}
   warningHighlight: {fileID: 493970888}
   waypoints: []
@@ -5459,6 +5464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 2132086316}
   warningHighlight: {fileID: 1458847091}
   waypoints:
@@ -5634,6 +5640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 141698823}
   warningHighlight: {fileID: 1808101362}
   waypoints:
@@ -6248,6 +6255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 469850250}
   warningHighlight: {fileID: 974128352}
   waypoints:
@@ -6375,6 +6383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1389529916}
   warningHighlight: {fileID: 220077038}
   waypoints: []
@@ -6794,6 +6803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 748346076}
   warningHighlight: {fileID: 1802395319}
   waypoints: []
@@ -7231,6 +7241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1136753546}
   warningHighlight: {fileID: 1246236111}
   waypoints: []
@@ -10045,6 +10056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1330374263}
   warningHighlight: {fileID: 1562866322}
   waypoints:
@@ -10264,8 +10276,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnPoint
       value: 
-      objectReference: {fileID: 5047853793196236512, guid: 3881d78841c274137b3536bd0b7b25e0,
-        type: 3}
+      objectReference: {fileID: 517153453}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: repairSkill
@@ -11339,8 +11350,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnPoint
       value: 
-      objectReference: {fileID: 5047853793812876098, guid: 3881d78841c274137b3536bd0b7b25e0,
-        type: 3}
+      objectReference: {fileID: 264276755}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: repairSkill
@@ -12589,6 +12599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   oxygenLevel: 0
+  RoomType: 0
   highlight: {fileID: 1062435940}
   warningHighlight: {fileID: 2041892214}
   waypoints:
@@ -15602,8 +15613,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnPoint
       value: 
-      objectReference: {fileID: 5047853792274083345, guid: 3881d78841c274137b3536bd0b7b25e0,
-        type: 3}
+      objectReference: {fileID: 2082764805}
     - target: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
         type: 3}
       propertyPath: repairSkill
@@ -16137,12 +16147,17 @@ PrefabInstance:
     - target: {fileID: 1005160141098367637, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1005160141098367639, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005160141898371598, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1005160142257685667, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
@@ -16157,7 +16172,7 @@ PrefabInstance:
     - target: {fileID: 1005160142257685670, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
@@ -16262,6 +16277,16 @@ PrefabInstance:
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978501108679377583, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051194911672182309, guid: a373ed38dda78d7439047ab885e60f70,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17571,6 +17596,12 @@ PrefabInstance:
       propertyPath: crew
       value: 
       objectReference: {fileID: 11400000, guid: 15759ed0fa2eaad4e9c538c5bd3cc0db,
+        type: 2}
+    - target: {fileID: 5790217213662827542, guid: b572113be8ee71e41934eeb8c25d4612,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 11400000, guid: 69a652324fa6b384ca03a54505af7722,
         type: 2}
     - target: {fileID: 5790217213662827542, guid: b572113be8ee71e41934eeb8c25d4612,
         type: 3}

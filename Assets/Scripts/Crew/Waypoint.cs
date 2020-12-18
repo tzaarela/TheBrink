@@ -22,7 +22,7 @@ public class Waypoint : MonoBehaviour
     private void Awake()
     {
         //test;
-        // Position = transform.position;
+        //Position = transform.position;
         Position = transform.localPosition;
     }
 

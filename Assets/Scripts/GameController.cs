@@ -1,5 +1,7 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.Crew;
+using Assets.Scripts.Tweening.Animations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +14,13 @@ public class GameController : ScriptableObject
 
     public Ship ship;
     public Crew crew;
-    public TransitionController transitionController;
+    
+    [Header("DEBUG")]
+    public bool _debuging;
+    [SerializeField] private GameScene _beginDebugScene;
+
+
+    private Action onTransitionComplete;
 
     public GameScene GameScene { get => gameScene; 
         set 
@@ -24,40 +32,32 @@ public class GameController : ScriptableObject
 
     private GameScene gameScene = GameScene.InMainMenu;
 
-    public void Awake()
+    public void Init(Ship ship, Crew crew)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
-
-    public void Init(Ship ship, Crew crew, TransitionController transitionController)
-    {
+        Instance = this;
         this.ship = ship;
         this.crew = crew;
-        this.transitionController = transitionController;
 
-        //Debug.
-        //SwitchScene(GameScene.InMission);
+        // TODO DEBUG ONLY
+        if (_debuging)
+            SwitchScene(_beginDebugScene);
+        // SwitchScene(GameScene.InMission);
     }
 
     public void SwitchScene(GameScene gameScene)
     {
+        TransitionController transitionController = TransitionController.Instance;
+
         switch (gameScene)
         {
             case GameScene.InMainMenu:
                 {
                     SceneManager.LoadScene("MainMenuScene");
-                    transitionController.RunTransitionAnimation(gameScene);
                     break;
 
                 }
             case GameScene.InMission:
                 {
-                    
-                    transitionController.RunTransitionAnimation(gameScene);
-
                     var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
 
                     AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
@@ -65,22 +65,28 @@ public class GameController : ScriptableObject
                     op.completed += (AsyncOperation o) =>
                     {
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
+                        //MissionController.Instance.Route = ship.contract.route
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
                         CrewController.Instance.CreateShipCrew(crew);
                     };
 
-
                     break;
                 }
             case GameScene.InSpaceport:
                 {
-                    SceneManager.LoadScene("SpaceportScene");
-                    transitionController.RunTransitionAnimation(gameScene);
+                    onTransitionComplete += HandleLoginComplete;
+                    transitionController.PlayLogin(onTransitionComplete);
+
                     break;
                 }
             default:
                 break;
         }
+    }
+
+    private void HandleLoginComplete()
+    {
+        SceneManager.LoadScene("SpaceportScene");
     }
 }

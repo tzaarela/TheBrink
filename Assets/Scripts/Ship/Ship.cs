@@ -17,7 +17,9 @@ public class Ship : ScriptableObject
     public float maxCapacitor = 1000f;
     public float capacitorBottleNeck;
     public int cash = 1000000;
-    
+
+
+    public MissionContract missionContract;
     public RoomDataArray roomData;
     
     [Header("DEBUG")]
@@ -64,5 +66,15 @@ public class Ship : ScriptableObject
     public void SetCrewMember(int index, CrewMember crewMember)
     {
         CrewController.Instance.crewMembers[index] = crewMember;
+    }
+
+    public float GetFuelPercent()
+    {
+        return fuel / maxFuel;
+    }
+
+    public int GetCrewCount()
+    {
+        return 99; // TODO DEBUG ONLY
     }
 }

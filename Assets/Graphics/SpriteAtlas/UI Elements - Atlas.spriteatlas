@@ -74,6 +74,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bb228876de53543c3a38175f224a83fd, type: 3}
   - {fileID: 21300000, guid: 80c853b64891f4d5fbf35981b3c9590e, type: 3}
   - {fileID: 21300000, guid: c3875fd66c7f644c188b314def4d9d38, type: 3}
+  - {fileID: 21300000, guid: 16079927e494d40b7bd1b6da0885c209, type: 3}
   - {fileID: 21300000, guid: 8c7aba57a13240a4db453f6686048e18, type: 3}
   - {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
   - {fileID: 21300000, guid: 8f395fc8959b24d3ea647086592a9694, type: 3}
@@ -132,6 +133,7 @@ SpriteAtlas:
   - ShipUI_Floor_Active
   - 1x1px_white_temp_01
   - Main_Menu_Button-outline_WHITE
+  - ShipUI_ShipOverview_Floor_NoNames
   - electrical failure_45x33
   - ShipUI_Portrait2
   - Ship_MainDeck
