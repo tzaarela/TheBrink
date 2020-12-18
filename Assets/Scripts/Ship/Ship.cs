@@ -17,7 +17,9 @@ public class Ship : ScriptableObject
     public float maxCapacitor = 1000f;
     public float capacitorBottleNeck;
     public int cash = 1000000;
-    
+
+
+    public MissionContract missionContract;
     public RoomDataArray roomData;
     
     [Header("DEBUG")]

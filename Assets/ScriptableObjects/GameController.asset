@@ -15,4 +15,4 @@ MonoBehaviour:
   ship: {fileID: 11400000, guid: bd50f08c2fd4df340b3529f5093831b8, type: 2}
   crew: {fileID: 11400000, guid: 15759ed0fa2eaad4e9c538c5bd3cc0db, type: 2}
   _debuging: 1
-  _beginDebugScene: 2
+  _beginDebugScene: 1
