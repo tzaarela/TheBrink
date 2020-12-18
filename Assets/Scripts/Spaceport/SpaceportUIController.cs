@@ -16,6 +16,7 @@ public class SpaceportUIController : MonoBehaviour
     private SpaceportPanelController[] _panelControllers;
 
     [SerializeField] private TMP_Text _cashText;
+    [SerializeField] private TMP_Text _captainName;
 
     private void Awake()
     {
@@ -47,10 +48,13 @@ public class SpaceportUIController : MonoBehaviour
 
     private void Init()
     {
-        // ShowPanel(SpaceportTabType.Contracts);
+        ShowPanel(SpaceportTabType.Contracts);
         // ShowPanel(SpaceportTabType.Barrack);   // TODO Debug Only.
-        ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
+        // ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
         UpdateCash(0);
+        _captainName.text = $"Ship Name: The Brink\n" +
+                            $"Captain: {GameController.Instance.ship.captainName}\n" +
+                            $"Manufacturer Date: 2020-12-01";
     }
 
     private void HideAllPanels()
@@ -69,7 +73,8 @@ public class SpaceportUIController : MonoBehaviour
 
     public void Depart()
     {
-        GameController.Instance.GameScene = GameScene.Mission;
+        if (SpaceportContractsController.instance.HasContract())
+            GameController.Instance.GameScene = GameScene.Mission;
     }
 
     public void UpdateCash(int increaseAmount)

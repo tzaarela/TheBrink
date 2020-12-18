@@ -19,7 +19,6 @@ public class Ship : ScriptableObject
     public int cash = 1000000;
     public string captainName = "John";
 
-
     public MissionContract missionContract;
     public RoomDataArray roomData;
     

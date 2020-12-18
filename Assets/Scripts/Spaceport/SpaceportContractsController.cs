@@ -115,6 +115,11 @@ public class SpaceportContractsController : SpaceportPanelController
         UpdateContractsDescriptionUI();
         Show();
     }
+
+    public bool HasContract()
+    {
+        return _accepted;
+    }
 }
 
 enum ContractsPanelType : int
