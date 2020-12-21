@@ -10,7 +10,7 @@ using DG.Tweening;
 public class TextSequence : MonoBehaviour 
 {
     public List<TextPrint> textPrints;
-    public InputTextHandler inputTextHandler;
+    public TextInput inputTextHandler;
     public Action onComplete;
     public bool isExecuted;
 

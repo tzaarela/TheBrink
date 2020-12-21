@@ -20,7 +20,7 @@ namespace Assets.Scripts.Systems
         Image energyLevel;
 
         [SerializeField]
-        Button powerButton;
+        ToggleButton powerButton;
 
         //[SerializeField]
         //float energyWanted;
@@ -30,6 +30,7 @@ namespace Assets.Scripts.Systems
         public void Start()
         {
             shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == systemType);
+            powerButton.onToggle += ToggleSystemPower;
         }
 
         public void Update()
@@ -38,11 +39,12 @@ namespace Assets.Scripts.Systems
             airLevel.fillAmount = shipSystem.AirLevel * 0.01f;
             //energyLevel.fillAmount = shipSystem.CurrentEnergy
         }
-        //If on, turn off, if off turn on.
-        public void ToggleSystemPower()
-        {
 
-            shipSystem.SystemState = shipSystem.SystemState == SystemState.IsOn ? SystemState.IsOff : SystemState.IsOn;
+
+        //If on, turn off, if off turn on.
+        public void ToggleSystemPower(bool isOn)
+        {
+            shipSystem.PowerState = isOn ? PowerState.IsOn : PowerState.IsOff;
         }
     }
 }

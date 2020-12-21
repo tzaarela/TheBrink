@@ -24,7 +24,7 @@ public class BridgeSystem : ShipSystem
     public float TimeUntilNextEncounter { get; set; }
 
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
@@ -39,7 +39,7 @@ public class BridgeSystem : ShipSystem
         this.ship = ship;
         this.rooms = rooms;
         this.systemController = systemController;
-        SystemState = SystemState.IsOn;
+        PowerState = PowerState.IsOn;
         SystemType = SystemType.Bridge;
 
         systemRoom = this.rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
@@ -48,10 +48,13 @@ public class BridgeSystem : ShipSystem
 
         EnergyWanted = 0;
     }
+    public void Update()
+    {
+        AirLevel = systemRoom.oxygenLevel;
+    }
 
     public void Run()
     {
-        AirLevel = systemRoom.oxygenLevel;
         EstimatedTimetoArrival = UpdateETA();
         TimeUntilRetrogradeBurn = UpdateTimeToRetro();
         TimeUntilNextEncounter = UpdateTimeToEncounter();
@@ -101,4 +104,6 @@ public class BridgeSystem : ShipSystem
     {
         throw new System.NotImplementedException();
     }
+
+    
 }

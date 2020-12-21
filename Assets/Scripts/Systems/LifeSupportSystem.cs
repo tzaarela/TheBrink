@@ -13,7 +13,7 @@ public class LifeSupportSystem : ShipSystem
     float totalOxygenNeeded;
 
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
 
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
@@ -25,7 +25,7 @@ public class LifeSupportSystem : ShipSystem
 
     public LifeSupportSystem(List<Room> rooms)
     {
-        SystemState = SystemState.IsOn;
+        PowerState = PowerState.IsOn;
         SystemType = SystemType.LifeSupport;
         this.rooms = rooms;
         systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
@@ -33,6 +33,11 @@ public class LifeSupportSystem : ShipSystem
         oxygenMissingPerRoom = new float[rooms.Count];
 
         EnergyWanted = 0;
+    }
+
+    public void Update()
+    {
+        AirLevel = systemRoom.oxygenLevel;
     }
 
     public void Run()

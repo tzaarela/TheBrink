@@ -30,7 +30,7 @@ public class ReactorSystem : ShipSystem
     private float energyOutput;
 
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
@@ -45,7 +45,7 @@ public class ReactorSystem : ShipSystem
 
         systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Reactor);
         SystemType = SystemType.Reactor;
-        SystemState = SystemState.IsOn;
+        PowerState = PowerState.IsOn;
         FuelCost = 1;
         CapacityLevel = 2;
         //Removed this for now, so we won't have that annoying notice.

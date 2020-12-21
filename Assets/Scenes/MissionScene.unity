@@ -6392,6 +6392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097759701}
   - component: {fileID: 1097759700}
+  - component: {fileID: 1097759702}
   m_Layer: 0
   m_Name: $$$DEBUG$$$
   m_TagString: Untagged
@@ -6425,6 +6426,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1097759702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097759699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484c8824a3c0b164892e889f8e60682a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugProperties: []
 --- !u!114 &1125139358 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2236792370988146526, guid: df3816e6a00274d69b706bea613317fe,
@@ -13139,26 +13153,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 535532216}
     m_Modifications:
-    - target: {fileID: 5255476882137058558, guid: 500f4b312079bb64bb12367bab83349d,
-        type: 3}
-      propertyPath: graphic
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5255476882137058558, guid: 500f4b312079bb64bb12367bab83349d,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761586719823556860, guid: 500f4b312079bb64bb12367bab83349d,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7195976559525260590, guid: 500f4b312079bb64bb12367bab83349d,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7195976560637408297, guid: 500f4b312079bb64bb12367bab83349d,
         type: 3}
       propertyPath: m_Name
@@ -13273,11 +13267,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7195976560637408299, guid: 500f4b312079bb64bb12367bab83349d,
-        type: 3}
-      propertyPath: powerButton
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9060497421752796835, guid: 500f4b312079bb64bb12367bab83349d,
         type: 3}

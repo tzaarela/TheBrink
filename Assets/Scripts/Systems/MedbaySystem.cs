@@ -12,7 +12,7 @@ public class MedbaySystem : ShipSystem
     public Queue<CrewMember> patientsToTreat;
 
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
     
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
@@ -26,7 +26,7 @@ public class MedbaySystem : ShipSystem
 
     public MedbaySystem(List<Room> rooms)
     {
-        SystemState = SystemState.IsOn;
+        PowerState = PowerState.IsOn;
         SystemType = SystemType.Medbay;
         patients = new List<CrewMember>();
         this.rooms = rooms;
@@ -34,7 +34,12 @@ public class MedbaySystem : ShipSystem
 
         EnergyWanted = 0;
     }
-    
+
+    public void Update()
+    {
+        AirLevel = systemRoom.oxygenLevel;
+    }
+
     public void Run()
     {
         AirLevel = systemRoom.oxygenLevel;

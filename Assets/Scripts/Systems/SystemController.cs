@@ -64,16 +64,17 @@ public class SystemController : ScriptableObject
 
     public List<ShipSystem> GetActiveSystems()
     {
-        return ShipSystems.Where(x => x.SystemState == SystemState.IsOn).ToList();
+        return ShipSystems.Where(x => x.PowerState == PowerState.IsOn).ToList();
     }
 
     public void ShipSystemUpdate()
     {
-        var activeSystems = GetActiveSystems();
-
-        foreach (var activeSystem in activeSystems)
+        foreach (var system in ShipSystems)
         {
-            activeSystem.Run();
+            if (system.PowerState == PowerState.IsOn)
+                system.Run();
+
+            system.Update();
         }
     }
 }

@@ -87,9 +87,9 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 3786330536062389321}
+  m_TargetGraphic: {fileID: 0}
   toggleTransition: 1
-  graphic: {fileID: 6761586719823556860}
+  graphic: {fileID: 0}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
@@ -875,7 +875,7 @@ MonoBehaviour:
   systemType: 0
   airLevel: {fileID: 7195976559525260590}
   energyLevel: {fileID: 7195976560155426174}
-  powerButton: {fileID: 0}
+  powerButton: {fileID: 760743516049728413}
 --- !u!1 &7292420677338133547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,18 +1488,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9a0a49015fc1f84194f78f9dc0954ed, type: 3}
---- !u!114 &3786330536062389321 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2469199768510572202, guid: e9a0a49015fc1f84194f78f9dc0954ed,
-    type: 3}
-  m_PrefabInstance: {fileID: 1643782616588626659}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5930339194307685335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5930339194307685335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4936841873797087540, guid: e9a0a49015fc1f84194f78f9dc0954ed,
@@ -2514,15 +2502,3 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7313674024592946552}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6761586719823556860 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4083243732915832196, guid: 29491980aed7bc94badb117d73ed9342,
-    type: 3}
-  m_PrefabInstance: {fileID: 7313674024592946552}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7887421436375423455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

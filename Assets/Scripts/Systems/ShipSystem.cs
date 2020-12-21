@@ -6,7 +6,7 @@ using UnityEngine;
 public interface ShipSystem 
 {
     SystemType SystemType { get; set; }
-    SystemState SystemState  { get; set; }
+    PowerState PowerState  { get; set; }
 
     float AirLevel { get; set; }
 
@@ -17,6 +17,8 @@ public interface ShipSystem
     float EnergyToMaintain { get; set; }
 
     void Run();
+
+    void Update();
 
     void SetEnergyWanted();
 

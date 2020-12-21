@@ -3,21 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using Assets.Scripts.Controls;
+using System.Linq;
 
-public class BridgeControls : MonoBehaviour
+public class BridgeControls : MonoBehaviour, BaseControl
 {
     [SerializeField]
     private TextMeshProUGUI etaValue;
 
-    SystemController systemController;
+    ShipSystem shipSystem;
+    RoomController roomController;
+
+
+
+
+    public float AirLevel { get; set; }
+    public float EnergyLevel { get; set; }
 
     void Start()
     {
-        systemController = SystemController.Instance;
+        shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == SystemType.Bridge);
     }
 
     void Update()
     {
-        //etaValue.text = Convert.ToInt32(systemController.estimatedTimeToArrival).ToString();
+        AirLevel = shipSystem.AirLevel;
     }
 }

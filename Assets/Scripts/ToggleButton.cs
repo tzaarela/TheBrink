@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,10 +12,14 @@ public class ToggleButton : MonoBehaviour
 
     [SerializeField]
     GameObject buttonToggleOff;
+
+    public Action<bool> onToggle;
     
     public void Toggle(Toggle toggle)
     {
-        buttonToggleOn.SetActive(toggle.isOn);
-        buttonToggleOff.SetActive(!toggle.isOn);
+        buttonToggleOn.SetActive(!toggle.isOn);
+        buttonToggleOff.SetActive(toggle.isOn);
+
+        onToggle.Invoke(toggle.isOn);
     }
 }

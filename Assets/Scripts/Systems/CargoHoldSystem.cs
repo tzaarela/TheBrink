@@ -7,7 +7,7 @@ using UnityEngine;
 public class CargoHoldSystem : ShipSystem
 {
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
@@ -20,7 +20,7 @@ public class CargoHoldSystem : ShipSystem
 
     public CargoHoldSystem(List<Room> rooms)
     {
-        SystemState = SystemState.IsOn;
+        PowerState = PowerState.IsOn;
         SystemType = SystemType.CargoBay;
         systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.CargoHold);
 
@@ -28,14 +28,18 @@ public class CargoHoldSystem : ShipSystem
         EnergyWanted = 0;
     }
 
-    public void SetEnergyWanted()
+    public void Update()
     {
-        throw new System.NotImplementedException();
+        AirLevel = systemRoom.oxygenLevel;
     }
 
     public void Run()
     {
         AirLevel = systemRoom.oxygenLevel;
+    }
+    public void SetEnergyWanted()
+    {
+        throw new System.NotImplementedException();
     }
 
     public void Reboot()
@@ -47,4 +51,6 @@ public class CargoHoldSystem : ShipSystem
     {
         throw new System.NotImplementedException();
     }
+
+    
 }

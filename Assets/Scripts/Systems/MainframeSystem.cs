@@ -9,7 +9,7 @@ public class MainframeSystem : ShipSystem
     Ship ship;
 
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
@@ -24,6 +24,11 @@ public class MainframeSystem : ShipSystem
         SystemType = SystemType.Mainframe;
 
         EnergyWanted = 0;
+    }
+
+    public void Update()
+    {
+        AirLevel = systemRoom.oxygenLevel;
     }
 
     public void Run()

@@ -7,7 +7,7 @@ using UnityEngine;
 public class CorridorSystem : ShipSystem
 {
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
 
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
@@ -18,7 +18,7 @@ public class CorridorSystem : ShipSystem
 
     public CorridorSystem(List<Room> rooms)
     {
-        SystemState = SystemState.IsOn;
+        PowerState = PowerState.IsOn;
         SystemType = SystemType.Corridors;
         systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Corridor);
 
@@ -36,6 +36,10 @@ public class CorridorSystem : ShipSystem
          * 
          * Have we decided if corridoes need energy or not?
          */
+    }
+    public void Update()
+    {
+        AirLevel = systemRoom.oxygenLevel;
     }
 
     public void Run()

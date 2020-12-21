@@ -7,7 +7,7 @@ using UnityEngine;
 public class MainBatterySystem : ShipSystem
 {
     public SystemType SystemType { get; set; }
-    public SystemState SystemState { get; set; }
+    public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
@@ -18,11 +18,16 @@ public class MainBatterySystem : ShipSystem
     {
         systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MainBattery);
 
-        SystemState = SystemState.IsOn;
+        PowerState = PowerState.IsOn;
         SystemType = SystemType.MainBattery;
 
         EnergyWanted = 0;
 
+    }
+
+    public void Update()
+    {
+        AirLevel = systemRoom.oxygenLevel;
     }
 
     public void Run()
