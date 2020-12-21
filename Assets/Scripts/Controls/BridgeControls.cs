@@ -6,7 +6,7 @@ using System;
 using Assets.Scripts.Controls;
 using System.Linq;
 
-public class BridgeControls : MonoBehaviour, BaseControl
+public class BridgeControls : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI etaValue;
@@ -17,16 +17,9 @@ public class BridgeControls : MonoBehaviour, BaseControl
 
 
 
-    public float AirLevel { get; set; }
-    public float EnergyLevel { get; set; }
-
+    
     void Start()
     {
         shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == SystemType.Bridge);
-    }
-
-    void Update()
-    {
-        AirLevel = shipSystem.AirLevel;
     }
 }

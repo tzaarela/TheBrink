@@ -12,6 +12,7 @@ public class CargoHoldSystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
+    public float CurrentEnergyInSystem { get; set; }
 
     float Load;
     //Decide here, what should the load be? Look up how much the ship should carry.
@@ -30,11 +31,12 @@ public class CargoHoldSystem : ShipSystem
 
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Run()
     {
+        CurrentEnergyInSystem = CurrentEnergy;
 
     }
     public void SetEnergyWanted()
