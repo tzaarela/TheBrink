@@ -70,6 +70,9 @@ public class LifeSupportSystem : ShipSystem
 
     public float ProduceOxygen()
     {
+        totalOxygenNeeded = 0;
+        totalOxygenProduced = 0;
+
         for (int i = 0; i < oxygenMissingPerRoom.Length; i++)
         {
             totalOxygenNeeded += oxygenMissingPerRoom[i];
@@ -77,7 +80,7 @@ public class LifeSupportSystem : ShipSystem
 
         while (totalOxygenProduced <= totalOxygenNeeded && CurrentEnergy > SystemController.Instance.oxygenProduceCost)
         {
-            totalOxygenProduced++;
+            totalOxygenProduced += 6;
 
             CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
         }
