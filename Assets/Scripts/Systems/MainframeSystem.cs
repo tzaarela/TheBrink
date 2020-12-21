@@ -12,9 +12,8 @@ public class MainframeSystem : ShipSystem
     public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
-    public float EnergyToMaintain { get; set; }
     public float CurrentEnergyInSystem { get; set; }
-
+    public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
     private Room systemRoom;
 
@@ -35,7 +34,6 @@ public class MainframeSystem : ShipSystem
 
     public void Run()
     {
-
         var energyNeeded = GetEnergyNeeded();
 
         if (energyNeeded > 0)
@@ -44,9 +42,6 @@ public class MainframeSystem : ShipSystem
 
             SendEnergyOut(energyFragment);
         }
-
-        CurrentEnergyInSystem = CurrentEnergy;
-
     }
     /// <summary>
     /// Goes through all active shipsystems and gathers energyWanted into a float

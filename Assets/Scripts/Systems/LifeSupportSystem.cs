@@ -39,8 +39,7 @@ public class LifeSupportSystem : ShipSystem
 
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
-
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Run()

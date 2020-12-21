@@ -83,6 +83,7 @@ public class SystemController : ScriptableObject
                 system.Run();
 
             system.Update();
+
             if(isDebug)
                 debugger.DebugPropertyValues(system);
         }
