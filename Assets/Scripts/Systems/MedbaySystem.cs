@@ -16,6 +16,8 @@ public class MedbaySystem : ShipSystem
     
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
+    public float CurrentEnergyInSystem { get; set; }
+
     public float EnergyToMaintain { get; set; }
 
     public float AirLevel { get; set; }
@@ -37,7 +39,7 @@ public class MedbaySystem : ShipSystem
 
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Run()
@@ -54,6 +56,9 @@ public class MedbaySystem : ShipSystem
                 TreatPatients(patients, doctor);
             }
         }
+
+        CurrentEnergyInSystem = CurrentEnergy;
+
     }
 
     public void SetEnergyWanted()

@@ -37,9 +37,8 @@ namespace Assets.Scripts.Systems
         {
             //If u get an exception here it´s probably because u loaded wrong scene without debug mode.
             airLevel.fillAmount = shipSystem.AirLevel * 0.01f;
-            //energyLevel.fillAmount = shipSystem.CurrentEnergy
+            energyLevel.fillAmount = shipSystem.CurrentEnergyInSystem * 0.01f;
         }
-
 
         //If on, turn off, if off turn on.
         public void ToggleSystemPower(bool isOn)

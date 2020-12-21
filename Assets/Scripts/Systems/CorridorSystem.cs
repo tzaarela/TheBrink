@@ -14,6 +14,8 @@ public class CorridorSystem : ShipSystem
     public float EnergyToMaintain { get; set; }
 
     public float AirLevel { get; set; }
+    public float CurrentEnergyInSystem { get; set; }
+
     private Room systemRoom;
 
     public CorridorSystem(List<Room> rooms)
@@ -39,11 +41,13 @@ public class CorridorSystem : ShipSystem
     }
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Run()
     {
+        CurrentEnergyInSystem = CurrentEnergy;
+
     }
 
     public void SetEnergyWanted()

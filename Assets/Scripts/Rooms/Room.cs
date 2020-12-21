@@ -10,7 +10,6 @@ namespace Assets.Scripts.Rooms
 {
     public class Room : UITrigger
     {
-        public float oxygenLevel;
         public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
         public float RoomHealth { get => roomHealth; set => roomHealth = value; }
         public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
@@ -32,6 +31,15 @@ namespace Assets.Scripts.Rooms
                     onRoomDeselected.Invoke();
             }
         }
+        public float OxygenLevel
+        {
+            get {return oxygenLevel; }
+            set
+            {
+                oxygenLevel = Mathf.Clamp(value, 0, 100);
+            }
+        }
+        
         public List<Hazard> Hazards { get; set; }
 
         private Door _door;
@@ -47,6 +55,8 @@ namespace Assets.Scripts.Rooms
         [SerializeField]
         private float radiationLevel;
         [SerializeField]
+        private float oxygenLevel;
+        [SerializeField]
         private float roomHealth;
         [SerializeField]
         private bool hasElectricity;
@@ -57,7 +67,7 @@ namespace Assets.Scripts.Rooms
         {
             RoomType = data.roomType;
             RoomHealth = data.health;
-            oxygenLevel = 100;
+            OxygenLevel = 100;
             Hazards = new List<Hazard>();
             PresentCrewMembers = new List<CrewMember>();
 
@@ -103,7 +113,7 @@ namespace Assets.Scripts.Rooms
 
         public void AirDrain(float drainLevel)
         {
-            oxygenLevel -= drainLevel;
+            OxygenLevel -= drainLevel;
         }
 
         public List<Command> GetAvailableCommandsForRoom(CrewMember crewMember)

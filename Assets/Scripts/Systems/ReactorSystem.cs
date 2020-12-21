@@ -33,6 +33,8 @@ public class ReactorSystem : ShipSystem
     public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
+    public float CurrentEnergyInSystem { get; set; }
+
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
 
@@ -60,7 +62,7 @@ public class ReactorSystem : ShipSystem
 
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
+        AirLevel = systemRoom.OxygenLevel;
     }
     
     public void Run()
@@ -79,6 +81,9 @@ public class ReactorSystem : ShipSystem
             //TODO: Remove this later, if you implement the other way for the ship speed and travel and momentum to happen.
             ship.speed = 0;
         }
+
+        CurrentEnergyInSystem = CurrentEnergy;
+
     }
 
     public void BurnsFuel()
