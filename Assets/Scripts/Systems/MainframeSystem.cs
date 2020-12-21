@@ -29,12 +29,11 @@ public class MainframeSystem : ShipSystem
 
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Run()
     {
-
         var energyNeeded = GetEnergyNeeded();
 
         if (energyNeeded > 0)

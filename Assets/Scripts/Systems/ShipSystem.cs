@@ -14,6 +14,8 @@ public interface ShipSystem
 
     float CurrentEnergy { get; set; }
 
+    float CurrentEnergyInSystem { get; set; }
+
     float EnergyToMaintain { get; set; }
 
     void Run();

@@ -29,6 +29,7 @@ public class BridgeSystem : ShipSystem
     public float CurrentEnergy { get; set; }
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
+    public float CurrentEnergyInSystem { get; set; }
 
     private Room systemRoom;
     private List<Room> rooms;
@@ -50,7 +51,7 @@ public class BridgeSystem : ShipSystem
     }
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Run()
@@ -62,6 +63,8 @@ public class BridgeSystem : ShipSystem
         //So, I leave this here atm so I can turn the method below into returning a float later.
         //EnergyWanted = 
         SetEnergyWanted();
+
+        CurrentEnergyInSystem = CurrentEnergy;
     }
 
     public float UpdateETA()

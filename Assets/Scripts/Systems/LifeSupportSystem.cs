@@ -1,9 +1,10 @@
-﻿using Assets.Scripts.Rooms;
+﻿using Assets.Scripts;
+using Assets.Scripts.Rooms;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using System.Reflection;
 public class LifeSupportSystem : ShipSystem
 {
     public float[] oxygenMissingPerRoom;
@@ -17,11 +18,14 @@ public class LifeSupportSystem : ShipSystem
 
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
+    public float CurrentEnergyInSystem { get; set; }
+
     public float EnergyToMaintain { get; set; }
 
     public float AirLevel { get; set; }
 
     private Room systemRoom;
+    private Debugger debugger;
 
     public LifeSupportSystem(List<Room> rooms)
     {
@@ -29,15 +33,13 @@ public class LifeSupportSystem : ShipSystem
         SystemType = SystemType.LifeSupport;
         this.rooms = rooms;
         systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
-
         oxygenMissingPerRoom = new float[rooms.Count];
-
         EnergyWanted = 0;
     }
 
     public void Update()
     {
-        AirLevel = systemRoom.oxygenLevel;
+        AirLevel = systemRoom.OxygenLevel;
     }
 
     public void Run()
@@ -50,15 +52,18 @@ public class LifeSupportSystem : ShipSystem
         SendOxygenOut(oxygenFragment);
 
         SetEnergyWanted();
+
+        CurrentEnergyInSystem = CurrentEnergy;
+
     }
 
     public void GetOxygenNeeded()
     {
         for (int i = 0; i < rooms.Count; i++)
         {
-            if (rooms[i].oxygenLevel < SystemController.Instance.optimalOxygenLevel)
+            if (rooms[i].OxygenLevel < SystemController.Instance.optimalOxygenLevel)
             {
-                oxygenMissingPerRoom[i] = 100 - rooms[i].oxygenLevel;
+                oxygenMissingPerRoom[i] = 100 - rooms[i].OxygenLevel;
             }
         }
     }
@@ -70,7 +75,7 @@ public class LifeSupportSystem : ShipSystem
             totalOxygenNeeded += oxygenMissingPerRoom[i];
         }
 
-        while (totalOxygenProduced < totalOxygenNeeded || CurrentEnergy > SystemController.Instance.oxygenProduceCost)
+        while (totalOxygenProduced <= totalOxygenNeeded && CurrentEnergy > SystemController.Instance.oxygenProduceCost)
         {
             totalOxygenProduced++;
 
@@ -81,7 +86,7 @@ public class LifeSupportSystem : ShipSystem
         {
             return 0;
         }
-
+        //TODO: DJ, look at this later, very weird.
         return totalOxygenProduced / totalOxygenNeeded;
     }
 
@@ -89,7 +94,7 @@ public class LifeSupportSystem : ShipSystem
     {
         for(int i = 0; i < rooms.Count; i++)
         {
-            rooms[i].oxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
+            rooms[i].OxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
         }
     }
 
