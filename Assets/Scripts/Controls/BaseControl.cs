@@ -10,5 +10,6 @@ namespace Assets.Scripts.Controls
     {
         float AirLevel { get; set; }
         float EnergyLevel { get; set; }
+
     }
 }

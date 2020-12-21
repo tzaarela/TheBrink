@@ -1,7 +1,9 @@
 ﻿using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SystemController", menuName = "SystemController")]
@@ -27,6 +29,8 @@ public class SystemController : ScriptableObject
     [Header("CorridorsSystem")]
 
     public ShipSystem[] ShipSystems;
+    private Debugger debugger;
+    bool isDebug;
 
     //Add reference to all rooms (for airLevel in Life Support & DoorSystem).
 
@@ -47,6 +51,8 @@ public class SystemController : ScriptableObject
 
     public void CreateShipSystems(Ship ship)
     {
+        isDebug = GameController.Instance._debuging;
+        debugger = Debugger.instance;
         var rooms = RoomController.Instance.Rooms;
         var amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
 
@@ -62,6 +68,8 @@ public class SystemController : ScriptableObject
         ShipSystems[7] = new CorridorSystem(rooms);
     }
 
+   
+
     public List<ShipSystem> GetActiveSystems()
     {
         return ShipSystems.Where(x => x.PowerState == PowerState.IsOn).ToList();
@@ -75,6 +83,10 @@ public class SystemController : ScriptableObject
                 system.Run();
 
             system.Update();
+            if(isDebug)
+                debugger.DebugPropertyValues(system);
         }
+
+        debugger.isSetup = true;
     }
 }
