@@ -30,7 +30,7 @@ public class MainBatterySystem : ShipSystem
         SystemType = SystemType.MainBattery;
 
         //Go through this later, also lift out some to the common list in top of SystemController.
-        EnergyToMaintain = 10;
+        EnergyToMaintain = 0;
         EnergyWanted = 0;
 
     }
