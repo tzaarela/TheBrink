@@ -89,6 +89,7 @@
           <e p="Command.cs" t="Include" />
           <e p="ConsoleController.cs" t="Include" />
           <e p="Controls" t="Include">
+            <e p="BaseControl.cs" t="Include" />
             <e p="BridgeControls.cs" t="Include" />
             <e p="ReactorControls.cs" t="Include" />
           </e>
@@ -105,6 +106,7 @@
             <e p="TaskType.cs" t="Include" />
             <e p="WayPoint.cs" t="Include" />
           </e>
+          <e p="Debugger.cs" t="Include" />
           <e p="DebugScript.cs" t="Include" />
           <e p="Door.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -115,7 +117,6 @@
           </e>
           <e p="GameController.cs" t="Include" />
           <e p="GameScene.cs" t="Include" />
-          <e p="InputTextHandler.cs" t="Include" />
           <e p="InterfacePanels" t="Include">
             <e p="ContextMenuController.cs" t="Include" />
             <e p="ContextMenuItem.cs" t="Include" />
@@ -189,11 +190,11 @@
             <e p="MainBatterySystem.cs" t="Include" />
             <e p="MainframeSystem.cs" t="Include" />
             <e p="MedbaySystem.cs" t="Include" />
+            <e p="PowerState.cs" t="Include" />
             <e p="ReactorSystem.cs" t="Include" />
             <e p="ShipSystem.cs" t="Include" />
             <e p="SystemContent.cs" t="Include" />
             <e p="SystemController.cs" t="Include" />
-            <e p="SystemState.cs" t="Include" />
             <e p="SystemTab.cs" t="Include" />
             <e p="SystemTabController.cs" t="Include" />
             <e p="SystemType.cs" t="Include" />
@@ -203,6 +204,7 @@
           <e p="ToggleButton.cs" t="Include" />
           <e p="Tweening" t="Include">
             <e p="Animations" t="Include">
+              <e p="TextInput.cs" t="Include" />
               <e p="TextPrint.cs" t="Include" />
               <e p="TextSequence.cs" t="Include" />
               <e p="TransitionController.cs" t="Include" />
