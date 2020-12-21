@@ -58,10 +58,13 @@ public class ReactorSystem : ShipSystem
         EnergyWanted = 0;
     }
 
-    public void Run()
+    public void Update()
     {
         AirLevel = systemRoom.oxygenLevel;
-
+    }
+    
+    public void Run()
+    {
 
         if (ship.fuel > 0)
         {

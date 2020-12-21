@@ -35,7 +35,7 @@ public class CargoHoldSystem : ShipSystem
 
     public void Run()
     {
-        AirLevel = systemRoom.oxygenLevel;
+
     }
     public void SetEnergyWanted()
     {

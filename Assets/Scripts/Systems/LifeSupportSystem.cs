@@ -43,8 +43,6 @@ public class LifeSupportSystem : ShipSystem
     public void Run()
     {
 
-        AirLevel = systemRoom.oxygenLevel;
-
         GetOxygenNeeded();
 
         var oxygenFragment = ProduceOxygen();

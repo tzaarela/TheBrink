@@ -44,7 +44,6 @@ public class CorridorSystem : ShipSystem
 
     public void Run()
     {
-        AirLevel = systemRoom.oxygenLevel;
     }
 
     public void SetEnergyWanted()

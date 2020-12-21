@@ -42,7 +42,6 @@ public class MedbaySystem : ShipSystem
 
     public void Run()
     {
-        AirLevel = systemRoom.oxygenLevel;
 
         var patients = GetPatients(systemRoom);
 

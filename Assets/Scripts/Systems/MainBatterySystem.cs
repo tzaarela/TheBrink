@@ -32,7 +32,6 @@ public class MainBatterySystem : ShipSystem
 
     public void Run()
     {
-        AirLevel = systemRoom.oxygenLevel;
     }
 
     public void SetEnergyWanted()
