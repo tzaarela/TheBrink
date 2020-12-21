@@ -15,6 +15,7 @@ public class MainframeSystem : ShipSystem
     public float CurrentEnergyInSystem { get; set; }
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
+    public float TotalEnergyNeeded { get; set; }
     private Room systemRoom;
 
     public MainframeSystem(Ship ship, List<Room> rooms)
@@ -49,15 +50,20 @@ public class MainframeSystem : ShipSystem
     /// <returns>A float of energyNeeded from all active systems</returns>
     public float GetEnergyNeeded()
     {
-        float totalEnergyNeeded = 0;
+        TotalEnergyNeeded = 0;
 
-        var activeSystems = SystemController.Instance.GetActiveSystems();
+        var systems = SystemController.Instance.ShipSystems;
 
-        foreach (var activeSystem in activeSystems)
+        foreach (var system in systems)
         {
-            totalEnergyNeeded += activeSystem.EnergyWanted;
+            system.CurrentEnergy = 0;
+            
+            if(system.PowerState == PowerState.IsOn)
+            { 
+                TotalEnergyNeeded += system.EnergyWanted;
+            }
         }
-        return totalEnergyNeeded;
+        return TotalEnergyNeeded;
     }
     /// <summary>
     /// Takes in float energyNeeded, decreases the ship Capacitor & increases MainframeSystem.CurrentEnergy
