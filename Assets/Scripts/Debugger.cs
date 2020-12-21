@@ -34,47 +34,52 @@ namespace Assets.Scripts
 
         public void Start()
         {
-
             Reactor = new List<DebugProp>();
             LifeSupport = new List<DebugProp>();
-            MainFrame = new List<DebugProp>(); ;
-            Bridge = new List<DebugProp>(); ;
-            Cargo = new List<DebugProp>(); ;
-            Corridor = new List<DebugProp>(); ;
-            Medbay = new List<DebugProp>(); ;
-            MainBattery = new List<DebugProp>(); ;
+            MainFrame = new List<DebugProp>();
+            Bridge = new List<DebugProp>();
+            Cargo = new List<DebugProp>();
+            Corridor = new List<DebugProp>(); 
+            Medbay = new List<DebugProp>();
+            MainBattery = new List<DebugProp>();
 
             debugProps = new Dictionary<string, List<DebugProp>>();
 
-            debugProps.Add("LifeSupportSystem", Reactor);
-            debugProps.Add("BridgeSystem", LifeSupport);
-            debugProps.Add("CorridorSystem", MainFrame);
-            debugProps.Add("MainBatterySystem", Bridge);
-            debugProps.Add("MainframeSystem", Cargo);
-            debugProps.Add("MedbaySystem", Corridor);
-            debugProps.Add("ReactorSystem", Medbay);
-            debugProps.Add("CargoHoldSystem", MainBattery);
+            debugProps.Add("LifeSupportSystem", LifeSupport);
+            debugProps.Add("BridgeSystem", Bridge);
+            debugProps.Add("CorridorSystem", Corridor);
+            debugProps.Add("MainBatterySystem", MainBattery);
+            debugProps.Add("MainframeSystem", MainFrame);
+            debugProps.Add("MedbaySystem", Medbay);
+            debugProps.Add("ReactorSystem", Reactor);
+            debugProps.Add("CargoHoldSystem", Cargo);
         }
 
         public void DebugPropertyValues(object obj)
         {
-            Type t = obj.GetType();
-            PropertyInfo[] props = t.GetProperties();
+            Type type = obj.GetType();
+            PropertyInfo[] props = type.GetProperties();
             foreach (PropertyInfo prop in props)
             {
                 if (!isSetup)
                 {
-                    debugProps[t.Name].Add(new DebugProp(prop.Name, prop.GetValue(obj).ToString()));
+                    debugProps[type.Name].Add(new DebugProp(prop.Name, prop.GetValue(obj).ToString()));
                 }
                 else
                 {
-                    for (int i = 0; i < debugProps[t.Name].Count; i++)
-                    {
-                        var debugProp = debugProps[t.Name][i];
+                    var debugProperties = debugProps[type.Name];
 
-                        if (debugProp.name == prop.Name)
-                            debugProp.value = prop.GetValue(obj).ToString();
+                    for (int i = 0; i < debugProperties.Count; i++)
+                    {
+                        var property = debugProperties[i];
+                        if (property.name == prop.Name)
+                        {
+                            property.value = prop.GetValue(obj).ToString();
+                        }
+                        debugProperties[i] = property;
                     }
+
+                    debugProps[type.Name] = debugProperties;
                 }
             }
         }
