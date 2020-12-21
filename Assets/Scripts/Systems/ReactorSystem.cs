@@ -10,7 +10,8 @@ public class ReactorSystem : ShipSystem
 {
     private Ship ship;
 
-    private float FuelCost;
+    public float fuelCost;
+
     public float Efficiency
     {
         get { return _efficiency; }
@@ -25,16 +26,12 @@ public class ReactorSystem : ShipSystem
     }
     private int _capacityLevel;
 
-    //TODO: I'll remove this for now.
-    //private bool IsRetrograde;
-    private float energyOutput;
-
+    public float EnergyOutput { get; set; }
     public SystemType SystemType { get; set; }
     public PowerState PowerState { get; set; }
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float CurrentEnergyInSystem { get; set; }
-
     public float EnergyToMaintain { get; set; }
     public float AirLevel { get; set; }
 
@@ -48,13 +45,13 @@ public class ReactorSystem : ShipSystem
         systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Reactor);
         SystemType = SystemType.Reactor;
         PowerState = PowerState.IsOn;
-        FuelCost = 1;
-        CapacityLevel = 2;
+        fuelCost = SystemController.Instance.fuelCost;
+        CapacityLevel = SystemController.Instance.capacityLevel;
         //Removed this for now, so we won't have that annoying notice.
         //IsRetrograde = false;
         
         //Wait, surely this is bizzarre? What was I thinking? Having an energyoutput that is LOWER than the bottleneck?
-        energyOutput = ship.capacitorBottleNeck / 3;
+        EnergyOutput = ship.capacitorBottleNeck / 3;
         Efficiency = 1.00f;
 
         EnergyWanted = 0;
@@ -88,14 +85,14 @@ public class ReactorSystem : ShipSystem
 
     public void BurnsFuel()
     {
-        ship.fuel -= CapacityLevel * FuelCost;
+        ship.fuel = Mathf.Clamp(ship.fuel - CapacityLevel * fuelCost, 0, ship.maxFuel);
     }
 
     public void ProdEnergy()
     {
-        energyOutput = energyOutput * CapacityLevel * Efficiency;
+        EnergyOutput = CapacityLevel * Efficiency;
 
-        ship.capacitor += energyOutput;
+        ship.capacitor = Mathf.Clamp(EnergyOutput + ship.capacitor, 0, ship.maxCapacitor);
     }
 
     public void ProdSpeed()

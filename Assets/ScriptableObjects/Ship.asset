@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25853490263f0ba44841a23a80e2051d, type: 3}
   m_Name: Ship
   m_EditorClassIdentifier: 
-  speed: 10
-  position: 0
-  fuel: 638
+  speed: 1
+  position: 51.12316
+  fuel: 590.8115
   maxFuel: 1000
-  capacitor: 1000
+  capacitor: 0
   maxCapacitor: 1000
-  capacitorBottleNeck: 0
+  capacitorBottleNeck: 100
   cash: 1000000
   captainName: Mask Lobert
   missionContract: {fileID: 11400000, guid: a7ce26e10e38c4f55b7c49bfda7611a1, type: 2}
