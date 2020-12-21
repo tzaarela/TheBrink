@@ -72,15 +72,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 16079927e494d40b7bd1b6da0885c209, type: 3}
   - {fileID: 21300000, guid: 8c7aba57a13240a4db453f6686048e18, type: 3}
   - {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
-  - {fileID: -2897203261715952056, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
-  - {fileID: -9027160683635849523, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
-  - {fileID: 8082654419782018365, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
-  - {fileID: -1471556661742532906, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
-  - {fileID: 1094749345154489322, guid: 2b4326d895e434a7ea631e4a00de3cbb, type: 3}
   - {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
   - {fileID: 21300000, guid: f325b039f53be214ab3f08d802c4ea49, type: 3}
   - {fileID: 21300000, guid: e845f849ddb9447b080502a6d98f3fc8, type: 3}
-  - {fileID: 21300000, guid: c482f6598e1aec94380a642a24757678, type: 3}
   - {fileID: 21300000, guid: 6454a479a357f4ac3a8e22282312133d, type: 3}
   - {fileID: 21300000, guid: 133ac2a9ff6d94cf7b4f0532f0cbed04, type: 3}
   - {fileID: 21300000, guid: d26db72abe4854aed9dd6135c3be8c22, type: 3}
@@ -113,9 +107,9 @@ SpriteAtlas:
   - RadarClock_01_resized
   - loading circle_gameover
   - border-outline_01_72x72
-  - _ire_icon
+  - fire_icon
   - ALERT BIG UI_border
-  - _ine
+  - lineRadar
   - tab-border_13x13_01_Highlight
   - Button_02_8x8
   - ShipUI_Floor_Active
@@ -123,15 +117,9 @@ SpriteAtlas:
   - ShipUI_ShipOverview_Floor_NoNames
   - electrical failure_45x33
   - ShipUI_Portrait2
-  - LogosSPACE_GroupedWhite_1
-  - LogosSPACE_GroupedWhite_3
-  - LogosSPACE_GroupedWhite_4
-  - ship-icon-logo-01
-  - spaceport-logo_01
   - ShipUI_Portrait4
   - radarSwish
   - tab-border_13x13_01_Normal
-  - Box_Logga(LoginScreen-Spaceport)_161x186
   - tab-border_13x13_01_Pressed
   - Main_Menu_Button_31x5_01
   - tab-border_13x10_01_selected_Highlight
