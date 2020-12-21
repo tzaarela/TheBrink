@@ -14,10 +14,6 @@ public class BridgeControls : MonoBehaviour
     ShipSystem shipSystem;
     RoomController roomController;
 
-
-
-
-    
     void Start()
     {
         shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == SystemType.Bridge);

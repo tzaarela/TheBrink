@@ -44,7 +44,6 @@ namespace Assets.Scripts
             MainBattery = new List<DebugProp>();
 
             debugProps = new Dictionary<string, List<DebugProp>>();
-
             debugProps.Add("LifeSupportSystem", LifeSupport);
             debugProps.Add("BridgeSystem", Bridge);
             debugProps.Add("CorridorSystem", Corridor);
@@ -84,8 +83,6 @@ namespace Assets.Scripts
             }
         }
     }
-
-   
 
     [Serializable]
     public struct DebugProp

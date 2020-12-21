@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8f87bf74fb3134f8823d122a145c2c, type: 3}
   m_Name: SystemController
   m_EditorClassIdentifier: 
+  estimatedTimeToArrival: 948.9617
   optimalOxygenLevel: 95
-  oxygenProduceCost: 3
+  oxygenProduceCost: 0.1
+  healingAmount: 1
+  fuelCost: 0.1
+  capacityLevel: 1
