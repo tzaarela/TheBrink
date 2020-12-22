@@ -11,6 +11,8 @@ namespace Assets.Scripts
         Start,
         MainMenu,
         Mission,
-        Spaceport
+        Spaceport,
+        SpaceportNoIntro,
+        GameOver
     }
 }

@@ -11,11 +11,28 @@ public class BridgeControls : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI etaValue;
 
-    ShipSystem shipSystem;
+    [SerializeField]
+    private TextMeshProUGUI distanceValue;
+
+    IShipSystem shipSystem;
     RoomController roomController;
+
+    SystemController systemController;
 
     void Start()
     {
+        systemController = SystemController.Instance;
         shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == SystemType.Bridge);
+    }
+
+    void Update()
+    {
+        var wholeMinutes = systemController.estimatedTimeToArrival / 60;
+        var minutes = Mathf.FloorToInt(wholeMinutes);
+        var seconds = systemController.estimatedTimeToArrival % 60;
+
+        etaValue.text = $"{minutes} Min  {Mathf.CeilToInt(seconds)} Sec"; 
+        BridgeSystem bridgeSystem = (BridgeSystem)shipSystem;
+        distanceValue.text = Mathf.CeilToInt(bridgeSystem.DistanceToStarport).ToString() + " AU";
     }
 }

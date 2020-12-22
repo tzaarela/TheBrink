@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Assets.Scripts.Systems;
 
 public class MedbaySystem : ShipSystem
 {
@@ -11,20 +12,8 @@ public class MedbaySystem : ShipSystem
 
     public Queue<CrewMember> patientsToTreat;
 
-    public SystemType SystemType { get; set; }
-    public PowerState PowerState { get; set; }
-    
-    public float EnergyWanted { get; set; }
-    public float CurrentEnergy { get; set; }
-    public float CurrentEnergyInSystem { get; set; }
-
-    public float EnergyToMaintain { get; set; }
-
-    public float AirLevel { get; set; }
-
     private List<CrewMember> patients;
     private List<Room> rooms;
-    private Room systemRoom;
 
     public MedbaySystem(List<Room> rooms)
     {
@@ -32,24 +21,25 @@ public class MedbaySystem : ShipSystem
         SystemType = SystemType.Medbay;
         patients = new List<CrewMember>();
         this.rooms = rooms;
-        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MedBay);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MedBay);
 
         EnergyWanted = 0;
     }
 
-    public void Update()
+    public override void Update()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = SystemRoom.OxygenLevel;
+        base.Update();
     }
 
-    public void Run()
+    public override void Run()
     {
 
-        var patients = GetPatients(systemRoom);
+        var patients = GetPatients(SystemRoom);
 
         if (patients.Count > 0)
         {
-            var doctor = GetDoctor(systemRoom);
+            var doctor = GetDoctor(SystemRoom);
 
             if (doctor != null)
             {
@@ -60,22 +50,6 @@ public class MedbaySystem : ShipSystem
         CurrentEnergyInSystem = CurrentEnergy;
 
     }
-
-    public void SetEnergyWanted()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void Reboot()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void RunDiagnostic()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public CrewMember GetDoctor(Room systemRoom)
     {
         return systemRoom.PresentCrewMembers.FirstOrDefault(x => x.crewData.profession == Profession.Scientist);

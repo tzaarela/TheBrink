@@ -3,26 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Assets.Scripts.Systems;
 
 public class CorridorSystem : ShipSystem
 {
-    public SystemType SystemType { get; set; }
-    public PowerState PowerState { get; set; }
-
-    public float EnergyWanted { get; set; }
-    public float CurrentEnergy { get; set; }
-    public float EnergyToMaintain { get; set; }
-
-    public float AirLevel { get; set; }
-    public float CurrentEnergyInSystem { get; set; }
-
-    private Room systemRoom;
-
     public CorridorSystem(List<Room> rooms)
     {
         PowerState = PowerState.IsOn;
         SystemType = SystemType.Corridors;
-        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Corridor);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Corridor);
 
 
         EnergyWanted = 0;
@@ -39,29 +28,15 @@ public class CorridorSystem : ShipSystem
          * Have we decided if corridoes need energy or not?
          */
     }
-    public void Update()
+    public override void Update()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = SystemRoom.OxygenLevel;
+        base.Update();
     }
 
-    public void Run()
+    public override void Run()
     {
         CurrentEnergyInSystem = CurrentEnergy;
 
-    }
-
-    public void SetEnergyWanted()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void Reboot()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void RunDiagnostic()
-    {
-        throw new System.NotImplementedException();
     }
 }

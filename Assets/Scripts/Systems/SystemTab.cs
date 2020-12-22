@@ -19,7 +19,7 @@ namespace Assets.Scripts.Systems
         
 
         [SerializeField]
-        private ShipSystem shipSystem;
+        private global::IShipSystem shipSystem;
 
         [SerializeField]
         Color32 textColorSelected;

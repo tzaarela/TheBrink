@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Rooms;
+using Assets.Scripts.Systems;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,32 +9,25 @@ public class MainframeSystem : ShipSystem
 {
     Ship ship;
 
-    public SystemType SystemType { get; set; }
-    public PowerState PowerState { get; set; }
-    public float EnergyWanted { get; set; }
-    public float CurrentEnergy { get; set; }
-    public float CurrentEnergyInSystem { get; set; }
-    public float EnergyToMaintain { get; set; }
-    public float AirLevel { get; set; }
     public float TotalEnergyNeeded { get; set; }
-    private Room systemRoom;
 
     public MainframeSystem(Ship ship, List<Room> rooms)
     {
         this.ship = ship;
-        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MainFrame);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MainFrame);
 
         SystemType = SystemType.Mainframe;
 
         EnergyWanted = 0;
     }
 
-    public void Update()
+    public override void Update()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = SystemRoom.OxygenLevel;
+        base.Update();
     }
 
-    public void Run()
+    public override void Run()
     {
         var energyNeeded = GetEnergyNeeded();
 
@@ -95,20 +89,5 @@ public class MainframeSystem : ShipSystem
         {
             activeSystem.CurrentEnergy = energyFragment * activeSystem.EnergyWanted;
         }
-    }
-
-    public void SetEnergyWanted()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void Reboot()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void RunDiagnostic()
-    {
-        throw new System.NotImplementedException();
     }
 }

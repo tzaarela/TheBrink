@@ -32,8 +32,15 @@ public class CrewController : MonoBehaviour
     //Updates all commands but Move, crewMember.Update() handles this 
     public void UpdateCrewCommands()
     {
+        int deadCounter = 0;
         foreach (var crewMember in crewMembers)
         {
+            if (crewMember.isDead)
+            {
+                deadCounter++;
+                continue;
+            }
+
             var commandQueue = crewMember.CommandQueue;
             if(commandQueue.Count() > 0 && commandQueue.Peek().GetType() != typeof(MoveCommand))
             {
@@ -52,6 +59,11 @@ public class CrewController : MonoBehaviour
                 else
                     crewMember.CurrentCommand = null;
             }
+        }
+
+        if(deadCounter >= 3)
+        {
+            MissionController.Instance.GameOver();
         }
     }
 

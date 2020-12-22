@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.Rooms;
+using Assets.Scripts.Systems;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,24 +15,15 @@ public class BridgeSystem : ShipSystem
     //float timeMax = 0.1f;
 
     //Navigationvariables
-    float DistanceToStarport;
     float DistanceToRetrogradeBurn;
     float DisanceToNextEncounter;
 
     //Time variables
+    public float DistanceToStarport { get; set; }
     public float EstimatedTimetoArrival { get; set; }
     public float TimeUntilRetrogradeBurn { get; set; }
     public float TimeUntilNextEncounter { get; set; }
 
-    public SystemType SystemType { get; set; }
-    public PowerState PowerState { get; set; }
-    public float EnergyWanted { get; set; }
-    public float CurrentEnergy { get; set; }
-    public float EnergyToMaintain { get; set; }
-    public float AirLevel { get; set; }
-    public float CurrentEnergyInSystem { get; set; }
-
-    private Room systemRoom;
     private List<Room> rooms;
     private SystemController systemController;
 
@@ -44,7 +36,7 @@ public class BridgeSystem : ShipSystem
         PowerState = PowerState.IsOn;
         SystemType = SystemType.Bridge;
 
-        systemRoom = this.rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
+        SystemRoom = this.rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
 
         route = MissionController.Instance.Route;
 
@@ -52,14 +44,16 @@ public class BridgeSystem : ShipSystem
         EnergyToMaintain = 0;
         EnergyWanted = 0;
     }
-    public void Update()
+    public override void Update()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = SystemRoom.OxygenLevel;
+        base.Update();
     }
 
-    public void Run()
+    public override void Run()
     {
-        EstimatedTimetoArrival = UpdateETA();
+        EstimatedTimetoArrival = GetETA();
+        DistanceToStarport = GetDistanceLeft();
         TimeUntilRetrogradeBurn = UpdateTimeToRetro();
         TimeUntilNextEncounter = UpdateTimeToEncounter();
 
@@ -70,7 +64,12 @@ public class BridgeSystem : ShipSystem
         CurrentEnergyInSystem = CurrentEnergy;
     }
 
-    public float UpdateETA()
+    public float GetDistanceLeft()
+    {
+        return route.Length - route.ShipPosition;
+    }
+
+    public float GetETA()
     {
         float eta = ((route.Length - route.ShipPosition) / ship.speed);
         systemController.estimatedTimeToArrival = eta;
@@ -94,19 +93,19 @@ public class BridgeSystem : ShipSystem
         return 10;
     }
 
-    public void SetEnergyWanted()
+    public override void SetEnergyWanted()
     {
         //TODO: Set this method to return a float instead?
         //Based on what Saarela mentioned that might be the best way to handle this sort of things.
         EnergyWanted = EnergyToMaintain;
     }
 
-    public void Reboot()
+    public override void Reboot()
     {
         throw new System.NotImplementedException();
     }
 
-    public void RunDiagnostic()
+    public override void RunDiagnostic()
     {
         throw new System.NotImplementedException();
     }

@@ -187,10 +187,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7b7f395f8c83a434e9f3dab5bbf5fac3, type: 3}
-    m_FontSize: 41
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 41
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -198,4 +198,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: POWER ON
+  m_Text: LOCK

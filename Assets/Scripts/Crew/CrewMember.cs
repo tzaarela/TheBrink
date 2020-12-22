@@ -1,5 +1,7 @@
 ﻿using Assets.Scripts.Crew;
 using Assets.Scripts.InterfacePanels;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,6 +13,8 @@ public class CrewMember : UITrigger
     private Waypoint _spawnPoint;
     [SerializeField]
     private Transform highlight;
+    [SerializeField]
+    private Transform takeDamage;
     [SerializeField]
     private float speed;
 
@@ -36,6 +40,9 @@ public class CrewMember : UITrigger
         }
 
     }
+
+    public Action onDeath;
+    public bool isDead;
 
     public MoveController moveController;
     private bool isSelected;
@@ -72,6 +79,43 @@ public class CrewMember : UITrigger
         }
         else if (CommandQueue.Count == 0)
             Status = "Idle";
+    }
+
+    bool damageBlinked;
+
+    public bool TakeDamage(float damage)
+    {
+        crewData.health = Mathf.Clamp(crewData.health - damage, 0, 100);
+        if (crewData.health == 0)
+        {
+            Die();
+            return true;
+        }
+
+        if(!damageBlinked)
+        {
+            damageBlinked = true;
+            takeDamage.gameObject.SetActive(true);
+            StartCoroutine(DamageBlinkWait());
+        }
+
+        return false;
+
+    }
+
+    IEnumerator DamageBlinkWait()
+    {
+        yield return new WaitForSeconds(1);
+        damageBlinked = false;
+        takeDamage.gameObject.SetActive(false);
+    }
+
+    public void Die()
+    {
+        //IMPLEMENT
+        isDead = true;
+        onDeath.Invoke();
+        Debug.Log("CrewMember " + crewData.name + " died!");
     }
 
     public void Select()

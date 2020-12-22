@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System.Reflection;
+using Assets.Scripts.Systems;
+
 public class LifeSupportSystem : ShipSystem
 {
     public float[] oxygenMissingPerRoom;
@@ -13,16 +15,6 @@ public class LifeSupportSystem : ShipSystem
     float totalOxygenProduced;
     float totalOxygenNeeded;
 
-    public SystemType SystemType { get; set; }
-    public PowerState PowerState { get; set; }
-
-    public float EnergyWanted { get; set; }
-    public float CurrentEnergy { get; set; }
-    public float CurrentEnergyInSystem { get; set; }
-    public float EnergyToMaintain { get; set; }
-    public float AirLevel { get; set; }
-
-    private Room systemRoom;
     private Debugger debugger;
 
     public LifeSupportSystem(List<Room> rooms)
@@ -30,17 +22,18 @@ public class LifeSupportSystem : ShipSystem
         PowerState = PowerState.IsOn;
         SystemType = SystemType.LifeSupport;
         this.rooms = rooms;
-        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
         oxygenMissingPerRoom = new float[rooms.Count];
         EnergyWanted = 0;
     }
 
-    public void Update()
+    public override void Update()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = SystemRoom.OxygenLevel;
+        base.Update();
     }
 
-    public void Run()
+    public override void Run()
     {
         GetOxygenNeeded();
 
@@ -96,7 +89,7 @@ public class LifeSupportSystem : ShipSystem
         }
     }
 
-    public void SetEnergyWanted()
+    public override void SetEnergyWanted()
     {
         if (totalOxygenNeeded > totalOxygenProduced)
         {
@@ -106,15 +99,5 @@ public class LifeSupportSystem : ShipSystem
         {
             EnergyWanted = 0;
         }
-    }
-
-    public void Reboot()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void RunDiagnostic()
-    {
-        throw new System.NotImplementedException();
     }
 }

@@ -52,49 +52,53 @@ public class GameController : ScriptableObject
         switch (gameScene)
         {
             case GameScene.MainMenu:
+                AudioController.instance.StopAllSound();
+                AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
+                SceneManager.LoadScene("MainMenuScene");
+                break;
+
+            case GameScene.Mission:
+                var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
+
+                AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+
+                op.completed += (AsyncOperation o) =>
                 {
                     AudioController.instance.StopAllSound();
-                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
-                    SceneManager.LoadScene("MainMenuScene");
-                    break;
+                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
+                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
+                    SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
 
-                }
-            case GameScene.Mission:
-                {
-                    var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
+                    if (!_debuging)
+                        MissionController.Instance.Route = ship.missionContract.route;
 
-                    AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+                    RoomController.Instance.CreateRooms();
+                    SystemController.Instance.CreateShipSystems(ship);
+                    CrewController.Instance.CreateShipCrew(crew);
 
-                    op.completed += (AsyncOperation o) =>
-                    {
-                        AudioController.instance.StopAllSound();
-                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
-                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
-                        SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
-                        
-                        if(!_debuging)
-                            MissionController.Instance.Route = ship.missionContract.route;
+                };
+                break;
 
-                        RoomController.Instance.CreateRooms();
-                        SystemController.Instance.CreateShipSystems(ship);
-                        CrewController.Instance.CreateShipCrew(crew);
+            case GameScene.SpaceportNoIntro:
+                HandleLoginComplete();
+                break;
 
-                    };
-
-                    break;
-                }
             case GameScene.Spaceport:
-                {
-                    onTransitionComplete += HandleLoginComplete;
-                    transitionController.PlayLogin(onTransitionComplete);
-                    AudioController.instance.StopAllBGM();
-                    break;
-                }
+                onTransitionComplete += HandleLoginComplete;
+                transitionController.PlayLogin(onTransitionComplete);
+                AudioController.instance.StopAllBGM();
+                break;
 
             case GameScene.Start:
                 AudioController.instance.StopAllSound();
                 AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
                 break;
+
+            case GameScene.GameOver:
+                AudioController.instance.StopAllSound();
+                SceneManager.LoadScene("GameOverScene");
+                break;
+
             default:
                 break;
         }

@@ -31,7 +31,7 @@ public class SystemController : ScriptableObject
 
     [Header("CorridorsSystem")]
 
-    public ShipSystem[] ShipSystems;
+    public IShipSystem[] ShipSystems;
     private Debugger debugger;
     bool isDebug;
 
@@ -59,7 +59,7 @@ public class SystemController : ScriptableObject
         var rooms = RoomController.Instance.Rooms;
         var amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
 
-        ShipSystems = new ShipSystem[amountOfSystems];
+        ShipSystems = new IShipSystem[amountOfSystems];
 
         ShipSystems[0] = new ReactorSystem(ship, rooms);
         ShipSystems[1] = new MainframeSystem(ship, rooms);
@@ -73,7 +73,7 @@ public class SystemController : ScriptableObject
 
    
 
-    public List<ShipSystem> GetActiveSystems()
+    public List<IShipSystem> GetActiveSystems()
     {
         return ShipSystems.Where(x => x.PowerState == PowerState.IsOn).ToList();
     }

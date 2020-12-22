@@ -22,15 +22,16 @@ namespace Assets.Scripts.Systems
         [SerializeField]
         ToggleButton powerButton;
 
-        //[SerializeField]
-        //float energyWanted;
-        
-        ShipSystem shipSystem;
+        [SerializeField]
+        ToggleButton depressurizeButton;
+
+        IShipSystem shipSystem;
 
         public void Start()
         {
             shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == systemType);
             powerButton.onToggle += ToggleSystemPower;
+            depressurizeButton.onToggle += ToggleDepressurise;
         }
 
         public void Update()
@@ -44,6 +45,11 @@ namespace Assets.Scripts.Systems
         public void ToggleSystemPower(bool isOn)
         {
             shipSystem.PowerState = isOn ? PowerState.IsOn : PowerState.IsOff;
+        }
+
+        public void ToggleDepressurise(bool isOn)
+        {
+            shipSystem.IsDepressurised = isOn;
         }
     }
 }

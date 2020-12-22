@@ -104,7 +104,7 @@ namespace Assets.Scripts.Rooms
             Hazards.RemoveAll(x => x.IsFinished);
 
             warningHighlight.gameObject.SetActive(Hazards.Count > 0);
-        
+
             foreach (Hazard hazard in Hazards)
             {
                 hazard.UpdateHazard();
@@ -114,6 +114,8 @@ namespace Assets.Scripts.Rooms
         public void AirDrain(float drainLevel)
         {
             OxygenLevel -= drainLevel;
+            if (OxygenLevel <= 0)
+                PresentCrewMembers.ForEach(x => x.TakeDamage(0.1f));
         }
 
         public List<Command> GetAvailableCommandsForRoom(CrewMember crewMember)

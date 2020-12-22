@@ -22,7 +22,7 @@ namespace Assets.Scripts.Controls
 
         public void Update()
         {
-            fuelValue.text = ship.fuel.ToString();
+            fuelValue.text = Mathf.CeilToInt(ship.fuel).ToString();
         }
     }
 }

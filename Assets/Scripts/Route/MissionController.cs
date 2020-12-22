@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.Route;
+using Assets.Scripts.Tweening.Animations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +12,21 @@ public class MissionController : MonoBehaviour
 {
     public static MissionController Instance { get; set; }
 
-    public Ship ship;
-
     public const float TICK_TIMER_MAX = 0.1f;
+    public Ship ship;
+    public GameObject outpostReachedOverlay;
+    
     private float tickTimer = 0;
     private Route route;
+    private Action onTransitionComplete;
+    private bool isFinished;
 
     public Route Route
     {
         get 
         { 
             if(route == null)
-                route = new Route(1000, 0, 10);
+                route = new Route(1000, 100, 10);
             return route; 
         }
         set { route = value; }
@@ -42,10 +46,6 @@ public class MissionController : MonoBehaviour
         ship = GameController.Instance.ship;
     }
 
-    public void StartMissions(Mission mission)
-    {
-        //Create route
-    }
 
     public void Update()
     {
@@ -61,11 +61,25 @@ public class MissionController : MonoBehaviour
             SystemController.Instance.ShipSystemUpdate();
         }
     }
+    public void StartMissions(Mission mission)
+    {
+        //Create route
+    }
+
+    public void GameOver()
+    {
+        GameController.Instance.GameScene = GameScene.GameOver;
+    }
 
     private void UpdateShipPosition()
     {
         ship.position += ship.speed * Time.deltaTime;
         Route.ShipPosition = ship.position;
+
+        if (route.ShipPosition >= route.Length && !isFinished)
+        {
+            FinishMission();
+        }
     }
 
     private void CheckEncounters()
@@ -81,6 +95,20 @@ public class MissionController : MonoBehaviour
                 encounter.Execute();
             }
         }
+    }
+
+    private void FinishMission()
+    {
+        isFinished = true;
+        outpostReachedOverlay.SetActive(true);
+        onTransitionComplete += BackToOutpost;
+        TransitionController.Instance.PlayOutpostReached(onTransitionComplete);
+    }
+
+    private void BackToOutpost()
+    {
+        GameController.Instance.GameScene = GameScene.SpaceportNoIntro;
+        outpostReachedOverlay.SetActive(false);
     }
 
 }

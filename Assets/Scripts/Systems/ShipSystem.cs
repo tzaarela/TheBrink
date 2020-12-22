@@ -1,30 +1,45 @@
-﻿using Assets.Scripts;
-using System.Collections;
+﻿using Assets.Scripts.Rooms;
+using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public interface ShipSystem 
+namespace Assets.Scripts.Systems
 {
-    SystemType SystemType { get; set; }
-    PowerState PowerState  { get; set; }
+    public class ShipSystem : IShipSystem
+    {
+        public Room SystemRoom { get; set; }
+        public SystemType SystemType { get; set; }
+        public PowerState PowerState { get; set; }
+        public bool IsDepressurised { get; set; }
+        public float AirLevel { get; set; }
+        public float EnergyWanted { get; set; }
+        public float CurrentEnergy { get; set; }
+        public float CurrentEnergyInSystem { get; set; }
+        public float EnergyToMaintain { get; set; }
 
-    float AirLevel { get; set; }
+        public virtual void Reboot()
+        {
+        }
 
-    float EnergyWanted { get; set; }
+        public virtual void Run()
+        {
+            
+        }
 
-    float CurrentEnergy { get; set; }
+        public virtual void RunDiagnostic()
+        {
+        }
 
-    float CurrentEnergyInSystem { get; set; }
+        public virtual void SetEnergyWanted()
+        {
+        }
 
-    float EnergyToMaintain { get; set; }
-
-    void Run();
-
-    void Update();
-
-    void SetEnergyWanted();
-
-    void Reboot();
-
-    void RunDiagnostic();
+        public virtual void Update()
+        {
+            if (IsDepressurised)
+                SystemRoom.OxygenLevel -= 1f;
+        }
+    }
 }

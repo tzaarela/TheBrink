@@ -27,22 +27,14 @@ public class ReactorSystem : ShipSystem
     private int _capacityLevel;
 
     public float EnergyOutput { get; set; }
-    public SystemType SystemType { get; set; }
-    public PowerState PowerState { get; set; }
-    public float EnergyWanted { get; set; }
-    public float CurrentEnergy { get; set; }
-    public float CurrentEnergyInSystem { get; set; }
-    public float EnergyToMaintain { get; set; }
-    public float AirLevel { get; set; }
 
-    private Room systemRoom;
 
     public ReactorSystem(Ship ship, List<Room> rooms)
     {
         this.ship = ship;
 
 
-        systemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Reactor);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Reactor);
         SystemType = SystemType.Reactor;
         PowerState = PowerState.IsOn;
         fuelCost = SystemController.Instance.fuelCost;
@@ -57,12 +49,13 @@ public class ReactorSystem : ShipSystem
         EnergyWanted = 0;
     }
 
-    public void Update()
+    public override void Update()
     {
-        AirLevel = systemRoom.OxygenLevel;
+        AirLevel = SystemRoom.OxygenLevel;
+        base.Update();
     }
     
-    public void Run()
+    public override void Run()
     {
 
         if (ship.fuel > 0)
@@ -98,20 +91,5 @@ public class ReactorSystem : ShipSystem
     public void ProdSpeed()
     {
         ship.speed = CapacityLevel;
-    }
-
-    public void SetEnergyWanted()
-    {
-        throw new System.NotImplementedException();
-    }
-    
-    public void Reboot()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void RunDiagnostic()
-    {
-        throw new System.NotImplementedException();
     }
 }

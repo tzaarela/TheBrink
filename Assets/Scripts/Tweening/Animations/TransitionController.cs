@@ -32,10 +32,8 @@ namespace Assets.Scripts.Tweening.Animations
             {
                 _instance = this;
             }
-            else
+            else if (_instance != this)
                 Destroy(gameObject);
-
-            DontDestroyOnLoad(gameObject);
         }
 
         public void Start()
@@ -48,6 +46,13 @@ namespace Assets.Scripts.Tweening.Animations
             mainMenuCanvas.gameObject.SetActive(false);
             loginCanvas.gameObject.SetActive(true);
             var loginTransitions = transitionLayers.Where(x => x.name == "Login").ToList();
+            loginTransitions.ForEach(x => AddToQueue(x.textSequence, onTransitionComplete));
+        }
+
+        public void PlayOutpostReached(Action onTransitionComplete)
+        {
+            loginCanvas.gameObject.SetActive(true);
+            var loginTransitions = transitionLayers.Where(x => x.name == "OutpostReached").ToList();
             loginTransitions.ForEach(x => AddToQueue(x.textSequence, onTransitionComplete));
         }
 

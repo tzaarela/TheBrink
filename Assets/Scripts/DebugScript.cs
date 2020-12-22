@@ -9,6 +9,6 @@ public class DebugScript : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("MainMenuScene");
+            GameController.Instance.GameScene = GameScene.MainMenu;
     }
 }
