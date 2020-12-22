@@ -19,9 +19,7 @@ public class LifeSupportSystem : ShipSystem
     public float EnergyWanted { get; set; }
     public float CurrentEnergy { get; set; }
     public float CurrentEnergyInSystem { get; set; }
-
     public float EnergyToMaintain { get; set; }
-
     public float AirLevel { get; set; }
 
     private Room systemRoom;
@@ -44,17 +42,14 @@ public class LifeSupportSystem : ShipSystem
 
     public void Run()
     {
-
         GetOxygenNeeded();
 
         var oxygenFragment = ProduceOxygen();
-
         SendOxygenOut(oxygenFragment);
 
         SetEnergyWanted();
 
         CurrentEnergyInSystem = CurrentEnergy;
-
     }
 
     public void GetOxygenNeeded()
@@ -70,6 +65,9 @@ public class LifeSupportSystem : ShipSystem
 
     public float ProduceOxygen()
     {
+        totalOxygenNeeded = 0;
+        totalOxygenProduced = 0;
+
         for (int i = 0; i < oxygenMissingPerRoom.Length; i++)
         {
             totalOxygenNeeded += oxygenMissingPerRoom[i];
@@ -77,7 +75,7 @@ public class LifeSupportSystem : ShipSystem
 
         while (totalOxygenProduced <= totalOxygenNeeded && CurrentEnergy > SystemController.Instance.oxygenProduceCost)
         {
-            totalOxygenProduced++;
+            totalOxygenProduced += 6;
 
             CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
         }

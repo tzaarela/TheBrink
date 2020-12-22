@@ -40,6 +40,7 @@ public class BridgeSystem : ShipSystem
         this.ship = ship;
         this.rooms = rooms;
         this.systemController = systemController;
+
         PowerState = PowerState.IsOn;
         SystemType = SystemType.Bridge;
 
@@ -47,6 +48,8 @@ public class BridgeSystem : ShipSystem
 
         route = MissionController.Instance.Route;
 
+        //I set EnergyToMaintain to zero on Bridge, seeing as this system will not be able to be turned off, and should not take any energy.
+        EnergyToMaintain = 0;
         EnergyWanted = 0;
     }
     public void Update()
