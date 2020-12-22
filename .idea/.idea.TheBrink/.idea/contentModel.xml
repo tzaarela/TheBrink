@@ -7,6 +7,17 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Imports" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Render Features" t="Include">
+                <e p="Blit.cs" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="BlitPropertyDrawer.cs" t="Include" />
+                </e>
+              </e>
+              <e p="SimpleCameraController.cs" t="Include" />
+            </e>
+          </e>
           <e p="Shapes2D" t="Include">
             <e p="changelog.txt" t="Include" />
             <e p="Editor" t="Include">
@@ -89,7 +100,6 @@
           <e p="Command.cs" t="Include" />
           <e p="ConsoleController.cs" t="Include" />
           <e p="Controls" t="Include">
-            <e p="BaseControl.cs" t="Include" />
             <e p="BridgeControls.cs" t="Include" />
             <e p="ReactorControls.cs" t="Include" />
           </e>

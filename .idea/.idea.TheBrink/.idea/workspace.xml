@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Version2/ShipUI_ShipOverview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Version2/ShipUI_ShipOverview.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Shapes2D Sprites/MainBatteryRoom-Highlight [Image] (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Shapes2D Sprites/MainBatteryRoom-Highlight [Image] (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +151,7 @@
       <workItem from="1608123007942" duration="19948000" />
       <workItem from="1608199471885" duration="24610000" />
       <workItem from="1608287754010" duration="3154000" />
-      <workItem from="1608539885457" duration="646000" />
+      <workItem from="1608539885457" duration="1131000" />
     </task>
     <servers />
   </component>
