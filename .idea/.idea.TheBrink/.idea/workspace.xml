@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/UI Version2/ShipUI_ShipOverview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/UI Version2/ShipUI_ShipOverview.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Shaders/Retro/BlitToMain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Shaders/Retro/BlitToMain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/Shaders/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Shaders/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene_SEFGDHFJGKHG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MissionScene_SEFGDHFJGKHG.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +150,7 @@
       <workItem from="1608123007942" duration="19948000" />
       <workItem from="1608199471885" duration="24610000" />
       <workItem from="1608287754010" duration="3154000" />
-      <workItem from="1608539885457" duration="646000" />
+      <workItem from="1608539885457" duration="1346000" />
     </task>
     <servers />
   </component>
