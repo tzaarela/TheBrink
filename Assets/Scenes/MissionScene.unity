@@ -3255,14 +3255,6 @@ PrefabInstance:
       propertyPath: m_text
       value: REACTOR CONTROLS
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7195976559302396049, guid: 500f4b312079bb64bb12367bab83349d,
         type: 3}
       propertyPath: m_Name
@@ -8272,26 +8264,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167301517}
   m_CullTransparentMesh: 0
---- !u!1 &1180330682 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7292420677338133547, guid: 500f4b312079bb64bb12367bab83349d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7195976560952850008}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1180330684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180330682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced9fd93633f4e542909f70955e1f015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  etaValue: {fileID: 895908490}
-  distanceValue: {fileID: 1287772750}
 --- !u!114 &1186629306 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3512179006454801909, guid: abea9dafb0df44149b3b36ce83bcc71d,
@@ -13873,7 +13845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   etaValue: {fileID: 895908490}
-  distanceValue: {fileID: 0}
+  distanceValue: {fileID: 1287772750}
 --- !u!1001 &2094473112
 PrefabInstance:
   m_ObjectHideFlags: 0
