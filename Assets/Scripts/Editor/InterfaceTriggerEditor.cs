@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.InterfacePanels;
+﻿using Assets.Scripts.Controls;
+using Assets.Scripts.InterfacePanels;
 using Assets.Scripts.Rooms;
 using Assets.Scripts.Systems;
 using Unity.Collections;
@@ -18,6 +19,18 @@ namespace Assets.Scripts.Editor
             base.OnInspectorGUI();
         }
     }
+
+    [CustomEditor(typeof(ReactorControls))]
+    public class ReactorControlsTriggerEditor : EventTriggerEditor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            base.OnInspectorGUI();
+        }
+    }
+
 
     [CustomEditor(typeof(Room))]
     public class RoomTriggerEditor : EventTriggerEditor

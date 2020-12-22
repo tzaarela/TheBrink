@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Editor
 {
     [CustomEditor(typeof(Debugger))]
     [CanEditMultipleObjects]
-    public class LookAtPointEditor : Editor
+    public class PropertyInfoEditor : UnityEditor.Editor
     {
         List<SerializedProperty> properties;
 
@@ -48,7 +48,6 @@ namespace Assets.Scripts
 
             }
             serializedObject.ApplyModifiedProperties();
-
         }
     }
 }

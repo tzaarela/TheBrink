@@ -35,6 +35,7 @@ namespace Assets.Scripts.Crew
         [Header("DEBUG")]
         [SerializeField] private bool _beginWithDefault;
         [SerializeField] private bool _isHired = false;
+        [SerializeField] private int _health = 100;
 
         private void OnEnable()
         {
@@ -44,8 +45,10 @@ namespace Assets.Scripts.Crew
         public void Reset()
         {
             if (!_beginWithDefault)
+
                 return;
 
+            health = _health;
             isHired = _isHired;
         }
     }

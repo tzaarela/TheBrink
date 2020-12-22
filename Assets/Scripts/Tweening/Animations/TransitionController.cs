@@ -22,6 +22,7 @@ namespace Assets.Scripts.Tweening.Animations
 
         public List<TransitionLayer> transitionLayers;
         public Queue<TextSequence> transitionQueue;
+        public Action onTransitionComplete;
 
         private static TransitionController _instance;
         public static TransitionController Instance { get => _instance; set => _instance = value; }
@@ -41,8 +42,15 @@ namespace Assets.Scripts.Tweening.Animations
             transitionQueue = new Queue<TextSequence>();
         }
 
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                onTransitionComplete.Invoke();
+        }
+
         public void PlayLogin(Action onTransitionComplete)
         {
+            this.onTransitionComplete = onTransitionComplete;
             mainMenuCanvas.gameObject.SetActive(false);
             loginCanvas.gameObject.SetActive(true);
             var loginTransitions = transitionLayers.Where(x => x.name == "Login").ToList();

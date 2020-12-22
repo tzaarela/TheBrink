@@ -115,7 +115,7 @@ namespace Assets.Scripts.Rooms
         {
             OxygenLevel -= drainLevel;
             if (OxygenLevel <= 0)
-                PresentCrewMembers.ForEach(x => x.TakeDamage(0.1f));
+                PresentCrewMembers.ForEach(x => x.TakeDamage(1f));
         }
 
         public List<Command> GetAvailableCommandsForRoom(CrewMember crewMember)

@@ -4546,7 +4546,7 @@ PrefabInstance:
     - target: {fileID: 2920158606960687154, guid: 9d275200e542b2c4b84169bfc03a4990,
         type: 3}
       propertyPath: m_Text
-      value: "HGG LSR-Platform PHALANX V.4.2 Authorization... GRANTED.\r"
+      value: "HGG LSR-Platform PHALANX V.4.2 Authorization... \nGRANTED.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2920158606960687164, guid: 9d275200e542b2c4b84169bfc03a4990,
         type: 3}
@@ -9389,7 +9389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 65.91, y: -48.524994}
+  m_AnchoredPosition: {x: 65.90991, y: -48.524902}
   m_SizeDelta: {x: 79.12, y: 33.05078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656051080
@@ -10065,7 +10065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -22, y: 23.474976}
+  m_AnchoredPosition: {x: -22, y: 23.474854}
   m_SizeDelta: {x: 154.51733, y: 31.009491}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1830673544

@@ -22,7 +22,7 @@ public class ReactorSystem : ShipSystem
     public int CapacityLevel
     {
         get { return _capacityLevel; }
-        set { _capacityLevel = Mathf.Clamp(value, 1, 3); }
+        set { _capacityLevel = Mathf.Clamp(value, 1, 6); }
     }
     private int _capacityLevel;
 
@@ -90,6 +90,6 @@ public class ReactorSystem : ShipSystem
 
     public void ProdSpeed()
     {
-        ship.speed = CapacityLevel;
+        ship.speed = CapacityLevel * 2;
     }
 }
