@@ -57,13 +57,13 @@ public class MainBatterySystem : ShipSystem
 
         //isLockingOn toggles from button.
 
-        if(isFiring)
-        {
-            //checks here random against prob to hit. and sets is hit after that?
-            //if true then set energy to zero, send that on, also check for how much energy was used?
+        //if(isFiring)
+        //{
+        //    //checks here random against prob to hit. and sets is hit after that?
+        //    //if true then set energy to zero, send that on, also check for how much energy was used?
 
-            //sets isCharged to false, sets isCharging to true, sets TargetLock to false
-        }
+        //    //sets isCharged to false, sets isCharging to true, sets TargetLock to false
+        //}
 
         //Should this be its own method?
         if(isLockingOnTarget)
@@ -110,5 +110,15 @@ public class MainBatterySystem : ShipSystem
          * boolean isWeaponCharged
          * If weapon is fired... so we need button here... then we send energyamountInShot on to the coming encounter, and have a method there that handles this.
         */
+    }
+
+    public void Fire()
+    {
+
+    }
+
+    public void LockOn()
+    {
+
     }
 }
