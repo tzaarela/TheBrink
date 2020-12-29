@@ -146,18 +146,7 @@ public class MainBatterySystem : ShipSystem
             return true;
         }
         else
-<<<<<<< Updated upstream
         { 
-            return false;
-        }
-    }
-
-    public void LockOn()
-    {
-        if (probOfHittingTarget < 100)
-=======
->>>>>>> Stashed changes
-        {
             return false;
         }
     }
