@@ -11635,6 +11635,12 @@ PrefabInstance:
       objectReference: {fileID: 1235155093}
     - target: {fileID: 8114687764573468356, guid: 55c765d0525e95d43b24dffc510790cd,
         type: 3}
+      propertyPath: InputControllerPrefab
+      value: 
+      objectReference: {fileID: 6680224814840505581, guid: e00723d27211481428e6d715ad127f9f,
+        type: 3}
+    - target: {fileID: 8114687764573468356, guid: 55c765d0525e95d43b24dffc510790cd,
+        type: 3}
       propertyPath: transitionLayers.Array.data[0].textSequence
       value: 
       objectReference: {fileID: 947337585}

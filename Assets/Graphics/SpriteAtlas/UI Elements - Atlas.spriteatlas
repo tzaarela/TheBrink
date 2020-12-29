@@ -93,6 +93,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 808287dde39e2c145bddb075ddeecada, type: 3}
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
   - {fileID: 21300000, guid: 1ad0b6ae7758e49988f07e3aa851e87d, type: 3}
+  - {fileID: 21300000, guid: 2562865fde4d4b348934bfe06d642fe1, type: 3}
   - {fileID: 21300000, guid: 33a62eff97eaa44c7a89b39c55c5eed4, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShipUI_Portrait1
@@ -138,6 +139,7 @@ SpriteAtlas:
   - gubb_icon__01
   - 8x8_ui-border-temp_01
   - tab-border_13x10_01_selected
+  - ShipUI_Portrait6.png
   - ShipIcon_105x120
   m_Tag: UI Elements - Atlas
   m_IsVariant: 0
