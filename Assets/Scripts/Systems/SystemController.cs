@@ -11,15 +11,19 @@ public class SystemController : ScriptableObject
 {
     [Header("BridgeSystem")]
     public float estimatedTimeToArrival = 0f;
+
     [Header("MainframeSystem")]
+    public float energyPortion = 0.5f;
 
     [Header("MainBatterySystem")]
 
     [Header("Life Support")]
     public float optimalOxygenLevel = 95f;
-    public float oxygenProduceCost = 3f;
+    public float oxygenProduced = 5f;
+    public float oxygenProduceCost = 0.1f;
 
     [Header("MedbaySystem")]
+    public float healingEnergyCost = 1f;
     public float healingAmount = 1f;
 
     [Header("ReactorSystem")]
@@ -70,8 +74,6 @@ public class SystemController : ScriptableObject
         ShipSystems[6] = new CargoHoldSystem(rooms);
         ShipSystems[7] = new CorridorSystem(rooms);
     }
-
-   
 
     public List<IShipSystem> GetActiveSystems()
     {

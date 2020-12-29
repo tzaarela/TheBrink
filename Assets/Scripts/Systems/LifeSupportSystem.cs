@@ -35,69 +35,92 @@ public class LifeSupportSystem : ShipSystem
 
     public override void Run()
     {
-        GetOxygenNeeded();
 
-        var oxygenFragment = ProduceOxygen();
-        SendOxygenOut(oxygenFragment);
+        SendOxygen();
 
-        SetEnergyWanted();
+        //GetOxygenNeeded();
 
-        CurrentEnergyInSystem = CurrentEnergy;
+        //var oxygenFragment = ProduceOxygen();
+        //SendOxygenOut(oxygenFragment);
+
+        //SetEnergyWanted();
+
+        //CurrentEnergyInSystem = CurrentEnergy;
     }
 
-    public void GetOxygenNeeded()
+    public void SendOxygen()
     {
-        for (int i = 0; i < rooms.Count; i++)
+        foreach (var room in rooms)
         {
-            if (rooms[i].OxygenLevel < SystemController.Instance.optimalOxygenLevel)
+            //Checks if we even have enough energy in the system to produce oxygen else breaks the foreach loop.
+            if (CurrentEnergy > SystemController.Instance.oxygenProduceCost)
             {
-                oxygenMissingPerRoom[i] = 100 - rooms[i].OxygenLevel;
+                //TODO: We need to add a bool to each room, that checks if that room is being dePressurerized OR sealed or not.
+                //Cause if it is, it should not be getting any oxygen obv.
+                if (room.OxygenLevel < SystemController.Instance.optimalOxygenLevel && room.)
+                {
+                    room.OxygenLevel += SystemController.Instance.oxygenProduced;
+                    CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
+                }
             }
+            else
+                break;
         }
     }
 
-    public float ProduceOxygen()
-    {
-        totalOxygenNeeded = 0;
-        totalOxygenProduced = 0;
+    //public void GetOxygenNeeded()
+    //{
+    //    for (int i = 0; i < rooms.Count; i++)
+    //    {
+    //        if (rooms[i].OxygenLevel < SystemController.Instance.optimalOxygenLevel)
+    //        {
+    //            oxygenMissingPerRoom[i] = 100 - rooms[i].OxygenLevel;
+    //        }
+    //    }
+    //}
 
-        for (int i = 0; i < oxygenMissingPerRoom.Length; i++)
-        {
-            totalOxygenNeeded += oxygenMissingPerRoom[i];
-        }
+    //public float ProduceOxygen()
+    //{
+    //    totalOxygenNeeded = 0;
+    //    totalOxygenProduced = 0;
 
-        while (totalOxygenProduced <= totalOxygenNeeded && CurrentEnergy > SystemController.Instance.oxygenProduceCost)
-        {
-            totalOxygenProduced += 6;
+    //    for (int i = 0; i < oxygenMissingPerRoom.Length; i++)
+    //    {
+    //        totalOxygenNeeded += oxygenMissingPerRoom[i];
+    //    }
 
-            CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
-        }
+    //    while (totalOxygenProduced <= totalOxygenNeeded && CurrentEnergy > SystemController.Instance.oxygenProduceCost)
+    //    {
+    //        totalOxygenProduced += 6;
 
-        if(totalOxygenNeeded == 0)
-        {
-            return 0;
-        }
-        //TODO: DJ, look at this later, very weird.
-        return totalOxygenProduced / totalOxygenNeeded;
-    }
+    //        CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
+    //    }
 
-    public void SendOxygenOut(float oxygenFragment)
-    {
-        for(int i = 0; i < rooms.Count; i++)
-        {
-            rooms[i].OxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
-        }
-    }
+    //    if(totalOxygenNeeded == 0)
+    //    {
+    //        return 0;
+    //    }
+    //    //TODO: DJ, look at this later, very weird.
+    //    return totalOxygenProduced / totalOxygenNeeded;
+    //}
 
-    public override void SetEnergyWanted()
-    {
-        if (totalOxygenNeeded > totalOxygenProduced)
-        {
-            EnergyWanted = (totalOxygenNeeded - totalOxygenProduced) * SystemController.Instance.oxygenProduceCost;
-        }
-        else
-        {
-            EnergyWanted = 0;
-        }
-    }
+    //public void SendOxygenOut(float oxygenFragment)
+    //{
+    //    for(int i = 0; i < rooms.Count; i++)
+    //    {
+    //        rooms[i].OxygenLevel += oxygenFragment * oxygenMissingPerRoom[i];
+    //    }
+    //}
+
+    //public override void SetEnergyWanted()
+    //{
+    //    if (totalOxygenNeeded > totalOxygenProduced)
+    //    {
+    //        EnergyWanted = (totalOxygenNeeded - totalOxygenProduced) * SystemController.Instance.oxygenProduceCost;
+    //    }
+    //    else
+    //    {
+    //        EnergyWanted = 0;
+    //    }
+    //}
 }

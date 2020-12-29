@@ -14,6 +14,7 @@ namespace Assets.Scripts.Rooms
         public float RoomHealth { get => roomHealth; set => roomHealth = value; }
         public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
         public RoomType RoomType;
+        public RoomState RoomState;
 
         public List<CrewMember> PresentCrewMembers { get; set; }
 
@@ -68,6 +69,7 @@ namespace Assets.Scripts.Rooms
             RoomType = data.roomType;
             RoomHealth = data.health;
             OxygenLevel = 100;
+            RoomState = RoomState.Open;
             Hazards = new List<Hazard>();
             PresentCrewMembers = new List<CrewMember>();
 
