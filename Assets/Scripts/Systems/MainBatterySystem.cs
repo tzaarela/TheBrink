@@ -51,30 +51,7 @@ public class MainBatterySystem : ShipSystem
     {
         CurrentEnergyInSystem = CurrentEnergy;
 
-        EnergyWanted += EnergyToMaintain;
-
-        //isCharging toggles from button.
-
-        //isLockingOn toggles from button.
-
-        //if(isFiring)
-        //{
-        //    //checks here random against prob to hit. and sets is hit after that?
-        //    //if true then set energy to zero, send that on, also check for how much energy was used?
-
-        //    //sets isCharged to false, sets isCharging to true, sets TargetLock to false
-        //}
-
-        //Should this be its own method?
-        if(isLockingOnTarget)
-        {
-            if(probOfHittingTarget >= 100)
-            {
-                isTargetLocked = true;
-                isLockingOnTarget = false;
-            }
-            probOfHittingTarget++;
-        }
+        EnergyWanted += EnergyToMaintain;        
 
         if(isCharging)
         {
@@ -112,13 +89,74 @@ public class MainBatterySystem : ShipSystem
         */
     }
 
+    public void Charge()
+    {
+        if(weaponCharge < maxWeaponCharge)
+        {
+            weaponCharge++;
+            //TODO, so here we want to decrease energy, or give this system some way of sipponing energy from other systems.
+        }else
+        {
+            isCharged = true;
+        }
+    }
+
     public void Fire()
     {
 
+        Debug.Log("The weapons fire!");
+        
+        didHitTarget = CheckForHit(probOfHittingTarget);
+
+        if(didHitTarget)
+        {
+            Debug.Log("The weapons hit their target!");
+        }
+        else
+        {
+            Debug.Log("The weapons missed their target.");
+            isCharging = true;
+            isLockingOnTarget = true;
+        }
+
+        weaponCharge = 0;
+        probOfHittingTarget = 0;
+        isCharged = false;
+    }
+
+    public bool CheckForHit(float probOfHittingTarget)
+    {
+        int random = (Random.Range(0, 101));
+
+        if(probOfHittingTarget < random)
+        {
+            return true;
+        }
+        else
+        { 
+            return false;
+        }
     }
 
     public void LockOn()
     {
 
+        if (probOfHittingTarget < 100)
+        {
+            probOfHittingTarget++;
+        }
+        else
+        { 
+            isTargetLocked = true;
+            isLockingOnTarget = false;
+            Debug.Log("Target Lock aquired.");
+            //I prob want to add later here that the button changes when the target is locked, when you have a hundred per cent chance.
+            //And I need this to be set to zero when you fire, and also if you detoggle it right?
+        }
     }
+
+    //public bool Charging()
+    //{
+
+    //}
 }
