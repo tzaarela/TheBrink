@@ -52,12 +52,11 @@ public class LifeSupportSystem : ShipSystem
     {
         foreach (var room in rooms)
         {
-            //Checks if we even have enough energy in the system to produce oxygen else breaks the foreach loop.
+            //Checks if we even have enough energy in the system to produce oxygen, else breaks the foreach loop.
             if (CurrentEnergy > SystemController.Instance.oxygenProduceCost)
             {
-                //TODO: We need to add a bool to each room, that checks if that room is being dePressurerized OR sealed or not.
-                //Cause if it is, it should not be getting any oxygen obv.
-                if (room.OxygenLevel < SystemController.Instance.optimalOxygenLevel && room.)
+                //Checks if each room has enough oxygen, and isn't being sealed or depressurized.
+                if (room.OxygenLevel < SystemController.Instance.optimalOxygenLevel && room.RoomState == RoomState.Open)
                 {
                     room.OxygenLevel += SystemController.Instance.oxygenProduced;
                     CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
