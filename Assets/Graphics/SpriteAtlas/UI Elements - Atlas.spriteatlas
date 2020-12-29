@@ -51,6 +51,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
+  - {fileID: 21300000, guid: be749ff0591a38249b2a1bb320988196, type: 3}
   - {fileID: 21300000, guid: cc448b11a68f24bc59595089c5d06f1e, type: 3}
   - {fileID: 21300000, guid: 0f66ef11b3ff742868a9b71248ce95ad, type: 3}
   - {fileID: 21300000, guid: d6ec6e518ae2f4f5cbcd34b063a04a2d, type: 3}
@@ -101,6 +102,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 33a62eff97eaa44c7a89b39c55c5eed4, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShipUI_Portrait1
+  - Button_03_PressedGREY
   - left-arrow_10x6_01_white
   - tab-border_13x10_01_selected_Pressed
   - Button_01_8x8
