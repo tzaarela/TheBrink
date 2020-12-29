@@ -140,7 +140,6 @@ public class MainBatterySystem : ShipSystem
 
     public void LockOn()
     {
-
         if (probOfHittingTarget < 100)
         {
             probOfHittingTarget++;

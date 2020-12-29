@@ -30,6 +30,8 @@ namespace Assets.Scripts.Tweening.Animations
 
         [Range(0f, 10f)]
         public float fadeTimer = 1f;
+
+        public InputController InputControllerPrefab;
         
 
         private static TransitionController _instance;
@@ -58,22 +60,14 @@ namespace Assets.Scripts.Tweening.Animations
                 onTransitionComplete.Invoke();
         }
 
-        public void FadeOut()
-        {
-            fadeOutAnimator.SetTrigger("FadingOut");
-
-            StartCoroutine(FadingOut());
-
-        }
-
-        IEnumerator FadingOut()
-        {
-            yield return new WaitForSeconds(fadeTimer);
-            onFadedOut.Invoke();
-        }
-
         public void PlayLogin(Action onTransitionComplete)
         {
+            var inputController = Instantiate(InputControllerPrefab, this.transform);
+            inputController.clickToContinue = true;
+            inputController.anyKey = false;
+            inputController.keyCode = KeyCode.Q;
+            inputController.gameScene = GameScene.SpaceportNoIntro;
+
             this.onTransitionComplete = onTransitionComplete;
             mainMenuCanvas.gameObject.SetActive(false);
             loginCanvas.gameObject.SetActive(true);
@@ -96,6 +90,20 @@ namespace Assets.Scripts.Tweening.Animations
                 transitionQueue.Peek().ExecuteSequence();
         }
 
+        public void FadeOut()
+        {
+            fadeOutAnimator.SetTrigger("FadingOut");
+
+            StartCoroutine(FadingOut());
+
+        }
+
+        IEnumerator FadingOut()
+        {
+            yield return new WaitForSeconds(fadeTimer);
+            onFadedOut.Invoke();
+        }
+
         private void HandleOnSequenceComplete(Action onTransitionComplete)
         {
             var textSequence = transitionQueue.Dequeue();
@@ -105,5 +113,11 @@ namespace Assets.Scripts.Tweening.Animations
             else
                 onTransitionComplete.Invoke();
         }
+
+        private void ForceSceneChange(GameScene gameScene)
+        {
+            GameController.Instance.GameScene = gameScene;
+        }
+
     }
 }

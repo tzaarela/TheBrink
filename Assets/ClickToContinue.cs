@@ -3,14 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickToContinue : MonoBehaviour
+public class ClickToContinue
 {
-    [SerializeField]
     GameScene swapToScene;
+    KeyCode keyCode;
 
-    void Update()
+    public ClickToContinue(GameScene swapToScene, KeyCode keyCode)
     {
-        if (Input.anyKey)
+        this.swapToScene = swapToScene;
+        this.keyCode = keyCode;
+    }
+
+    public ClickToContinue(GameScene swapToScene)
+    {
+        this.swapToScene = swapToScene;
+        this.keyCode = KeyCode.None;
+    }
+
+    public void CheckInput()
+    {
+        if (keyCode == KeyCode.None && Input.anyKey)
+            GameController.Instance.GameScene = swapToScene;
+
+        else if (Input.GetKeyDown(keyCode))
             GameController.Instance.GameScene = swapToScene;
     }
 }
