@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,13 @@ namespace Assets.Scripts.Tweening.Animations
         public Queue<TextSequence> transitionQueue;
         public Action onTransitionComplete;
 
+        public Animator fadeOutAnimator;
+        public Action onFadedOut;
+
+        [Range(0f, 10f)]
+        public float fadeTimer = 1f;
+        
+
         private static TransitionController _instance;
         public static TransitionController Instance { get => _instance; set => _instance = value; }
 
@@ -35,6 +43,8 @@ namespace Assets.Scripts.Tweening.Animations
             }
             else if (_instance != this)
                 Destroy(gameObject);
+
+            //DontDestroyOnLoad(gameObject);
         }
 
         public void Start()
@@ -46,6 +56,20 @@ namespace Assets.Scripts.Tweening.Animations
         {
             if (Input.GetKeyDown(KeyCode.Escape))
                 onTransitionComplete.Invoke();
+        }
+
+        public void FadeOut()
+        {
+            fadeOutAnimator.SetTrigger("FadingOut");
+
+            StartCoroutine(FadingOut());
+
+        }
+
+        IEnumerator FadingOut()
+        {
+            yield return new WaitForSeconds(fadeTimer);
+            onFadedOut.Invoke();
         }
 
         public void PlayLogin(Action onTransitionComplete)

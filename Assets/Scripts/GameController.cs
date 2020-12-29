@@ -52,31 +52,39 @@ public class GameController : ScriptableObject
         switch (gameScene)
         {
             case GameScene.MainMenu:
-                AudioController.instance.StopAllSound();
-                AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
-                SceneManager.LoadScene("MainMenuScene");
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
+                {
+                    AudioController.instance.StopAllSound();
+                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
+                    SceneManager.LoadScene("MainMenuScene");
+                };
                 break;
 
             case GameScene.Mission:
-                var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
 
-                AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
-
-                op.completed += (AsyncOperation o) =>
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
                 {
-                    AudioController.instance.StopAllSound();
-                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
-                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
-                    SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
+                    var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
+                    AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
 
-                    if (!_debuging)
-                        MissionController.Instance.Route = ship.missionContract.route;
+                    op.completed += (AsyncOperation o) =>
+                    {
+                        AudioController.instance.StopAllSound();
+                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
+                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
+                        SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
 
-                    RoomController.Instance.CreateRooms();
-                    SystemController.Instance.CreateShipSystems(ship);
-                    CrewController.Instance.CreateShipCrew(crew);
+                        if (!_debuging)
+                            MissionController.Instance.Route = ship.missionContract.route;
 
+                        RoomController.Instance.CreateRooms();
+                        SystemController.Instance.CreateShipSystems(ship);
+                        CrewController.Instance.CreateShipCrew(crew);
+                    };
                 };
+
                 break;
 
             case GameScene.SpaceportNoIntro:
@@ -95,8 +103,13 @@ public class GameController : ScriptableObject
                 break;
 
             case GameScene.GameOver:
-                AudioController.instance.StopAllSound();
-                SceneManager.LoadScene("GameOverScene");
+
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
+                {
+                    AudioController.instance.StopAllSound();
+                    SceneManager.LoadScene("GameOverScene");
+                };
                 break;
 
             default:
@@ -106,9 +119,13 @@ public class GameController : ScriptableObject
 
     private void HandleLoginComplete()
     {
-        AudioController.instance.StopAllSound();
-        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Spaceport, 0.1f);
-        SceneManager.LoadScene("SpaceportScene");
+        TransitionController.Instance.FadeOut();
+        TransitionController.Instance.onFadedOut += () =>
+        {
+            AudioController.instance.StopAllSound();
+            AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Spaceport, 0.1f);
+            SceneManager.LoadScene("SpaceportScene");
+        }; 
         
     }
 }
