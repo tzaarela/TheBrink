@@ -86,11 +86,9 @@ public class CrewMember : UITrigger
     public bool TakeDamage(float damage)
     {
         crewData.health = Mathf.Clamp(crewData.health - damage, 0, 100);
-        if (crewData.health == 0)
-        {
-            Die();
-            return true;
-        }
+        
+        if(crewData.health == 0) 
+            isDead = true;
 
         if(!damageBlinked)
         {
@@ -113,7 +111,6 @@ public class CrewMember : UITrigger
     public void Die()
     {
         //IMPLEMENT
-        isDead = true;
         onDeath.Invoke();
         Debug.Log("CrewMember " + crewData.name + " died!");
     }

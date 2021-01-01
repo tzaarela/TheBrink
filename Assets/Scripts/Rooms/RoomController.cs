@@ -40,6 +40,9 @@ public class RoomController : MonoBehaviour
         {
             room.AirDrain(airDrainLevel);
             room.UpdateHazard();
+            room.PresentCrewMembers
+                .Where(x => x.isDead).ToList()
+                .ForEach(x => x.Die());
         }
     }
 

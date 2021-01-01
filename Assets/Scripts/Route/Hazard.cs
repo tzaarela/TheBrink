@@ -96,15 +96,13 @@ public class Hazard
     /// </summary>
     public void FireBurns()
     {
-        if(SeverityAmount >= _hazardRoom.RoomHealth / 2)
+        if (SeverityAmount >= _hazardRoom.RoomHealth / 2)
         {
             _hazardRoom.RoomHealth -= 0.1f;
 
             for (int i = _hazardRoom.PresentCrewMembers.Count - 1; i >= 0; i--)
             {
                 var isDead = _hazardRoom.PresentCrewMembers[i].TakeDamage(1f);
-                if (isDead)
-                    _hazardRoom.PresentCrewMembers.RemoveAt(i);
             }
         }
     }

@@ -63,6 +63,7 @@ public class GameController : ScriptableObject
 
             case GameScene.Mission:
 
+
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
@@ -75,13 +76,13 @@ public class GameController : ScriptableObject
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
+                        RoomController.Instance.CreateRooms();
+                        SystemController.Instance.CreateShipSystems(ship);
+                        CrewController.Instance.CreateShipCrew(crew);
 
                         if (!_debuging)
                             MissionController.Instance.Route = ship.missionContract.route;
 
-                        RoomController.Instance.CreateRooms();
-                        SystemController.Instance.CreateShipSystems(ship);
-                        CrewController.Instance.CreateShipCrew(crew);
                     };
                 };
 

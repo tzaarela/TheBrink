@@ -75,6 +75,11 @@ public class SystemController : ScriptableObject
         ShipSystems[7] = new CorridorSystem(rooms);
     }
 
+    public IShipSystem GetSystemOfType(SystemType systemType)
+    {
+        return ShipSystems.FirstOrDefault(x => x.SystemType == systemType);
+    }
+
     public List<IShipSystem> GetActiveSystems()
     {
         return ShipSystems.Where(x => x.PowerState == PowerState.IsOn).ToList();

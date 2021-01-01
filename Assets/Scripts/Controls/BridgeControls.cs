@@ -22,7 +22,7 @@ public class BridgeControls : MonoBehaviour
     void Start()
     {
         systemController = SystemController.Instance;
-        shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == SystemType.Bridge);
+        shipSystem = SystemController.Instance.GetSystemOfType(SystemType.Bridge);
     }
 
     void Update()
