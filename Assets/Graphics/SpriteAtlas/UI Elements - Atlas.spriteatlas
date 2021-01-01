@@ -55,7 +55,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cc448b11a68f24bc59595089c5d06f1e, type: 3}
   - {fileID: 21300000, guid: 0f66ef11b3ff742868a9b71248ce95ad, type: 3}
   - {fileID: 21300000, guid: d6ec6e518ae2f4f5cbcd34b063a04a2d, type: 3}
+  - {fileID: 21300000, guid: 14410691fe802c0479c1a57fceb77f3a, type: 3}
   - {fileID: 21300000, guid: 1ce298d1ca34b456b81d73c97f5a7d8e, type: 3}
+  - {fileID: 21300000, guid: 370ee512ad7c2bc4f90c38b6371a548f, type: 3}
   - {fileID: 21300000, guid: 40a863620f5594611a9d1952c9646ea1, type: 3}
   - {fileID: 21300000, guid: 5bc06f920b357434e98ae6a65ffbb24d, type: 3}
   - {fileID: 21300000, guid: 747d45535920e43c0a1bf6d9c6f53183, type: 3}
@@ -65,6 +67,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3e6596643914b45498aa00658ae460bc, type: 3}
   - {fileID: 21300000, guid: ac7a2a640f9adce47bc34010a03a1b2e, type: 3}
   - {fileID: 21300000, guid: 4bf699842cd6c4843b4015008d10333c, type: 3}
+  - {fileID: 21300000, guid: e64d3a459d2fc2f4881cdffa572f9207, type: 3}
   - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
   - {fileID: 21300000, guid: 67c603a5f83ef42e7830e3e0db76d701, type: 3}
   - {fileID: 21300000, guid: 75ecc33653f9c4c27aa5a34709c4b602, type: 3}
@@ -75,6 +78,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 8c7aba57a13240a4db453f6686048e18, type: 3}
   - {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
   - {fileID: 21300000, guid: 0d06a83885d1516449370f62b6575117, type: 3}
+  - {fileID: 21300000, guid: 1fa028e87f71a084d9a38af2bca12d75, type: 3}
   - {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
   - {fileID: 21300000, guid: f325b039f53be214ab3f08d802c4ea49, type: 3}
   - {fileID: 21300000, guid: e845f849ddb9447b080502a6d98f3fc8, type: 3}
@@ -91,6 +95,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5698c82bad194418daec14536de3962e, type: 3}
   - {fileID: 21300000, guid: b7a00b2baa500bc4b9142a9219f200a0, type: 3}
   - {fileID: 21300000, guid: 2cab8c9b35131ee46958f57f9dac5228, type: 3}
+  - {fileID: 21300000, guid: 974e6aab65bc9f5499b8f08ad696fc07, type: 3}
   - {fileID: 21300000, guid: a7cf1bab579e28541927f71a238e6faa, type: 3}
   - {fileID: 21300000, guid: fcf875fc8eb4a324ab27feb3c41b06bb, type: 3}
   - {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
@@ -108,7 +113,9 @@ SpriteAtlas:
   - left-arrow_10x6_01_white
   - tab-border_13x10_01_selected_Pressed
   - Button_01_8x8
+  - Logotype_Broadhill
   - 8x8_ui-border-temp_01_noFill
+  - Accepted_Contract
   - Box_Logga_75x88_WHITE
   - death-icon
   - 8x8_ui-border3-temp_01
@@ -118,6 +125,7 @@ SpriteAtlas:
   - border-outline_01_72x72
   - fire_icon
   - ALERT BIG UI_border
+  - Logotype_Pharmastrum
   - lineRadar
   - tab-border_13x13_01_Highlight
   - Button_02_8x8
@@ -128,6 +136,7 @@ SpriteAtlas:
   - electrical failure_45x33
   - ShipUI_Portrait2
   - LogoCONTACT_01
+  - Logotype_Solus
   - ShipUI_Portrait4
   - radarSwish
   - tab-border_13x13_01_Normal
@@ -144,6 +153,7 @@ SpriteAtlas:
   - 8x8_ui-border2-temp_01
   - Button_03_Pressed
   - ShipUI_Portrait5
+  - Logotype_Untitled
   - Button_03_Highlight
   - crew_idcard_BG
   - ShipUI_Portrait3
