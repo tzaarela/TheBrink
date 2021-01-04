@@ -43,8 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd69819208a84d10aeed11db46aad6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _globalBGMVolume: 0.8
+  _globalMasterVolume: 0.5
+  _globalBGMVolume: 0.4
   _globalSFXVolume: 0.8
+  _masterIsMuted: 0
+  _bgmIsMuted: 0
+  _sfxIsMuted: 0
   _sfxClips:
   - {fileID: 8300000, guid: a5a5f91b949c74b5ea8ced4affbaf994, type: 3}
   - {fileID: 8300000, guid: fc3bbdb7a2d2e4b67a3c136534ebb3bd, type: 3}

@@ -56,7 +56,7 @@ public class GameController : ScriptableObject
                 TransitionController.Instance.onFadedOut += () =>
                 {
                     AudioController.instance.StopAllSound();
-                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
+                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu);
                     SceneManager.LoadScene("MainMenuScene");
                 };
                 break;
@@ -74,8 +74,8 @@ public class GameController : ScriptableObject
                     {
 
                         AudioController.instance.StopAllSound();
-                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
-                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
+                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission);
+                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient);
 
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
                         RoomController.Instance.CreateRooms();
@@ -104,7 +104,7 @@ public class GameController : ScriptableObject
 
             case GameScene.Start:
                 AudioController.instance.StopAllSound();
-                AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu, 0.2f);
+                AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu);
                 break;
 
             case GameScene.GameOver:
@@ -141,7 +141,7 @@ public class GameController : ScriptableObject
         TransitionController.Instance.onFadedOut += () =>
         {
             AudioController.instance.StopAllSound();
-            AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Spaceport, 0.1f);
+            AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Spaceport);
             SceneManager.LoadScene("SpaceportScene");
         }; 
         

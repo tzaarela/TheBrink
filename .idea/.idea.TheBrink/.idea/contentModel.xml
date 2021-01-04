@@ -157,7 +157,6 @@
             <e p="RoomData.cs" t="Include" />
             <e p="RoomDataArray.cs" t="Include" />
             <e p="RoomState.cs" t="Include" />
-            <e p="RoomType.cs" t="Include" />
           </e>
           <e p="Route" t="Include">
             <e p="ContractType.cs" t="Include" />
@@ -169,6 +168,7 @@
             <e p="MissionController.cs" t="Include" />
             <e p="Radar.cs" t="Include" />
             <e p="RadarController.cs" t="Include" />
+            <e p="RadarEncounter.cs" t="Include" />
             <e p="Route.cs" t="Include" />
             <e p="RouteType.cs" t="Include" />
           </e>
@@ -234,6 +234,7 @@
               <e p="TransitionController.cs" t="Include" />
             </e>
           </e>
+          <e p="VolumeType.cs" t="Include" />
         </e>
         <e p="VolumeSlider.cs" t="Include" />
       </e>
