@@ -17,8 +17,8 @@ public class CargoHoldSystem : ShipSystem
         SystemType = SystemType.CargoBay;
         SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.CargoHold);
 
+        CurrentEnergy = 50;
 
-        EnergyWanted = 0;
     }
 
     public override void Update()
@@ -29,7 +29,6 @@ public class CargoHoldSystem : ShipSystem
 
     public override void Run()
     {
-        CurrentEnergyInSystem = CurrentEnergy;
 
     }
 }

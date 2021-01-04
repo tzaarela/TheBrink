@@ -103,6 +103,7 @@ public class SystemController : ScriptableObject
             if (system.PowerState == PowerState.IsOn)
             {
                 system.Run();
+                system.Upkeep();
             }
 
             system.Update();

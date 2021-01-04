@@ -29,8 +29,9 @@ public class MainBatterySystem : ShipSystem
         //TODO: Se what values here that you might want to lift out to SystemController.
         //Go through this later, also lift out some to the common list in top of SystemController.
 
-        EnergyToMaintain = 0;
-        EnergyWanted = 0;
+        UpkeepCost = SystemController.Instance.mainBatteryUpkeepSystem;
+
+        CurrentEnergy = 50;
 
         weaponCharge = 0;
         probOfHittingTarget = 0;

@@ -45,15 +45,13 @@ public class ReactorSystem : ShipSystem
         EnergyProduction = SystemController.Instance.energyProduction;
         UpkeepCost = SystemController.Instance.reactorUpkeepSystem;
 
+        //This is my ugly way of trying to make sure that this system does not drain energy from other systems.
+        CurrentEnergy = 100;
 
         //Removed this for now, so we won't have that annoying notice.
         //IsRetrograde = false;
-        
-        //Wait, surely this is bizzarre? What was I thinking? Having an energyoutput that is LOWER than the bottleneck?
-        EnergyOutput = ship.capacitorBottleNeck / 3;
-        Efficiency = 1.00f;
 
-        EnergyWanted = 0;
+        Efficiency = 1.00f;
     }
 
     public override void Update()
@@ -78,8 +76,6 @@ public class ReactorSystem : ShipSystem
             //TODO: Remove this later, if you implement the other way for the ship speed and travel and momentum to happen.
             ship.speed = 0;
         }
-
-        CurrentEnergyInSystem = CurrentEnergy;
 
     }
 

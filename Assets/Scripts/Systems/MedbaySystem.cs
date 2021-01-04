@@ -23,7 +23,9 @@ public class MedbaySystem : ShipSystem
         this.rooms = rooms;
         SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MedBay);
 
-        EnergyWanted = 0;
+        UpkeepCost = SystemController.Instance.medbayUpkeepSystem;
+        CurrentEnergy = 50;
+
     }
 
     public override void Update()
@@ -46,9 +48,6 @@ public class MedbaySystem : ShipSystem
                 TreatPatients(patients, doctor);
             }
         }
-
-        CurrentEnergyInSystem = CurrentEnergy;
-
     }
     public CrewMember GetDoctor(Room systemRoom)
     {

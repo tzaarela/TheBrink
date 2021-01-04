@@ -13,8 +13,8 @@ public class CorridorSystem : ShipSystem
         SystemType = SystemType.Corridors;
         SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Corridor);
 
+        CurrentEnergy = 50;
 
-        EnergyWanted = 0;
 
         /*
          * It needs a list of all corridors & airlocks.
@@ -36,7 +36,6 @@ public class CorridorSystem : ShipSystem
 
     public override void Run()
     {
-        CurrentEnergyInSystem = CurrentEnergy;
 
     }
 }
