@@ -5,5 +5,6 @@ public enum HazardType
 {
     Fire,
     Breach,
+    ElectricFailure,
     RoomSpecific
 }

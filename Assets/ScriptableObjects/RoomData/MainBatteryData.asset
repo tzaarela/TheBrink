@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1854302ec1ae1d342b9965a9a8007b75, type: 3}
   m_Name: MainBatteryData
   m_EditorClassIdentifier: 
+  systemType: 2
   health: 100
   _defaultHealth: 100
   _beginWithDefault: 1
-  roomType: 6

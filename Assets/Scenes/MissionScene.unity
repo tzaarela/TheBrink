@@ -311,8 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 4
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 1279017786}
   warningHighlight: {fileID: 2125228042}
   waypoints:
@@ -320,7 +321,6 @@ MonoBehaviour:
   radiationLevel: 0
   oxygenLevel: 0
   roomHealth: 100
-  hasElectricity: 1
   data: {fileID: 11400000, guid: 2e227c9db1fef804083b71584dcdd8ce, type: 2}
 --- !u!114 &41654219
 MonoBehaviour:
@@ -1207,8 +1207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 3
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 2078513889}
   warningHighlight: {fileID: 1753191176}
   waypoints:
@@ -1216,7 +1217,6 @@ MonoBehaviour:
   radiationLevel: 0
   oxygenLevel: 0
   roomHealth: 100
-  hasElectricity: 1
   data: {fileID: 11400000, guid: fc27879a9f6abd74b90fa52227b8f2e6, type: 2}
 --- !u!114 &145291458
 MonoBehaviour:
@@ -1331,7 +1331,7 @@ RectTransform:
   - {fileID: 874985044}
   - {fileID: 1645407454}
   m_Father: {fileID: 994651515}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3697,7 +3697,7 @@ RectTransform:
   m_LocalScale: {x: 0.9414814, y: 0.942264, z: 1.0433733}
   m_Children: []
   m_Father: {fileID: 994651515}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3741,6 +3741,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440622147}
+  m_CullTransparentMesh: 0
+--- !u!1 &447497627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447497628}
+  - component: {fileID: 447497630}
+  - component: {fileID: 447497629}
+  m_Layer: 5
+  m_Name: OuterSilhouette [Image] (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &447497628
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447497627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9414814, y: 0.942264, z: 1.0433733}
+  m_Children: []
+  m_Father: {fileID: 994651515}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 12.299988}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &447497629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447497627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1ec16329abfbb439cbd4bde4979b744d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &447497630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447497627}
   m_CullTransparentMesh: 0
 --- !u!1 &449850059
 GameObject:
@@ -3830,8 +3905,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 1
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 413084175}
   warningHighlight: {fileID: 1571112015}
   waypoints:
@@ -3839,7 +3915,6 @@ MonoBehaviour:
   radiationLevel: 0
   oxygenLevel: 0
   roomHealth: 100
-  hasElectricity: 1
   data: {fileID: 11400000, guid: 6b3796b2d302f1c4d8ed9ae0d34601f8, type: 2}
 --- !u!114 &449850064
 MonoBehaviour:
@@ -4855,7 +4930,7 @@ GameObject:
   - component: {fileID: 586542782}
   - component: {fileID: 586542781}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: FrameBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5626,8 +5701,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 5
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 2132086316}
   warningHighlight: {fileID: 1458847091}
   waypoints:
@@ -5635,7 +5711,6 @@ MonoBehaviour:
   radiationLevel: 20
   oxygenLevel: 0
   roomHealth: 98
-  hasElectricity: 1
   data: {fileID: 11400000, guid: 37dff2cb0a80ae1408aeacb62ca1ac2c, type: 2}
 --- !u!61 &733175601
 BoxCollider2D:
@@ -5781,8 +5856,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 6
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 141698823}
   warningHighlight: {fileID: 1808101362}
   waypoints:
@@ -5790,7 +5866,6 @@ MonoBehaviour:
   radiationLevel: 0
   oxygenLevel: 0
   roomHealth: 100
-  hasElectricity: 1
   data: {fileID: 11400000, guid: 1d3b9672d1a3d9e4a91f155e6bd7658a, type: 2}
 --- !u!114 &746413032
 MonoBehaviour:
@@ -6486,8 +6561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 0
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 469850250}
   warningHighlight: {fileID: 974128352}
   waypoints:
@@ -6495,7 +6571,6 @@ MonoBehaviour:
   radiationLevel: 0
   oxygenLevel: 0
   roomHealth: 100
-  hasElectricity: 1
   data: {fileID: 11400000, guid: e86af6258200fd94b84f476113dc958a, type: 2}
 --- !u!114 &817595655
 MonoBehaviour:
@@ -7599,6 +7674,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 447497628}
   - {fileID: 440622148}
   - {fileID: 1797091739}
   - {fileID: 165831673}
@@ -8163,8 +8239,8 @@ Transform:
   - {fileID: 1388245975}
   - {fileID: 707298873}
   - {fileID: 1726075961}
-  - {fileID: 2123859683}
   - {fileID: 2056552083}
+  - {fileID: 2123859683}
   - {fileID: 586542780}
   - {fileID: 1570245683}
   m_Father: {fileID: 0}
@@ -9234,8 +9310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 6
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 1330374263}
   warningHighlight: {fileID: 1562866322}
   waypoints:
@@ -9243,7 +9320,6 @@ MonoBehaviour:
   radiationLevel: 0
   oxygenLevel: 0
   roomHealth: 100
-  hasElectricity: 1
   data: {fileID: 11400000, guid: 2bfc19af8a57d64478bd40aafd645ef8, type: 2}
 --- !u!114 &1287071974
 MonoBehaviour:
@@ -11713,8 +11789,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
-  RoomType: 0
+  SystemType: 2
   RoomState: 0
+  hasElectricFailure: 0
   highlight: {fileID: 1062435940}
   warningHighlight: {fileID: 2041892214}
   waypoints:
@@ -11722,7 +11799,6 @@ MonoBehaviour:
   radiationLevel: 0
   oxygenLevel: 0
   roomHealth: 100
-  hasElectricity: 1
   data: {fileID: 11400000, guid: f9c2b594ffcb2db4f9940472835daf47, type: 2}
 --- !u!114 &1698666223
 MonoBehaviour:
@@ -12194,7 +12270,7 @@ RectTransform:
   - {fileID: 1617275052}
   - {fileID: 948363641}
   m_Father: {fileID: 994651515}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12231,7 +12307,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 994651515}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -13193,7 +13269,7 @@ RectTransform:
   - {fileID: 1561506049}
   - {fileID: 2081851085}
   m_Father: {fileID: 1078634785}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14195,26 +14271,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1078634785}
     m_Modifications:
-    - target: {fileID: 1005160141098367637, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1005160141098367639, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1005160141898371598, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1005160142257685667, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 198623751}
     - target: {fileID: 1005160142257685670, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_Name
@@ -14238,7 +14294,7 @@ PrefabInstance:
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
@@ -14328,16 +14384,6 @@ PrefabInstance:
     - target: {fileID: 1005160142257685671, guid: a373ed38dda78d7439047ab885e60f70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4978501108679377583, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6051194911672182309, guid: a373ed38dda78d7439047ab885e60f70,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14580,7 +14626,7 @@ PrefabInstance:
     - target: {fileID: 326006672630120991, guid: abea9dafb0df44149b3b36ce83bcc71d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 326006672630120991, guid: abea9dafb0df44149b3b36ce83bcc71d,
         type: 3}

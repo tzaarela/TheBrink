@@ -14,10 +14,11 @@ namespace Assets.Scripts.Systems
         public PowerState PowerState { get; set; }
         public bool IsDepressurised { get; set; }
         public float AirLevel { get; set; }
-        public float EnergyWanted { get; set; }
+
+        public float UpkeepCost { get; set; }
+        public float Capacity { get; set; }
         public float CurrentEnergy { get; set; }
-        public float CurrentEnergyInSystem { get; set; }
-        public float EnergyToMaintain { get; set; }
+        public float MaxEnergy { get; set; }
 
         public virtual void Reboot()
         {
@@ -28,11 +29,39 @@ namespace Assets.Scripts.Systems
             
         }
 
-        public virtual void RunDiagnostic()
+        public virtual void SetCapacity()
         {
+            if(CurrentEnergy < 20)
+            {
+                Capacity = 0.5f;
+            }
+            else if(CurrentEnergy < 40)
+            {
+                Capacity = 1.0f;
+
+            }
+            else if(CurrentEnergy < 60)
+            {
+                Capacity = 1.3f;
+
+            }
+            else if (CurrentEnergy < 90)
+            {
+                Capacity = 1.6f;
+
+            }
+            else
+            {
+                Capacity = 2.0f;
+            }
         }
 
-        public virtual void SetEnergyWanted()
+        public virtual void Upkeep()
+        {
+            CurrentEnergy -= UpkeepCost;
+        }
+
+        public virtual void RunDiagnostic()
         {
         }
 

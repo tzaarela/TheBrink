@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Ship
   m_EditorClassIdentifier: 
   position: 0
-  speed: 2
-  fuel: 1000
+  speed: 10
+  fuel: 638
   maxFuel: 1000
   capacitor: 1000
   maxCapacitor: 1000
@@ -23,10 +23,9 @@ MonoBehaviour:
   captainName: SAARELA
   missionContract: {fileID: 11400000, guid: a7ce26e10e38c4f55b7c49bfda7611a1, type: 2}
   roomData: {fileID: 11400000, guid: 8fb5ec5723b4d2d4896b81c981ae577a, type: 2}
-  crew: []
   _defaultSpeed: 10
   _defaultPosition: 0
   _defaultFuel: 638
   _defaultCapacitor: 1000
   _defaultCash: 1000000
-  _beginWithDefault: 0
+  _beginWithDefault: 1

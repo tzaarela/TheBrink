@@ -12,8 +12,8 @@ namespace Assets.Scripts.Rooms
     {
         public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
         public float RoomHealth { get => roomHealth; set => roomHealth = value; }
-        public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
-        public RoomType RoomType;
+
+        public SystemType SystemType;
         public RoomState RoomState;
 
         public List<CrewMember> PresentCrewMembers { get; set; }
@@ -42,6 +42,7 @@ namespace Assets.Scripts.Rooms
         }
         
         public List<Hazard> Hazards { get; set; }
+        public bool hasElectricFailure;
 
         private Door _door;
         private UnityEvent onRoomSelected;
@@ -59,14 +60,12 @@ namespace Assets.Scripts.Rooms
         private float oxygenLevel;
         [SerializeField]
         private float roomHealth;
-        [SerializeField]
-        private bool hasElectricity;
 
         public RoomData data;
 
         public void Awake()
         {
-            RoomType = data.roomType;
+            SystemType = data.systemType;
             RoomHealth = data.health;
             OxygenLevel = 100;
             RoomState = RoomState.Open;
@@ -185,6 +184,11 @@ namespace Assets.Scripts.Rooms
                         break;
                 }
             }
+        }
+
+        public IShipSystem GetShipSystem()
+        {
+            return SystemController.Instance.GetSystemOfType(SystemType);
         }
 
         public override void OnPointerEnter(PointerEventData eventData)

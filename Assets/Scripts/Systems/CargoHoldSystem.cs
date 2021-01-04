@@ -15,10 +15,10 @@ public class CargoHoldSystem : ShipSystem
     {
         PowerState = PowerState.IsOn;
         SystemType = SystemType.CargoBay;
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.CargoHold);
+        SystemRoom = rooms.FirstOrDefault(x => x.SystemType == SystemType.CargoBay);
 
+        CurrentEnergy = 50;
 
-        EnergyWanted = 0;
     }
 
     public override void Update()
@@ -29,7 +29,6 @@ public class CargoHoldSystem : ShipSystem
 
     public override void Run()
     {
-        CurrentEnergyInSystem = CurrentEnergy;
 
     }
 }

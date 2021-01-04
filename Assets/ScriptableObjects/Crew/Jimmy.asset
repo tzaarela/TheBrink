@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Jimmy
   m_EditorClassIdentifier: 
   crewName: Jimmy
-  health: 10000
+  health: 100
   repairSkill: 50
-  sprite: {fileID: 21300000, guid: 2cab8c9b35131ee46958f57f9dac5228, type: 3}
+  sprite: {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
   profession: 1
   age: 32
   gender: 1
@@ -29,5 +29,5 @@ MonoBehaviour:
   salary: 8500
   summary: '-'
   isHired: 0
-  _health: 10000
   _isHired: 0
+  _health: 100

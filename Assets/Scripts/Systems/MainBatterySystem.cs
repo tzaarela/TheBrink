@@ -17,10 +17,11 @@ public class MainBatterySystem : ShipSystem
     public float weaponCharge;
     public float probOfHittingTarget;
     public float maxWeaponCharge;
+    public float energyCostPerShot;
 
     public MainBatterySystem(List<Room> rooms)
     {
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MainBattery);
+        SystemRoom = rooms.FirstOrDefault(x => x.SystemType == SystemType.MainBattery);
 
         PowerState = PowerState.IsOn;
         SystemType = SystemType.MainBattery;
@@ -29,12 +30,14 @@ public class MainBatterySystem : ShipSystem
         //TODO: Se what values here that you might want to lift out to SystemController.
         //Go through this later, also lift out some to the common list in top of SystemController.
 
-        EnergyToMaintain = 0;
-        EnergyWanted = 0;
+        UpkeepCost = SystemController.Instance.mainBatteryUpkeepSystem;
+
+        CurrentEnergy = 50;
 
         weaponCharge = 0;
         probOfHittingTarget = 0;
-        maxWeaponCharge = 0;
+        maxWeaponCharge = 100;
+        energyCostPerShot = 40;
     }
 
     public override void Update()
@@ -68,7 +71,7 @@ public class MainBatterySystem : ShipSystem
         }
         else
         {
-            weaponCharge++;
+            weaponCharge += Capacity;
         }
     }
 
@@ -76,7 +79,7 @@ public class MainBatterySystem : ShipSystem
     {
         if (probOfHittingTarget < 100)
         {
-            probOfHittingTarget++;
+            probOfHittingTarget += Capacity;
         }
         else
         {
@@ -128,6 +131,8 @@ public class MainBatterySystem : ShipSystem
             isCharging = true;
             isLockingOnTarget = true;
         }
+
+        CurrentEnergy -= energyCostPerShot;
 
         weaponCharge = 0;
         probOfHittingTarget = 0;
