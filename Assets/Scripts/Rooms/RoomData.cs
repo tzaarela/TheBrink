@@ -10,7 +10,7 @@ namespace Assets.Scripts.Rooms
     [CreateAssetMenu(fileName = "RoomData", menuName = "RoomData")]
     public class RoomData : ScriptableObject
     {
-        public SystemType roomType;
+        public SystemType systemType;
         public float health;
         private const float MaxHealth = 100f;
         [Header("DEBUG")]

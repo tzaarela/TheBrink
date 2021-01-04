@@ -29,6 +29,5 @@ MonoBehaviour:
   salary: 15750
   summary: '-'
   isHired: 0
-  _beginWithDefault: 1
   _isHired: 0
   _health: 100

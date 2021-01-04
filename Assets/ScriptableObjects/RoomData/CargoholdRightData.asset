@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1854302ec1ae1d342b9965a9a8007b75, type: 3}
   m_Name: CargoholdRightData
   m_EditorClassIdentifier: 
+  systemType: 6
   health: 5
   _defaultHealth: 5
   _beginWithDefault: 1
-  roomType: 1

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Route;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,13 @@ public class Radar : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject enemyEncounterPrefab;
+    RadarEncounter meteorEncounterPrefab;
+
+    [SerializeField]
+    RadarEncounter solarFlareEncounterPrefab;
+
+    [SerializeField]
+    RadarEncounter gammaRayEncounterPrefab;
 
     [SerializeField]
     GameObject outpostPrefab;
@@ -52,9 +59,25 @@ public class Radar : MonoBehaviour
 
         foreach (var encounter in encounters)
         {
-            var radarEncounter = GameObject.Instantiate(enemyEncounterPrefab, routeLine);
+            RadarEncounter radarEncounter = null;
+
+            switch (encounter.EncounterType)
+            {
+                case EncounterType.SolarFlare:
+                    radarEncounter = GameObject.Instantiate(solarFlareEncounterPrefab, routeLine);
+                    break;
+                case EncounterType.Meteor:
+                    radarEncounter = GameObject.Instantiate(meteorEncounterPrefab, routeLine);
+                    break;
+                case EncounterType.GammaRay:
+                    radarEncounter = GameObject.Instantiate(gammaRayEncounterPrefab, routeLine);
+                    break;
+            }
+
+            radarEncounter.encounter = encounter;
             radarEncounter.transform.Translate(new Vector2(0, encounter.Position * RadarController.Instance.RouteLengthMultiplier));
         }
+
         var outpost = GameObject.Instantiate(outpostPrefab, routeLine);
         outpost.transform.Translate(new Vector2(0, RouteLength * RadarController.Instance.RouteLengthMultiplier + 50));
 

@@ -12,7 +12,7 @@ namespace Assets.Scripts.Rooms
     {
         public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
         public float RoomHealth { get => roomHealth; set => roomHealth = value; }
-        public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
+
         public SystemType SystemType;
         public RoomState RoomState;
 
@@ -42,6 +42,7 @@ namespace Assets.Scripts.Rooms
         }
         
         public List<Hazard> Hazards { get; set; }
+        public bool hasElectricFailure;
 
         private Door _door;
         private UnityEvent onRoomSelected;
@@ -59,14 +60,12 @@ namespace Assets.Scripts.Rooms
         private float oxygenLevel;
         [SerializeField]
         private float roomHealth;
-        [SerializeField]
-        private bool hasElectricity;
 
         public RoomData data;
 
         public void Awake()
         {
-            SystemType = data.roomType;
+            SystemType = data.systemType;
             RoomHealth = data.health;
             OxygenLevel = 100;
             RoomState = RoomState.Open;

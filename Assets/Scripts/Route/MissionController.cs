@@ -27,7 +27,7 @@ public class MissionController : MonoBehaviour
         get 
         { 
             if(route == null)
-                route = new Route(1000, 100, 10);
+                route = new Route(1000, 50, 10);
             return route; 
         }
         set { route = value; }
@@ -62,7 +62,6 @@ public class MissionController : MonoBehaviour
         if (tickTimer >= TICK_TIMER_MAX)
         {
             tickTimer = 0;
-            CheckEncounters();
             CrewController.Instance.UpdateCrewCommands();
             RoomController.Instance.UpdateRooms();
             SystemController.Instance.UpdateShipSystems();
@@ -87,21 +86,6 @@ public class MissionController : MonoBehaviour
         if (route.ShipPosition >= route.Length && !isFinished)
         {
             FinishMission();
-        }
-    }
-
-    private void CheckEncounters()
-    {
-        foreach (Encounter encounter in route.EncountersOnRoute)
-        {
-            if (!encounter.HasTriggered && route.ShipPosition > encounter.Position)
-            {
-                
-                Debug.Log("Encounter triggered!");
-                
-                encounter.HasTriggered = true;
-                encounter.Execute();
-            }
         }
     }
 

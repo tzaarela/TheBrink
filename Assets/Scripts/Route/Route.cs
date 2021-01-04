@@ -40,7 +40,9 @@ public class Route
         {
             var position = _distanceToNextEncounter * i;
 
-            Encounter encounter = new Encounter(position, _dangerLevel);
+            var encounterType = (EncounterType)Random.Range(0, 3);
+
+            Encounter encounter = new Encounter(position, _dangerLevel, encounterType);
 
             EncountersOnRoute.Add(encounter);
         }

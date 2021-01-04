@@ -28,6 +28,7 @@ public class Hazard
     //Initialize here, add function, that way called only once, called from room. create hazard. So causes inital damage
     public void UpdateHazard()
     {
+        _system.MaxEnergy = 100;
         switch (HazardType)
         {
             case HazardType.Breach:
@@ -55,7 +56,7 @@ public class Hazard
 
     private void RoomWithElectricFailure()
     {
-        //_system.PowerState = PowerState.IsOff;
+        _hazardRoom.hasElectricFailure = true;
     }
 
     ///<summary>

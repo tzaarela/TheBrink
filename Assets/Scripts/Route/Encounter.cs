@@ -12,7 +12,7 @@ public class Encounter
 
     public bool HasTriggered { get; set; }
 
-    public Encounter(float _encounterPosition, float _severity)
+    public Encounter(float _encounterPosition, float _severity, EncounterType encounterType)
     {
 
         Position = _encounterPosition;
@@ -21,7 +21,7 @@ public class Encounter
 
         //I'm just going to set this here, later on we will have other better constructors that will be able to set encounters
         //to different types.
-        EncounterType = EncounterType.SolarFlare;
+        EncounterType = encounterType;
     }
     public void Execute()
     {

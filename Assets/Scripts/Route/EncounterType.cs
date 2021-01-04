@@ -1,6 +1,6 @@
 ﻿public enum EncounterType
 {
-    SolarFlare,
-    Meteor,
-    GammaRay,
+    SolarFlare = 0,
+    Meteor = 1,
+    GammaRay = 2,
 }
