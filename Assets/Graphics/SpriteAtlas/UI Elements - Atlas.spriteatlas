@@ -45,6 +45,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: f7ab569da61c24fb685dab49bdf88b44, type: 3}
     - {fileID: 102900000, guid: 44735537ae84c49448972efdcd691f22, type: 3}
     - {fileID: 102900000, guid: ec41fcfd59bc640579a35ed6c25299a2, type: 3}
+    - {fileID: 102900000, guid: 95d9fe4a99de14c0396169acf07b3ae9, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -66,7 +67,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c2184544714128a49ba58abad5bc0afe, type: 3}
   - {fileID: 21300000, guid: 3e6596643914b45498aa00658ae460bc, type: 3}
   - {fileID: 21300000, guid: ac7a2a640f9adce47bc34010a03a1b2e, type: 3}
-  - {fileID: 21300000, guid: 4bf699842cd6c4843b4015008d10333c, type: 3}
   - {fileID: 21300000, guid: e64d3a459d2fc2f4881cdffa572f9207, type: 3}
   - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
   - {fileID: 21300000, guid: 67c603a5f83ef42e7830e3e0db76d701, type: 3}
@@ -85,7 +85,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 133ac2a9ff6d94cf7b4f0532f0cbed04, type: 3}
   - {fileID: 21300000, guid: 7dffd4f9ae767c04589c5b3867d9f921, type: 3}
   - {fileID: 21300000, guid: d26db72abe4854aed9dd6135c3be8c22, type: 3}
-  - {fileID: 21300000, guid: 8ce9fa4abe1f69043978d5863452b31b, type: 3}
   - {fileID: 21300000, guid: 94d9a65ac637e4447b419b4358c1076e, type: 3}
   - {fileID: 21300000, guid: 1ba752dae75de4c12a52bf51e53af0e3, type: 3}
   - {fileID: 21300000, guid: ff0fd3da93ecb4fcf9506d6b108d4351, type: 3}
@@ -122,7 +121,6 @@ SpriteAtlas:
   - loading circle_gameover
   - border-outline_01_72x72
   - fire_icon
-  - ALERT BIG UI_border
   - Logotype_Pharmastrum
   - lineRadar
   - tab-border_13x13_01_Highlight
@@ -141,7 +139,6 @@ SpriteAtlas:
   - Main_Menu_Button_31x5_01
   - Technichian_19x(1)
   - tab-border_13x10_01_selected_Highlight
-  - ALERT BIG UI
   - 8x8_ui-border_01_selected
   - Vaning_Icon_Pixelated2
   - ShipUI_Floor_Inactive
@@ -159,7 +156,7 @@ SpriteAtlas:
   - Circle_19x(1)
   - tab-border_13x10_01_selected
   - Engineer_19x(1)
-  - ShipUI_Portrait6.png
+  - ShipUI_Portrait6
   - ShipIcon_105x120
   m_Tag: UI Elements - Atlas
   m_IsVariant: 0

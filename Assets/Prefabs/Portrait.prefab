@@ -1263,6 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  _portrait: {fileID: 5821049006210840401}
   crewNameText: {fileID: 2193973714425766465}
   professionText: {fileID: 220437422944431518}
   healthBar: {fileID: 2764161496228016796}

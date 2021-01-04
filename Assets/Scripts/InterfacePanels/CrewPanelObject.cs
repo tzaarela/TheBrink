@@ -13,6 +13,8 @@ namespace Assets.Scripts.InterfacePanels
 {
     public class CrewPanelObject : UITrigger
     {
+        [SerializeField] private Image _portrait;
+        
         [SerializeField]
         GameObject crewNameText;
 
@@ -59,6 +61,7 @@ namespace Assets.Scripts.InterfacePanels
                     isInit = true;
                 }
 
+                _portrait.sprite = crewMember.crewData.sprite;
                 nameTextMesh.text = crewMember.crewData.name;
                 professionTextMesh.text = crewMember.crewData.profession.ToString();
                 statusTextMesh.text = crewMember.Status.ToString();

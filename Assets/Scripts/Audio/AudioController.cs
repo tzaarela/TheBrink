@@ -12,12 +12,18 @@ public class AudioController : MonoBehaviour
     
     private AudioSource[][] _audioSources;
 
+    [Header("Global volume settings")]
     [Range (0f, 1f)]
     [SerializeField] private float _globalBGMVolume = 0.8f;
     
     [Range (0f, 1f)]
     [SerializeField] private float _globalSFXVolume = 0.8f;
     
+    [Header("Mute Options")]
+    [SerializeField] private bool _bmgIsMuted;
+    [SerializeField] private bool _sfxIsMuted;
+    
+    [Header("AudioClips")]
     [SerializeField] private AudioClip[] _sfxClips;
     [SerializeField] private AudioClip[] _bgmClips;
 
@@ -66,6 +72,9 @@ public class AudioController : MonoBehaviour
     // PLAY
     public void PlayBGM(AudioBGMType audioBGMType, AudioClip audioClip, float volume = 1f, float delay = 0f)
     {
+        if (_bmgIsMuted)
+            return;
+        
         AudioSource audioSource = GetBGMSource(audioBGMType);
         audioSource.clip = audioClip;
         audioSource.volume = _globalBGMVolume * volume;
@@ -74,6 +83,9 @@ public class AudioController : MonoBehaviour
 
     public void PlayBGM(AudioBGMType audioBGMType, BGMClipType clipType, float volume = 1f, float delay = 0f)
     {
+        if (_bmgIsMuted)
+            return;
+        
         AudioSource audioSource = GetBGMSource(audioBGMType);
         audioSource.clip = GetBGMClip(clipType);
         audioSource.volume = _globalBGMVolume * volume;
@@ -82,6 +94,9 @@ public class AudioController : MonoBehaviour
     
     public void PlaySFX(AudioClip audioClip, float volume = 1f, float delay = 0f)
     {
+        if (_sfxIsMuted)
+            return;
+
         AudioSource audioSource = GetFreeSFXSource();
         audioSource.clip = audioClip;
         audioSource.volume = _globalSFXVolume * volume;
@@ -90,6 +105,9 @@ public class AudioController : MonoBehaviour
 
     public void PlaySFX(SFXClipType clipType, float volume = 1f, float delay = 0f)
     {
+        if (_sfxIsMuted)
+            return;
+
         AudioSource audioSource = GetFreeSFXSource();
         audioSource.clip = GetSFXClip(clipType);
         audioSource.volume = _globalSFXVolume * volume;
@@ -217,5 +235,13 @@ public class AudioController : MonoBehaviour
         {
             audioSource.volume = _globalSFXVolume;
         }
+    }
+
+    public void SetMute(AudioSourceType audioSourceType, bool mute)
+    {
+        if (audioSourceType == AudioSourceType.Music)
+            _bmgIsMuted = mute;
+        else
+            _sfxIsMuted = mute;
     }
 }

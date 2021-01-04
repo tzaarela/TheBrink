@@ -10,6 +10,12 @@ namespace Assets.Scripts.Crew
     [CreateAssetMenu(fileName = "Crew", menuName = "Crew")]
     public class Crew : ScriptableObject
     {
-        public CrewData[] crewDataArray = new CrewData[3];
+        // public CrewData[] crewDataArray = new CrewData[3];
+        public List<CrewData> crewDataList;
+
+        public int GetCrewCount()
+        {
+            return crewDataList.Count;
+        }
     }
 }

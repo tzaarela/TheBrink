@@ -5940,6 +5940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portrait
       objectReference: {fileID: 0}
+    - target: {fileID: 5821049006397201490, guid: b8ac146c55e99cd44ae6a93fcdb88f80,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5821049006397201517, guid: b8ac146c55e99cd44ae6a93fcdb88f80,
         type: 3}
       propertyPath: m_Pivot.x

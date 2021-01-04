@@ -124,10 +124,15 @@ public class GameController : ScriptableObject
 
     public void ResetGame()
     {
-        for (int i = 0; i < crew.crewDataArray.Length; i++)
+        foreach (CrewData crewData in crew.crewDataList)
         {
-            crew.crewDataArray[i].Reset();
+            crewData.Reset();
         }
+
+        // for (int i = 0; i < crew.crewDataArray.Length; i++)
+        // {
+        //     crew.crewDataArray[i].Reset();
+        // }
     }
 
     private void HandleLoginComplete()
