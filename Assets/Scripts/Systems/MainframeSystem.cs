@@ -19,6 +19,8 @@ public class MainframeSystem : ShipSystem
         SystemType = SystemType.Mainframe;
 
         EnergyWanted = 0;
+
+        UpkeepCost = SystemController.Instance.mainFrameUpkeepSystem;
     }
 
     public override void Update()

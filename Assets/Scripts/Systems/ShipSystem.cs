@@ -14,6 +14,7 @@ namespace Assets.Scripts.Systems
         public PowerState PowerState { get; set; }
         public bool IsDepressurised { get; set; }
         public float AirLevel { get; set; }
+        public float UpkeepCost { get; set; }
         public float EnergyWanted { get; set; }
         public float CurrentEnergy { get; set; }
         public float CurrentEnergyInSystem { get; set; }
