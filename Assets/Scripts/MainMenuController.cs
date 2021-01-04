@@ -69,12 +69,7 @@ public class MainMenuController : MonoBehaviour
         GameController.Instance.ResetGame();
         GameController.Instance.GameScene = GameScene.Spaceport;
     }
-    
-    public void LoadOnClick()
-    {
-        ShowPanelOnly(_currentPanel = MainMenuPanelType.Load);
-    }
-    
+
     public void OptionsOnClick()
     {
         ShowPanelOnly(_currentPanel = MainMenuPanelType.Options);
@@ -91,10 +86,6 @@ public class MainMenuController : MonoBehaviour
         {
             case MainMenuPanelType.New:
                 Debug.Log($"Pressed Back from New");
-                ShowPanelOnly(_currentPanel = MainMenuPanelType.Main);
-                break;
-            case MainMenuPanelType.Load:
-                Debug.Log($"Pressed Back from Load");
                 ShowPanelOnly(_currentPanel = MainMenuPanelType.Main);
                 break;
             case MainMenuPanelType.Options:

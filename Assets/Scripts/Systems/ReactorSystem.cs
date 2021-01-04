@@ -28,6 +28,8 @@ public class ReactorSystem : ShipSystem
 
     public float EnergyOutput { get; set; }
 
+    public float EnergyProduction;
+
 
     public ReactorSystem(Ship ship, List<Room> rooms)
     {
@@ -36,16 +38,20 @@ public class ReactorSystem : ShipSystem
         SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.Reactor);
         SystemType = SystemType.Reactor;
         PowerState = PowerState.IsOn;
+
         fuelCost = SystemController.Instance.fuelCost;
         CapacityLevel = SystemController.Instance.capacityLevel;
+        
+        EnergyProduction = SystemController.Instance.energyProduction;
+        UpkeepCost = SystemController.Instance.reactorUpkeepSystem;
+
+        //This is my ugly way of trying to make sure that this system does not drain energy from other systems.
+        CurrentEnergy = 100;
+
         //Removed this for now, so we won't have that annoying notice.
         //IsRetrograde = false;
-        
-        //Wait, surely this is bizzarre? What was I thinking? Having an energyoutput that is LOWER than the bottleneck?
-        EnergyOutput = ship.capacitorBottleNeck / 3;
-        Efficiency = 1.00f;
 
-        EnergyWanted = 0;
+        Efficiency = 1.00f;
     }
 
     public override void Update()
@@ -71,8 +77,6 @@ public class ReactorSystem : ShipSystem
             ship.speed = 0;
         }
 
-        CurrentEnergyInSystem = CurrentEnergy;
-
     }
 
     public void BurnsFuel()
@@ -82,7 +86,7 @@ public class ReactorSystem : ShipSystem
 
     public void ProdEnergy()
     {
-        EnergyOutput = CapacityLevel * Efficiency;
+        EnergyOutput = EnergyProduction * CapacityLevel * Efficiency;
 
         ship.capacitor = Mathf.Clamp(EnergyOutput + ship.capacitor, 0, ship.maxCapacitor);
     }
@@ -90,5 +94,6 @@ public class ReactorSystem : ShipSystem
     public void ProdSpeed()
     {
         ship.speed = CapacityLevel * 2;
+        //TODO: Make it so that this isn't a magic number.
     }
 }

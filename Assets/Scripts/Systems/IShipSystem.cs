@@ -15,19 +15,17 @@ public interface IShipSystem
 
     float AirLevel { get; set; }
 
-    float EnergyWanted { get; set; }
-
     float CurrentEnergy { get; set; }
 
-    float CurrentEnergyInSystem { get; set; }
-
-    float EnergyToMaintain { get; set; }
+    float MaxEnergy { get; set; }
 
     void Run();
 
     void Update();
 
-    void SetEnergyWanted();
+    void Upkeep();
+
+    void SetCapacity();
 
     void Reboot();
 

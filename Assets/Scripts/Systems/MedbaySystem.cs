@@ -23,7 +23,9 @@ public class MedbaySystem : ShipSystem
         this.rooms = rooms;
         SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.MedBay);
 
-        EnergyWanted = 0;
+        UpkeepCost = SystemController.Instance.medbayUpkeepSystem;
+        CurrentEnergy = 50;
+
     }
 
     public override void Update()
@@ -46,9 +48,6 @@ public class MedbaySystem : ShipSystem
                 TreatPatients(patients, doctor);
             }
         }
-
-        CurrentEnergyInSystem = CurrentEnergy;
-
     }
     public CrewMember GetDoctor(Room systemRoom)
     {
@@ -64,7 +63,7 @@ public class MedbaySystem : ShipSystem
     {
         foreach (var patient in patients)
         {
-            patient.crewData.health += SystemController.Instance.healingAmount;
+            patient.crewData.health += SystemController.Instance.healingAmount * Capacity;
             patient.crewData.health = Mathf.Clamp(patient.crewData.health, 0, 100);
         }
     }

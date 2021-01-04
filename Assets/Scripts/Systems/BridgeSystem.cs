@@ -40,9 +40,8 @@ public class BridgeSystem : ShipSystem
 
         route = MissionController.Instance.Route;
 
-        //I set EnergyToMaintain to zero on Bridge, seeing as this system will not be able to be turned off, and should not take any energy.
-        EnergyToMaintain = 0;
-        EnergyWanted = 0;
+        CurrentEnergy = 50;
+
     }
     public override void Update()
     {
@@ -57,11 +56,6 @@ public class BridgeSystem : ShipSystem
         TimeUntilRetrogradeBurn = UpdateTimeToRetro();
         TimeUntilNextEncounter = UpdateTimeToEncounter();
 
-        //So, I leave this here atm so I can turn the method below into returning a float later.
-        //EnergyWanted = 
-        SetEnergyWanted();
-
-        CurrentEnergyInSystem = CurrentEnergy;
     }
 
     public float GetDistanceLeft()
@@ -93,12 +87,6 @@ public class BridgeSystem : ShipSystem
         return 10;
     }
 
-    public override void SetEnergyWanted()
-    {
-        //TODO: Set this method to return a float instead?
-        //Based on what Saarela mentioned that might be the best way to handle this sort of things.
-        EnergyWanted = EnergyToMaintain;
-    }
 
     public override void Reboot()
     {

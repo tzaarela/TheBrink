@@ -16,7 +16,7 @@ public class GameController : ScriptableObject
     public Crew crew;
     
     [Header("DEBUG")]
-    public bool _debuging;
+    public bool isDebuging;
     [SerializeField] private GameScene _beginDebugScene;
 
 
@@ -39,7 +39,7 @@ public class GameController : ScriptableObject
         this.crew = crew;
 
         // TODO DEBUG ONLY
-        if (_debuging)
+        if (isDebuging)
             SwitchScene(_beginDebugScene);
         else
             SwitchScene(GameScene.Start);
@@ -84,7 +84,7 @@ public class GameController : ScriptableObject
                         SystemWindowController.Instance.InitSystemContent();
                         MissionController.Instance.isInitialised = true;
 
-                        if (!_debuging)
+                        if (!isDebuging)
                             MissionController.Instance.Route = ship.missionContract.route;
 
                     };

@@ -97,10 +97,18 @@
             <e p="BGMClipType.cs" t="Include" />
             <e p="SFXClipType.cs" t="Include" />
           </e>
+          <e p="ClickToContinue.cs" t="Include" />
           <e p="Command.cs" t="Include" />
           <e p="ConsoleController.cs" t="Include" />
           <e p="Controls" t="Include">
             <e p="BridgeControls.cs" t="Include" />
+            <e p="CargoHoldControls.cs" t="Include" />
+            <e p="CorridorControls.cs" t="Include" />
+            <e p="IControls.cs" t="Include" />
+            <e p="LifeSupportControls.cs" t="Include" />
+            <e p="MainBatteryControls.cs" t="Include" />
+            <e p="MainFrameControls.cs" t="Include" />
+            <e p="MedbayControls.cs" t="Include" />
             <e p="ReactorControls.cs" t="Include" />
           </e>
           <e p="Crew" t="Include">
@@ -121,12 +129,14 @@
           <e p="Door.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="InterfaceTriggerEditor.cs" t="Include" />
+            <e p="PropertyInfoEditor.cs" t="Include" />
           </e>
           <e p="EventTriggers" t="Include">
             <e p="RoomTrigger.cs" t="Include" />
           </e>
           <e p="GameController.cs" t="Include" />
           <e p="GameScene.cs" t="Include" />
+          <e p="InputController.cs" t="Include" />
           <e p="InterfacePanels" t="Include">
             <e p="ContextMenuController.cs" t="Include" />
             <e p="ContextMenuItem.cs" t="Include" />
@@ -140,12 +150,12 @@
           <e p="MainMenuController.cs" t="Include" />
           <e p="MainMenuPanelType.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />
-          <e p="PropertyInfoEditor.cs" t="Include" />
           <e p="Rooms" t="Include">
             <e p="Room.cs" t="Include" />
             <e p="RoomController.cs" t="Include" />
             <e p="RoomData.cs" t="Include" />
             <e p="RoomDataArray.cs" t="Include" />
+            <e p="RoomState.cs" t="Include" />
             <e p="RoomType.cs" t="Include" />
           </e>
           <e p="Route" t="Include">
@@ -197,6 +207,7 @@
             <e p="BridgeSystem.cs" t="Include" />
             <e p="CargoHoldSystem.cs" t="Include" />
             <e p="CorridorSystem.cs" t="Include" />
+            <e p="IShipSystem.cs" t="Include" />
             <e p="LifeSupportSystem.cs" t="Include" />
             <e p="MainBatterySystem.cs" t="Include" />
             <e p="MainframeSystem.cs" t="Include" />
@@ -210,6 +221,7 @@
             <e p="SystemTabController.cs" t="Include" />
             <e p="SystemType.cs" t="Include" />
           </e>
+          <e p="SystemWindowController.cs" t="Include" />
           <e p="T.cs" t="Include" />
           <e p="TimeCounter.cs" t="Include" />
           <e p="ToggleButton.cs" t="Include" />
