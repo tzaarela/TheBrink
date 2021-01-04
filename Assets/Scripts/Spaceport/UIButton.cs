@@ -23,8 +23,6 @@ public class UIButton : UITrigger
 
     private void Start()
     {
-        // Debug.Log($"_sprites.Length: {_sprites.Length}");
-        // Debug.Log($"_colors.Length: {_colors.Length}");
         SetButtonState(ButtonState.Normal);
     }
 

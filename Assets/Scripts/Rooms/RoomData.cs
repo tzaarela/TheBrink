@@ -16,7 +16,6 @@ namespace Assets.Scripts.Rooms
         [Header("DEBUG")]
         [SerializeField] private int _defaultHealth = 50;
         [SerializeField] private bool _beginWithDefault;
-        
 
         private void OnEnable()
         {
