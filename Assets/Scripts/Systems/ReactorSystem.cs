@@ -28,6 +28,8 @@ public class ReactorSystem : ShipSystem
 
     public float EnergyOutput { get; set; }
 
+    public float EnergyProduction;
+
 
     public ReactorSystem(Ship ship, List<Room> rooms)
     {
@@ -38,6 +40,8 @@ public class ReactorSystem : ShipSystem
         PowerState = PowerState.IsOn;
         fuelCost = SystemController.Instance.fuelCost;
         CapacityLevel = SystemController.Instance.capacityLevel;
+        EnergyProduction = SystemController.Instance.energyProduction;
+
         //Removed this for now, so we won't have that annoying notice.
         //IsRetrograde = false;
         
@@ -82,7 +86,8 @@ public class ReactorSystem : ShipSystem
 
     public void ProdEnergy()
     {
-        EnergyOutput = CapacityLevel * Efficiency;
+        EnergyOutput = EnergyProduction * CapacityLevel * Efficiency;
+        //TODO: Need to produce MORE energy with a multiple variable here.
 
         ship.capacitor = Mathf.Clamp(EnergyOutput + ship.capacitor, 0, ship.maxCapacitor);
     }
@@ -90,5 +95,6 @@ public class ReactorSystem : ShipSystem
     public void ProdSpeed()
     {
         ship.speed = CapacityLevel * 2;
+        //TODO: Make it so that this isn't a magic number.
     }
 }

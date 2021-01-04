@@ -30,6 +30,7 @@ public class SystemController : ScriptableObject
     public float fuelCost = 0.1f;
     [Range(1, 3)]
     public int capacityLevel = 2;
+    public float energyProduction = 10;
 
     [Header("CargoHoldSystem")]
 

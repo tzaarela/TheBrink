@@ -42,36 +42,8 @@ public class MainframeSystem : ShipSystem
                 }
             }
         }
-
-        //var energyNeeded = GetEnergyNeeded();
-
-        //if (energyNeeded > 0)
-        //{
-        //    var energyFragment = DivideEnergy(energyNeeded);
-
-        //    SendEnergyOut(energyFragment);
-        //}
     }
-    /// <summary>
-    /// Goes through all active shipsystems and gathers energyWanted into a float
-    /// </summary>
-    /// <returns>A float of energyNeeded from all active systems</returns>
-    //public float GetEnergyNeeded()
-    //{
-    //    TotalEnergyNeeded = 0;
-
-    //    var systems = SystemController.Instance.ShipSystems;
-
-    //    foreach (var system in systems)
-    //    {
-    //        system.CurrentEnergy = 0;
-            
-    //        if(system.PowerState == PowerState.IsOn)
-    //        { 
-    //            TotalEnergyNeeded += system.EnergyWanted;
-    //        }
-    //    }
-    //    return TotalEnergyNeeded;
+   
     //}
     /// <summary>
     /// Takes in float energyNeeded, decreases the ship Capacitor & increases MainframeSystem.CurrentEnergy
