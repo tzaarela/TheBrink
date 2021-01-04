@@ -58,7 +58,7 @@ public class SystemController : ScriptableObject
 
     public void CreateShipSystems(Ship ship)
     {
-        isDebug = GameController.Instance._debuging;
+        isDebug = GameController.Instance.isDebuging;
         debugger = Debugger.instance;
         var rooms = RoomController.Instance.Rooms;
         var amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;

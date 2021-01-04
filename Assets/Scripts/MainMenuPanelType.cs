@@ -2,7 +2,6 @@
 {
     Main,
     New,
-    Load,
     Options,
     Credits
 }

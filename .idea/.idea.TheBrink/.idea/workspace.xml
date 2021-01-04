@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Shaders/Retro/BlitToMain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Shaders/Retro/BlitToMain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/Shaders/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/Shaders/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene_SEFGDHFJGKHG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MissionScene_SEFGDHFJGKHG.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ClickToContinue.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ClickToContinue.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/SystemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/SystemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SystemWindowController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SystemWindowController.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,24 +40,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportPanelController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/ButtonState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportPanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FCFB6FCD-3E9A-4E12-8C14-260F742E2185/ff/20b4ca42/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Crew/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/TabState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/ButtonState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -151,6 +157,7 @@
       <workItem from="1608199471885" duration="24610000" />
       <workItem from="1608287754010" duration="3154000" />
       <workItem from="1608539885457" duration="1346000" />
+      <workItem from="1609749329815" duration="235000" />
     </task>
     <servers />
   </component>
