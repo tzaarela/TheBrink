@@ -17,6 +17,7 @@ public class MainBatterySystem : ShipSystem
     public float weaponCharge;
     public float probOfHittingTarget;
     public float maxWeaponCharge;
+    public float energyCostPerShot;
 
     public MainBatterySystem(List<Room> rooms)
     {
@@ -35,7 +36,8 @@ public class MainBatterySystem : ShipSystem
 
         weaponCharge = 0;
         probOfHittingTarget = 0;
-        maxWeaponCharge = 0;
+        maxWeaponCharge = 100;
+        energyCostPerShot = 40;
     }
 
     public override void Update()
@@ -69,7 +71,7 @@ public class MainBatterySystem : ShipSystem
         }
         else
         {
-            weaponCharge++;
+            weaponCharge += Capacity;
         }
     }
 
@@ -77,7 +79,7 @@ public class MainBatterySystem : ShipSystem
     {
         if (probOfHittingTarget < 100)
         {
-            probOfHittingTarget++;
+            probOfHittingTarget += Capacity;
         }
         else
         {
@@ -129,6 +131,8 @@ public class MainBatterySystem : ShipSystem
             isCharging = true;
             isLockingOnTarget = true;
         }
+
+        CurrentEnergy -= energyCostPerShot;
 
         weaponCharge = 0;
         probOfHittingTarget = 0;

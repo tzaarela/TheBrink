@@ -9,10 +9,11 @@ using Assets.Scripts.Systems;
 
 public class LifeSupportSystem : ShipSystem
 {
-    public float[] oxygenMissingPerRoom;
     public List<Room> rooms;
 
     private Debugger debugger;
+
+    float oxygenProduced;
 
     public LifeSupportSystem(List<Room> rooms)
     {
@@ -34,10 +35,16 @@ public class LifeSupportSystem : ShipSystem
 
     public override void Run()
     {
-        SendOxygen();
+
+        SendOutOxygen();
     }
 
-    public void SendOxygen()
+    public void SetEfficiency()
+    {
+
+    }
+
+    public void SendOutOxygen()
     {
         foreach (var room in rooms)
         {
@@ -47,8 +54,8 @@ public class LifeSupportSystem : ShipSystem
                 //Checks if each room has enough oxygen, and isn't being sealed or depressurized.
                 if (room.OxygenLevel < SystemController.Instance.optimalOxygenLevel && room.RoomState == RoomState.Open)
                 {
-                    room.OxygenLevel += SystemController.Instance.oxygenProduced;
-                    CurrentEnergy -= SystemController.Instance.oxygenProduceCost;
+                    //Gives a portion of oxygen multiplied with the systems Capacity.
+                    room.OxygenLevel += SystemController.Instance.oxygenProduced * Capacity;
                 }
             }
             else

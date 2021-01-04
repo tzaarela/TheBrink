@@ -63,7 +63,7 @@ public class MedbaySystem : ShipSystem
     {
         foreach (var patient in patients)
         {
-            patient.crewData.health += SystemController.Instance.healingAmount;
+            patient.crewData.health += SystemController.Instance.healingAmount * Capacity;
             patient.crewData.health = Mathf.Clamp(patient.crewData.health, 0, 100);
         }
     }

@@ -16,7 +16,9 @@ namespace Assets.Scripts.Systems
         public float AirLevel { get; set; }
 
         public float UpkeepCost { get; set; }
+        public float Capacity { get; set; }
         public float CurrentEnergy { get; set; }
+        public float MaxEnergy { get; set; }
 
         public virtual void Reboot()
         {
@@ -25,6 +27,33 @@ namespace Assets.Scripts.Systems
         public virtual void Run()
         {
             
+        }
+
+        public virtual void SetCapacity()
+        {
+            if(CurrentEnergy < 20)
+            {
+                Capacity = 0.5f;
+            }
+            else if(CurrentEnergy < 40)
+            {
+                Capacity = 1.0f;
+
+            }
+            else if(CurrentEnergy < 60)
+            {
+                Capacity = 1.3f;
+
+            }
+            else if (CurrentEnergy < 90)
+            {
+                Capacity = 1.6f;
+
+            }
+            else
+            {
+                Capacity = 2.0f;
+            }
         }
 
         public virtual void Upkeep()

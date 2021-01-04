@@ -23,7 +23,7 @@ public class SystemController : ScriptableObject
     [Header("Life Support")]
     public float lifeSupportUpkeepSystem = 4.0f;
     public float optimalOxygenLevel = 95f;
-    public float oxygenProduced = 5f;
+    public float oxygenProduced = 2f;
     public float oxygenProduceCost = 0.1f;
 
     [Header("MedbaySystem")]
@@ -102,6 +102,7 @@ public class SystemController : ScriptableObject
         {
             if (system.PowerState == PowerState.IsOn)
             {
+                system.SetCapacity();
                 system.Run();
                 system.Upkeep();
             }

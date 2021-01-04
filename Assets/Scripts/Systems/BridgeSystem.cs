@@ -56,10 +56,6 @@ public class BridgeSystem : ShipSystem
         TimeUntilRetrogradeBurn = UpdateTimeToRetro();
         TimeUntilNextEncounter = UpdateTimeToEncounter();
 
-        //So, I leave this here atm so I can turn the method below into returning a float later.
-        //EnergyWanted = 
-        //SetEnergyWanted();
-
     }
 
     public float GetDistanceLeft()

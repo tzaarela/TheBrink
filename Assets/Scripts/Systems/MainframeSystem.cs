@@ -19,6 +19,8 @@ public class MainframeSystem : ShipSystem
         UpkeepCost = SystemController.Instance.mainFrameUpkeepSystem;
 
         CurrentEnergy = 50;
+
+        MaxEnergy = 100;
     }
 
     public override void Update()
@@ -34,15 +36,16 @@ public class MainframeSystem : ShipSystem
 
         foreach (var system in systems)
         {
+            //Checks if the system is on before giving it energy
             if(system.PowerState == PowerState.IsOn)
             {
-                if (ship.capacitor >= SystemController.Instance.energyPortion)
-                {
-                    //TODO: add a max here, so that it doesn't just keep puring energy into a system.
+                //Checks if the ship has energy to give AND if the system needs energy, before giving energy.
+                if (ship.capacitor >= SystemController.Instance.energyPortion && 
+                    system.CurrentEnergy + SystemController.Instance.energyPortion < system.MaxEnergy)
+                    
                     system.CurrentEnergy += SystemController.Instance.energyPortion;
                     ship.capacitor -= SystemController.Instance.energyPortion;
                 }
             }
         }
     }
-}

@@ -17,11 +17,15 @@ public interface IShipSystem
 
     float CurrentEnergy { get; set; }
 
+    float MaxEnergy { get; set; }
+
     void Run();
 
     void Update();
 
     void Upkeep();
+
+    void SetCapacity();
 
     void Reboot();
 
