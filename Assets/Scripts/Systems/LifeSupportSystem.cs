@@ -21,10 +21,8 @@ public class LifeSupportSystem : ShipSystem
         SystemType = SystemType.LifeSupport;
         this.rooms = rooms;
         SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
-
-        UpkeepCost = SystemController.Instance.lifeSupportUpkeepSystem;
-        CurrentEnergy = 50;
-
+        oxygenMissingPerRoom = new float[rooms.Count];
+        EnergyWanted = 0;
     }
 
     public override void Update()

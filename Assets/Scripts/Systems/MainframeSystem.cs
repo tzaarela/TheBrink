@@ -12,7 +12,7 @@ public class MainframeSystem : ShipSystem
     public MainframeSystem(Ship ship, List<Room> rooms)
     {
         this.ship = ship;
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.MainFrame);
+        SystemRoom = rooms.FirstOrDefault(x => x.SystemType == SystemType.Mainframe);
 
         SystemType = SystemType.Mainframe;
 

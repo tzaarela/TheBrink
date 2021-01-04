@@ -125,7 +125,7 @@ public class Hazard
                 break;
             case SystemType.MainBattery:
                 break;
-            case SystemType.MedBay:
+            case SystemType.Medbay:
                 break;
             default:
                 Debug.Log("hazard of type " + this.HazardType + "is of a specified RoomType that doesn't exist yet");

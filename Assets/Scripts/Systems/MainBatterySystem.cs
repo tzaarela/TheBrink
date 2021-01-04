@@ -21,7 +21,7 @@ public class MainBatterySystem : ShipSystem
 
     public MainBatterySystem(List<Room> rooms)
     {
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.MainBattery);
+        SystemRoom = rooms.FirstOrDefault(x => x.SystemType == SystemType.MainBattery);
 
         PowerState = PowerState.IsOn;
         SystemType = SystemType.MainBattery;

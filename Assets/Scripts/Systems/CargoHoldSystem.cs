@@ -15,7 +15,7 @@ public class CargoHoldSystem : ShipSystem
     {
         PowerState = PowerState.IsOn;
         SystemType = SystemType.CargoBay;
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.CargoHold);
+        SystemRoom = rooms.FirstOrDefault(x => x.SystemType == SystemType.CargoBay);
 
         CurrentEnergy = 50;
 

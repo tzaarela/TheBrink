@@ -56,7 +56,7 @@ public class Ship : ScriptableObject
 
     public List<float> GetRoomHealths()
     {
-        return RoomController.Instance.Rooms.Where(x => x.RoomType != SystemType.Corridor).Select(x => x.RoomHealth).ToList();
+        return RoomController.Instance.Rooms.Where(x => x.SystemType != SystemType.Corridors).Select(x => x.RoomHealth).ToList();
     }
 
     public List<CrewMember> GetCrewMembers()

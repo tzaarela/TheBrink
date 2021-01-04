@@ -11,7 +11,7 @@ public class CorridorSystem : ShipSystem
     {
         PowerState = PowerState.IsOn;
         SystemType = SystemType.Corridors;
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.Corridor);
+        SystemRoom = rooms.FirstOrDefault(x => x.SystemType == SystemType.Corridors);
 
         CurrentEnergy = 50;
 

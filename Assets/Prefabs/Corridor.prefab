@@ -233,12 +233,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+  SystemType: 7
+  RoomState: 0
   highlight: {fileID: 639067105661620619}
   warningHighlight: {fileID: 639067106424990929}
   waypoints:
   - {fileID: 0}
-  oxygenLevel: 0
   radiationLevel: 20
+  oxygenLevel: 0
   roomHealth: 100
   hasElectricity: 1
   data: {fileID: 11400000, guid: 92028214eebe55a49b0a05db23d05805, type: 2}
