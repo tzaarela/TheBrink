@@ -13,9 +13,6 @@ public class EmployeeContractContent : MonoBehaviour
         set => _crewData = value;
     }
 
-    // [SerializeField] private EmployeeContent _employeeContent;
-    
-
     [Header("Contract Info")]
     [SerializeField] private TMP_Text _companyName;
     [SerializeField] private TMP_Text _employeeInfo;

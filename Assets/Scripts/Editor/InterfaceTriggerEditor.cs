@@ -109,6 +109,17 @@ namespace Assets.Scripts.Editor
         }
     }
     
+    [CustomEditor(typeof(VolumeSlider))]
+    public class VolumeSliderEditor : EventTriggerEditor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            base.OnInspectorGUI();
+        }
+    }
+    
     [CustomEditor(typeof(UIButton))]
     public class UIButtonEditor : EventTriggerEditor
     {

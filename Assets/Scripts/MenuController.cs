@@ -18,8 +18,6 @@ public class MenuController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"gameScene: {GameController.Instance.GameScene}");
-        
         if (Input.GetKeyDown(KeyCode.Escape))
             ToggleMenu();
     }

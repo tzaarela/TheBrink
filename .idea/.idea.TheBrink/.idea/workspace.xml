@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OptionContent [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OptionContent [Panel].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +56,7 @@
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/TabState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumeSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,8 +87,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Starter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
@@ -97,7 +100,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/MenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/VolumeSlider.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -167,7 +173,7 @@
       <workItem from="1608199471885" duration="24610000" />
       <workItem from="1608287754010" duration="3154000" />
       <workItem from="1608539885457" duration="1346000" />
-      <workItem from="1609749329815" duration="19533000" />
+      <workItem from="1609749329815" duration="22173000" />
     </task>
     <servers />
   </component>
