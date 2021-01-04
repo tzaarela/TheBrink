@@ -15,7 +15,7 @@ MonoBehaviour:
   crewName: Johan
   health: 100
   repairSkill: 50
-  sprite: {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
+  sprite: {fileID: 21300000, guid: 2562865fde4d4b348934bfe06d642fe1, type: 3}
   profession: 0
   age: -1
   gender: 0
@@ -29,5 +29,5 @@ MonoBehaviour:
   salary: 1200
   summary: '-'
   isHired: 0
-  _isHired: 0
   _health: 100
+  _isHired: 0
