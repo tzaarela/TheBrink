@@ -15,6 +15,7 @@ namespace Assets.Scripts.Crew
         public float health;
         public float extinguishFireSkill;
         public float fixElectricFailureSkill;
+        public float fixHullBreachSkill;
         public Sprite sprite;
         public Profession profession;
 

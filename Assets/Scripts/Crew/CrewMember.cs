@@ -143,9 +143,20 @@ public class CrewMember : UITrigger
         moveController.Move();
     }
 
-    public void Repair()
+    public void ExtinguishFire()
     {
         CurrentCommand.Destination.ExtinguishFire(this);
+    }
+
+    public void FixHullBreach()
+    {
+        CurrentCommand.Destination.FixHullBreach(this);
+
+    }
+
+    public void FixElectronics()
+    {
+        CurrentCommand.Destination.FixElectricFailure(this);
     }
 
     public override void OnPointerClick(PointerEventData eventData)

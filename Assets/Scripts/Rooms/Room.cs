@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using Assets.Scripts.Crew;
 using Assets.Scripts.InterfacePanels;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,6 @@ namespace Assets.Scripts.Rooms
     public class Room : UITrigger
     {
         public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
-        public float RoomHealth { get => roomHealth; set => roomHealth = value; }
 
         public SystemType SystemType;
         public RoomState RoomState;
@@ -51,7 +51,7 @@ namespace Assets.Scripts.Rooms
         [SerializeField]
         private Transform highlight;
         [SerializeField]
-        private Transform warningHighlight;
+        private WarningHighlight warningHighlight;
         [SerializeField]
         public List<Waypoint> waypoints;
         [SerializeField]
@@ -66,7 +66,6 @@ namespace Assets.Scripts.Rooms
         public void Awake()
         {
             SystemType = data.systemType;
-            RoomHealth = data.health;
             OxygenLevel = 100;
             RoomState = RoomState.Open;
             Hazards = new List<Hazard>();
@@ -104,12 +103,35 @@ namespace Assets.Scripts.Rooms
         {
             Hazards.RemoveAll(x => x.IsFinished);
 
-            warningHighlight.gameObject.SetActive(Hazards.Count > 0);
+
+            var hasHazard = Hazards.Count > 0;
+
+            warningHighlight.gameObject.SetActive(hasHazard);
+            if(hasHazard)
+                SetWarningIcons();
 
             foreach (Hazard hazard in Hazards)
             {
                 hazard.UpdateHazard();
             }
+        }
+
+        public void SetWarningIcons()
+        {
+            if (Hazards.Any(x => x.HazardType == HazardType.Fire))
+                warningHighlight.fireIcon.SetActive(true);
+            else
+                warningHighlight.fireIcon.SetActive(false);
+
+            if (Hazards.Any(x => x.HazardType == HazardType.Breach))
+                warningHighlight.breachIcon.SetActive(true);
+            else
+                warningHighlight.breachIcon.SetActive(false);
+
+            if (Hazards.Any(x => x.HazardType == HazardType.ElectricFailure))
+                warningHighlight.electricIcon.SetActive(true);
+            else
+                warningHighlight.electricIcon.SetActive(false);
         }
 
         public void AirDrain(float drainLevel)
@@ -127,9 +149,19 @@ namespace Assets.Scripts.Rooms
             if(crewMember.CurrentWayPoint != waypoints[0])
                 availableTasks.Add(new MoveCommand(crewMember, this));
 
-            if (Hazards.Count > 0)
+            if (Hazards.Any(x => x.HazardType == HazardType.Fire))
             {
                 availableTasks.Add(new ExtinguishFireCommand(crewMember, this));
+            }
+
+            if (Hazards.Any(x => x.HazardType == HazardType.Breach))
+            {
+                availableTasks.Add(new FixHullBreachCommand(crewMember, this));
+            }
+
+            if (Hazards.Any(x => x.HazardType == HazardType.ElectricFailure))
+            {
+                availableTasks.Add(new FixElectricCommand(crewMember, this));
             }
 
             return availableTasks;
@@ -179,7 +211,29 @@ namespace Assets.Scripts.Rooms
             {
                 Hazards.Remove(hazardToFix);
             }
+        }
 
+        public void FixHullBreach(CrewMember crewMember)
+        {
+            Hazard hazardToFix;
+            var breaches = Hazards.Where(x => x.HazardType == HazardType.Breach).ToList();
+
+            if (breaches.Count <= 0)
+            {
+                ConsoleController.instance.PrintToConsole($"{crewMember.name}: I've repaired the hullbreach in {crewMember.CurrentCommand.Destination.name}. ", 0.01f, true);
+                return;
+            }
+            else
+            {
+                hazardToFix = breaches[0];
+            }
+
+            hazardToFix.SeverityAmount -= crewMember.crewData.fixHullBreachSkill;
+
+            if (hazardToFix.SeverityAmount <= 0)
+            {
+                Hazards.Remove(hazardToFix);
+            }
         }
 
         public IShipSystem GetShipSystem()
@@ -209,7 +263,7 @@ namespace Assets.Scripts.Rooms
                 //RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true).IsSelected = false;
                 //IsSelected = true;
 
-                if (CrewController.Instance.GetSelectedCrewMember() != null)
+                if (CrewController.Instance.GetSelectedCrewMember() != null && SystemType != SystemType.Corridors)
                 {
                     var availableTasks = GetAvailableCommandsForRoom(CrewController.Instance.GetSelectedCrewMember());
                     ContextMenuController.instance.OpenContextMenu(availableTasks);

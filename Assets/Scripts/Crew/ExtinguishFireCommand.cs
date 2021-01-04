@@ -24,7 +24,7 @@ public class ExtinguishFireCommand : Command
 
     public override void Execute()
     {
-        crewMember.Repair();
+        crewMember.ExtinguishFire();
 
         if (crewMember.CurrentCommand.Destination.Hazards.Count <= 0)
             IsFinished = true;

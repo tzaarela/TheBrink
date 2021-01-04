@@ -51,8 +51,8 @@ public class LifeSupportSystem : ShipSystem
             //Checks if we even have enough energy in the system to produce oxygen, else breaks the foreach loop.
             if (CurrentEnergy > SystemController.Instance.oxygenProduceCost)
             {
-                //Checks if each room has enough oxygen, and isn't being sealed or depressurized.
-                if (room.OxygenLevel < SystemController.Instance.optimalOxygenLevel && room.RoomState == RoomState.Open)
+                //Checks if each room has enough oxygen, and isn't being depressurized.
+                if (room.OxygenLevel < SystemController.Instance.optimalOxygenLevel && room.RoomState != RoomState.Depreassurized)
                 {
                     //Gives a portion of oxygen multiplied with the systems Capacity.
                     room.OxygenLevel += SystemController.Instance.oxygenProduced * Capacity;

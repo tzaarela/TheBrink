@@ -33,5 +33,10 @@ namespace Assets.Scripts.Rooms
         {
             health = MaxHealth;
         }
+
+        public void TakeDamage(float damage)
+        {
+            health = Mathf.Clamp(health - damage, 0, 100);
+        }
     }
 }

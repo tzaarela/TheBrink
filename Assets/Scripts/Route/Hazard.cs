@@ -107,9 +107,9 @@ public class Hazard
     /// </summary>
     public void FireBurns()
     {
-        if (SeverityAmount >= _hazardRoom.RoomHealth / 2)
+        if (SeverityAmount >= _hazardRoom.data.health / 2)
         {
-            _hazardRoom.RoomHealth -= 0.1f;
+            _hazardRoom.data.TakeDamage(0.1f);
 
             for (int i = _hazardRoom.PresentCrewMembers.Count - 1; i >= 0; i--)
             {

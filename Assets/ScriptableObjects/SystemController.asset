@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8f87bf74fb3134f8823d122a145c2c, type: 3}
   m_Name: SystemController
   m_EditorClassIdentifier: 
-  estimatedTimeToArrival: 948.9617
+  bridgeUpkeepSystem: 1
+  estimatedTimeToArrival: 472.1858
+  mainFrameUpkeepSystem: 1
+  energyPortion: 40
+  mainBatteryUpkeepSystem: 2
+  lifeSupportUpkeepSystem: 4
   optimalOxygenLevel: 95
+  oxygenProduced: 5
   oxygenProduceCost: 0.1
+  medbayUpkeepSystem: 1
+  healingEnergyCost: 1
   healingAmount: 1
+  reactorUpkeepSystem: 0
   fuelCost: 0.1
   capacityLevel: 1
+  energyProduction: 40
+  cargoHoldUpkeepSystem: 1
+  corridorUpkeepSystem: 1

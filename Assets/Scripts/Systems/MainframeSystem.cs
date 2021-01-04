@@ -41,7 +41,7 @@ public class MainframeSystem : ShipSystem
             {
                 //Checks if the ship has energy to give AND if the system needs energy, before giving energy.
                 if (ship.capacitor >= SystemController.Instance.energyPortion &&
-                    system.CurrentEnergy + SystemController.Instance.energyPortion < system.MaxEnergy)
+                    system.CurrentEnergy + SystemController.Instance.energyPortion < MaxEnergy)
                 {
                     system.CurrentEnergy += SystemController.Instance.energyPortion;
                     ship.capacitor -= SystemController.Instance.energyPortion;

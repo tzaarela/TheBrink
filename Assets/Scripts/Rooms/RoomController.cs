@@ -38,6 +38,9 @@ public class RoomController : MonoBehaviour
     {
         foreach (Room room in Rooms)
         {
+            if (room.SystemType == SystemType.Corridors)
+                continue;
+
             room.AirDrain(airDrainLevel);
             room.UpdateHazard();
             room.PresentCrewMembers
@@ -67,7 +70,7 @@ public class RoomController : MonoBehaviour
             var index = roomIndices[i];
             ConsoleController.instance.PrintToConsole("WARNING! Hullbreach in " + Rooms[index].name + "! ", 0.01f, false);
             Rooms[index].CreateHazard(HazardType.Breach, severity);
-            Rooms[index].RoomHealth -= severity;
+            Rooms[index].data.TakeDamage(severity);
             Rooms[index].PresentCrewMembers.ForEach(x => x.TakeDamage(20));
         }
     }

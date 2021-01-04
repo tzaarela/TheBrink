@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 25853490263f0ba44841a23a80e2051d
+guid: 637bb91a510601f4a9235cb25471bb9a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - missionContract: {instanceID: 0}
-  - roomData: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
