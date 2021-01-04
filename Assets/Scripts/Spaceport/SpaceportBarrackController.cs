@@ -13,7 +13,6 @@ public class SpaceportBarrackController : SpaceportPanelController
     [SerializeField] private Transform _crewTransform;
     [SerializeField] private Transform _unemployedTransform;
 
-    // [SerializeField] private List<CrewData> _crewMembersData;
     [SerializeField] private Crew _crew;
     [SerializeField] private List<EmployeeContent> _employeesContent;
     [SerializeField] private EmployeeContent _currentEmployeeContent;
@@ -49,7 +48,6 @@ public class SpaceportBarrackController : SpaceportPanelController
     private void Init()
     {
         _crew = GameController.Instance.crew;
-        // _crewMembersData = GameController.Instance.ship.crew;
         InitEmployeeContent(ref _employeesContent, ref _unemployedTransform);
         
         _employeeContract.gameObject.SetActive(false);
@@ -78,11 +76,6 @@ public class SpaceportBarrackController : SpaceportPanelController
                 _crew.crewDataList.Add(crewData);
             else if (_crew.crewDataList.Contains(crewData) && !crewData.isHired)
                 _crew.crewDataList.Remove(crewData);
-            
-            // if (!_crewMembersData.Contains(crewData) && crewData.isHired)
-            //     _crewMembersData.Add(crewData);
-            // else if(_crewMembersData.Contains(crewData) && !crewData.isHired)
-            //     _crewMembersData.Remove(crewData);
         }
     }
 
@@ -100,7 +93,6 @@ public class SpaceportBarrackController : SpaceportPanelController
 
     public void HireEmployee()
     {
-        // if (_crewMembersData.Count >= MaxCrewMembers)
         if (_crew.crewDataList.Count >= MaxCrewMembers)
             return;
         
@@ -116,12 +108,7 @@ public class SpaceportBarrackController : SpaceportPanelController
     {
         CrewData crewData = _employeeContract.CrewData;
         crewData.isHired = hire;
-        
-        // if (hire)
-        //     _crewMembersData.Add(crewData);
-        // else
-        //     _crewMembersData.Remove(crewData);
-        
+
         if (hire)
             _crew.crewDataList.Add(crewData);
         else

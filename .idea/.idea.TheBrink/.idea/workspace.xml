@@ -20,44 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Icons/ALERT BIG UI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Icons/ALERT BIG UI.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Icons/ALERT BIG UI_border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Icons/ALERT BIG UI_border.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait6.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/ShipUI_Portrait6.png.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CrewMember-Barrack [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CrewMember-Barrack [Panel].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Portrait.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Portrait.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/CrewDataArray.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/CrewDataArray.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Eddie.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Eddie.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Jimmy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Jimmy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Johan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Johan.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/Crew.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/Crew.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DebugScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DebugScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" afterDir="false" />
     </list>
@@ -110,7 +81,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractButtonType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/GenderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
@@ -123,16 +93,20 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Starter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Crew.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DebugScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Crew.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/MenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -202,7 +176,7 @@
       <workItem from="1608199471885" duration="24610000" />
       <workItem from="1608287754010" duration="3154000" />
       <workItem from="1608539885457" duration="1346000" />
-      <workItem from="1609749329815" duration="16607000" />
+      <workItem from="1609749329815" duration="19115000" />
     </task>
     <servers />
   </component>

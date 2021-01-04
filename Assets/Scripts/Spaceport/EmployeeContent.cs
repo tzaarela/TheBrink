@@ -29,16 +29,6 @@ public class EmployeeContent : UITrigger
     private bool _mouseOver;
     private const float ClickVolume = 0.5f;
 
-    private void Start()
-    {
-        Init();
-    }
-
-    private void Init()
-    {
-        // UpdateUI();
-    }
-    
     public void UpdateUI()
     {
         UpdateUI(_crewData);
@@ -63,7 +53,6 @@ public class EmployeeContent : UITrigger
         if (!Input.GetMouseButtonUp(0))
             return;
         
-        // base.OnPointerClick(eventData);
         SpaceportBarrackController.instance.ShowEmployeeContract(_crewData, this);
     }
 
@@ -81,7 +70,6 @@ public class EmployeeContent : UITrigger
     
     public override void OnPointerUp(PointerEventData eventData)
     {
-        // base.OnPointerUp(eventData);
         if (!_mouseOver)
             return;
 
@@ -91,7 +79,6 @@ public class EmployeeContent : UITrigger
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        // base.OnPointerDown(eventData);
         if (!_mouseOver || !Input.GetMouseButton(0))
             return;
         
