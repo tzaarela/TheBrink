@@ -12,7 +12,8 @@ namespace Assets.Scripts.Crew
     {
         public string crewName = "No Name";
         public float health;
-        public float repairSkill;
+        public float extinguishFireSkill;
+        public float fixElectricFailureSkill;
         public Sprite sprite;
         public Profession profession;
 

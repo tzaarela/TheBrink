@@ -129,61 +129,57 @@ namespace Assets.Scripts.Rooms
 
             if (Hazards.Count > 0)
             {
-                availableTasks.Add(new RepairCommand(crewMember, this));
+                availableTasks.Add(new ExtinguishFireCommand(crewMember, this));
             }
 
             return availableTasks;
         }
 
-        public void RepairRoom(CrewMember crewMember)
+        public void ExtinguishFire(CrewMember crewMember)
         {
             Hazard hazardToFix;
+            var fires = Hazards.Where(x => x.HazardType == HazardType.Fire).ToList();
 
-            if (Hazards.Count <= 0)
+            if (fires.Count <= 0)
             {
-                ConsoleController.instance.PrintToConsole($"{crewMember.name}: I've finished the repairs in {crewMember.CurrentCommand.Destination.name}. ", 0.01f, true);
+                ConsoleController.instance.PrintToConsole($"{crewMember.name}: I've extinguished the fire in {crewMember.CurrentCommand.Destination.name}. ", 0.01f, true);
                 return;
             }
             else
             {
-                hazardToFix = Hazards[0];
+                hazardToFix = fires[0];
             }
-
-            foreach(Hazard hazard in Hazards)
-            {
-                if(hazard.HazardType == HazardType.Fire)
-                {
-                    hazardToFix = hazard;
-                    break;
-                }
-            }
+            
+            hazardToFix.SeverityAmount -= crewMember.crewData.extinguishFireSkill;
 
             if (hazardToFix.SeverityAmount <= 0)
             {
-                hazardToFix.IsFinished = true;
+                Hazards.Remove(hazardToFix);
+            }
+        }
+
+        public void FixElectricFailure(CrewMember crewMember)
+        {
+            Hazard hazardToFix;
+            var electricFailures = Hazards.Where(x => x.HazardType == HazardType.ElectricFailure).ToList();
+
+            if(electricFailures.Count <= 0)
+            {
+                ConsoleController.instance.PrintToConsole($"{crewMember.name}: I've fixed the electric failure in {crewMember.CurrentCommand.Destination.name}. ", 0.01f, true);
+                return;
             }
             else
             {
-                switch (hazardToFix.HazardType)
-                {
-                    case HazardType.Fire:
-                        hazardToFix.SeverityAmount -= crewMember.crewData.repairSkill;
-                        Debug.Log("The crewmember is trying to put out the fire.");
-                        break;
-                        ///<summary>
-                        ///Important to know here, is that the Breach only fixes the oxygen leakage.
-                        ///It does not fix the actual damage to the roomHealth, which will need to be fixed in starport. 
-                        ///</summary>
-                    case HazardType.Breach:
-                        hazardToFix.SeverityAmount -= crewMember.crewData.repairSkill;
-                        Debug.Log("The crewmember is trying to patch over the hull breach.");
-                        break;
-                    default:
-                        //crewMember.FinishCurrentTask();
-                        Debug.Log("The crewmember couldn't find a hazard that they are able told to repair");
-                        break;
-                }
+                hazardToFix = electricFailures[0];
             }
+
+            hazardToFix.SeverityAmount -= crewMember.crewData.fixElectricFailureSkill;
+
+            if (hazardToFix.SeverityAmount <= 0)
+            {
+                Hazards.Remove(hazardToFix);
+            }
+
         }
 
         public IShipSystem GetShipSystem()

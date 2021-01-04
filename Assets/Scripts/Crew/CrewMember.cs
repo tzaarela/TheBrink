@@ -145,7 +145,7 @@ public class CrewMember : UITrigger
 
     public void Repair()
     {
-        CurrentCommand.Destination.RepairRoom(this);
+        CurrentCommand.Destination.ExtinguishFire(this);
     }
 
     public override void OnPointerClick(PointerEventData eventData)

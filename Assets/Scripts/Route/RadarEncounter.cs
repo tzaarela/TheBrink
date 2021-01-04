@@ -9,7 +9,6 @@ namespace Assets.Scripts.Route
 {
     public class RadarEncounter : MonoBehaviour
     {
-
         public Encounter encounter;
 
         private void OnTriggerEnter2D(Collider2D collision)

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepairCommand : Command
+public class ExtinguishFireCommand : Command
 {
     public bool IsExecuted { get; set; }
     public override string Name { get; set; }
@@ -14,12 +14,12 @@ public class RepairCommand : Command
 
     private CrewMember crewMember;
 
-    public RepairCommand(CrewMember crewMember, Room destination)
+    public ExtinguishFireCommand(CrewMember crewMember, Room destination)
     {
         this.crewMember = crewMember;
         Destination = destination;
-        Name = "Repair";
-        StatusText = "Repairing";
+        Name = "Extinguish Fire";
+        StatusText = "Extinguishing fire...";
     }
 
     public override void Execute()
