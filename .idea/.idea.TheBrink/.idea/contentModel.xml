@@ -149,6 +149,7 @@
           </e>
           <e p="MainMenuController.cs" t="Include" />
           <e p="MainMenuPanelType.cs" t="Include" />
+          <e p="MenuController.cs" t="Include" />
           <e p="MoveController.cs" t="Include" />
           <e p="Rooms" t="Include">
             <e p="Room.cs" t="Include" />
@@ -234,6 +235,7 @@
             </e>
           </e>
         </e>
+        <e p="VolumeSlider.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

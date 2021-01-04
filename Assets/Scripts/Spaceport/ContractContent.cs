@@ -45,7 +45,7 @@ public class ContractContent : MonoBehaviour
             _fuelRequirements.color = _errorColor;
         
         _employeRequirements.text = $"Crew members required: {contract.crewMembersNeeded}";
-        if (GameController.Instance.ship.GetCrewCount() >= contract.crewMembersNeeded)
+        if (GameController.Instance.crew.GetCrewCount() >= contract.crewMembersNeeded)
             _employeRequirements.color = _normalColor;
         else
             _employeRequirements.color = _errorColor;
@@ -72,7 +72,7 @@ public class ContractContent : MonoBehaviour
     {
         if (Mathf.CeilToInt(GameController.Instance.ship.GetFuelPercent() * 100) < _contract.averageFuelPercentNeeded)
             return false;
-        else if (GameController.Instance.ship.GetCrewCount() < _contract.crewMembersNeeded)
+        else if (GameController.Instance.crew.GetCrewCount() < _contract.crewMembersNeeded)
             return false;
 
         return true;

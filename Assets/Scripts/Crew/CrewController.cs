@@ -71,7 +71,7 @@ public class CrewController : MonoBehaviour
     {
         for (int i = 0; i < crewMemberSlots.Length; i++)
         {
-            crewMemberSlots[i].crewData = crew.crewDataArray[i];
+            crewMemberSlots[i].crewData = crew.crewDataList[i];
             crewMembers.Add(crewMemberSlots[i]);
         }
     }

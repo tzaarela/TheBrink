@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Assets.Scripts.Crew
 {
@@ -34,13 +35,28 @@ namespace Assets.Scripts.Crew
         public bool isHired;
         
         [Header("New Game Values")]
-        [SerializeField] private bool _isHired = false;
         [SerializeField] private int _health = 100;
+        [SerializeField] private bool _isHired = false;
 
+        private void OnEnable()
+        {
+            Reset();
+        }
+
+        private void Awake()
+        {
+            Init();
+        }
+        
         public void Reset()
         {
             health = _health;
             isHired = _isHired;
+        }
+
+        private void Init()
+        {
+            sprite = Resources.Load<Sprite>("Graphics/Portraits/ShipUI_Portrait4");
         }
     }
 }

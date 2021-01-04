@@ -21,15 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ClickToContinue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ClickToContinue.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/SystemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/SystemController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SystemWindowController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SystemWindowController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OptionContent [Panel].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/OptionContent [Panel].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +34,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,6 +56,7 @@
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/TabState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumeSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,7 +66,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/WorkshopPanelType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" />
@@ -73,21 +77,33 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractButtonType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/GenderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/BGMClipType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Starter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DebugScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Crew.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/MenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/VolumeSlider.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -105,11 +121,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4580">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="4580" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -157,7 +173,7 @@
       <workItem from="1608199471885" duration="24610000" />
       <workItem from="1608287754010" duration="3154000" />
       <workItem from="1608539885457" duration="1346000" />
-      <workItem from="1609749329815" duration="235000" />
+      <workItem from="1609749329815" duration="22173000" />
     </task>
     <servers />
   </component>

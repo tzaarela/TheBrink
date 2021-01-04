@@ -7,7 +7,12 @@ using TMPro;
 public class EmployeeContractContent : MonoBehaviour
 {
     [SerializeField] private CrewData _crewData;
-    
+    public CrewData CrewData
+    {
+        get => _crewData;
+        set => _crewData = value;
+    }
+
     [Header("Contract Info")]
     [SerializeField] private TMP_Text _companyName;
     [SerializeField] private TMP_Text _employeeInfo;

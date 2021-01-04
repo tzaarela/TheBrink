@@ -3,6 +3,7 @@ using Assets.Scripts.Rooms;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Crew;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -22,7 +23,7 @@ public class Ship : ScriptableObject
 
     public MissionContract missionContract;
     public RoomDataArray roomData;
-    
+
     [Header("DEBUG")]
     [SerializeField] private float _defaultSpeed = 10f;
     [SerializeField] private float _defaultPosition = 0f;
@@ -72,10 +73,5 @@ public class Ship : ScriptableObject
     public float GetFuelPercent()
     {
         return fuel / maxFuel;
-    }
-
-    public int GetCrewCount()
-    {
-        return 99; // TODO DEBUG ONLY
     }
 }

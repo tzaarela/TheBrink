@@ -30,15 +30,11 @@ public class SpaceportUIController : MonoBehaviour
 
     private void Start()
     {
-        SetAllComponents();
+        GetAllComponents();
         Init();
     }
 
     private void GetAllComponents()
-    {
-    }
-    
-    private void SetAllComponents()
     {
         _panelControllers = new SpaceportPanelController[3];
         _panelControllers[(int)SpaceportTabType.Contracts] = SpaceportContractsController.instance;
@@ -48,13 +44,19 @@ public class SpaceportUIController : MonoBehaviour
 
     private void Init()
     {
-        ShowPanel(SpaceportTabType.Contracts);
-        // ShowPanel(SpaceportTabType.Barrack);   // TODO Debug Only.
-        // ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
         UpdateCash(0);
-        _captainName.text = $"Ship Name: The Brink\n" +
+        _captainName.text = $"Ship Name: HTV Galloway\n" +
                             $"Captain: {GameController.Instance.ship.captainName}\n" +
-                            $"Manufacturer Date: 2020-12-01";
+                            $"Manufacturer Date: 2298-A0-B2";
+
+        if (!GameController.Instance.isDebuging)
+        {
+            ShowPanel(SpaceportTabType.Contracts);
+            return;
+        }
+        // ShowPanel(SpaceportTabType.Contracts);
+        ShowPanel(SpaceportTabType.Barrack);   // TODO Debug Only.
+        // ShowPanel(SpaceportTabType.Workshop);   // TODO Debug Only.
     }
 
     private void HideAllPanels()
