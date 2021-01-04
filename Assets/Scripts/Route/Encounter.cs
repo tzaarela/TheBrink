@@ -24,20 +24,22 @@ public class Encounter
         EncounterType = EncounterType.SolarFlare;
     }
     public void Execute()
-    { 
-        switch(EncounterType) 
+    {
+        switch (EncounterType)
         {
-            case EncounterType.SmallMeteorSwarm:
-                Debug.Log("The ship is struck by a small swarm of meteors!");
-                
-                RoomController.Instance.CreateBreachInRoom(Severity);
+            case EncounterType.Meteor:
+                Debug.Log("The ship is got struck by a meteor!");
+                RoomController.Instance.CreateBreachInRooms(Severity, 3);
                 break;
 
             case EncounterType.SolarFlare:
                 Debug.Log("The ship is exposed to a dangerous solar flare!");
-                RoomController.Instance.CreateFireInRoom(Severity);
+                RoomController.Instance.CreateFireInRooms(Severity, 3);
                 break;
-
+            case EncounterType.GammaRay:
+                Debug.Log("The ship is exposed to a gamma-ray!");
+                RoomController.Instance.CreateElectricFailureInRooms(Severity, 3);
+                break;
             default:
                 Debug.Log("The EncounterType wasn't one that the method could recognize.");
                 break;

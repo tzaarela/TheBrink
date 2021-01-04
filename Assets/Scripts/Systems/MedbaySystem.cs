@@ -21,7 +21,7 @@ public class MedbaySystem : ShipSystem
         SystemType = SystemType.Medbay;
         patients = new List<CrewMember>();
         this.rooms = rooms;
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.MedBay);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.MedBay);
 
         EnergyWanted = 0;
     }

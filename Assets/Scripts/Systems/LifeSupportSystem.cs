@@ -22,7 +22,7 @@ public class LifeSupportSystem : ShipSystem
         PowerState = PowerState.IsOn;
         SystemType = SystemType.LifeSupport;
         this.rooms = rooms;
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.LifeSupport);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.LifeSupport);
         oxygenMissingPerRoom = new float[rooms.Count];
         EnergyWanted = 0;
     }

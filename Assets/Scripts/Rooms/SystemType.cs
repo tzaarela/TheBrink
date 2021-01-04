@@ -1,4 +1,4 @@
-﻿public enum RoomType
+﻿public enum SystemType
 {
     Reactor,
     CargoHold,
@@ -7,6 +7,5 @@
     LifeSupport,
     MedBay,
     MainBattery,
-    AirLock,
     Corridor
 }

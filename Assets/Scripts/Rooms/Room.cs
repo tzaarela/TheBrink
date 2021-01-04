@@ -13,7 +13,7 @@ namespace Assets.Scripts.Rooms
         public float RadiationLevel { get => radiationLevel; set => radiationLevel = value; }
         public float RoomHealth { get => roomHealth; set => roomHealth = value; }
         public bool HasElectricity { get => hasElectricity; set => hasElectricity = value; }
-        public RoomType RoomType;
+        public SystemType SystemType;
         public RoomState RoomState;
 
         public List<CrewMember> PresentCrewMembers { get; set; }
@@ -66,7 +66,7 @@ namespace Assets.Scripts.Rooms
 
         public void Awake()
         {
-            RoomType = data.roomType;
+            SystemType = data.roomType;
             RoomHealth = data.health;
             OxygenLevel = 100;
             RoomState = RoomState.Open;
@@ -185,6 +185,11 @@ namespace Assets.Scripts.Rooms
                         break;
                 }
             }
+        }
+
+        public IShipSystem GetShipSystem()
+        {
+            return SystemController.Instance.GetSystemOfType(SystemType);
         }
 
         public override void OnPointerEnter(PointerEventData eventData)

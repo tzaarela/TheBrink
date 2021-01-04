@@ -33,7 +33,7 @@ public class ReactorSystem : ShipSystem
     {
         this.ship = ship;
 
-        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == RoomType.Reactor);
+        SystemRoom = rooms.FirstOrDefault(x => x.RoomType == SystemType.Reactor);
         SystemType = SystemType.Reactor;
         PowerState = PowerState.IsOn;
         fuelCost = SystemController.Instance.fuelCost;

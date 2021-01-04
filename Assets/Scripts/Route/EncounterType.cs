@@ -1,5 +1,6 @@
 ﻿public enum EncounterType
 {
     SolarFlare,
-    SmallMeteorSwarm
+    Meteor,
+    GammaRay,
 }

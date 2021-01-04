@@ -16,12 +16,14 @@ public class Hazard
     public bool IsFinished { get; set; }
 
     private Room _hazardRoom;
+    private IShipSystem _system;
 
     public Hazard(HazardType hazardType, float severityAmount, Room hazardRoom)
     {
         HazardType = hazardType;
         SeverityAmount = severityAmount;
         _hazardRoom = hazardRoom;
+        _system = _hazardRoom.GetShipSystem();
     }
     //Initialize here, add function, that way called only once, called from room. create hazard. So causes inital damage
     public void UpdateHazard()
@@ -37,6 +39,9 @@ public class Hazard
             case HazardType.RoomSpecific:
                 RoomSpecificHazard();
                 break;
+            case HazardType.ElectricFailure:
+                RoomWithElectricFailure();
+                break;
             default:
                 Debug.Log("Hazard is of unknown type. HazardType is: " + this.HazardType);
                 break;
@@ -46,6 +51,11 @@ public class Hazard
         {
             IsFinished = true;
         }
+    }
+
+    private void RoomWithElectricFailure()
+    {
+        //_system.PowerState = PowerState.IsOff;
     }
 
     ///<summary>
@@ -109,13 +119,13 @@ public class Hazard
 
     public void RoomSpecificHazard() 
     {
-    switch(_hazardRoom.RoomType)
+    switch(_hazardRoom.SystemType)
         {
-            case RoomType.Reactor:
+            case SystemType.Reactor:
                 break;
-            case RoomType.MainBattery:
+            case SystemType.MainBattery:
                 break;
-            case RoomType.MedBay:
+            case SystemType.MedBay:
                 break;
             default:
                 Debug.Log("hazard of type " + this.HazardType + "is of a specified RoomType that doesn't exist yet");

@@ -36,7 +36,7 @@ public class BridgeSystem : ShipSystem
         PowerState = PowerState.IsOn;
         SystemType = SystemType.Bridge;
 
-        SystemRoom = this.rooms.FirstOrDefault(x => x.RoomType == RoomType.Bridge);
+        SystemRoom = this.rooms.FirstOrDefault(x => x.RoomType == SystemType.Bridge);
 
         route = MissionController.Instance.Route;
 
