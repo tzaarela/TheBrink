@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,19 +27,27 @@ namespace Assets.Scripts.Systems
         ToggleButton depressurizeButton;
 
         IShipSystem shipSystem;
+        bool isInitalized;
 
-        public void Start()
+        public GameObject specificControlPrefab;
+        private IControls specificControl;
+
+        public void Init()
         {
             shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == systemType);
             powerButton.onToggle += ToggleSystemPower;
             depressurizeButton.onToggle += ToggleDepressurise;
+            specificControl = specificControlPrefab.GetComponent<IControls>();
+            specificControl.Init();
         }
 
-        public void Update()
+        public void UpdateUI()
         {
             //If u get an exception here it´s probably because u loaded wrong scene without debug mode.
             airLevel.fillAmount = shipSystem.AirLevel * 0.01f;
             energyLevel.fillAmount = shipSystem.CurrentEnergyInSystem * 0.01f;
+
+            specificControl.UpdateUI();
         }
 
         //If on, turn off, if off turn on.

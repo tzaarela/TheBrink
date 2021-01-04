@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Controls
 {
-    public class MainBatteryControls : MonoBehaviour
+    public class MainBatteryControls : MonoBehaviour, IControls
     {
         [SerializeField]
         Button fireButton;
@@ -18,7 +18,9 @@ namespace Assets.Scripts.Controls
 
         MainBatterySystem mainBatterySystem;
 
-        public void Start()
+        public IShipSystem shipSystem { get; set; }
+
+        public void Init()
         {
             mainBatterySystem = SystemController.Instance.ShipSystems
                 .FirstOrDefault(x => x.SystemType == SystemType.MainBattery)
@@ -26,6 +28,10 @@ namespace Assets.Scripts.Controls
 
             fireButton.onClick.AddListener(mainBatterySystem.Fire);
             lockTarget.onClick.AddListener(mainBatterySystem.LockOn);
+        }
+
+        public void UpdateUI()
+        {
         }
     }
 }

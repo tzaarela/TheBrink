@@ -85,18 +85,24 @@ public class SystemController : ScriptableObject
         return ShipSystems.Where(x => x.PowerState == PowerState.IsOn).ToList();
     }
 
-    public void ShipSystemUpdate()
+    public void UpdateShipSystems()
     {
         foreach (var system in ShipSystems)
         {
             if (system.PowerState == PowerState.IsOn)
+            {
                 system.Run();
+            }
 
             system.Update();
 
             if(isDebug)
+            {
                 debugger.DebugPropertyValues(system);
+            }
         }
+
+       
 
         debugger.isSetup = true;
     }

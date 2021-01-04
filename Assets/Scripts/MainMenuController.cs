@@ -47,7 +47,6 @@ public class MainMenuController : MonoBehaviour
     public void ShowPanel(int panelIndex)
     {
         if (panelIndex == 1)
-            GameController.Instance.GameScene = GameScene.Spaceport;
         ShowPanelOnly(_currentPanel = (MainMenuPanelType)panelIndex);
         Debug.Log($"ShowPanel: {_currentPanel}");
     }
@@ -63,10 +62,12 @@ public class MainMenuController : MonoBehaviour
         _panels[(int)panelType].SetActive(true);
     }
 
-    public void NewOnClick()
+    public void NewGameOnClick()
     {
         // ShowPanelOnly(_currentPanel = MainMenuPanelType.New);
-        SceneManager.LoadScene("SpaceportScene");
+
+        GameController.Instance.ResetGame();
+        GameController.Instance.GameScene = GameScene.Spaceport;
     }
     
     public void LoadOnClick()

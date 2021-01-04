@@ -7,7 +7,7 @@ using Assets.Scripts.InterfacePanels;
 
 namespace Assets.Scripts.Controls
 {
-    public class ReactorControls : UITrigger
+    public class ReactorControls : UITrigger, IControls
     {
         Ship ship;
         ReactorSystem reactorSystem;
@@ -24,20 +24,7 @@ namespace Assets.Scripts.Controls
         [SerializeField]
         private Button buttonThrottleDown;
 
-
-        public void Start()
-        {
-            ship = GameController.Instance.ship;
-            reactorSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == SystemType.Reactor) as ReactorSystem;
-            buttonThrottleUp.onClick.AddListener(ThrottleUp);
-            buttonThrottleDown.onClick.AddListener(ThrottleDown);
-        }
-
-        public void Update()
-        {
-            fuelValue.text = Mathf.CeilToInt(ship.fuel).ToString();
-            speedValue.text = ship.speed.ToString() + " AU/s";
-        }
+        public IShipSystem shipSystem { get; set; }
 
         public void ThrottleUp()
         {
@@ -50,5 +37,18 @@ namespace Assets.Scripts.Controls
 
         }
 
+        public void UpdateUI()
+        {
+            fuelValue.text = Mathf.CeilToInt(ship.fuel).ToString();
+            speedValue.text = ship.speed.ToString() + " AU/s";
+        }
+
+        public void Init()
+        {
+            ship = GameController.Instance.ship;
+            reactorSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == SystemType.Reactor) as ReactorSystem;
+            buttonThrottleUp.onClick.AddListener(ThrottleUp);
+            buttonThrottleDown.onClick.AddListener(ThrottleDown);
+        }
     }
 }

@@ -32,22 +32,12 @@ namespace Assets.Scripts.Crew
 
         public bool isHired;
         
-        [Header("DEBUG")]
-        [SerializeField] private bool _beginWithDefault;
+        [Header("New Game Values")]
         [SerializeField] private bool _isHired = false;
         [SerializeField] private int _health = 100;
 
-        private void OnEnable()
-        {
-            Reset();
-        }
-
         public void Reset()
         {
-            if (!_beginWithDefault)
-
-                return;
-
             health = _health;
             isHired = _isHired;
         }

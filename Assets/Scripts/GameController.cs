@@ -72,13 +72,17 @@ public class GameController : ScriptableObject
 
                     op.completed += (AsyncOperation o) =>
                     {
+
                         AudioController.instance.StopAllSound();
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission, 0.2f);
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient, 0.1f);
+
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
                         CrewController.Instance.CreateShipCrew(crew);
+                        SystemWindowController.Instance.InitSystemContent();
+                        MissionController.Instance.isInitialised = true;
 
                         if (!_debuging)
                             MissionController.Instance.Route = ship.missionContract.route;
@@ -115,6 +119,14 @@ public class GameController : ScriptableObject
 
             default:
                 break;
+        }
+    }
+
+    public void ResetGame()
+    {
+        for (int i = 0; i < crew.crewDataArray.Length; i++)
+        {
+            crew.crewDataArray[i].Reset();
         }
     }
 

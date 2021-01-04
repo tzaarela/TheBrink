@@ -12,6 +12,7 @@ public class MissionController : MonoBehaviour
 {
     public static MissionController Instance { get; set; }
 
+    public bool isInitialised;
     public const float TICK_TIMER_MAX = 0.1f;
     public Ship ship;
     public GameObject outpostReachedOverlay;
@@ -49,6 +50,12 @@ public class MissionController : MonoBehaviour
 
     public void Update()
     {
+        if (!isInitialised)
+            return;
+
+        if (isFinished)
+            return;
+
         UpdateShipPosition();
 
         tickTimer += Time.deltaTime;
@@ -58,7 +65,8 @@ public class MissionController : MonoBehaviour
             CheckEncounters();
             CrewController.Instance.UpdateCrewCommands();
             RoomController.Instance.UpdateRooms();
-            SystemController.Instance.ShipSystemUpdate();
+            SystemController.Instance.UpdateShipSystems();
+            SystemWindowController.Instance.UpdateUISystemContent();
         }
     }
     public void StartMissions(Mission mission)

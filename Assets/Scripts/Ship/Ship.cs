@@ -9,8 +9,9 @@ using UnityEngine.PlayerLoop;
 [CreateAssetMenu(fileName = "Ship", menuName = "Ship")]
 public class Ship : ScriptableObject
 {
-    public float speed = 10f;
+    [Range(0,1000)]
     public float position = 0f;
+    public float speed = 10f;
     public float fuel = 1000f;
     public float maxFuel = 1000f;
     public float capacitor = 1000f;

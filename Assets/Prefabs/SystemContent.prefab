@@ -1046,6 +1046,7 @@ MonoBehaviour:
   energyLevel: {fileID: 7195976560155426174}
   powerButton: {fileID: 760743516049728413}
   depressurizeButton: {fileID: 6713864569790183304}
+  specificControlPrefab: {fileID: 7292420677338133547}
 --- !u!1 &7240699452907194915
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,10 @@ public class Radar : MonoBehaviour
 
     [SerializeField]
     GameObject enemyEncounterPrefab;
-    
+
+    [SerializeField]
+    GameObject outpostPrefab;
+
     private RectTransform routeLine;
     private RectTransform radarTransform;
     private float routeLength;
@@ -50,9 +53,10 @@ public class Radar : MonoBehaviour
         foreach (var encounter in encounters)
         {
             var radarEncounter = GameObject.Instantiate(enemyEncounterPrefab, routeLine);
-
             radarEncounter.transform.Translate(new Vector2(0, encounter.Position * RadarController.Instance.RouteLengthMultiplier));
         }
+        var outpost = GameObject.Instantiate(outpostPrefab, routeLine);
+        outpost.transform.Translate(new Vector2(0, RouteLength * RadarController.Instance.RouteLengthMultiplier + 50));
 
     }
 }

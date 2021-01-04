@@ -54,12 +54,6 @@ namespace Assets.Scripts.Tweening.Animations
             transitionQueue = new Queue<TextSequence>();
         }
 
-        public void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-                onTransitionComplete.Invoke();
-        }
-
         public void PlayLogin(Action onTransitionComplete)
         {
             var inputController = Instantiate(InputControllerPrefab, this.transform);

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25853490263f0ba44841a23a80e2051d, type: 3}
   m_Name: Ship
   m_EditorClassIdentifier: 
-  speed: 10
-  position: 134.14806
-  fuel: 638
+  position: 1000
+  speed: 2
+  fuel: 630.50183
   maxFuel: 1000
-  capacitor: 1000
+  capacitor: 774
   maxCapacitor: 1000
   capacitorBottleNeck: 100
   cash: 1000000

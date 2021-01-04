@@ -190,6 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyEncounterPrefab: {fileID: 473439668250443280, guid: 369ee989b4fce834f827588184a34b68,
     type: 3}
+  outpostPrefab: {fileID: 473439668250443280, guid: 47acb9d3eab68214ba8fede57cad3272,
+    type: 3}
 --- !u!1 &1005160142375970335
 GameObject:
   m_ObjectHideFlags: 0
