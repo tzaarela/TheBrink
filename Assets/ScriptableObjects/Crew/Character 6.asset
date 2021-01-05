@@ -17,8 +17,8 @@ MonoBehaviour:
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
-  profession: 2
+  sprite: {fileID: 21300000, guid: 2562865fde4d4b348934bfe06d642fe1, type: 3}
+  profession: 1
   age: 29
   gender: 1
   quirk: Shy
@@ -26,10 +26,11 @@ MonoBehaviour:
   bloodType: 0
   companyName: The Brink
   favoriteFood: Risotto
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  workHours: 20hr shifts
+  employeeHistory: Pharmastrum
   salary: 15750
-  summary: '-'
+  summary: 'Worked on new discoveries within Pharmastrum. Wants to change things
+    up, now works on contracted missions. '
   isHired: 0
   _health: 100
   _isHired: 0

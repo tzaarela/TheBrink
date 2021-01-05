@@ -26,10 +26,10 @@ MonoBehaviour:
   bloodType: 2
   companyName: The Brink
   favoriteFood: Bibimbap
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  workHours: 15 hr shift
+  employeeHistory: Starship Destiny
   salary: 15750
-  summary: '-'
+  summary: Worked on the famous Starship; Destiny and comes highly recommended.
   isHired: 0
   _health: 100
   _isHired: 0

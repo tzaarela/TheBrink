@@ -18,7 +18,7 @@ MonoBehaviour:
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
   sprite: {fileID: 21300000, guid: 2cab8c9b35131ee46958f57f9dac5228, type: 3}
-  profession: 2
+  profession: 0
   age: 35
   gender: 1
   quirk: Sleepy
@@ -29,7 +29,8 @@ MonoBehaviour:
   workHours: 24/7, all year round
   employeeHistory: Unknown
   salary: 15750
-  summary: '-'
+  summary: 'Occasionally sleeps on the job, but does great work. Specialty: Reactor
+    Engines'
   isHired: 0
   _health: 100
   _isHired: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
   sprite: {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
-  profession: 2
+  profession: 1
   age: 30
   gender: 2
   quirk: Messy
@@ -26,10 +26,11 @@ MonoBehaviour:
   bloodType: 2
   companyName: The Brink
   favoriteFood: Curry
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  workHours: 18hr shifts
+  employeeHistory: Corpo.
   salary: 15750
-  summary: '-'
+  summary: Used to work for the Corporation, making new medicines. Hardworking and
+    a good teammember.
   isHired: 0
   _health: 100
   _isHired: 0

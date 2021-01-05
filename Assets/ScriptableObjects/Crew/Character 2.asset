@@ -27,9 +27,10 @@ MonoBehaviour:
   companyName: The Brink
   favoriteFood: Pizza
   workHours: 24/7, all year round
-  employeeHistory: Unknown
+  employeeHistory: Worked in Senopol prior.
   salary: 15750
-  summary: '-'
+  summary: 'Changed career when he was 40. Enjoys working with others but is a man
+    of few words. '
   isHired: 0
   _health: 100
   _isHired: 0

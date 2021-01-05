@@ -18,18 +18,18 @@ MonoBehaviour:
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
   sprite: {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
-  profession: 2
+  profession: 0
   age: 28
-  gender: 0
+  gender: 2
   quirk: Strong
   lengthCM: 175
   bloodType: 4
   companyName: The Brink
   favoriteFood: Bolognese
   workHours: 24/7, all year round
-  employeeHistory: Unknown
+  employeeHistory: Worked aboard HTV Senthia
   salary: 15750
-  summary: '-'
+  summary: Motivated Engineer. Has good experience despite young age.
   isHired: 0
   _health: 100
   _isHired: 0
