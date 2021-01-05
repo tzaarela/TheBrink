@@ -17,7 +17,7 @@ MonoBehaviour:
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
+  sprite: {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
   profession: 2
   age: 32
   gender: 2
