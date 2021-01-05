@@ -58,6 +58,9 @@ public class MainBatterySystem : ShipSystem
         {
             LockingOnTarget();
         }
+
+
+        base.Run();
     }
 
     public void ChargingWeapons()

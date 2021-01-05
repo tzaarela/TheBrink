@@ -55,7 +55,7 @@ public class BridgeSystem : ShipSystem
         DistanceToStarport = GetDistanceLeft();
         TimeUntilRetrogradeBurn = UpdateTimeToRetro();
         TimeUntilNextEncounter = UpdateTimeToEncounter();
-
+        base.Run();
     }
 
     public float GetDistanceLeft()

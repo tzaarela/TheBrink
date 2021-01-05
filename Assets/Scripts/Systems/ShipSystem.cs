@@ -10,6 +10,7 @@ namespace Assets.Scripts.Systems
     public class ShipSystem : IShipSystem
     {
         public Room SystemRoom { get; set; }
+        public float RoomHealth { get; set; }
         public SystemType SystemType { get; set; }
         public PowerState PowerState { get; set; }
         public bool IsDepressurised { get; set; }
@@ -26,7 +27,7 @@ namespace Assets.Scripts.Systems
 
         public virtual void Run()
         {
-            
+            RoomHealth = SystemRoom.data.health;
         }
 
         public virtual void SetCapacity()

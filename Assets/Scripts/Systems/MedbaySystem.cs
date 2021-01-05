@@ -48,6 +48,8 @@ public class MedbaySystem : ShipSystem
                 TreatPatients(patients, doctor);
             }
         }
+
+        base.Run();
     }
     public CrewMember GetDoctor(Room systemRoom)
     {

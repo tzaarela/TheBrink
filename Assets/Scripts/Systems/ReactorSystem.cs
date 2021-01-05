@@ -76,7 +76,7 @@ public class ReactorSystem : ShipSystem
             //TODO: Remove this later, if you implement the other way for the ship speed and travel and momentum to happen.
             ship.speed = 0;
         }
-
+        base.Run();
     }
 
     public void BurnsFuel()

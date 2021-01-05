@@ -29,6 +29,6 @@ public class CargoHoldSystem : ShipSystem
 
     public override void Run()
     {
-
+        base.Run();
     }
 }

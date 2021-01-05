@@ -36,6 +36,6 @@ public class CorridorSystem : ShipSystem
 
     public override void Run()
     {
-
+        base.Run();
     }
 }

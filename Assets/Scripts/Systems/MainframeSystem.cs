@@ -48,5 +48,7 @@ public class MainframeSystem : ShipSystem
                 }
             }
         }
+
+        base.Run();
     }
 }

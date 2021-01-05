@@ -8,6 +8,8 @@ public interface IShipSystem
 {
     Room SystemRoom { get; set; }
 
+    float RoomHealth { get; set; }
+
     SystemType SystemType { get; set; }
     PowerState PowerState  { get; set; }
 

@@ -115,8 +115,6 @@ public class SystemController : ScriptableObject
             }
         }
 
-       
-
         debugger.isSetup = true;
     }
 }

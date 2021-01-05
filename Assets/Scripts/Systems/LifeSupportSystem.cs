@@ -35,8 +35,8 @@ public class LifeSupportSystem : ShipSystem
 
     public override void Run()
     {
-
         SendOutOxygen();
+        base.Run();
     }
 
     public void SetEfficiency()
