@@ -1,0 +1,50 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "Mission",
+            "id": "b06800f1-72d1-4eef-b5c1-907f9437379e",
+            "actions": [
+                {
+                    "name": "Open Menu",
+                    "type": "Button",
+                    "id": "77f55a80-68e4-40a3-95bc-b56ffa21779c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5cf9e09e-89ec-4f23-b9dc-b905927dc09c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MissionKeyScheme",
+                    "action": "Open Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "MissionKeyScheme",
+            "bindingGroup": "MissionKeyScheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

@@ -50,8 +50,8 @@ namespace Assets.Scripts.InterfacePanels
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0) && isOpen && !IsMenuItemSelected)
-                CloseContextMenu();
+            //if (Input.GetMouseButtonDown(0) && isOpen && !IsMenuItemSelected)
+            //    CloseContextMenu();
         }
 
         public void OpenContextMenu(List<Command> availableTasks)
