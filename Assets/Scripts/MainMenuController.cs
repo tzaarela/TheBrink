@@ -77,7 +77,7 @@ public class MainMenuController : MonoBehaviour
     
     public void CreditsOnClick()
     {
-        ShowPanelOnly(_currentPanel = MainMenuPanelType.Credits);
+        GameController.Instance.GameScene = GameScene.Credits;
     }
 
     public void BackOnClick()

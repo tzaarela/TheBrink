@@ -480,17 +480,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PROGRAMMING\r\n\r\nEddie Norberg\r\nJimmy Saarela\r\nJohan Ahlgren\r\n\r\nGRAPHICS\r\n\r\nIsabelle
-    Eriksson Koski\r\nJennifer Lewin\r\nJimmy Hult\xE9n\r\n\r\n\r\nADDITIONAL ART
-    ASSETS\r\n\r\nCracked Icon \xA9 Alex, JP\r\nwww.thenounproject.com\r\n\r\nwww.Artbreeder.com\r\n\r\n\r\nMUSIC\r\n\r\n\"Factory
-    On Mercury\"\r\n\r\n\"Time Running Out\"\r\n\r\nBy Eric Matyas\r\nwww.soundimage.org\r\n\r\n\r\n\"Sci-Fi
-    Pulse Loop\"\r\n\r\nBy DL Sounds\r\nwww.dl-sounds.com\r\n\r\n\r\nVFX\r\n\r\nVHS
-    Glitch - Video Clip\r\nBy Christoper \"ChickArt\" Huppertz\r\nhttps://gumroad.com/l/vhs_video_clip\r\n\r\n\r\nFONTS\r\n\r\nKimberley
+  m_text: "THE BRINK\n\n\nPROGRAMMERS\n---------------------\nEddie Norberg\r\nJimmy
+    Saarela\r\nJohan Ahlgren\r\n\r\n\nGRAPHICS\r\n\r---------------\nIsabelle Eriksson
+    Koski\r\nJennifer Lewin\r\nJimmy Hult\xE9n\r\n\r\n\r\nADDITIONAL ART ASSETS\r\n\r----------------------------------\nCracked
+    Icon \xA9 Alex, JP\r\nwww.thenounproject.com\r\n\r\nwww.Artbreeder.com\r\n\r\n\r\nMUSIC\r\n-\r----------\n\"Factory
+    On Mercury\"\r\n\r\n\"Time Running Out\"\r\n\r\nBy Eric Matyas\r\nwww.soundimage.org\r\n\r\n\"Sci-Fi
+    Pulse Loop\"\r\n\r\nBy DL Sounds\r\nwww.dl-sounds.com\r\n\r\n\r\nVFX\r\n\r-------\nVHS
+    Glitch - Video Clip\r\nBy Christoper \"ChickArt\" Huppertz\r\nhttps://gumroad.com/l/vhs_video_clip\r\n\r\n\r\nFONTS\r\n\r-----------\nKimberley
     \xA9 2000-2012 Typodermic Fonts Inc.\r\n\r\nAtlantis International Copyright
     \xA9 2018, Heaven Castro.\r\n\r\nPerfect DOS VGA 437 Copyright \xA9 2003, Zeh
-    Fernando.\r\n\r\n\r\nSPECIAL THANKS\r\n\r\nMax Friberg, Robert Esbj\xF6rnsson
-    and our fellow students for their support and constructive feedback.\r\n\r\nErik
-    Nilsson for his invaluable help during the idea generation phase.\r\n\r\n"
+    Fernando.\r\n\r\n\r\nSPECIAL THANKS\r\n\r------------------------\nMax Friberg,
+    Robert Esbj\xF6rnsson and our fellow students for their support and constructive
+    feedback.\r\n\r\nErik Nilsson for his invaluable help during the idea generation
+    phase.\r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d2fdd8fbc062d40d3b7a8d162217e5b9, type: 2}
   m_sharedMaterial: {fileID: 2564031454170496482, guid: d2fdd8fbc062d40d3b7a8d162217e5b9,
@@ -819,6 +821,50 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 71901947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302893709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302893711}
+  - component: {fileID: 1302893710}
+  m_Layer: 0
+  m_Name: PlayAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1302893710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302893709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e328f06b1923eb4f963ff7a8bebca45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 398940435}
+--- !u!4 &1302893711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302893709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1433750753
 PrefabInstance:
   m_ObjectHideFlags: 0

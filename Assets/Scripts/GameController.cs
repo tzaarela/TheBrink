@@ -134,6 +134,14 @@ public class GameController : ScriptableObject
                 SceneManager.LoadScene("DockingScene");
                 TransitionController.Instance.FadeIn();
                 break;
+            case GameScene.Credits:
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
+                {
+                    SceneManager.LoadScene("CreditsScene");
+                    TransitionController.Instance.FadeIn();
+                };
+                break;
             default:
                 break;
         }

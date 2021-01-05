@@ -14,6 +14,7 @@ namespace Assets.Scripts
         Spaceport,
         SpaceportNoIntro,
         GameOver,
-        Docking
+        Docking,
+        Credits
     }
 }
