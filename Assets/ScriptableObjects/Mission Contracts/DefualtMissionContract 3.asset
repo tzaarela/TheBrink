@@ -12,22 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc5e81649909461fbde70642cafbb5f, type: 3}
   m_Name: DefualtMissionContract 3
   m_EditorClassIdentifier: 
-  contractName: Default Contract
-  shortDescription: 'Ex. Deliver supplies to x spaceport
-
-    Ex. Escort contract'
-  description: 'Text text text text
-
-    Text text text text
-
-    Text text text
-    text
-
-    Text text...'
+  contractName: Senepol Contract
+  shortDescription: Senepol spaceport requires a shipment of supplies.
+  description: After a smaller hullbreach in the spaceport, Senepol lost important
+    supplies for their greenhouse. They require a shipment of assorted chemicals,
+    tools and fertilizer to make up for what they lost.
   difficulty: Dangerous Route
-  difficultyDescription: 'Route is overrun by pirates
-
-    who control the area'
+  difficultyDescription: 'Dangerous route as hazards are spread along the entire
+    route. Dangers include: asteroid fields, pirating zones and solar flare risks.
+    A risky but rewarding contract.'
   averageFuelPercentNeeded: 80
   crewMembersNeeded: 3
   cashEarnings: 75000
