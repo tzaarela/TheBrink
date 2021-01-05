@@ -47,6 +47,8 @@ public class CrewMember : UITrigger
     public MoveController moveController;
     private bool isSelected;
 
+    public Transform progressBarSlot;
+
     private void Awake()
     {
         Status = "Idle";

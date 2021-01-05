@@ -284,6 +284,19 @@ namespace Assets.Scripts.Rooms
             {
                 var crewMember = collision.GetComponent<CrewMember>();
                 PresentCrewMembers.Add(crewMember);
+
+                //Vector3[] positions = new Vector3[]
+                //{
+                //    new Vector3(0,0,0),
+                //    new Vector3(10,0,0),
+                //    new Vector3(-10,0,0),
+                //};
+
+                //for (int i = 0; i < PresentCrewMembers.Count; i++)
+                //{
+                    
+                //    PresentCrewMembers[i].transform.position += positions[i];
+                //}
             }
         }
 

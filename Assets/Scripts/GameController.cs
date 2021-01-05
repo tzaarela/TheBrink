@@ -38,7 +38,7 @@ public class GameController : ScriptableObject
         this.ship = ship;
         this.crew = crew;
 
-        // TODO DEBUG ONLY
+        // DEBUG ONLY
         if (isDebuging)
             SwitchScene(_beginDebugScene);
         else
@@ -116,7 +116,13 @@ public class GameController : ScriptableObject
                     SceneManager.LoadScene("GameOverScene");
                 };
                 break;
-
+            case GameScene.Docking:
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
+                {
+                    SceneManager.LoadScene("DockingScene");
+                };
+                break;
             default:
                 break;
         }

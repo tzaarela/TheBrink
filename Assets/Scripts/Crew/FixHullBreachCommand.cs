@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Crew
 {
@@ -16,21 +17,36 @@ namespace Assets.Scripts.Crew
         public override string StatusText { get; set; }
 
         private CrewMember crewMember;
+        private ProgressBar progressBar;
 
         public FixHullBreachCommand(CrewMember crewMember, Room destination)
         {
             this.crewMember = crewMember;
             Destination = destination;
             Name = "Repair Hullbreach";
-            StatusText = "Repairing hullbreach...";
+            StatusText = "Working...";
         }
 
         public override void Execute()
         {
+            if (!IsExecuted)
+            {
+                progressBar = GameObject.Instantiate(CrewController.Instance.progressBarPrefab, crewMember.progressBarSlot.transform);
+                IsExecuted = true;
+            }
+
             crewMember.FixHullBreach();
 
-            if (!crewMember.CurrentCommand.Destination.Hazards.Any(x => x.HazardType == HazardType.Breach))
+            var fire = crewMember.CurrentCommand.Destination.Hazards.FirstOrDefault(x => x.HazardType == HazardType.Breach);
+
+            if (fire == null)
+            {
+                GameObject.Destroy(progressBar.gameObject);
                 IsFinished = true;
+                return;
+            }
+
+            progressBar.SetProgressDone(fire.SeverityAmount);
         }
     }
 }

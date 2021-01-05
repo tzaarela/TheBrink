@@ -27,7 +27,7 @@ public class MissionController : MonoBehaviour
         get 
         { 
             if(route == null)
-                route = new Route(1000, 10, 10);
+                route = new Route(1000, 10, 100);
             return route; 
         }
         set { route = value; }
@@ -99,7 +99,7 @@ public class MissionController : MonoBehaviour
 
     private void BackToOutpost()
     {
-        GameController.Instance.GameScene = GameScene.SpaceportNoIntro;
+        GameController.Instance.GameScene = GameScene.Docking;
         outpostReachedOverlay.SetActive(false);
     }
 

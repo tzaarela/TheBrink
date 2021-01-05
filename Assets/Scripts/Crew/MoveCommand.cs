@@ -31,8 +31,24 @@ public class MoveCommand : Command
 
         commandOwner.moveController.Move();
 
-        if (commandOwner.CurrentWayPoint == Destination.waypoints[0]) 
+        if (commandOwner.CurrentWayPoint == Destination.waypoints[0])
+        {
+            if(Destination.PresentCrewMembers.Count == 1)
+            {
+                commandOwner.transform.position += new Vector3(0, 0, 0);
+            }
+
+            if (Destination.PresentCrewMembers.Count == 2)
+            {
+                commandOwner.transform.position += new Vector3(30, 0, 0);
+            }
+
+            if (Destination.PresentCrewMembers.Count == 3)
+            {
+                commandOwner.transform.position += new Vector3(-30, 0, 0);
+            }
             IsFinished = true;
+        }
     }
 
     

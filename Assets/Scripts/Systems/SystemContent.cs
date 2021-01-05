@@ -58,6 +58,7 @@ namespace Assets.Scripts.Systems
         public void ToggleDepressurise(bool isOn)
         {
             shipSystem.IsDepressurised = isOn;
+            shipSystem.SystemRoom.RoomState = isOn ? RoomState.Depreassurized : RoomState.Open;
         }
     }
 }

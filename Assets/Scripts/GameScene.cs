@@ -13,6 +13,7 @@ namespace Assets.Scripts
         Mission,
         Spaceport,
         SpaceportNoIntro,
-        GameOver
+        GameOver,
+        Docking
     }
 }

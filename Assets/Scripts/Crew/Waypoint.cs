@@ -7,7 +7,7 @@ public class Waypoint : MonoBehaviour
 {
     [SerializeField]
     private List<Waypoint> _neighbours;
-    
+
     public Vector2 Position { get; private set; }
 
     [HideInInspector]

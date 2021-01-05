@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ClickToContinue
 {
-    GameScene swapToScene;
+    public GameScene swapToScene;
     KeyCode keyCode;
 
     public ClickToContinue(GameScene swapToScene, KeyCode keyCode)

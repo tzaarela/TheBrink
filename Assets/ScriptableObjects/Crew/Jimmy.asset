@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crewName: Jimmy
   health: 100
-  extinguishFireSkill: 30
-  fixElectricFailureSkill: 10
-  fixHullBreachSkill: 10
+  extinguishFireSkill: 25
+  fixElectricFailureSkill: 1
+  fixHullBreachSkill: 1
   sprite: {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
   profession: 1
   age: 32

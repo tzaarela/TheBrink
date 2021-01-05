@@ -9,7 +9,9 @@ using UnityEngine;
 public class CrewController : MonoBehaviour
 {
     public static CrewController Instance;
-    
+
+    public ProgressBar progressBarPrefab;
+
     [SerializeField]
     private CrewMember[] crewMemberSlots = new CrewMember[3];
 
