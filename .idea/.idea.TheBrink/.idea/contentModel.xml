@@ -150,6 +150,7 @@
             <e p="InterfaceTrigger.cs" t="Include" />
             <e p="UITrigger.cs" t="Include" />
           </e>
+          <e p="KeyController.cs" t="Include" />
           <e p="MainMenuController.cs" t="Include" />
           <e p="MainMenuPanelType.cs" t="Include" />
           <e p="MenuController.cs" t="Include" />
@@ -232,6 +233,7 @@
           <e p="ToggleButton.cs" t="Include" />
           <e p="Tweening" t="Include">
             <e p="Animations" t="Include">
+              <e p="RunSequence.cs" t="Include" />
               <e p="TextInput.cs" t="Include" />
               <e p="TextPrint.cs" t="Include" />
               <e p="TextSequence.cs" t="Include" />
