@@ -42,7 +42,10 @@ public class GameController : ScriptableObject
 
         // DEBUG ONLY
         if (isDebuging)
+        {
             GameScene = _beginDebugScene;
+        }
+            
         else
         {
             GameScene = GameScene.Start;
