@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
   m_Name: Eddie 5
   m_EditorClassIdentifier: 
-  crewName: Eddie
+  crewName: Dax Lahiri
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
   sprite: {fileID: 21300000, guid: 2cab8c9b35131ee46958f57f9dac5228, type: 3}
   profession: 2
-  age: 32
-  gender: 2
-  quirk: OCD
-  lengthCM: 180
-  bloodType: 2
+  age: 35
+  gender: 1
+  quirk: Sleepy
+  lengthCM: 174
+  bloodType: 7
   companyName: The Brink
-  favoriteFood: Bibimbap
+  favoriteFood: Omelette
   workHours: 24/7, all year round
   employeeHistory: Unknown
   salary: 15750

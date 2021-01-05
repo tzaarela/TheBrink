@@ -12,22 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc5e81649909461fbde70642cafbb5f, type: 3}
   m_Name: DefualtMissionContract 2
   m_EditorClassIdentifier: 
-  contractName: Default Contract
-  shortDescription: 'Ex. Deliver supplies to x spaceport
+  contractName: Mayall Contract
+  shortDescription: 'Deliver supplies to Mayall spaceport.
 
-    Ex. Escort contract'
-  description: 'Text text text text
-
-    Text text text text
-
-    Text text text
-    text
-
-    Text text...'
+'
+  description: The outpost Mayall has been dealing with increased pirate attacks
+    and is in dire need of spare parts to be able to function on a normal level.
+    Deliver the shipment of 20 cases of spare parts to Mayall.
   difficulty: Dangerous Route
-  difficultyDescription: 'Route is overrun by pirates
-
-    who control the area'
+  difficultyDescription: "BEWARE! As this outpost is in the outer rim, there\u2019s
+    little to no information about potential dangers. We know that there have been
+    ships that never return upon taking on a similar route. \r"
   averageFuelPercentNeeded: 80
   crewMembersNeeded: 3
   cashEarnings: 75000
