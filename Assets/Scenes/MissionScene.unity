@@ -1296,6 +1296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor-right-3
       objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}
 --- !u!224 &99946980 stripped
@@ -5111,6 +5116,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor-right-1
       objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}
 --- !u!224 &492173222 stripped
@@ -5118,12 +5128,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 639067107563876834, guid: 69a305229b5f3bb4b94202950e157fc5,
     type: 3}
   m_PrefabInstance: {fileID: 492173221}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &494838576 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1233662135}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &502937545
 PrefabInstance:
@@ -5403,12 +5407,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 332803564}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &523103483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 874985043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &535532215
 GameObject:
   m_ObjectHideFlags: 0
@@ -5640,6 +5638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Corridor-left-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}
@@ -7520,7 +7523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b43823353e67649997f75ed674febc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInSeconds: 0.1
+  timeInSeconds: 1
   delayInSeconds: 1
 --- !u!114 &791785637
 MonoBehaviour:
@@ -8298,6 +8301,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor-left-2
       objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}
 --- !u!224 &874985044 stripped
@@ -9008,12 +9016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7f3d73383481547b61cb534dad8a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1037722793 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 492173221}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1038472610
 GameObject:
   m_ObjectHideFlags: 0
@@ -10096,6 +10098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Corridor-right-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}
@@ -11351,12 +11358,6 @@ MonoBehaviour:
   fireIcon: {fileID: 179901196}
   electricIcon: {fileID: 1659465744}
   breachIcon: {fileID: 1806966529}
---- !u!1 &1460155494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 639067105456745174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1470152851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7292420677338133547, guid: 500f4b312079bb64bb12367bab83349d,
@@ -12256,12 +12257,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1548239828}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1553077126 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 99946979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1561506048
 GameObject:
   m_ObjectHideFlags: 0
@@ -12599,12 +12594,6 @@ MonoBehaviour:
   fireIcon: {fileID: 1477563990}
   electricIcon: {fileID: 1877756389}
   breachIcon: {fileID: 56739772}
---- !u!1 &1578475645 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 577537297}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1586207760
 GameObject:
   m_ObjectHideFlags: 0
@@ -13131,6 +13120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Corridor-left-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}
@@ -14934,12 +14928,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a58f296649c174ff0a4f1da310c47b8c, type: 3}
---- !u!1 &1950661330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1645407453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1987516167 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7324913899654559604, guid: abea9dafb0df44149b3b36ce83bcc71d,
@@ -15705,12 +15693,6 @@ MonoBehaviour:
   fireIcon: {fileID: 795729491}
   electricIcon: {fileID: 91203248}
   breachIcon: {fileID: 502937547}
---- !u!1 &2042815794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 2077990024}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2056552082
 GameObject:
   m_ObjectHideFlags: 0
@@ -16245,6 +16227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Corridor-top
+      objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}
@@ -17002,14 +16989,6 @@ MonoBehaviour:
   - {fileID: 41654214}
   - {fileID: 1287071969}
   - {fileID: 746413027}
-  - {fileID: 1460155494}
-  - {fileID: 1037722793}
-  - {fileID: 494838576}
-  - {fileID: 1553077126}
-  - {fileID: 2042815794}
-  - {fileID: 1578475645}
-  - {fileID: 523103483}
-  - {fileID: 1950661330}
   - {fileID: 817595650}
   airDrainLevel: 0.2
 --- !u!4 &2145493753
@@ -17899,6 +17878,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Corridor-bot
+      objectReference: {fileID: 0}
+    - target: {fileID: 639067107563876837, guid: 69a305229b5f3bb4b94202950e157fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a305229b5f3bb4b94202950e157fc5, type: 3}

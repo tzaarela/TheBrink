@@ -74,7 +74,7 @@ public class SystemController : ScriptableObject
         var rooms = RoomController.Instance.Rooms;
         var amountOfSystems = SystemType.GetNames(typeof(SystemType)).Length;
 
-        ShipSystems = new IShipSystem[amountOfSystems];
+        ShipSystems = new IShipSystem[amountOfSystems - 1];
 
         ShipSystems[0] = new ReactorSystem(ship, rooms);
         ShipSystems[1] = new MainframeSystem(ship, rooms);
@@ -83,7 +83,7 @@ public class SystemController : ScriptableObject
         ShipSystems[4] = new BridgeSystem(ship, rooms, this);
         ShipSystems[5] = new MedbaySystem(rooms);
         ShipSystems[6] = new CargoHoldSystem(rooms);
-        ShipSystems[7] = new CorridorSystem(rooms);
+        //ShipSystems[7] = new CorridorSystem(rooms);
     }
 
     public IShipSystem GetSystemOfType(SystemType systemType)
