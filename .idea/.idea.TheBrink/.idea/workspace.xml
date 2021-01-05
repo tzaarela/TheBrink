@@ -21,47 +21,36 @@
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Cold-Moon_Looping.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Cold-Moon_Looping.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Dark Organism.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Dark Organism.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Darkness-Approaches_Looping.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Darkness-Approaches_Looping.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/MainMenu_BGM_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/MainMenu_BGM_01.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Mission_BGM_01.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Mission_BGM_01.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Spaceport_BGM_01.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Spaceport_BGM_01.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Suspense Trans1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/BGM/Suspense Trans1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/button-click_sfx_01.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/button-click_sfx_01.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Transition Font.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TextMeshPro Assets/Transition Font.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Login Screen.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Login Screen/UI_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Login Screen/UI_Logo.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/SpriteAtlas/UI Elements - Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BellScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BellScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Hulten [Scene].unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Hulten [Scene].unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JEmdi.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jennifer.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jennifer.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JohnnyScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JohnnyScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene_SEFGDHFJGKHG.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene_SEFGDHFJGKHG.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MockupScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MockupScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Unsorted - No Use/ShipUI_ShipOverview_Floor_NoNames.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Unsorted - No Use/ShipUI_ShipOverview_Floor_NoNames.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spaceport [Canvas].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceport [Canvas].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SystemContent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SystemContent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MissionScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene_Jennifer.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene_Jennifer.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Eddie.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Eddie.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Jimmy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Jimmy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Johan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Crew/Johan.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GameController.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Mission Contracts/DefualtMissionContract 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Ship.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,23 +102,19 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/BGMClipType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Starter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DebugScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportBarrackController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/MenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/EmployeeContractContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/InterfaceTriggerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/VolumeType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" />
       <option value="$PROJECT_DIR$/Assets/VolumeSlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/GenderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
@@ -137,11 +122,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Rooms/Room.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Crew/Crew.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContractsController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/FuelPanel.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -214,7 +203,7 @@
       <workItem from="1609749329815" duration="27106000" />
       <workItem from="1609839540275" duration="5418000" />
       <workItem from="1609867992211" duration="3563000" />
-      <workItem from="1609879512845" duration="616000" />
+      <workItem from="1609879512845" duration="3867000" />
     </task>
     <servers />
   </component>

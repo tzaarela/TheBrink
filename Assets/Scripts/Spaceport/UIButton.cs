@@ -34,6 +34,9 @@ public class UIButton : UITrigger
 
     private void SetButtonState(ButtonState buttonState)
     {
+        if (_sprites[0] == null)
+            return;
+        
         _image.sprite = _sprites[(int) buttonState];
         if (_text != null)
             _text.color = _colors[(int) buttonState];

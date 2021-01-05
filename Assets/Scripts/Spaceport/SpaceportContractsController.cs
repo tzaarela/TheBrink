@@ -67,7 +67,7 @@ public class SpaceportContractsController : SpaceportPanelController
             MissionContract missionContract = _missionContracts[i];
             
             _contractsShortDescription[i].transform.parent.gameObject.SetActive(true);
-            _contractsShortDescription[i].text = $"{missionContract.contractName}\n\n{missionContract.shortDescription}";
+            _contractsShortDescription[i].text = $"{missionContract.contractName} Contract\n\n{missionContract.shortDescription}";
             _contractIcons[i].sprite = missionContract.logo;
             _contractIcons[i].SetNativeSize();
         }
