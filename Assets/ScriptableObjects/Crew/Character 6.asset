@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
   m_Name: Character 6
   m_EditorClassIdentifier: 
-  crewName: "Orston Igmar\xE9"
+  crewName: "O. Igmar\xE9"
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
