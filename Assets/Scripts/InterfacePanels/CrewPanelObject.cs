@@ -62,7 +62,7 @@ namespace Assets.Scripts.InterfacePanels
                 }
 
                 _portrait.sprite = crewMember.crewData.sprite;
-                nameTextMesh.text = crewMember.crewData.name;
+                nameTextMesh.text = crewMember.crewData.displayName;
                 professionTextMesh.text = crewMember.crewData.profession.ToString();
                 statusTextMesh.text = crewMember.Status.ToString();
 

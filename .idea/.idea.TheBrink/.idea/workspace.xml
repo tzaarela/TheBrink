@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +57,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FCFB6FCD-3E9A-4E12-8C14-260F742E2185/b7/d04f6f91/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewMemberUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spaceport/ButtonState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -69,7 +72,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/MissionContract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportContract.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractButtonType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/GenderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/BloodType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/RepairContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/SpaceportWorkshopController.cs" />
@@ -79,7 +81,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Starter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/ContractContent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewController.cs" />
@@ -98,7 +99,9 @@
       <option value="$PROJECT_DIR$/Assets/VolumeSlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/GenderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -169,7 +172,7 @@
       <workItem from="1608287754010" duration="3154000" />
       <workItem from="1608539885457" duration="1346000" />
       <workItem from="1609749329815" duration="27106000" />
-      <workItem from="1609839540275" duration="3600000" />
+      <workItem from="1609839540275" duration="4712000" />
     </task>
     <servers />
   </component>
