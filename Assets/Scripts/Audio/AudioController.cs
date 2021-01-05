@@ -49,6 +49,11 @@ public class AudioController : MonoBehaviour
         Init();
     }
 
+    private void Update()
+    {
+        Debug.Log($"GameScene: {GameController.Instance.GameScene}");
+    }
+
     private void Init()
     {
         _audioSources = new AudioSource[Enum.GetNames(typeof(AudioSourceType)).Length][];

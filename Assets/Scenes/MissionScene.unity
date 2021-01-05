@@ -9066,8 +9066,8 @@ Transform:
   - {fileID: 2056552083}
   - {fileID: 586542780}
   - {fileID: 2123859683}
-  - {fileID: 1570245683}
   - {fileID: 2057740188}
+  - {fileID: 1570245683}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14125,6 +14125,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -24
       objectReference: {fileID: 0}
+    - target: {fileID: 4109987480220968436, guid: 8b17c286b3cc041068d116f0f96b9014,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 480762253}
     - target: {fileID: 4109987480220968440, guid: 8b17c286b3cc041068d116f0f96b9014,
         type: 3}
       propertyPath: m_Pivot.x
@@ -14138,7 +14143,7 @@ PrefabInstance:
     - target: {fileID: 4109987480220968440, guid: 8b17c286b3cc041068d116f0f96b9014,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4109987480220968440, guid: 8b17c286b3cc041068d116f0f96b9014,
         type: 3}
@@ -17531,7 +17536,7 @@ PrefabInstance:
     - target: {fileID: 1558878992743944433, guid: 31848d9992b64c0439ca2af5cf7b8493,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1558878992743944433, guid: 31848d9992b64c0439ca2af5cf7b8493,
         type: 3}

@@ -116,11 +116,14 @@
             <e p="CrewController.cs" t="Include" />
             <e p="CrewData.cs" t="Include" />
             <e p="CrewMember.cs" t="Include" />
+            <e p="ExtinguishFireCommand.cs" t="Include" />
+            <e p="FixElectricCommand.cs" t="Include" />
+            <e p="FixHullBreachCommand.cs" t="Include" />
             <e p="IdleCommand.cs" t="Include" />
             <e p="MoveCommand.cs" t="Include" />
             <e p="Pathfinder.cs" t="Include" />
             <e p="Profession.cs" t="Include" />
-            <e p="RepairCommand.cs" t="Include" />
+            <e p="ProgressBar.cs" t="Include" />
             <e p="TaskType.cs" t="Include" />
             <e p="WayPoint.cs" t="Include" />
           </e>
@@ -157,6 +160,7 @@
             <e p="RoomData.cs" t="Include" />
             <e p="RoomDataArray.cs" t="Include" />
             <e p="RoomState.cs" t="Include" />
+            <e p="WarningHighlight.cs" t="Include" />
           </e>
           <e p="Route" t="Include">
             <e p="ContractType.cs" t="Include" />
@@ -234,9 +238,10 @@
               <e p="TransitionController.cs" t="Include" />
             </e>
           </e>
+          <e p="VideoFinished.cs" t="Include" />
+          <e p="VolumeSlider.cs" t="Include" />
           <e p="VolumeType.cs" t="Include" />
         </e>
-        <e p="VolumeSlider.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

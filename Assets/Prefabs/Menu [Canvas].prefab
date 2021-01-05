@@ -306,7 +306,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 4109987480220968443}
           m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-          m_MethodName: ToggleMenu
+          m_MethodName: ConfirmOptions
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2310,6 +2310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f6d620ddfa04b82bc3d038709c1193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _systemFilesPanel: {fileID: 4109987479559864457}
+  _optionsPanel: {fileID: 810835985}
 --- !u!1 &4109987480279079920
 GameObject:
   m_ObjectHideFlags: 0
