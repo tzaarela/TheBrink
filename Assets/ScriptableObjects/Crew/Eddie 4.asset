@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
   m_Name: Eddie 4
   m_EditorClassIdentifier: 
-  crewName: Eddie
+  crewName: Harley Ivanov
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
   sprite: {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
   profession: 2
-  age: 32
-  gender: 2
+  age: 43
+  gender: 0
   quirk: OCD
-  lengthCM: 180
+  lengthCM: 166
   bloodType: 2
   companyName: The Brink
   favoriteFood: Bibimbap

@@ -12,22 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc5e81649909461fbde70642cafbb5f, type: 3}
   m_Name: DefualtMissionContract 1
   m_EditorClassIdentifier: 
-  contractName: Default Contract
-  shortDescription: 'Ex. Deliver supplies to x spaceport
+  contractName: Cygnus A Contract
+  shortDescription: 'Deliver medical supplies to Cygnus A spaceport.
 
-    Ex. Escort contract'
-  description: 'Text text text text
-
-    Text text text text
-
-    Text text text
-    text
-
-    Text text...'
+'
+  description: The outpost hospital in CYGNUS A has run out of supplies. More specifically
+    a tranquilizer used before surgeries. Deliver the shipment (10 cases) of Ativan
+    to CYGNUS A.
   difficulty: Dangerous Route
-  difficultyDescription: 'Route is overrun by pirates
+  difficultyDescription: 'Solar flares are fairly common on the way to this outpost.
+    Keep an eye out for electrical fires.
 
-    who control the area'
+'
   averageFuelPercentNeeded: 80
   crewMembersNeeded: 3
   cashEarnings: 75000
