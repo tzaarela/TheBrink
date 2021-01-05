@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
   m_Name: Character 3
   m_EditorClassIdentifier: 
-  crewName: E. Northira
+  crewName: Eve Northira
   displayName: E. Northira
   health: 100
   extinguishFireSkill: 25

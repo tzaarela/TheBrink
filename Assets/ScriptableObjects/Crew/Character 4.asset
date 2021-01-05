@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
   m_Name: Character 4
   m_EditorClassIdentifier: 
-  crewName: H. Ivanov
+  crewName: Harley Ivanov
   displayName: H. Ivanov
   health: 100
   extinguishFireSkill: 25
@@ -30,7 +30,9 @@ MonoBehaviour:
   workHours: 15hr shift
   employeeHistory: Starship Destiny
   salary: 15750
-  summary: Worked on the famous Starship; Destiny and comes highly recommended.
+  summary: 'Worked on the famous Starship, Destiny.
+
+    Comes highly recommended.'
   isHired: 0
   _health: 100
   _isHired: 0

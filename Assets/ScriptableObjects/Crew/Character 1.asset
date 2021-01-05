@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
   m_Name: Character 1
   m_EditorClassIdentifier: 
-  crewName: E. Voltmoor
+  crewName: Ezra Voltmoor
   displayName: E. Voltmoor
   health: 100
   extinguishFireSkill: 25
@@ -30,7 +30,9 @@ MonoBehaviour:
   workHours: 18hr shift
   employeeHistory: Worked aboard HTV Senthia
   salary: 15750
-  summary: Motivated Engineer. Has good experience despite young age.
+  summary: 'Motivated Engineer.
+
+    Has good experience despite young age.'
   isHired: 0
   _health: 100
   _isHired: 0
