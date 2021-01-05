@@ -22,7 +22,9 @@ public class GameController : ScriptableObject
 
     private Action onTransitionComplete;
 
-    public GameScene GameScene { get => gameScene; 
+    public GameScene GameScene 
+    { 
+        get => gameScene; 
         set 
         {
             gameScene = value;
@@ -40,9 +42,9 @@ public class GameController : ScriptableObject
 
         // DEBUG ONLY
         if (isDebuging)
-            SwitchScene(_beginDebugScene);
+            GameScene = _beginDebugScene;
         else
-            SwitchScene(GameScene.Start);
+            GameScene = GameScene.Start;
     }
 
     public void SwitchScene(GameScene gameScene)
