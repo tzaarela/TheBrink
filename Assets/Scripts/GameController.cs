@@ -44,7 +44,10 @@ public class GameController : ScriptableObject
         if (isDebuging)
             GameScene = _beginDebugScene;
         else
+        {
             GameScene = GameScene.Start;
+            gameScene = GameScene.MainMenu;
+        }
     }
 
     public void SwitchScene(GameScene gameScene)
