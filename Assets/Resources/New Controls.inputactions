@@ -6,9 +6,25 @@
             "id": "b06800f1-72d1-4eef-b5c1-907f9437379e",
             "actions": [
                 {
-                    "name": "Open Menu",
+                    "name": "SelectCrewMember1",
                     "type": "Button",
-                    "id": "77f55a80-68e4-40a3-95bc-b56ffa21779c",
+                    "id": "18242bb6-0fcd-483e-96f0-02aa447cb66b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SelectCrewMember2",
+                    "type": "Button",
+                    "id": "722b8560-d9ee-4387-95e0-1310ba1cb56c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SelectCrewMember3",
+                    "type": "Button",
+                    "id": "b124aaf7-9e39-45cb-92ff-d1c2b3341377",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -17,12 +33,34 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "5cf9e09e-89ec-4f23-b9dc-b905927dc09c",
-                    "path": "<Keyboard>/escape",
+                    "id": "975109f6-0501-45e5-82ea-6d6c157def42",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "MissionKeyScheme",
-                    "action": "Open Menu",
+                    "action": "SelectCrewMember1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92867a76-d2d9-4ef1-a39c-c16c2bf1d622",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MissionKeyScheme",
+                    "action": "SelectCrewMember2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "634b2eb7-5b2c-4201-a091-7f09c6f9cd31",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MissionKeyScheme",
+                    "action": "SelectCrewMember3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -82,4 +82,10 @@ public class CrewController : MonoBehaviour
     {
         return crewMembers.FirstOrDefault(x => x.IsSelected);
     }
+
+    public void SelectCrewMemberByIndex(int index)
+    {
+        if (crewMembers[index] != null)
+            crewMembers[index].Select();
+    }
 }
