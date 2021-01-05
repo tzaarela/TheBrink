@@ -27,6 +27,8 @@ namespace Assets.Scripts.Tweening.Animations
 
         public Animator fadeOutAnimator;
         public Action onFadedOut;
+        public Action onFadedIn;
+
 
         [Range(0f, 10f)]
         public float fadeTimer = 1f;
@@ -84,18 +86,37 @@ namespace Assets.Scripts.Tweening.Animations
                 transitionQueue.Peek().ExecuteSequence();
         }
 
+        public void FadeIn()
+        {
+            fadeOutAnimator.SetTrigger("FadingIn");
+            StartCoroutine(FadingIn());
+        }
+
         public void FadeOut()
         {
             fadeOutAnimator.SetTrigger("FadingOut");
-
             StartCoroutine(FadingOut());
-
         }
 
         IEnumerator FadingOut()
         {
             yield return new WaitForSeconds(fadeTimer);
-            onFadedOut.Invoke();
+
+            if(onFadedOut != null)
+            {
+                onFadedOut.Invoke();
+            }
+
+        }
+
+        IEnumerator FadingIn()
+        {
+            yield return new WaitForSeconds(fadeTimer);
+
+            if(onFadedIn != null)
+            { 
+                onFadedIn.Invoke();
+            }
         }
 
         private void HandleOnSequenceComplete(Action onTransitionComplete)

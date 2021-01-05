@@ -45,6 +45,7 @@ public class MissionController : MonoBehaviour
     public void Start()
     {
         ship = GameController.Instance.ship;
+        ship.position = 0;
     }
 
 
@@ -99,8 +100,8 @@ public class MissionController : MonoBehaviour
 
     private void BackToOutpost()
     {
-        GameController.Instance.GameScene = GameScene.Docking;
         outpostReachedOverlay.SetActive(false);
+        GameController.Instance.GameScene = GameScene.Docking;
     }
 
 }

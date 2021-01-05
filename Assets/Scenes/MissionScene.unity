@@ -17909,11 +17909,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeInEffect [Canvas]
       objectReference: {fileID: 0}
-    - target: {fileID: 1558878992743944432, guid: 31848d9992b64c0439ca2af5cf7b8493,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1558878992743944433, guid: 31848d9992b64c0439ca2af5cf7b8493,
         type: 3}
       propertyPath: m_Pivot.x

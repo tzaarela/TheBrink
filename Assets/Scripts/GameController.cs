@@ -58,12 +58,11 @@ public class GameController : ScriptableObject
                     AudioController.instance.StopAllSound();
                     AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.MainMenu);
                     SceneManager.LoadScene("MainMenuScene");
+                    TransitionController.Instance.FadeIn();
                 };
                 break;
 
             case GameScene.Mission:
-
-
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
@@ -78,6 +77,8 @@ public class GameController : ScriptableObject
                         AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient);
 
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
+                        TransitionController.Instance.FadeIn();
+
                         RoomController.Instance.CreateRooms();
                         SystemController.Instance.CreateShipSystems(ship);
                         CrewController.Instance.CreateShipCrew(crew);
@@ -97,9 +98,14 @@ public class GameController : ScriptableObject
                 break;
 
             case GameScene.Spaceport:
-                onTransitionComplete += HandleLoginComplete;
-                transitionController.PlayLogin(onTransitionComplete);
-                AudioController.instance.StopAllBGM();
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
+                {
+                    TransitionController.Instance.FadeIn();
+                    onTransitionComplete += HandleLoginComplete;
+                    transitionController.PlayLogin(onTransitionComplete);
+                };
+                //AudioController.instance.StopAllBGM();
                 break;
 
             case GameScene.Start:
@@ -112,16 +118,13 @@ public class GameController : ScriptableObject
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
-                    AudioController.instance.StopAllSound();
                     SceneManager.LoadScene("GameOverScene");
+                    TransitionController.Instance.FadeIn();
                 };
                 break;
             case GameScene.Docking:
-                TransitionController.Instance.FadeOut();
-                TransitionController.Instance.onFadedOut += () =>
-                {
-                    SceneManager.LoadScene("DockingScene");
-                };
+                SceneManager.LoadScene("DockingScene");
+                TransitionController.Instance.FadeIn();
                 break;
             default:
                 break;
@@ -149,6 +152,7 @@ public class GameController : ScriptableObject
             AudioController.instance.StopAllSound();
             AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Spaceport);
             SceneManager.LoadScene("SpaceportScene");
+            TransitionController.Instance.FadeIn();
         }; 
         
     }
