@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="" />
+    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +78,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/BGMClipType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuPanelType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Starter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InterfacePanels/CrewPanelObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ship/Ship.cs" />
@@ -97,6 +98,7 @@
       <option value="$PROJECT_DIR$/Assets/VolumeSlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Crew/CrewData.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -167,7 +169,7 @@
       <workItem from="1608287754010" duration="3154000" />
       <workItem from="1608539885457" duration="1346000" />
       <workItem from="1609749329815" duration="27106000" />
-      <workItem from="1609839540275" duration="3125000" />
+      <workItem from="1609839540275" duration="3600000" />
     </task>
     <servers />
   </component>

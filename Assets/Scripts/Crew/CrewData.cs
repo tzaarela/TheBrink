@@ -44,20 +44,10 @@ namespace Assets.Scripts.Crew
             Reset();
         }
 
-        private void Awake()
-        {
-            Init();
-        }
-        
         public void Reset()
         {
             health = _health;
             isHired = _isHired;
-        }
-
-        private void Init()
-        {
-            sprite = Resources.Load<Sprite>("Graphics/Portraits/ShipUI_Portrait4");
         }
     }
 }

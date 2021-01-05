@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: Eddie 2
+  m_Name: Character 1
   m_EditorClassIdentifier: 
-  crewName: Cadrien Yang
+  crewName: Ezra Voltmoor
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: a3b43dd70d8e7aa4489d30243c7a60ac, type: 3}
+  sprite: {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
   profession: 2
-  age: 48
-  gender: 1
-  quirk: Quiet
-  lengthCM: 187
-  bloodType: 5
+  age: 28
+  gender: 0
+  quirk: Strong
+  lengthCM: 175
+  bloodType: 4
   companyName: The Brink
-  favoriteFood: Pizza
+  favoriteFood: Bolognese
   workHours: 24/7, all year round
   employeeHistory: Unknown
   salary: 15750
