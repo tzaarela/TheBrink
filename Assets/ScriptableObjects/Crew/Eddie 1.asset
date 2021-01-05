@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
+  m_Name: Eddie 1
+  m_EditorClassIdentifier: 
+  crewName: Eddie
+  health: 100
+  extinguishFireSkill: 25
+  fixElectricFailureSkill: 20
+  fixHullBreachSkill: 1
+  sprite: {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
+  profession: 2
+  age: 32
+  gender: 2
+  quirk: OCD
+  lengthCM: 180
+  bloodType: 2
+  companyName: The Brink
+  favoriteFood: Bibimbap
+  workHours: 24/7, all year round
+  employeeHistory: Unknown
+  salary: 15750
+  summary: '-'
+  isHired: 0
+  _health: 100
+  _isHired: 0
