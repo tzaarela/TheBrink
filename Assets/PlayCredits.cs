@@ -18,4 +18,12 @@ public class PlayCredits : MonoBehaviour
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
         GameController.Instance.GameScene = Assets.Scripts.GameScene.MainMenu;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameController.Instance.GameScene = Assets.Scripts.GameScene.MainMenu;
+        }
+    }
 }
