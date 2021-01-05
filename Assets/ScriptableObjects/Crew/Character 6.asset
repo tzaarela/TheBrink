@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
   m_Name: Character 6
   m_EditorClassIdentifier: 
-  crewName: "O. Igmar\xE9"
+  crewName: O. Igmare
+  displayName: O. Igmare
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
@@ -26,7 +27,7 @@ MonoBehaviour:
   bloodType: 0
   companyName: The Brink
   favoriteFood: Risotto
-  workHours: 20hr shifts
+  workHours: 20hr shift
   employeeHistory: Pharmastrum
   salary: 15750
   summary: 'Worked on new discoveries within Pharmastrum. Wants to change things

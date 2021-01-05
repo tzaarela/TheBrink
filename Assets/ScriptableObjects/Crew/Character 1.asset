@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Character 1
   m_EditorClassIdentifier: 
   crewName: E. Voltmoor
+  displayName: E. Voltmoor
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
@@ -26,7 +27,7 @@ MonoBehaviour:
   bloodType: 4
   companyName: The Brink
   favoriteFood: Bolognese
-  workHours: 24/7, all year round
+  workHours: 18hr shift
   employeeHistory: Worked aboard HTV Senthia
   salary: 15750
   summary: Motivated Engineer. Has good experience despite young age.

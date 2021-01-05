@@ -426,7 +426,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jimmy AAAAAA
+  m_text: O. igmare
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef8c207e46c564f64ab40f6755387412, type: 2}
   m_sharedMaterial: {fileID: -3919579297627752949, guid: ef8c207e46c564f64ab40f6755387412,
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: -58
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0

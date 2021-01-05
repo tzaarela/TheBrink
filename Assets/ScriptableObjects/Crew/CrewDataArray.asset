@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CrewDataArray
   m_EditorClassIdentifier: 
   crewDataList:
-  - {fileID: 11400000, guid: 76c2b023fb2d33044b233c38fedf837a, type: 2}
-  - {fileID: 11400000, guid: 0456151586ea43f46921ac5347420555, type: 2}
-  - {fileID: 11400000, guid: 8e91e1077b194ed438b84d621603acb6, type: 2}
+  - {fileID: 11400000, guid: b59d378258315e146bbfdd0805fdf207, type: 2}
+  - {fileID: 11400000, guid: cd54f76cd2beecb4eae1a01d8363d468, type: 2}
+  - {fileID: 11400000, guid: e370c720d75df304bac4da13d69287ab, type: 2}

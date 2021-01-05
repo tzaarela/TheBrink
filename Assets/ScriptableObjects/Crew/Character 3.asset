@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Character 3
   m_EditorClassIdentifier: 
   crewName: E. Northira
+  displayName: E. Northira
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
@@ -26,7 +27,7 @@ MonoBehaviour:
   bloodType: 2
   companyName: The Brink
   favoriteFood: Curry
-  workHours: 18hr shifts
+  workHours: 18hr shift
   employeeHistory: Corpo.
   salary: 15750
   summary: Used to work for the Corporation, making new medicines. Hardworking and
