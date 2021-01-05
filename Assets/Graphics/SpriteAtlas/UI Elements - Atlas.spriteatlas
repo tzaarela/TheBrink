@@ -52,6 +52,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
+  - {fileID: 21300000, guid: 6e9c2bb0469e94903871e1f12c1c45ee, type: 3}
   - {fileID: 21300000, guid: be749ff0591a38249b2a1bb320988196, type: 3}
   - {fileID: 21300000, guid: cc448b11a68f24bc59595089c5d06f1e, type: 3}
   - {fileID: 21300000, guid: 0f66ef11b3ff742868a9b71248ce95ad, type: 3}
@@ -67,11 +68,11 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c2184544714128a49ba58abad5bc0afe, type: 3}
   - {fileID: 21300000, guid: 3e6596643914b45498aa00658ae460bc, type: 3}
   - {fileID: 21300000, guid: ac7a2a640f9adce47bc34010a03a1b2e, type: 3}
+  - {fileID: 21300000, guid: 0914dcf4a5dd64f3ab61744b5c7dcd23, type: 3}
   - {fileID: 21300000, guid: e64d3a459d2fc2f4881cdffa572f9207, type: 3}
   - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
   - {fileID: 21300000, guid: 67c603a5f83ef42e7830e3e0db76d701, type: 3}
   - {fileID: 21300000, guid: 75ecc33653f9c4c27aa5a34709c4b602, type: 3}
-  - {fileID: 21300000, guid: bb228876de53543c3a38175f224a83fd, type: 3}
   - {fileID: 21300000, guid: 80c853b64891f4d5fbf35981b3c9590e, type: 3}
   - {fileID: 21300000, guid: d6ecfae63eb667f45b097a34de75d6e6, type: 3}
   - {fileID: 21300000, guid: 8c7aba57a13240a4db453f6686048e18, type: 3}
@@ -87,7 +88,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d26db72abe4854aed9dd6135c3be8c22, type: 3}
   - {fileID: 21300000, guid: 94d9a65ac637e4447b419b4358c1076e, type: 3}
   - {fileID: 21300000, guid: 1ba752dae75de4c12a52bf51e53af0e3, type: 3}
-  - {fileID: 21300000, guid: ff0fd3da93ecb4fcf9506d6b108d4351, type: 3}
   - {fileID: 21300000, guid: f106351b665ea90479156be5d32855c1, type: 3}
   - {fileID: 21300000, guid: 5698c82bad194418daec14536de3962e, type: 3}
   - {fileID: 21300000, guid: b7a00b2baa500bc4b9142a9219f200a0, type: 3}
@@ -106,6 +106,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 33a62eff97eaa44c7a89b39c55c5eed4, type: 3}
   m_PackedSpriteNamesToIndex:
   - ShipUI_Portrait1
+  - ShipUI_ShipOverview
   - Button_03_PressedGREY
   - left-arrow_10x6_01_white
   - tab-border_13x10_01_selected_Pressed
@@ -121,11 +122,11 @@ SpriteAtlas:
   - loading circle_gameover
   - border-outline_01_72x72
   - fire_icon
+  - ShipUI_ShipOverview_Floor
   - Logotype_Pharmastrum
   - lineRadar
   - tab-border_13x13_01_Highlight
   - Button_02_8x8
-  - ShipUI_Floor_Active
   - 1x1px_white_temp_01
   - Scientist_19x(1)
   - electrical failure_45x33
@@ -141,7 +142,6 @@ SpriteAtlas:
   - tab-border_13x10_01_selected_Highlight
   - 8x8_ui-border_01_selected
   - Vaning_Icon_Pixelated2
-  - ShipUI_Floor_Inactive
   - Button_03_Normal
   - 8x8_ui-border2-temp_01
   - Button_03_Pressed

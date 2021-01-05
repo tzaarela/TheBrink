@@ -9,7 +9,7 @@ using TMPro;
 public class MenuController : MonoBehaviour
 {
     private GameObject _menuPanel;
-
+    
     [SerializeField] private GameObject _systemFilesPanel;
     [SerializeField] private GameObject _optionsPanel;
 
@@ -22,8 +22,15 @@ public class MenuController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && GameController.Instance.GameScene != GameScene.MainMenu)
-            ToggleMenu();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameScene gameScene = GameController.Instance.GameScene;
+            
+            Debug.Log($"_gameScene: {gameScene}");
+            if ((gameScene == GameScene.MainMenu && _menuPanel.activeInHierarchy) ||
+                gameScene == GameScene.SpaceportNoIntro || gameScene == GameScene.Mission)
+                ToggleMenu();
+        }
     }
 
     private void GetAllComponents()
@@ -57,7 +64,6 @@ public class MenuController : MonoBehaviour
 
     public void ConfirmOptions()
     {
-        Debug.Log($"GameController.Instance.GameScene: {GameController.Instance.GameScene}");
         if (GameController.Instance.GameScene == GameScene.MainMenu)
             CloseOptions();
         else

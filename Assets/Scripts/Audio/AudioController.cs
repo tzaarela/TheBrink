@@ -49,11 +49,6 @@ public class AudioController : MonoBehaviour
         Init();
     }
 
-    private void Update()
-    {
-        Debug.Log($"GameScene: {GameController.Instance.GameScene}");
-    }
-
     private void Init()
     {
         _audioSources = new AudioSource[Enum.GetNames(typeof(AudioSourceType)).Length][];
@@ -89,9 +84,6 @@ public class AudioController : MonoBehaviour
     // PLAY
     public void PlayBGM(AudioBGMType audioBGMType, AudioClip audioClip, float volume = 1f, float delay = 0f)
     {
-        if (_bgmIsMuted)
-            return;
-        
         AudioSource audioSource = GetBGMSource(audioBGMType);
         audioSource.clip = audioClip;
         audioSource.volume = GetVolume(AudioSourceType.Music, volume);
@@ -100,9 +92,6 @@ public class AudioController : MonoBehaviour
 
     public void PlayBGM(AudioBGMType audioBGMType, BGMClipType clipType, float volume = 1f, float delay = 0f)
     {
-        if (_bgmIsMuted)
-            return;
-        
         AudioSource audioSource = GetBGMSource(audioBGMType);
         audioSource.clip = GetBGMClip(clipType);
         audioSource.volume = GetVolume(AudioSourceType.Music, volume);
@@ -111,9 +100,6 @@ public class AudioController : MonoBehaviour
     
     public void PlaySFX(AudioClip audioClip, float volume = 1f, float delay = 0f)
     {
-        if (_sfxIsMuted)
-            return;
-
         AudioSource audioSource = GetFreeSFXSource();
         audioSource.clip = audioClip;
         audioSource.volume = GetVolume(AudioSourceType.SFX, volume);
@@ -122,9 +108,6 @@ public class AudioController : MonoBehaviour
 
     public void PlaySFX(SFXClipType clipType, float volume = 1f, float delay = 0f)
     {
-        if (_sfxIsMuted)
-            return;
-
         AudioSource audioSource = GetFreeSFXSource();
         audioSource.clip = GetSFXClip(clipType);
         audioSource.volume = GetVolume(AudioSourceType.SFX, volume);

@@ -9,7 +9,7 @@ public class SpaceportContractsController : SpaceportPanelController
     
     [SerializeField] private MissionContract[] _missionContracts = new MissionContract[3];
     [SerializeField] private TMP_Text[] _contractsShortDescription = new TMP_Text[3];
-    [SerializeField] private TMP_Text[] _contractsActive = new TMP_Text[3];
+    [SerializeField] private GameObject[] _contractsActive = new GameObject[3];
 
     [SerializeField] private ContractContent _contractContent;
     private int _activeContractIndex = -1;
@@ -60,7 +60,7 @@ public class SpaceportContractsController : SpaceportPanelController
                 continue;
             }
             
-            _contractsActive[i].gameObject.SetActive(_activeContractIndex == i);
+            _contractsActive[i].SetActive(_activeContractIndex == i);
 
             MissionContract missionContract = _missionContracts[i];
             

@@ -85,15 +85,15 @@ public class MainMenuController : MonoBehaviour
         switch (_currentPanel)
         {
             case MainMenuPanelType.New:
-                Debug.Log($"Pressed Back from New");
+                // Debug.Log($"Pressed Back from New");
                 ShowPanelOnly(_currentPanel = MainMenuPanelType.Main);
                 break;
             case MainMenuPanelType.Options:
-                Debug.Log($"Pressed Back from Options");
+                // Debug.Log($"Pressed Back from Options");
                 ShowPanelOnly(_currentPanel = MainMenuPanelType.Main);
                 break;
             case MainMenuPanelType.Credits:
-                Debug.Log($"Pressed Back from Credits");
+                // Debug.Log($"Pressed Back from Credits");
                 ShowPanelOnly(_currentPanel = MainMenuPanelType.Main);
                 break;
         }

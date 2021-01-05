@@ -70,6 +70,8 @@ namespace Assets.Scripts.Rooms
             RoomState = RoomState.Open;
             Hazards = new List<Hazard>();
             PresentCrewMembers = new List<CrewMember>();
+            
+            Highlight(false);
 
 
             if (onRoomSelected == null)

@@ -16,5 +16,10 @@ namespace Assets.Scripts.Crew
         {
             return crewDataList.Count;
         }
+
+        public void Reset()
+        {
+            crewDataList = new List<CrewData>();
+        }
     }
 }
