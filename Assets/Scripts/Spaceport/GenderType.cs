@@ -2,5 +2,6 @@
 {
     Unknown,
     Male,
-    Female
+    Female,
+    NB
 }

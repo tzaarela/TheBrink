@@ -12,6 +12,7 @@ namespace Assets.Scripts.Crew
     public class CrewData : ScriptableObject
     {
         public string crewName = "No Name";
+        public string displayName = "Display Name";
         public float health;
         public float extinguishFireSkill;
         public float fixElectricFailureSkill;
@@ -44,20 +45,10 @@ namespace Assets.Scripts.Crew
             Reset();
         }
 
-        private void Awake()
-        {
-            Init();
-        }
-        
         public void Reset()
         {
             health = _health;
             isHired = _isHired;
-        }
-
-        private void Init()
-        {
-            sprite = Resources.Load<Sprite>("Graphics/Portraits/ShipUI_Portrait4");
         }
     }
 }

@@ -10,26 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: Eddie 4
+  m_Name: Character 1
   m_EditorClassIdentifier: 
-  crewName: Harley Ivanov
+  crewName: Ezra Voltmoor
+  displayName: E. Voltmoor
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
-  profession: 2
-  age: 43
-  gender: 0
-  quirk: OCD
-  lengthCM: 166
-  bloodType: 2
+  sprite: {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
+  profession: 0
+  age: 28
+  gender: 2
+  quirk: Strong
+  lengthCM: 175
+  bloodType: 4
   companyName: The Brink
-  favoriteFood: Bibimbap
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  favoriteFood: Bolognese
+  workHours: 18hr shift
+  employeeHistory: Worked aboard HTV Senthia
   salary: 15750
-  summary: '-'
+  summary: 'Motivated Engineer.
+
+    Has good experience despite young age.'
   isHired: 0
   _health: 100
   _isHired: 0

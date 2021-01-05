@@ -10,26 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: Eddie 6
+  m_Name: Character 5
   m_EditorClassIdentifier: 
-  crewName: "Orston Igmar\xE9"
+  crewName: Dax Lahiri
+  displayName: D. Lahiri
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: 2562865fde4d4b348934bfe06d642fe1, type: 3}
-  profession: 2
-  age: 29
+  sprite: {fileID: 21300000, guid: 2cab8c9b35131ee46958f57f9dac5228, type: 3}
+  profession: 0
+  age: 35
   gender: 1
-  quirk: Shy
-  lengthCM: 183
-  bloodType: 0
+  quirk: Sleepy
+  lengthCM: 174
+  bloodType: 7
   companyName: The Brink
-  favoriteFood: Frittata
-  workHours: 24/7, all year round
+  favoriteFood: Omelette
+  workHours: 20hr shift
   employeeHistory: Unknown
   salary: 15750
-  summary: '-'
+  summary: 'Occasionally sleeps on the job, but does great work. Specialty: Reactor
+    Engines'
   isHired: 0
   _health: 100
   _isHired: 0

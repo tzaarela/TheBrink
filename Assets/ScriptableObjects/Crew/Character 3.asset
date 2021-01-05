@@ -10,26 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: Eddie 5
+  m_Name: Character 3
   m_EditorClassIdentifier: 
-  crewName: Dax Lahiri
+  crewName: Eve Northira
+  displayName: E. Northira
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: 2cab8c9b35131ee46958f57f9dac5228, type: 3}
-  profession: 2
-  age: 35
-  gender: 1
-  quirk: Sleepy
-  lengthCM: 174
-  bloodType: 7
+  sprite: {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
+  profession: 1
+  age: 30
+  gender: 2
+  quirk: Messy
+  lengthCM: 180
+  bloodType: 2
   companyName: The Brink
-  favoriteFood: Omelette
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  favoriteFood: Curry
+  workHours: 18hr shift
+  employeeHistory: Corpo.
   salary: 15750
-  summary: '-'
+  summary: Used to work for the Corporation, making new medicines. Hardworking and
+    a good teammember.
   isHired: 0
   _health: 100
   _isHired: 0

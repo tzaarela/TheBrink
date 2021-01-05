@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: Eddie 2
+  m_Name: Character 2
   m_EditorClassIdentifier: 
   crewName: Cadrien Yang
+  displayName: C. Yang
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
@@ -26,10 +27,13 @@ MonoBehaviour:
   bloodType: 5
   companyName: The Brink
   favoriteFood: Pizza
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  workHours: 22hr shift
+  employeeHistory: Worked in Senopol prior.
   salary: 15750
-  summary: '-'
+  summary: 'Changed career when he was 40.
+
+    Enjoys working with others but is
+    a man of few words. '
   isHired: 0
   _health: 100
   _isHired: 0

@@ -10,26 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: Eddie 1
+  m_Name: Character 4
   m_EditorClassIdentifier: 
-  crewName: Ezra Voltmoor
+  crewName: Harley Ivanov
+  displayName: H. Ivanov
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: 49dfe5101d4c60c469d67470a11f6eb4, type: 3}
+  sprite: {fileID: 21300000, guid: 857beb19548d20947baee2980482d31e, type: 3}
   profession: 2
-  age: 28
-  gender: 0
-  quirk: Strong
-  lengthCM: 175
-  bloodType: 4
+  age: 43
+  gender: 3
+  quirk: OCD
+  lengthCM: 166
+  bloodType: 2
   companyName: The Brink
-  favoriteFood: Bolognese
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  favoriteFood: Bibimbap
+  workHours: 15hr shift
+  employeeHistory: Starship Destiny
   salary: 15750
-  summary: '-'
+  summary: 'Worked on the famous Starship, Destiny.
+
+    Comes highly recommended.'
   isHired: 0
   _health: 100
   _isHired: 0

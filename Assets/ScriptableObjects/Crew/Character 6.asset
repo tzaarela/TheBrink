@@ -10,26 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ddae6f016d1dd744b93542f544302cb, type: 3}
-  m_Name: Eddie 3
+  m_Name: Character 6
   m_EditorClassIdentifier: 
-  crewName: Eve Northira
+  crewName: Orston Igmare
+  displayName: O. Igmare
   health: 100
   extinguishFireSkill: 25
   fixElectricFailureSkill: 20
   fixHullBreachSkill: 1
-  sprite: {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
-  profession: 2
-  age: 30
-  gender: 2
-  quirk: Messy
-  lengthCM: 180
-  bloodType: 2
+  sprite: {fileID: 21300000, guid: 2562865fde4d4b348934bfe06d642fe1, type: 3}
+  profession: 1
+  age: 29
+  gender: 1
+  quirk: Shy
+  lengthCM: 183
+  bloodType: 0
   companyName: The Brink
-  favoriteFood: Curry
-  workHours: 24/7, all year round
-  employeeHistory: Unknown
+  favoriteFood: Risotto
+  workHours: 20hr shift
+  employeeHistory: Pharmastrum
   salary: 15750
-  summary: '-'
+  summary: 'Worked on new discoveries within Pharmastrum. Wants to change things
+    up, now works on contracted missions. '
   isHired: 0
   _health: 100
   _isHired: 0
