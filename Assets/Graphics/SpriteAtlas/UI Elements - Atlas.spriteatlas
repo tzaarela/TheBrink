@@ -72,6 +72,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e64d3a459d2fc2f4881cdffa572f9207, type: 3}
   - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
   - {fileID: 21300000, guid: 67c603a5f83ef42e7830e3e0db76d701, type: 3}
+  - {fileID: 21300000, guid: 7f0de7e521d52ac48b91b0361d0cea3f, type: 3}
   - {fileID: 21300000, guid: 75ecc33653f9c4c27aa5a34709c4b602, type: 3}
   - {fileID: 21300000, guid: 80c853b64891f4d5fbf35981b3c9590e, type: 3}
   - {fileID: 21300000, guid: d6ecfae63eb667f45b097a34de75d6e6, type: 3}
@@ -98,6 +99,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
   - {fileID: 21300000, guid: de4a626d0ebfd22428dc2923ad7031b4, type: 3}
   - {fileID: 21300000, guid: 808287dde39e2c145bddb075ddeecada, type: 3}
+  - {fileID: 21300000, guid: bae3b02e03ec84e8da86074a33571eec, type: 3}
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
   - {fileID: 21300000, guid: 974f8c7e7bf55c94ba144b241d8cfafd, type: 3}
   - {fileID: 21300000, guid: 1ad0b6ae7758e49988f07e3aa851e87d, type: 3}
@@ -126,6 +128,7 @@ SpriteAtlas:
   - Logotype_Pharmastrum
   - lineRadar
   - tab-border_13x13_01_Highlight
+  - UI_Logo
   - Button_02_8x8
   - 1x1px_white_temp_01
   - Scientist_19x(1)
@@ -152,6 +155,7 @@ SpriteAtlas:
   - ShipUI_Portrait3
   - MechanicalError_31x31
   - gubb_icon__01
+  - Logotype_OS1
   - 8x8_ui-border-temp_01
   - Circle_19x(1)
   - tab-border_13x10_01_selected

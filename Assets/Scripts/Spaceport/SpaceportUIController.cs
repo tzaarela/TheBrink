@@ -17,6 +17,7 @@ public class SpaceportUIController : MonoBehaviour
 
     [SerializeField] private TMP_Text _cashText;
     [SerializeField] private TMP_Text _captainName;
+    [SerializeField] private TMP_Text _spaceportName;
 
     private void Awake()
     {
@@ -48,6 +49,13 @@ public class SpaceportUIController : MonoBehaviour
         _captainName.text = $"Ship Name: HTV Galloway\n" +
                             $"Captain: {GameController.Instance.ship.captainName}\n" +
                             $"Manufacturer Date: 2298-A0-B2";
+
+        _spaceportName.text = $"Logged into: ";
+        _spaceportName.text += (GameController.Instance.ship.missionContract == null)
+                            ? $"Kata"
+                            : $"{GameController.Instance.ship.GetContractName()}";
+
+        GameController.Instance.ship.missionContract = null;
 
         if (!GameController.Instance.isDebuging)
         {

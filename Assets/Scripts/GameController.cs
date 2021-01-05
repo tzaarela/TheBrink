@@ -150,6 +150,7 @@ public class GameController : ScriptableObject
     public void ResetGame()
     {
         crew.Reset();
+        ship.Reset();
     }
 
     private void HandleLoginComplete()

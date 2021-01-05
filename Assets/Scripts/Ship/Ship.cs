@@ -46,6 +46,7 @@ public class Ship : ScriptableObject
             fuel = _defaultFuel;
             capacitor = _defaultCapacitor;
             cash = _defaultCash;
+            missionContract = null;
             return;
         }
         
@@ -53,6 +54,7 @@ public class Ship : ScriptableObject
         cash = 1000000;
         fuel = maxFuel;
         capacitor = maxCapacitor;
+        missionContract = null;
     }
 
     public List<float> GetRoomHealths()
@@ -73,5 +75,10 @@ public class Ship : ScriptableObject
     public float GetFuelPercent()
     {
         return fuel / maxFuel;
+    }
+
+    public string GetContractName()
+    {
+        return missionContract.contractName;
     }
 }
