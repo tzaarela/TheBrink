@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class SpaceportContractsController : SpaceportPanelController
@@ -10,6 +11,7 @@ public class SpaceportContractsController : SpaceportPanelController
     [SerializeField] private MissionContract[] _missionContracts = new MissionContract[3];
     [SerializeField] private TMP_Text[] _contractsShortDescription = new TMP_Text[3];
     [SerializeField] private GameObject[] _contractsActive = new GameObject[3];
+    [SerializeField] private Image[] _contractIcons = new Image[3];
 
     [SerializeField] private ContractContent _contractContent;
     private int _activeContractIndex = -1;
@@ -66,6 +68,8 @@ public class SpaceportContractsController : SpaceportPanelController
             
             _contractsShortDescription[i].transform.parent.gameObject.SetActive(true);
             _contractsShortDescription[i].text = $"{missionContract.contractName}\n\n{missionContract.shortDescription}";
+            _contractIcons[i].sprite = missionContract.logo;
+            _contractIcons[i].SetNativeSize();
         }
     }
 

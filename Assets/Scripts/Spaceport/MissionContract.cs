@@ -6,6 +6,7 @@ using UnityEngine;
 public class MissionContract : ScriptableObject
 {
     public string contractName;
+    public Sprite logo;
     [TextArea] public string shortDescription;
     [TextArea] public string description;
     public string difficulty;

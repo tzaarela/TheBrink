@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DefualtMissionContract 3
   m_EditorClassIdentifier: 
   contractName: Senopol Contract
+  logo: {fileID: 21300000, guid: bae3b02e03ec84e8da86074a33571eec, type: 3}
   shortDescription: Senopol spaceport requires a shipment of supplies.
   description: After a smaller hullbreach in the spaceport, Senopol lost important
     supplies for their greenhouse. They require a shipment of assorted chemicals,
@@ -28,6 +29,6 @@ MonoBehaviour:
   threatPercent: 50
   alienLevel: -1
   pirateLevel: 3
-  encounterAmount: 20
+  encounterAmount: 40
   routeLength: 1000
   routeTime: 150

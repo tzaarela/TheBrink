@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: DefualtMissionContract 2
   m_EditorClassIdentifier: 
   contractName: Mayall Contract
+  logo: {fileID: 21300000, guid: 1fa028e87f71a084d9a38af2bca12d75, type: 3}
   shortDescription: 'Deliver supplies to Mayall spaceport.
 
 '
   description: The outpost Mayall has been dealing with increased pirate attacks
     and is in dire need of spare parts to be able to function on a normal level.
     Deliver the shipment of 20 cases of spare parts to Mayall.
-  difficulty: Dangerous Route
+  difficulty: Avarage Route
   difficultyDescription: "BEWARE! As this outpost is in the outer rim, there\u2019s
     little to no information about potential dangers. We know that there have been
     ships that never return upon taking on a similar route. \r"

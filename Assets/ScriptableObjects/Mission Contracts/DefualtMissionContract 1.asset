@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: DefualtMissionContract 1
   m_EditorClassIdentifier: 
   contractName: Cygnus A Contract
+  logo: {fileID: 21300000, guid: 14410691fe802c0479c1a57fceb77f3a, type: 3}
   shortDescription: 'Deliver medical supplies to Cygnus A spaceport.
 
 '
   description: The outpost hospital in CYGNUS A has run out of supplies. More specifically
     a tranquilizer used before surgeries. Deliver the shipment (10 cases) of Ativan
     to CYGNUS A.
-  difficulty: Dangerous Route
+  difficulty: Easy Route
   difficultyDescription: 'Solar flares are fairly common on the way to this outpost.
     Keep an eye out for electrical fires.
 
@@ -31,6 +32,6 @@ MonoBehaviour:
   threatPercent: 50
   alienLevel: -1
   pirateLevel: 3
-  encounterAmount: 20
+  encounterAmount: 10
   routeLength: 1000
   routeTime: 150

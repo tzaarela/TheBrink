@@ -98,6 +98,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: eed23b0d315c9e94e82e454703858bcd, type: 3}
   - {fileID: 21300000, guid: de4a626d0ebfd22428dc2923ad7031b4, type: 3}
   - {fileID: 21300000, guid: 808287dde39e2c145bddb075ddeecada, type: 3}
+  - {fileID: 21300000, guid: bae3b02e03ec84e8da86074a33571eec, type: 3}
   - {fileID: 21300000, guid: 9337592e1277a468c9f3fb4af42766a7, type: 3}
   - {fileID: 21300000, guid: 974f8c7e7bf55c94ba144b241d8cfafd, type: 3}
   - {fileID: 21300000, guid: 1ad0b6ae7758e49988f07e3aa851e87d, type: 3}
@@ -152,6 +153,7 @@ SpriteAtlas:
   - ShipUI_Portrait3
   - MechanicalError_31x31
   - gubb_icon__01
+  - Logotype_OS1
   - 8x8_ui-border-temp_01
   - Circle_19x(1)
   - tab-border_13x10_01_selected

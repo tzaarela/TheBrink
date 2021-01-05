@@ -26,7 +26,7 @@ public class MenuController : MonoBehaviour
         {
             GameScene gameScene = GameController.Instance.GameScene;
             
-            Debug.Log($"_gameScene: {gameScene}");
+            // Debug.Log($"_gameScene: {gameScene}");
             if ((gameScene == GameScene.MainMenu && _menuPanel.activeInHierarchy) ||
                 gameScene == GameScene.SpaceportNoIntro || gameScene == GameScene.Mission)
                 ToggleMenu();
