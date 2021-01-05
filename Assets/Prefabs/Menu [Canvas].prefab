@@ -306,7 +306,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 4109987480220968443}
           m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-          m_MethodName: ShowSystemFiles
+          m_MethodName: ConfirmOptions
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

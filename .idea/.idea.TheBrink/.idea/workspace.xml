@@ -19,19 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBrink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menu [Canvas].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menu [Canvas].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpaceportScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VideoFinished.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VideoFinished.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumeSlider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumeSlider.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="4cead349-934b-44e3-b4ab-46cd15e80319" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,9 +94,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/VolumeType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spaceport/UIButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
       <option value="$PROJECT_DIR$/Assets/VolumeSlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kSteYFNUKwuC2N7DK9GgIWFfMl" />
@@ -179,7 +167,7 @@
       <workItem from="1608287754010" duration="3154000" />
       <workItem from="1608539885457" duration="1346000" />
       <workItem from="1609749329815" duration="27106000" />
-      <workItem from="1609839540275" duration="2748000" />
+      <workItem from="1609839540275" duration="3125000" />
     </task>
     <servers />
   </component>
