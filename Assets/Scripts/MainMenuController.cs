@@ -77,6 +77,12 @@ public class MainMenuController : MonoBehaviour
     
     public void CreditsOnClick()
     {
+        if (Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.R))
+        {
+            ShowPanelOnly(_currentPanel = MainMenuPanelType.Credits);
+            return;
+        }
+        
         GameController.Instance.GameScene = GameScene.Credits;
     }
 
