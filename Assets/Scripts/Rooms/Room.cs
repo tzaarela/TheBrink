@@ -154,6 +154,16 @@ namespace Assets.Scripts.Rooms
                 PresentCrewMembers.ForEach(x => x.TakeDamage(1f));
         }
 
+        public void MoveToRoom(CrewMember crewMember)
+        {
+            if (crewMember.CurrentWayPoint != waypoints[0])
+            {
+                var moveCommand = new MoveCommand(crewMember, this);
+                crewMember.CommandQueue.Clear();
+                crewMember.CommandQueue.Enqueue(moveCommand);
+            }
+        }
+
         public List<Command> GetAvailableCommandsForRoom(CrewMember crewMember)
         {
             //TODO - GET CORRECT TASKS FOR ROOM AND CHARACTER
@@ -270,9 +280,19 @@ namespace Assets.Scripts.Rooms
             //{
             //    ContextMenuController.instance.CloseContextMenu();
             //}
+            if (eventData.button == PointerEventData.InputButton.Left)
+            {
+                ContextMenuController.instance.CloseContextMenu();
+            }
+
+            if (eventData.button == PointerEventData.InputButton.Left && eventData.clickCount > 1)
+            {
+                MoveToRoom(CrewController.Instance.GetSelectedCrewMember());
+            }
 
             if (eventData.button == PointerEventData.InputButton.Right)
             {
+                eventData.clickCount = 0;
                 //RoomController.Instance.Rooms.FirstOrDefault(x => x.IsSelected == true).IsSelected = false;
                 //IsSelected = true;
 

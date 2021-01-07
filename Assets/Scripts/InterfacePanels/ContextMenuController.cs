@@ -59,6 +59,9 @@ namespace Assets.Scripts.InterfacePanels
             CloseContextMenu();
             isOpen = true;
 
+            if (availableTasks.Count <= 0)
+                return;
+
             var mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
             menuPanelObject = Instantiate(menuPanelPrefab, new Vector2(mousePos.x, mousePos.y), Quaternion.identity, printToCanvas.transform);
             var menuPanel = menuPanelObject.GetComponent<ContextMenuPanel>();

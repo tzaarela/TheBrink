@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DG.Tweening;
+
 
 [System.Serializable]
 public class CrewMember : UITrigger
@@ -60,6 +62,7 @@ public class CrewMember : UITrigger
 
     public void Start()
     {
+        transform.DOScale(1.2f, 0.5f).SetEase(Ease.OutBack).SetLoops(-1, LoopType.Yoyo);
     }
 
     public void Update()
@@ -114,6 +117,7 @@ public class CrewMember : UITrigger
     {
         //IMPLEMENT
         onDeath.Invoke();
+        crewData.Reset();
         Debug.Log("CrewMember " + crewData.name + " died!");
     }
 

@@ -60,6 +60,8 @@ public class GameController : ScriptableObject
         switch (gameScene)
         {
             case GameScene.MainMenu:
+
+                GC.Collect();
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
@@ -71,6 +73,7 @@ public class GameController : ScriptableObject
                 break;
 
             case GameScene.MainMenuStart:
+                GC.Collect();
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
@@ -80,11 +83,12 @@ public class GameController : ScriptableObject
                 break;
 
             case GameScene.Mission:
+                GC.Collect();
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
-                    var sceneIndex = SceneManager.GetSceneByBuildIndex(2);
-                    AsyncOperation op = SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+                    var sceneIndex = SceneManager.GetSceneByBuildIndex(3);
+                    AsyncOperation op = SceneManager.LoadSceneAsync(3, LoadSceneMode.Single);
 
                     op.completed += (AsyncOperation o) =>
                     {
@@ -106,10 +110,12 @@ public class GameController : ScriptableObject
                 break;
 
             case GameScene.SpaceportNoIntro:
+                GC.Collect();
                 HandleLoginComplete();
                 break;
 
             case GameScene.Spaceport:
+                GC.Collect();
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
@@ -127,6 +133,7 @@ public class GameController : ScriptableObject
 
             case GameScene.GameOver:
 
+                GC.Collect();
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
@@ -135,10 +142,13 @@ public class GameController : ScriptableObject
                 };
                 break;
             case GameScene.Docking:
+
+                GC.Collect();
                 SceneManager.LoadScene("DockingScene");
                 TransitionController.Instance.FadeIn();
                 break;
             case GameScene.Undocking:
+                GC.Collect();
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
@@ -150,6 +160,7 @@ public class GameController : ScriptableObject
                 };
                 break;
             case GameScene.Credits:
+                GC.Collect();
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
                 {
