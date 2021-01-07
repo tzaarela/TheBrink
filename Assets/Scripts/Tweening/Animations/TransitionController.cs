@@ -61,7 +61,7 @@ namespace Assets.Scripts.Tweening.Animations
             var inputController = Instantiate(InputControllerPrefab, this.transform);
             inputController.clickToContinue = true;
             inputController.anyKey = false;
-            inputController.keyCode = KeyCode.Q;
+            inputController.keyCode = KeyCode.Escape;
             inputController.gameScene = GameScene.SpaceportNoIntro;
 
             this.onTransitionComplete = onTransitionComplete;

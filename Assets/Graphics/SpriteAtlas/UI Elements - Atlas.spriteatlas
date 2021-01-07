@@ -69,6 +69,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3e6596643914b45498aa00658ae460bc, type: 3}
   - {fileID: 21300000, guid: ac7a2a640f9adce47bc34010a03a1b2e, type: 3}
   - {fileID: 21300000, guid: 0914dcf4a5dd64f3ab61744b5c7dcd23, type: 3}
+  - {fileID: 21300000, guid: 52e46005af269404f8004ee13c083a50, type: 3}
   - {fileID: 21300000, guid: e64d3a459d2fc2f4881cdffa572f9207, type: 3}
   - {fileID: 21300000, guid: afef2f856e00aa547817dc123b05416a, type: 3}
   - {fileID: 21300000, guid: 67c603a5f83ef42e7830e3e0db76d701, type: 3}
@@ -125,6 +126,7 @@ SpriteAtlas:
   - border-outline_01_72x72
   - fire_icon
   - ShipUI_ShipOverview_Floor
+  - oxygen
   - Logotype_Pharmastrum
   - lineRadar
   - tab-border_13x13_01_Highlight

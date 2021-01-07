@@ -108,9 +108,15 @@ namespace Assets.Scripts.Rooms
 
             var hasHazard = Hazards.Count > 0;
 
-            warningHighlight.gameObject.SetActive(hasHazard);
-            if(hasHazard)
+            warningHighlight.gameObject.SetActive(hasHazard || OxygenLevel <= 0);
+
+            if(hasHazard || OxygenLevel <= 0)
                 SetWarningIcons();
+
+            if (OxygenLevel <= 0)
+                warningHighlight.oxygenIcon.SetActive(true);
+            else
+                warningHighlight.oxygenIcon.SetActive(false);
 
             foreach (Hazard hazard in Hazards)
             {
@@ -134,6 +140,11 @@ namespace Assets.Scripts.Rooms
                 warningHighlight.electricIcon.SetActive(true);
             else
                 warningHighlight.electricIcon.SetActive(false);
+
+            if (OxygenLevel <= 0)
+                warningHighlight.oxygenIcon.SetActive(true);
+            else
+                warningHighlight.oxygenIcon.SetActive(false);
         }
 
         public void AirDrain(float drainLevel)

@@ -10,11 +10,13 @@ namespace Assets.Scripts
     {
         Start,
         MainMenu,
+        MainMenuStart,
         Mission,
         Spaceport,
         SpaceportNoIntro,
         GameOver,
         Docking,
+        Undocking,
         Credits
     }
 }

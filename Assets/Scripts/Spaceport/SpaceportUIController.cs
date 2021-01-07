@@ -84,7 +84,7 @@ public class SpaceportUIController : MonoBehaviour
     public void Depart()
     {
         if (SpaceportContractsController.instance.HasContract())
-            GameController.Instance.GameScene = GameScene.Mission;
+            GameController.Instance.GameScene = GameScene.Undocking;
     }
 
     public void UpdateCash(int increaseAmount)

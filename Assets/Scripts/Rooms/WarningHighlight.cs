@@ -12,5 +12,6 @@ namespace Assets.Scripts.Rooms
         public GameObject fireIcon;
         public GameObject electricIcon;
         public GameObject breachIcon;
+        public GameObject oxygenIcon;
     }
 }

@@ -70,6 +70,15 @@ public class GameController : ScriptableObject
                 };
                 break;
 
+            case GameScene.MainMenuStart:
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
+                {
+                    SceneManager.LoadScene("MainMenuScene");
+                    TransitionController.Instance.FadeIn();
+                };
+                break;
+
             case GameScene.Mission:
                 TransitionController.Instance.FadeOut();
                 TransitionController.Instance.onFadedOut += () =>
@@ -79,11 +88,6 @@ public class GameController : ScriptableObject
 
                     op.completed += (AsyncOperation o) =>
                     {
-
-                        AudioController.instance.StopAllSound();
-                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission);
-                        AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient);
-
                         SceneManager.SetActiveScene(SceneManager.GetSceneByName("MissionScene"));
                         TransitionController.Instance.FadeIn();
 
@@ -133,6 +137,17 @@ public class GameController : ScriptableObject
             case GameScene.Docking:
                 SceneManager.LoadScene("DockingScene");
                 TransitionController.Instance.FadeIn();
+                break;
+            case GameScene.Undocking:
+                TransitionController.Instance.FadeOut();
+                TransitionController.Instance.onFadedOut += () =>
+                {
+                    AudioController.instance.StopAllSound();
+                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Music, BGMClipType.Mission);
+                    AudioController.instance.PlayBGM(Assets.Scripts.Audio.AudioBGMType.Ambient, BGMClipType.MissionAmbient);
+                    SceneManager.LoadScene("UndockingScene");
+                    TransitionController.Instance.FadeIn();
+                };
                 break;
             case GameScene.Credits:
                 TransitionController.Instance.FadeOut();
