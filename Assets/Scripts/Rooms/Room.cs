@@ -15,6 +15,7 @@ namespace Assets.Scripts.Rooms
 
         public SystemType SystemType;
         public RoomState RoomState;
+        public bool isLocked;
 
         public List<CrewMember> PresentCrewMembers { get; set; }
 
@@ -44,10 +45,11 @@ namespace Assets.Scripts.Rooms
         public List<Hazard> Hazards { get; set; }
         public bool hasElectricFailure;
 
-        private Door _door;
         private UnityEvent onRoomSelected;
         private UnityEvent onRoomDeselected;
 
+        [SerializeField]
+        private List<Door> doors;
         [SerializeField]
         private Transform highlight;
         [SerializeField]
@@ -154,8 +156,29 @@ namespace Assets.Scripts.Rooms
                 PresentCrewMembers.ForEach(x => x.TakeDamage(1f));
         }
 
+        public void LockRoom()
+        {
+            isLocked = true;
+            foreach (var door in doors)
+            {
+                door.LockDoor();
+            }
+        }
+
+        public void UnlockRoom()
+        {
+            isLocked = false;
+            foreach (var door in doors)
+            {
+                door.UnlockDoor();
+            }
+        }
+
         public void MoveToRoom(CrewMember crewMember)
         {
+            if (isLocked)
+                return;
+
             if (crewMember.CurrentWayPoint != waypoints[0])
             {
                 var moveCommand = new MoveCommand(crewMember, this);

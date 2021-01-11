@@ -26,6 +26,9 @@ namespace Assets.Scripts.Systems
         [SerializeField]
         ToggleButton depressurizeButton;
 
+        [SerializeField]
+        ToggleButton lockButton;
+
         IShipSystem shipSystem;
         bool isInitalized;
 
@@ -37,6 +40,7 @@ namespace Assets.Scripts.Systems
             shipSystem = SystemController.Instance.ShipSystems.FirstOrDefault(x => x.SystemType == systemType);
             powerButton.onToggle += ToggleSystemPower;
             depressurizeButton.onToggle += ToggleDepressurise;
+            lockButton.onToggle += ToggleLock;
             specificControl = specificControlPrefab.GetComponent<IControls>();
             specificControl.Init();
         }
@@ -60,6 +64,14 @@ namespace Assets.Scripts.Systems
         {
             shipSystem.IsDepressurised = isOn;
             shipSystem.SystemRoom.RoomState = isOn ? RoomState.Depreassurized : RoomState.Open;
+        }
+
+        public void ToggleLock(bool isOn)
+        {
+            if (isOn)
+                shipSystem.SystemRoom.LockRoom();
+            else
+                shipSystem.SystemRoom.UnlockRoom();
         }
     }
 }
